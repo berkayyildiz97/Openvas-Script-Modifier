@@ -81,7 +81,7 @@ foreach radius_port (make_list(1812, 1813, 1814))
     {
       if(version_is_less(version:freeradiusVer, test_version:"1.1.8")){
         report = report_fixed_ver(installed_version:freeradiusVer, fixed_version:"1.1.8");
-        security_message(data:report);
+        security_message(port: radius_port, data: report);
         exit(0);
       }
     }

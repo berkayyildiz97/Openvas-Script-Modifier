@@ -75,7 +75,7 @@ if(lotusVer =~ "^8\.0")
   if(version_is_less(version:lotusVer, test_version:"8.0.2.6"))
   {
     report = report_fixed_ver(installed_version:lotusVer, fixed_version:"8.0.2.6");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -84,6 +84,6 @@ if(lotusVer =~ "^8\.5")
 {
   if(version_is_less(version:lotusVer, test_version:"8.5.1.5")){
     report = report_fixed_ver(installed_version:lotusVer, fixed_version:"8.5.1.5");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

@@ -66,5 +66,5 @@ if(!pgpVer)
 
 if(version_is_less(version:pgpVer, test_version:"9.10.0.500")){
   report = report_fixed_ver(installed_version:pgpVer, fixed_version:"9.10.0.500");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

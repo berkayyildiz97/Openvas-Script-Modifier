@@ -210,7 +210,7 @@ if(fileVer)
     {
       if(version_is_less(version:fileVer, test_version:"6.6.6001.18063")){
           report = report_fixed_ver(installed_version:fileVer, fixed_version:"6.6.6001.18063", install_path:dllPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
       }
       exit(0);
     }
@@ -223,7 +223,7 @@ if(fileVer)
     {
       if(version_is_less(version:fileVer, test_version:"6.6.6001.18063")){
           report = report_fixed_ver(installed_version:fileVer, fixed_version:"6.6.6001.18063", install_path:dllPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
       }
       exit(0);
     }

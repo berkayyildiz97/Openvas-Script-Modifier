@@ -66,5 +66,5 @@ if(!grabitVer)
 
 if(version_is_less(version:grabitVer, test_version:"1.7.2.4")){
   report = report_fixed_ver(installed_version:grabitVer, fixed_version:"1.7.2.4");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

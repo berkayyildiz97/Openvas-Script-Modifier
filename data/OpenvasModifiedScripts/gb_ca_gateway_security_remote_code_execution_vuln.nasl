@@ -71,5 +71,5 @@ if(!cagsver){
 
 if(version_is_less(version:cagsver, test_version:"8.1.0.69")){
   report = report_fixed_ver(installed_version:cagsver, fixed_version:"8.1.0.69");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

@@ -75,7 +75,7 @@ if(expressionVer == NULL)
 
 if(version_is_less(version:expressionVer, test_version:"1.6.7")){
   report = report_fixed_ver(installed_version:expressionVer, fixed_version:"1.6.7");
-  security_message(data:report);
+  security_message(port: httpPort, data: report);
   exit(0);
 }
 

@@ -96,7 +96,7 @@ if(hotfix_check_sp(winVista:2) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"11.0.6001.7009")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"11.0.6001.7009");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -105,7 +105,7 @@ if(hotfix_check_sp(winVista:2) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"11.0.6002.18297")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"11.0.6002.18297");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -116,6 +116,6 @@ else if(hotfix_check_sp(win7:1) > 0)
 {
   if(version_is_less(version:sysVer, test_version:"12.0.7600.16661")){
      report = report_fixed_ver(installed_version:sysVer, fixed_version:"12.0.7600.16661");
-     security_message(data:report);
+     security_message(port: 0, data: report);
   }
 }

@@ -94,6 +94,6 @@ if(openVer =~ "^3.*")
   ## OpenOffice 3.3 (3.3.9567)
   if(version_is_less(version:openVer, test_version:"3.3.9567")){
     report = report_fixed_ver(installed_version:openVer, fixed_version:"3.3.9567");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

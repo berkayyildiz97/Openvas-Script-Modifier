@@ -75,5 +75,5 @@ if(!arvaavVer)
 
 if(version_is_less(version:arvaavVer, test_version:"9.4.3201.9")){
   report = report_fixed_ver(installed_version:arvaavVer, fixed_version:"9.4.3201.9");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

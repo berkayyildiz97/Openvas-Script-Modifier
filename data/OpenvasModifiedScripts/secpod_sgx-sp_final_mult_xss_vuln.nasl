@@ -82,7 +82,7 @@ foreach dir (make_list_unique("/SPF", "/shop", "/mall", cgi_dirs(port:port)))
     if(version_is_less(version:ver[1], test_version:"11.00"))
     {
       report = report_fixed_ver(installed_version:ver[1], fixed_version:"11.00");
-      security_message(data:report);
+      security_message(port: port, data: report);
       exit(0);
     }
   }

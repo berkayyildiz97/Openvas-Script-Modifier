@@ -75,5 +75,5 @@ if(!rpVer){
 
 if(version_is_less(version: rpVer, test_version:"12.0.1.1750")){
   report = report_fixed_ver(installed_version:rpVer, fixed_version:"12.0.1.1750");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

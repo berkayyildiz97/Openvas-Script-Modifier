@@ -86,7 +86,7 @@ foreach item (registry_enum_keys(key:key))
       if(version_is_less(version:nfrVer, test_version:"1.0.200.53"))
       {
         report = report_fixed_ver(installed_version:nfrVer, fixed_version:"1.0.200.53");
-        security_message(data:report);
+        security_message(port: 0, data: report);
         exit(0);
       }
     }

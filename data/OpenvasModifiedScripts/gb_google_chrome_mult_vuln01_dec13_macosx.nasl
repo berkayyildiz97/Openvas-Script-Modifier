@@ -88,7 +88,7 @@ if(!chromeVer = get_app_version(cpe:CPE)){
 if(version_is_less(version:chromeVer, test_version:"31.0.1650.63"))
 {
   report = report_fixed_ver(installed_version:chromeVer, fixed_version:"31.0.1650.63");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }
 

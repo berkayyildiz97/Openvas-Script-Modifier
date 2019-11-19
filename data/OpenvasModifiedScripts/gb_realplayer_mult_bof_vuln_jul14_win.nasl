@@ -77,6 +77,6 @@ if(!realVer = get_app_version(cpe:CPE)){
 if(version_is_less(version:realVer, test_version:"17.0.10.8"))
 {
   report = report_fixed_ver(installed_version:realVer, fixed_version:"17.0.10.8");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

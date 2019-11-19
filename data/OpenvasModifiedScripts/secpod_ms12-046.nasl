@@ -89,7 +89,7 @@ if(dllVer6)
   if(version_is_less(version:dllVer6, test_version:"6.5.10.54"))
   {
     report = report_fixed_ver(installed_version:dllVer6, fixed_version:"6.5.10.54");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -103,8 +103,7 @@ if(officeVer =~ "^14\..*")
   {
     if(version_in_range(version:dllVer7, test_version:"7.0", test_version2:"7.0.16.26"))
     {
-      report = report_fixed_ver(installed_version:dllVer7, fixed_version:"6.5.10.547.0.16.27");
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
       exit(0);
     }
   }
@@ -115,8 +114,7 @@ if(officeVer =~ "^14\..*")
   if(accVer)
   {
     if(version_in_range(version:accVer, test_version:"14.0", test_version2:"14.0.6015.999")){
-      report = report_fixed_ver(installed_version:accVer, fixed_version:"6.5.10.547.0.16.2714.0.6015.1000");
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
   }
 }

@@ -89,7 +89,7 @@ if(ibmVer =~ "^6\.0\.*")
   if(version_is_less(version:ibmVer, test_version:"6.0.1070"))
   {
     report = report_fixed_ver(installed_version:ibmVer, fixed_version:"6.0.1070");
-    security_message(data:report);
+    security_message(port: ibmPort, data: report);
     exit(0);
   }
 }
@@ -99,7 +99,7 @@ if(ibmVer =~ "^06\.3.*")
   if(version_is_less(version:ibmVer, test_version:"06.30.0056"))
   {
     report = report_fixed_ver(installed_version:ibmVer, fixed_version:"06.30.0056");
-    security_message(data:report);
+    security_message(port: ibmPort, data: report);
     exit(0);
   }
 }
@@ -109,7 +109,7 @@ if(ibmVer =~ "^6\.5\.*")
   if(version_is_less(version:ibmVer, test_version:"6.5.0.12"))
   {
     report = report_fixed_ver(installed_version:ibmVer, fixed_version:"6.5.0.12");
-    security_message(data:report);
+    security_message(port: ibmPort, data: report);
     exit(0);
   }
 }
@@ -118,6 +118,6 @@ if(ibmVer =~ "^7\.0\.*")
 {
   if(version_is_less(version:ibmVer, test_version:"7.0.0.4")){
     report = report_fixed_ver(installed_version:ibmVer, fixed_version:"7.0.0.4");
-    security_message(data:report);
+    security_message(port: ibmPort, data: report);
   }
 }

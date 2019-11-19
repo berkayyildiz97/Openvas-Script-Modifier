@@ -79,5 +79,5 @@ if(!smVer){
 
 if(version_is_less(version:smVer, test_version:"1.1.13")){
   report = report_fixed_ver(installed_version:smVer, fixed_version:"1.1.13");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

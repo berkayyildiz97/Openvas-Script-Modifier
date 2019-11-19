@@ -92,7 +92,7 @@ foreach item (registry_enum_keys(key:key))
     if(version_is_less(version:dllVer, test_version:"7.0.7734.182"))
     {
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"7.0.7734.182", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
       exit(0);
     }
   }

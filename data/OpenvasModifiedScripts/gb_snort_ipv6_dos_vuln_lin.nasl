@@ -66,5 +66,5 @@ if(!snortVer)
 
 if(version_is_less(version:snortVer , test_version:"2.8.5.1")){
   report = report_fixed_ver(installed_version:snortVer, fixed_version:"2.8.5.1");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

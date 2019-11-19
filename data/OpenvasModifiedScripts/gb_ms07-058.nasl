@@ -87,7 +87,7 @@ if(sysPath)
     {
       if(version_is_less(version:sysVer, test_version:"5.0.2195.7090")){
         report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.0.2195.7090");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
 
@@ -98,7 +98,7 @@ if(sysPath)
       {
          if(version_is_less(version:sysVer, test_version:"5.1.2600.3173")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.1.2600.3173");
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }
@@ -112,7 +112,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"5.2.3790.2971")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.2.3790.2971");
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }
@@ -120,7 +120,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"5.2.3790.4115")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.2.3790.4115");
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }
@@ -144,7 +144,7 @@ if(hotfix_check_sp(winVista:3) > 0)
 {
   if(version_is_less(version:sysVer, test_version:"6.0.6000.16525")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6000.16525");
-      security_message(data:report);
+      security_message(port: 0, data: report);
   }
   exit(0);
 }

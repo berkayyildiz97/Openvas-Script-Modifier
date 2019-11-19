@@ -75,5 +75,5 @@ if(!officeVer){
 ## (Display Version comes as 3.41.9593)
 if(version_is_less(version: officeVer, test_version:"3.41.9593")){
   report = report_fixed_ver(installed_version:officeVer, fixed_version:"3.41.9593");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

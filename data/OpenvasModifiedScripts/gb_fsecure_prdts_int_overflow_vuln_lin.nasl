@@ -76,7 +76,7 @@ if(fsavVer)
   if(version_is_less(version:fsavVer, test_version:"7.02"))
   {
     report = report_fixed_ver(installed_version:fsavVer, fixed_version:"7.02");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -87,7 +87,7 @@ if(fsavVer)
   if(version_is_less(version:fsavVer, test_version:"5.54.7410"))
   {
     report = report_fixed_ver(installed_version:fsavVer, fixed_version:"5.54.7410");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -98,7 +98,7 @@ if(fsavVer)
   if(version_is_less(version:fsavVer, test_version:"5.54.7410"))
   {
     report = report_fixed_ver(installed_version:fsavVer, fixed_version:"5.54.7410");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -108,6 +108,6 @@ if(fsigkVer)
 {
   if(version_is_less(version:fsigkVer, test_version:"2.16.580")){
     report = report_fixed_ver(installed_version:fsigkVer, fixed_version:"2.16.580");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

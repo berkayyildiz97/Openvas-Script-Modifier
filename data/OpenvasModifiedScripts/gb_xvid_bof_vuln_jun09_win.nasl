@@ -71,5 +71,5 @@ if(!xvidVer)
 
 if(version_is_less(version:xvidVer, test_version:"1.2.2")){
   report = report_fixed_ver(installed_version:xvidVer, fixed_version:"1.2.2");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

@@ -106,7 +106,7 @@ if(hotfix_check_sp(winVista:2, win2008:2) > 0)
   {
     if(version_is_less(version:dllVer, test_version:"6.0.6001.18507")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6001.18507", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -115,7 +115,7 @@ if(hotfix_check_sp(winVista:2, win2008:2) > 0)
   {
     if(version_is_less(version:dllVer, test_version:"6.0.6002.18290")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6002.18290", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -126,6 +126,6 @@ else if(hotfix_check_sp(win7:1) > 0)
 {
   if(version_is_less(version:dllVer, test_version:"6.1.7600.16661")){
     report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.1.7600.16661", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

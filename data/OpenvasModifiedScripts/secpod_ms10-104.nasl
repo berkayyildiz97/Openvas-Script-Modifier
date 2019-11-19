@@ -96,7 +96,7 @@ foreach item (registry_enum_keys(key:key))
       if(version_is_less(version:vers, test_version:"12.0.6547.5000"))
       {
         report = report_fixed_ver(installed_version:vers, fixed_version:"12.0.6547.5000");
-        security_message(data:report);
+        security_message(port: 0, data: report);
         exit(0);
       }
     }

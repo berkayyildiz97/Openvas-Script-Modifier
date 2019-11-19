@@ -93,7 +93,7 @@ if(sysPath)
     {
       if(version_is_less(version:sysVer, test_version:"5.1.2600.3490")){
        report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.1.2600.3490", install_path:sysPath);
-       security_message(data:report);
+       security_message(port: 0, data: report);
       }
       exit(0);
     }
@@ -105,7 +105,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"5.1.2600.3494")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.1.2600.3494", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
           exit(0);
       }
@@ -113,7 +113,7 @@ if(sysPath)
       {
     	if(version_is_less(version:sysVer, test_version:"5.1.2600.5727")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.1.2600.5727", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }
@@ -127,7 +127,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"5.2.3790.3262")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.2.3790.3262", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
           exit(0);
       }
@@ -135,7 +135,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"5.2.3790.4427")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.2.3790.4427", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
         exit(0);
       }
@@ -157,7 +157,7 @@ if(sysPath)
       {
         if(version_is_less(version:dllVer, test_version:"6.0.6001.18178")){
           report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6001.18178", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }
@@ -170,7 +170,7 @@ if(sysPath)
       {
         if(version_is_less(version:dllVer, test_version:"6.0.6001.18178")){
           report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6001.18178", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }

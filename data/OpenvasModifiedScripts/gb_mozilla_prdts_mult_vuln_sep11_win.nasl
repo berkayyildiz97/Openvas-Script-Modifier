@@ -79,7 +79,7 @@ if(ffVer)
 {
   if(version_is_less(version:ffVer, test_version:"3.6.20")){
      report = report_fixed_ver(installed_version:ffVer, fixed_version:"3.6.20");
-     security_message(data:report);
+     security_message(port: 0, data: report);
      exit(0);
   }
 }
@@ -89,8 +89,7 @@ if(seaVer)
 {
   if(version_in_range(version:seaVer, test_version:"2.0", test_version2:"2.2"))
   {
-     report = report_fixed_ver(installed_version:seaVer, fixed_version:"3.6.202.3");
-     security_message(data:report);
+     security_message( port: 0, data: "The target host was found to be vulnerable" );
      exit(0);
   }
 }
@@ -99,7 +98,6 @@ tbVer = get_kb_item("Thunderbird/Win/Ver");
 if(tbVer != NULL)
 {
   if(version_in_range(version:tbVer, test_version:"3.0", test_version2:"3.1.11")){
-    report = report_fixed_ver(installed_version:tbVer, fixed_version:"3.6.202.33.1.12");
-    security_message(data:report);
+    security_message( port: 0, data: "The target host was found to be vulnerable" );
   }
 }

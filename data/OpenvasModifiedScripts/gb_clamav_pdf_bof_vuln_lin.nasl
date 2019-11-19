@@ -82,5 +82,5 @@ if(!clamVer){
 
 if(version_is_less(version:clamVer, test_version:"0.96.3")){
   report = report_fixed_ver(installed_version:clamVer, fixed_version:"0.96.3");
-  security_message(data:report);
+  security_message(port: port, data: report);
 }

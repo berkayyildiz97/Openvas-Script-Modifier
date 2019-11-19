@@ -81,7 +81,7 @@ if(version[1] != NULL){
 if(version_is_less(version:ver, test_version:"4.5.181"))
 {
   report = report_fixed_ver(installed_version:ver, fixed_version:"4.5.181");
-  security_message(data:report);
+  security_message(port: port, data: report);
   exit(0);
 }
 
@@ -90,7 +90,7 @@ if(ver =~ "^6\.0\.*")
   if(version_is_less(version:ver, test_version:"6.0.1067"))
   {
     report = report_fixed_ver(installed_version:ver, fixed_version:"6.0.1067");
-    security_message(data:report);
+    security_message(port: port, data: report);
     exit(0);
   }
 }
@@ -106,7 +106,7 @@ if(ver =~ "^06\.3.*")
   if(version_is_less(version:ver, test_version:"06.30.0047"))
   {
     report = report_fixed_ver(installed_version:ver, fixed_version:"06.30.0047");
-    security_message(data:report);
+    security_message(port: port, data: report);
     exit(0);
   }
 }
@@ -115,6 +115,6 @@ if(ver =~ "^6\.5\.*")
 {
   if(version_is_less(version:ver, test_version:"6.5.0.3")){
     report = report_fixed_ver(installed_version:ver, fixed_version:"6.5.0.3");
-    security_message(data:report);
+    security_message(port: port, data: report);
   }
 }

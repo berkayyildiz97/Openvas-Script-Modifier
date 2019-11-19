@@ -123,7 +123,7 @@ if((hotfix_missing(name:"976138") == 1))
       {
         if(version_is_less(version:quartzVer, test_version:"6.5.1.912")){
           report = report_fixed_ver(installed_version:quartzVer, fixed_version:"6.5.1.912", install_path:dllPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
           exit(0);
         }
       }
@@ -156,7 +156,7 @@ if((hotfix_missing(name:"955759") == 1))
     {
       if(version_is_less(version:aclayerVer, test_version:"5.0.2195.7358")){
         report = report_fixed_ver(installed_version:aclayerVer, fixed_version:"5.0.2195.7358", install_path:dllPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
 
@@ -167,7 +167,7 @@ if((hotfix_missing(name:"955759") == 1))
       {
         if(version_is_less(version:aclayerVer, test_version:"5.1.2600.3647")){
           report = report_fixed_ver(installed_version:aclayerVer, fixed_version:"5.1.2600.3647", install_path:dllPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
         exit(0);
       }
@@ -175,7 +175,7 @@ if((hotfix_missing(name:"955759") == 1))
       {
         if(version_is_less(version:aclayerVer, test_version:"5.1.2600.5906")){
           report = report_fixed_ver(installed_version:aclayerVer, fixed_version:"5.1.2600.5906", install_path:dllPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
         exit(0);
       }
@@ -189,7 +189,7 @@ if((hotfix_missing(name:"955759") == 1))
       {
         if(version_is_less(version:aclayerVer, test_version:"5.2.3790.4624")){
           report = report_fixed_ver(installed_version:aclayerVer, fixed_version:"5.2.3790.4624", install_path:dllPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
         exit(0);
       }

@@ -76,13 +76,13 @@ if(!isnull(vers) && vers >!< "unknown") {
   if(vers =~ "^1\.8") {
     if(version_is_less(version: vers, test_version: "1.8.11")) {
       report = report_fixed_ver(installed_version:vers, fixed_version:"1.8.11");
-      security_message(data:report);
+      security_message(port: port, data: report);
       exit(0);
     }
   } else if(vers =~ "^1\.9") {
     if(version_is_less(version: vers, test_version: "1.9.7")) {
       report = report_fixed_ver(installed_version:vers, fixed_version:"1.9.7");
-      security_message(data:report);
+      security_message(port: port, data: report);
       exit(0);
     }
   }

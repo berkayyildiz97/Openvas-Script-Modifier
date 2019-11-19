@@ -85,7 +85,7 @@ if(dllVer)
   {
     if(version_is_less(version:dllVer, test_version:"5.0.2195.7151")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.0.2195.7151", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 
@@ -96,7 +96,7 @@ if(dllVer)
     {
       if(version_is_less(version:dllVer, test_version:"5.1.2600.3316")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.1.2600.3316", install_path:sysPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
   }
@@ -108,14 +108,14 @@ if(dllVer)
     {
       if(version_is_less(version:dllVer, test_version:"5.2.3790.3092")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.2.3790.3092", install_path:sysPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
     else if("Service Pack 2" >< SP)
     {
       if(version_is_less(version:dllVer, test_version:"5.2.3790.4238")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.2.3790.4238", install_path:sysPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
     else security_message( port: 0, data: "The target host was found to be vulnerable" );
@@ -124,7 +124,7 @@ if(dllVer)
   {
     if(version_is_less(version:dllVer, test_version:"6.0.6000.16615")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6000.16615", install_path:sysPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
     }
     exit(0);
   }

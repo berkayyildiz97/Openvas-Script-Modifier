@@ -98,14 +98,14 @@ if(hotfix_check_sp(win2k:5) > 0)
   {
     if(version_is_less(version:dllVer, test_version:"6.3.1.892")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.3.1.892");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
   else if(directXver =~ "^4\.09")
   {
     if(version_is_less(version:dllVer, test_version:"6.5.1.910")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.1.910");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
   exit(0);
@@ -120,14 +120,14 @@ if(hotfix_check_sp(xp:4) > 0)
     {
       if(version_is_less(version:dllVer, test_version:"6.5.2600.3497")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.2600.3497");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
     else if("Service Pack 3" >< SP)
     {
       if(version_is_less(version:dllVer, test_version:"6.5.2600.5731")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.2600.5731");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
   }
@@ -143,14 +143,14 @@ if(hotfix_check_sp(win2003:3) > 0)
     {
       if(version_is_less(version:dllVer, test_version:"6.5.3790.3266")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.3790.3266");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
     else if("Service Pack 2" >< SP)
     {
       if(version_is_less(version:dllVer, test_version:"6.5.3790.4431")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.3790.4431");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
   }

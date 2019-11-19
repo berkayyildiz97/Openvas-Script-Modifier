@@ -69,5 +69,5 @@ if(!shockVer){
 
 if(version_is_less(version:shockVer, test_version:"11.6.3.633")){
   report = report_fixed_ver(installed_version:shockVer, fixed_version:"11.6.3.633");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

@@ -77,7 +77,7 @@ if(typoVer = get_app_version(cpe:CPE, port:typoPort))
   if(version_is_less(version:typoVer, test_version:"4.0.5"))
   {
     report = report_fixed_ver(installed_version:typoVer, fixed_version:"4.0.5");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

@@ -85,7 +85,7 @@ if(!mwgVer){
 if(version_is_less(version:mwgVer, test_version:"7.3.2.9"))
 {
   report = report_fixed_ver(installed_version:mwgVer, fixed_version:"7.3.2.9");
-  security_message(data:report);
+  security_message(port: mwgPort, data: report);
   exit(0);
 }
 
@@ -94,7 +94,7 @@ if(mwgVer =~ "^7\.4")
   if(version_is_less(version:mwgVer, test_version:"7.4.2"))
   {
     report = report_fixed_ver(installed_version:mwgVer, fixed_version:"7.4.2");
-    security_message(data:report);
+    security_message(port: mwgPort, data: report);
     exit(0);
   }
 }

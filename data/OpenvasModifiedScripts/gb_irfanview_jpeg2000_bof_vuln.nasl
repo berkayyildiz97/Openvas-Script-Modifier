@@ -80,6 +80,6 @@ if(path != NULL)
 
   if(version_is_less(version:plgVer, test_version:"4.33")){
     report = report_fixed_ver(installed_version:plgVer, fixed_version:"4.33", install_path:irViewPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

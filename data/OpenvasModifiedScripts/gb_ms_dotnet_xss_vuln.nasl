@@ -77,5 +77,5 @@ if(!dotNet){
 
 if(version_is_less(version:dotNet, test_version:"1.1")){
    report = report_fixed_ver(installed_version:dotNet, fixed_version:"1.1");
-   security_message(data:report);
+   security_message(port: 0, data: report);
 }

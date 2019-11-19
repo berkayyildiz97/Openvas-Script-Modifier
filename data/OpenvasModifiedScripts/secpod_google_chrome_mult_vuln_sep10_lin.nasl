@@ -93,5 +93,5 @@ if(!chromeVer){
 
 if(version_is_less(version:chromeVer, test_version:"6.0.472.59")){
   report = report_fixed_ver(installed_version:chromeVer, fixed_version:"6.0.472.59");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

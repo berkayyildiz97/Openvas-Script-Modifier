@@ -67,6 +67,6 @@ if(winrarVer != NULL)
 {
   if(version_is_less(version:winrarVer, test_version:"3.71")){
      report = report_fixed_ver(installed_version:winrarVer, fixed_version:"3.71");
-     security_message(data:report);
+     security_message(port: 0, data: report);
    }
 }

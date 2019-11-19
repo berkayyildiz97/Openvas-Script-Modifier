@@ -65,5 +65,5 @@ if(!ccproxyVer)
 
 if(version_is_less(version:ccproxyVer, test_version:"6.62")){
   report = report_fixed_ver(installed_version:ccproxyVer, fixed_version:"6.62");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

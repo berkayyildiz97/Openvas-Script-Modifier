@@ -77,7 +77,7 @@ if(vmplayerVer)
   if(version_is_less(version:vmplayerVer, test_version:"2.5.3"))
   {
     report = report_fixed_ver(installed_version:vmplayerVer, fixed_version:"2.5.3");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -87,6 +87,6 @@ if(vmworkstnVer)
 {
   if(version_is_less(version:vmworkstnVer, test_version:"6.5.3")){
     report = report_fixed_ver(installed_version:vmworkstnVer, fixed_version:"6.5.3");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

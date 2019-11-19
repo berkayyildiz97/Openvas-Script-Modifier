@@ -67,5 +67,5 @@ if(!divxVer)
 
 if(version_is_less(version:divxVer, test_version:"1.4.3.4")){
   report = report_fixed_ver(installed_version:divxVer, fixed_version:"1.4.3.4");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

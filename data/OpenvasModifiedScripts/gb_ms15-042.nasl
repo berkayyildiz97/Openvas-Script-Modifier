@@ -90,7 +90,7 @@ if(hotfix_check_sp(win8_1x64:1, win2012R2:1) > 0)
 {
   if(version_is_less(version:exeVer, test_version:"6.3.9600.17729")){
     report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.3.9600.17729", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
   exit(0);
 }

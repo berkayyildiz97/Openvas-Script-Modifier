@@ -75,7 +75,7 @@ if(kavVer != NULL)
   if(version_is_less(version:kavVer, test_version:"9.0.0.736"))
   {
     report = report_fixed_ver(installed_version:kavVer, fixed_version:"9.0.0.736");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -87,7 +87,7 @@ if(kisVer != NULL)
   if(version_is_less(version:kisVer, test_version:"9.0.0.736"))
   {
     report = report_fixed_ver(installed_version:kisVer, fixed_version:"9.0.0.736");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -99,7 +99,7 @@ if(kavwVer != NULL)
   if(version_is_less(version:kavwVer, test_version:"6.0.4.1212"))
   {
     report = report_fixed_ver(installed_version:kavwVer, fixed_version:"6.0.4.1212");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -111,7 +111,7 @@ if(kavfsVer != NULL)
   if(version_is_less(version:kavfsVer, test_version:"6.0.4.1212"))
   {
     report = report_fixed_ver(installed_version:kavfsVer, fixed_version:"6.0.4.1212");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

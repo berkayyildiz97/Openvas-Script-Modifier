@@ -92,18 +92,15 @@ if(registry_key_exists(key:"SOFTWARE\Microsoft\Virtual PC"))
   {
     if(version_in_range(version:pcVer, test_version:"1.1.400.0",
                                        test_version2:"1.1.465.14")){
-      report = report_fixed_ver(installed_version:pcVer, fixed_version:"1.1.465.14");
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
     else if(version_in_range(version:pcVer, test_version:"1.1.500.0",
                                             test_version2:"1.1.597.0")){
-      report = report_fixed_ver(installed_version:pcVer, fixed_version:"1.1.597.0");
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
     else if(version_in_range(version:pcVer, test_version:"1.1.600.0",
                                             test_version2:"1.1.655.0")){
-      report = report_fixed_ver(installed_version:pcVer, fixed_version:"1.1.655.0");
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
     exit(0);
   }
@@ -126,7 +123,7 @@ if(registry_key_exists(key:"SOFTWARE\Microsoft\Virtual Server"))
   {
     if(version_is_less(version:srvVer, test_version:"1.1.655.0")){
       report = report_fixed_ver(installed_version:srvVer, fixed_version:"1.1.655.0");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 }

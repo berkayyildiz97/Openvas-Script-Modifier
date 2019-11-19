@@ -69,7 +69,7 @@ if(foxitVer)
   if(version_is_less(version:foxitVer, test_version:"4.3.1.0218"))
   {
     report = report_fixed_ver(installed_version:foxitVer, fixed_version:"4.3.1.0218");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -81,7 +81,7 @@ if(!foxVer){
 
 if(version_is_less(version:foxVer, test_version:"2.3.3.1112")){
   report = report_fixed_ver(installed_version:foxVer, fixed_version:"2.3.3.1112");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }
 

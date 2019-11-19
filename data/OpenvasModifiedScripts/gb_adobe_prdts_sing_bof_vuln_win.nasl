@@ -72,7 +72,7 @@ if(readerVer = get_app_version(cpe:CPE, nofork:TRUE))
   if(version_is_less(version:readerVer, test_version:"9.3.4"))
   {
     report = report_fixed_ver(installed_version:readerVer, fixed_version:"9.3.4");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }
 

@@ -155,7 +155,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"6.0.6001.18130")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6001.18130", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }
@@ -168,7 +168,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"6.0.6001.18130")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6001.18130", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }

@@ -72,6 +72,6 @@ if(!safariVer){
 
 if(version_is_less(version:safariVer, test_version:"5.33.17.8")) {
    report = report_fixed_ver(installed_version:safariVer, fixed_version:"5.33.17.8");
-   security_message(data:report);
+   security_message(port: 0, data: report);
 }
 

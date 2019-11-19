@@ -68,5 +68,5 @@ if(avVer == NULL){
 
 if(version_is_less(version:avVer, test_version:"0.97.3")){
   report = report_fixed_ver(installed_version:avVer, fixed_version:"0.97.3");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

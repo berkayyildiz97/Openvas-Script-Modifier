@@ -73,7 +73,7 @@ if(! version){
 if(version_is_less(version:version, test_version:"9.0"))
 {
   report = report_fixed_ver(installed_version:version, fixed_version:"9.0");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }
 
@@ -96,6 +96,6 @@ if(version =~ "^9\.0\.*")
 
   if(version_is_less(version:version, test_version:"9.0.0.11291")) {
     report = report_fixed_ver(installed_version:version, fixed_version:"9.0.0.11291", install_path:odbcPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

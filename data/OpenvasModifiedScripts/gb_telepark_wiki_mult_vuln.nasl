@@ -88,7 +88,7 @@ if(twikiVer[1] != NULL)
 {
   if(version_is_less(version:twikiVer[1], test_version:"2.4.25")){
     report = report_fixed_ver(installed_version:twikiVer[1], fixed_version:"2.4.25");
-    security_message(data:report);
+    security_message(port: twikiPort, data: report);
     exit(0);
   }
 }

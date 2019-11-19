@@ -67,5 +67,5 @@ if(!iPrintVer)
 
 if(version_is_less(version:iPrintVer, test_version:"5.32")){
   report = report_fixed_ver(installed_version:iPrintVer, fixed_version:"5.32");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

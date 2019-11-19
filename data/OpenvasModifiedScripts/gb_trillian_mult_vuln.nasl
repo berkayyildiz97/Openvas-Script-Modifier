@@ -98,7 +98,7 @@ if(exePath)
   {
     if(version_is_less(version:triVer, test_version:"3.1.12.0")){
       report = report_fixed_ver(installed_version:triVer, fixed_version:"3.1.12.0", install_path:exePath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 }

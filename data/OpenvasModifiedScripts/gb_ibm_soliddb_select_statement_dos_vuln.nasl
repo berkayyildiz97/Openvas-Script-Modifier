@@ -79,7 +79,7 @@ if(ibmVer =~ "^6\.5\.*")
   if(version_is_less(version:ibmVer, test_version:"6.5.0.9"))
   {
     report = report_fixed_ver(installed_version:ibmVer, fixed_version:"6.5.0.9");
-    security_message(data:report);
+    security_message(port: ibmPort, data: report);
     exit(0);
   }
 }

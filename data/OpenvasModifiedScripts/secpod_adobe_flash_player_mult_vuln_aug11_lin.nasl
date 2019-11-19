@@ -73,7 +73,7 @@ if(flashVer)
   if(version_is_less(version:flashVer, test_version:"10.3.183.5"))
   {
     report = report_fixed_ver(installed_version:flashVer, fixed_version:"10.3.183.5");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

@@ -116,5 +116,5 @@ if(!dllVer){
 
 if(version_is_less(version:dllVer, test_version:"3.1.15160.1")){
   report = report_fixed_ver(installed_version:dllVer, fixed_version:"3.1.15160.1", install_path:fsPath);
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

@@ -80,7 +80,7 @@ if( ! version = get_kb_item( "www/" + port + "/Nessus/Web/Server" ) ) exit ( 0 )
 
 if(version_is_less(version:version,test_version:"1.2.4")) {
   report = report_fixed_ver(installed_version:version, fixed_version:"1.2.4");
-  security_message(data:report);
+  security_message(port: port, data: report);
   exit(0);
 }
 

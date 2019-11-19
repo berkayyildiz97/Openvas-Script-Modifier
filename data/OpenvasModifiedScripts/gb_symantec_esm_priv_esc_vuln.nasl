@@ -73,6 +73,6 @@ if(!sesmVer){
 if(version_is_less(version:sesmVer, test_version:"11.0"))
 {
    report = report_fixed_ver(installed_version:sesmVer, fixed_version:"11.0");
-   security_message(data:report);
+   security_message(port: 0, data: report);
    exit(0);
 }

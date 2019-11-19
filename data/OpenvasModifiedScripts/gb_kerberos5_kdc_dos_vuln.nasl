@@ -75,5 +75,5 @@ if(!krbVer){
 
 if(version_is_less(version:krbVer, test_version:"1.7.1")){
   report = report_fixed_ver(installed_version:krbVer, fixed_version:"1.7.1");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

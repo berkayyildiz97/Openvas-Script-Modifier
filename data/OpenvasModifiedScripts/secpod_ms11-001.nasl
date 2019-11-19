@@ -99,7 +99,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
     if(version_is_less(version:exeVer, test_version:"6.0.6001.18561")){
       report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6001.18561", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -108,7 +108,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
     if(version_is_less(version:exeVer, test_version:"6.0.6002.18353")){
       report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6002.18353", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }

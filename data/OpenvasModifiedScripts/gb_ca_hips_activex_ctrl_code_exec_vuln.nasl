@@ -82,7 +82,7 @@ if(ver = get_kb_item("CA/HIPS/Server/Win/Ver"))
   if(version_is_less(version:ver, test_version:"8.1.0.88"))
   {
     report = report_fixed_ver(installed_version:ver, fixed_version:"8.1.0.88");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -94,14 +94,12 @@ if((hipsVer = get_kb_item("CA/HIPS/Engine/Win/Ver")) &&
   ## CA Internet Security Suite (ISS) 2010:
   if(version_in_range(version:issVer, test_version:"6.0", test_version2:"6.0.0.285") &&
      version_is_less_equal(version:hipsVer, test_version:"1.6.384")) {
-    report = report_fixed_ver(installed_version:issVer, fixed_version:"8.1.0.886.0.0.286");
-    security_message(data:report);
+    security_message( port: 0, data: "The target host was found to be vulnerable" );
   }
 
   ## CA Internet Security Suite (ISS) 2011:
   else if(version_in_range(version:issVer, test_version:"7.0", test_version2:"7.0.0.115") &&
      version_is_less_equal(version:hipsVer, test_version:"1.6.418")) {
-    report = report_fixed_ver(installed_version:issVer, fixed_version:"8.1.0.886.0.0.2867.0.0.116");
-    security_message(data:report);
+    security_message( port: 0, data: "The target host was found to be vulnerable" );
   }
 }

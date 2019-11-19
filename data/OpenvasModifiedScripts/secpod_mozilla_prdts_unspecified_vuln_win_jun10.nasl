@@ -79,8 +79,7 @@ if(ffVer)
 {
   if(version_in_range(version:ffVer, test_version:"3.5.0", test_version2:"3.5.9"))
   {
-    report = report_fixed_ver(installed_version:ffVer, fixed_version:"3.5.10");
-    security_message(data:report);
+    security_message( port: 0, data: "The target host was found to be vulnerable" );
     exit(0);
   }
 }
@@ -91,7 +90,7 @@ if(smVer != NULL)
   if(version_is_less(version:smVer, test_version:"2.0.5"))
   {
     report = report_fixed_ver(installed_version:smVer, fixed_version:"2.0.5");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -101,6 +100,6 @@ if(tbVer != NULL)
 {
   if(version_is_less(version:tbVer, test_version:"3.0.5")){
     report = report_fixed_ver(installed_version:tbVer, fixed_version:"3.0.5");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

@@ -68,7 +68,7 @@ if(flashVer = get_app_version(cpe:CPE, nofork:TRUE))
 {
   if(version_is_less(version:flashVer, test_version:"10.3.181.22")){
     report = report_fixed_ver(installed_version:flashVer, fixed_version:"10.3.181.22");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }
 

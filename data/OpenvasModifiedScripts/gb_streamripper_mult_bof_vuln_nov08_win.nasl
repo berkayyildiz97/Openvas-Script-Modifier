@@ -91,6 +91,6 @@ if(srVer[1] != NULL )
 {
   if(version_is_less(version:srVer[1], test_version:"1.64.0")){
     report = report_fixed_ver(installed_version:srVer[1], fixed_version:"1.64.0", install_path:srPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

@@ -181,7 +181,7 @@ if(dllVer)
     {
       if(version_is_less(version:dllVer, test_version:"6.0.6001.18049")){
           report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6001.18049", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
       }
          exit(0);
     }
@@ -194,7 +194,7 @@ if(dllVer)
     {
       if(version_is_less(version:dllVer, test_version:"6.0.6001.18049")){
           report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6001.18049", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
       }
          exit(0);
     }

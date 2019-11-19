@@ -81,7 +81,7 @@ if(!svnVer)
 
 if(version_is_less(version:svnVer, test_version:"2.1.0")){
   report = report_fixed_ver(installed_version:svnVer, fixed_version:"2.1.0");
-  security_message(data:report);
+  security_message(port: websvnPort, data: report);
   exit(0);
 }
 

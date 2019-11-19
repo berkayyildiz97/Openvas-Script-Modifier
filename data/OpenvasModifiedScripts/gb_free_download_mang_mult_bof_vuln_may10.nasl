@@ -79,5 +79,5 @@ if(!fdmVer){
 
 if(version_is_less(version:fdmVer, test_version:"3.0.852.0")){
   report = report_fixed_ver(installed_version:fdmVer, fixed_version:"3.0.852.0");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

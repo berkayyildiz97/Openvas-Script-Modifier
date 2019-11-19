@@ -78,6 +78,6 @@ if(!ownVer = get_app_version(cpe:CPE, port:ownPort)){
 if(version_is_less(version:ownVer, test_version:"4.0.12"))
 {
   report = report_fixed_ver(installed_version:ownVer, fixed_version:"4.0.12");
-  security_message(data:report);
+  security_message(port: ownPort, data: report);
   exit(0);
 }

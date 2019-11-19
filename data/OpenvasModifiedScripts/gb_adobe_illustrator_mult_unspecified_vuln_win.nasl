@@ -83,7 +83,7 @@ if(appPath)
   if(version_is_less(version:illuVer, test_version:"15.0.3"))
   {
     report = report_fixed_ver(installed_version:illuVer, fixed_version:"15.0.3", install_path:appPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 
@@ -91,7 +91,7 @@ if(appPath)
   {
     if(version_is_less(version:illuVer, test_version:"15.1.1")){
       report = report_fixed_ver(installed_version:illuVer, fixed_version:"15.1.1", install_path:appPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 }

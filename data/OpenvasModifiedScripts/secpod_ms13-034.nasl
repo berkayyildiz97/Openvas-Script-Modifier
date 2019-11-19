@@ -92,6 +92,6 @@ if(!defender_ver){
 if(version_is_less(version:defender_ver, test_version:"4.2.223.0"))
 {
   report = report_fixed_ver(installed_version:defender_ver, fixed_version:"4.2.223.0");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

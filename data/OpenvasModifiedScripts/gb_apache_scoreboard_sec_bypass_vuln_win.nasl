@@ -72,6 +72,6 @@ if(!httpVers = get_app_version(cpe:CPE, port:httpPort)) exit(0);
 if(version_is_less(version:httpVers, test_version:"2.2.22"))
 {
   report = report_fixed_ver(installed_version:httpVers, fixed_version:"2.2.22");
-  security_message(data:report);
+  security_message(port: httpPort, data: report);
   exit(0);
 }

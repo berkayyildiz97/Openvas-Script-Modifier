@@ -87,7 +87,7 @@ if(officeVer && officeVer =~ "^12\.")
     if(version_is_less(version:cnvVer, test_version:"9.11.0707.0"))
     {
       report = report_fixed_ver(installed_version:cnvVer, fixed_version:"9.11.0707.0", install_path:path);
-      security_message(data:report);
+      security_message(port: 0, data: report);
       exit(0);
     }
   }
@@ -117,7 +117,7 @@ foreach item (registry_enum_keys(key:key))
 
     if(version_is_less(version:dllVer, test_version:"9.8.1117.0")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"9.8.1117.0", install_path:path);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 }

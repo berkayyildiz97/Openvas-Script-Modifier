@@ -69,5 +69,5 @@ if(!tbVer)
 
 if(version_is_less(version:tbVer, test_version:"2.0.0.22")){
   report = report_fixed_ver(installed_version:tbVer, fixed_version:"2.0.0.22");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

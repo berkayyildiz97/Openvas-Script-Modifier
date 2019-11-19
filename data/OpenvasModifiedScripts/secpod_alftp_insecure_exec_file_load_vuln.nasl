@@ -80,7 +80,7 @@ if(alftpVer)
 {
   if(version_is_less(version:alftpVer, test_version:"5.31")){
     report = report_fixed_ver(installed_version:alftpVer, fixed_version:"5.31");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

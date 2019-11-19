@@ -87,10 +87,9 @@ if(!safariVer){
 
 if(version_is_less(version:safariVer, test_version:"3.525.28.1")){
   report = report_fixed_ver(installed_version:safariVer, fixed_version:"3.525.28.1");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }
 else if(version_in_range(version:safariVer, test_version:"3.525.28.1",
                          test_version2:"4.30.17.0")){
-  report = report_fixed_ver(installed_version:safariVer, fixed_version:"4.30.17.0");
-  security_message(data:report);
+  security_message(port:0);
 }

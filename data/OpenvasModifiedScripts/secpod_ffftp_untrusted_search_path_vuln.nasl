@@ -71,5 +71,5 @@ if(!ftpVer){
 
 if(version_is_less(version:ftpVer, test_version:"1.98.4.0")){
   report = report_fixed_ver(installed_version:ftpVer, fixed_version:"1.98.4.0");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

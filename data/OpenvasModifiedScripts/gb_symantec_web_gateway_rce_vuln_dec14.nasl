@@ -82,6 +82,6 @@ if(!symVer = get_app_version(cpe:CPE, port:symPort)){
 if(version_is_less(version:symVer, test_version:"5.2.2"))
 {
   report = report_fixed_ver(installed_version:symVer, fixed_version:"5.2.2");
-  security_message(data:report);
+  security_message(port: symPort, data: report);
   exit(0);
 }

@@ -65,5 +65,5 @@ if(!uvncVer)
 
 if(version_is_less(version:uvncVer, test_version:"1.0.5.4")){
   report = report_fixed_ver(installed_version:uvncVer, fixed_version:"1.0.5.4");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

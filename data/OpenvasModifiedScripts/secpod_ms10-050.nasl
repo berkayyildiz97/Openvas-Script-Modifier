@@ -106,8 +106,7 @@ if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:moviemkVer, test_version:"2.1",
                                             test_version2:"2.1.4027.0")){
-      report = report_fixed_ver(installed_version:moviemkVer, fixed_version:"2.1.4027.0", install_path:moviemkPath);
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
     exit(0);
   }
@@ -121,7 +120,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
     if(version_is_less(version:moviemkVer, test_version:"6.0.6001.18494")){
       report = report_fixed_ver(installed_version:moviemkVer, fixed_version:"6.0.6001.18494", install_path:moviemkPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -130,7 +129,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
       if(version_is_less(version:moviemkVer, test_version:"6.0.6002.18273")){
       report = report_fixed_ver(installed_version:moviemkVer, fixed_version:"6.0.6002.18273", install_path:moviemkPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }

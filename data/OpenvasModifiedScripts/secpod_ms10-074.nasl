@@ -89,7 +89,7 @@ if(sysPath)
     {
       if(version_is_less(version:dllVer, test_version:"4.1.0.6151")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"4.1.0.6151", install_path:sysPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
       exit(0);
     }
@@ -110,6 +110,6 @@ if(hotfix_check_sp(winVista:2, win2008:2, win7:1) > 0)
 {
   if(version_is_less(version:dllVer, test_version:"4.1.0.6151")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"4.1.0.6151", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
   }
 }

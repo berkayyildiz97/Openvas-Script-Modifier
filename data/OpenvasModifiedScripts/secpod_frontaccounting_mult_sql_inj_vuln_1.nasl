@@ -77,7 +77,7 @@ if(faVer[1])
 {
   if(version_is_less(version:faVer[1], test_version:"2.1.7")){
     report = report_fixed_ver(installed_version:faVer[1], fixed_version:"2.1.7");
-    security_message(data:report);
+    security_message(port: faPort, data: report);
     exit(0);
   }
 }

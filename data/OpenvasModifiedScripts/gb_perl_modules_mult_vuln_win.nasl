@@ -99,7 +99,7 @@ if(spVer)
 {
   if(version_is_less(version:spVer, test_version:"5.14.2")){
     report = report_fixed_ver(installed_version:spVer, fixed_version:"5.14.2");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }
 

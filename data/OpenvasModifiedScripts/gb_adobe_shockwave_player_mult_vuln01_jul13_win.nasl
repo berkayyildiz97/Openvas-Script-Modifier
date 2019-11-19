@@ -66,7 +66,7 @@ if(playerVer != NULL)
   if(version_is_less(version:playerVer, test_version:"12.0.3.133"))
   {
     report = report_fixed_ver(installed_version:playerVer, fixed_version:"12.0.3.133");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

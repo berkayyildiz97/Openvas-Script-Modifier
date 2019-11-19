@@ -94,7 +94,7 @@ foreach item (registry_enum_keys(key:key))
         if(version_is_less(version:ver, test_version:"2.0.0.67"))
         {
           report = report_fixed_ver(installed_version:ver, fixed_version:"2.0.0.67", install_path:skypePath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
           exit(0);
         }
       }

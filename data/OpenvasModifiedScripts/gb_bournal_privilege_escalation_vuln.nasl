@@ -70,5 +70,5 @@ if(!bourVer){
 
 if(version_is_less(version:bourVer, test_version:"1.4.1")){
    report = report_fixed_ver(installed_version:bourVer, fixed_version:"1.4.1");
-   security_message(data:report);
+   security_message(port: 0, data: report);
 }

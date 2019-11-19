@@ -113,7 +113,7 @@ if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_is_less(version:wabVer, test_version:"6.0.2900.6040")){
       report = report_fixed_ver(installed_version:wabVer, fixed_version:"6.0.2900.6040", install_path:appPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -127,7 +127,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   {
     if(version_is_less(version:wabVer, test_version:"6.0.3790.4785")){
       report = report_fixed_ver(installed_version:wabVer, fixed_version:"6.0.3790.4785", install_path:appPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -146,7 +146,7 @@ if(hotfix_check_sp(winVista:3, win2008:3) > 0)
   {
     if(version_is_less(version:wabVer, test_version:"6.0.6001.18535")){
       report = report_fixed_ver(installed_version:wabVer, fixed_version:"6.0.6001.18535", install_path:appPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -155,7 +155,7 @@ if(hotfix_check_sp(winVista:3, win2008:3) > 0)
   {
     if(version_is_less(version:wabVer, test_version:"6.0.6002.18324")){
       report = report_fixed_ver(installed_version:wabVer, fixed_version:"6.0.6002.18324", install_path:appPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -166,6 +166,6 @@ else if(hotfix_check_sp(win7:1) > 0)
 {
   if(version_is_less(version:wabVer, test_version:"6.1.7600.16684")){
     report = report_fixed_ver(installed_version:wabVer, fixed_version:"6.1.7600.16684", install_path:appPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

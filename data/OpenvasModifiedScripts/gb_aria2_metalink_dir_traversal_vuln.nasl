@@ -69,5 +69,5 @@ if(!aria2Ver){
 
 if(version_is_less(version:aria2Ver, test_version:"1.9.3")){
   report = report_fixed_ver(installed_version:aria2Ver, fixed_version:"1.9.3");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

@@ -71,7 +71,7 @@ torVer = ereg_replace(pattern:"-", replace:".", string:torVer);
 if(version_is_less(version:torVer, test_version:"0.2.1.28"))
 {
   report = report_fixed_ver(installed_version:torVer, fixed_version:"0.2.1.28");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }
 
@@ -79,6 +79,6 @@ if(torVer =~ "^0\.2\.2.*")
 {
   if(version_is_less(version:torVer, test_version:"0.2.2.20.alpha")){
     report = report_fixed_ver(installed_version:torVer, fixed_version:"0.2.2.20.alpha");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

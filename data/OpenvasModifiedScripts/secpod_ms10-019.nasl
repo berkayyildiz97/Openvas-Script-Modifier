@@ -109,8 +109,7 @@ if(authSigVer)
   {
     if(version_in_range(version:authSigVer, test_version:"5.1",
                         test_version2:"5.131.2195.7374")){
-      report = report_fixed_ver(installed_version:authSigVer, fixed_version:"5.131.2195.7374", install_path:sysPath);
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
       exit(0);
     }
   }
@@ -122,8 +121,7 @@ if(authSigVer)
     {
       if(version_in_range(version:authSigVer, test_version:"5.1",
                           test_version2:"5.131.2600.3660")){
-        report = report_fixed_ver(installed_version:authSigVer, fixed_version:"5.131.2600.3660", install_path:sysPath);
-        security_message(data:report);
+        security_message( port: 0, data: "The target host was found to be vulnerable" );
         exit(0);
       }
     }
@@ -131,8 +129,7 @@ if(authSigVer)
     {
       if(version_in_range(version:authSigVer, test_version:"5.1",
                           test_version2:"5.131.2600.5921")){
-        report = report_fixed_ver(installed_version:authSigVer, fixed_version:"5.131.2600.5921", install_path:sysPath);
-        security_message(data:report);
+        security_message( port: 0, data: "The target host was found to be vulnerable" );
         exit(0);
       }
     }
@@ -145,8 +142,7 @@ if(authSigVer)
     {
       if(version_in_range(version:authSigVer, test_version:"5.1",
                           test_version2:"5.131.3790.4641")){
-        report = report_fixed_ver(installed_version:authSigVer, fixed_version:"5.131.3790.4641", install_path:sysPath);
-        security_message(data:report);
+        security_message( port: 0, data: "The target host was found to be vulnerable" );
         exit(0);
       }
     }
@@ -169,8 +165,7 @@ if(cabBViewVer)
   {
     if(version_in_range(version:cabBViewVer, test_version:"5.0",
                         test_version2:"5.0.3900.7368")){
-      report = report_fixed_ver(installed_version:cabBViewVer, fixed_version:"5.0.3900.7368", install_path:sysPath);
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
     exit(0);
   }
@@ -182,8 +177,7 @@ if(cabBViewVer)
     {
       if(version_in_range(version:cabBViewVer, test_version:"6.0",
                           test_version2:"6.0.2900.3662")){
-        report = report_fixed_ver(installed_version:cabBViewVer, fixed_version:"6.0.2900.3662", install_path:sysPath);
-        security_message(data:report);
+        security_message( port: 0, data: "The target host was found to be vulnerable" );
       }
       exit(0);
     }
@@ -191,8 +185,7 @@ if(cabBViewVer)
     {
       if(version_in_range(version:cabBViewVer, test_version:"6.0",
                           test_version2:"6.0.2900.5926")){
-        report = report_fixed_ver(installed_version:cabBViewVer, fixed_version:"6.0.2900.5926", install_path:sysPath);
-        security_message(data:report);
+        security_message( port: 0, data: "The target host was found to be vulnerable" );
       }
       exit(0);
     }
@@ -205,8 +198,7 @@ if(cabBViewVer)
     {
       if(version_in_range(version:cabBViewVer, test_version:"6.0",
                           test_version2:"6.0.3790.4648")){
-        report = report_fixed_ver(installed_version:cabBViewVer, fixed_version:"6.0.3790.4648", install_path:sysPath);
-        security_message(data:report);
+        security_message( port: 0, data: "The target host was found to be vulnerable" );
       }
       exit(0);
     }
@@ -229,7 +221,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
     if(version_is_less(version:cabVer, test_version:"6.0.6001.18404")){
       report = report_fixed_ver(installed_version:cabVer, fixed_version:"6.0.6001.18404", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -238,7 +230,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
       if(version_is_less(version:cabVer, test_version:"6.0.6002.18184")){
         report = report_fixed_ver(installed_version:cabVer, fixed_version:"6.0.6002.18184", install_path:sysPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -252,7 +244,7 @@ else if(hotfix_check_sp(win2008:3) > 0)
   {
     if(version_is_less(version:cabVer, test_version:"6.0.6001.18404")){
       report = report_fixed_ver(installed_version:cabVer, fixed_version:"6.0.6001.18404", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -261,7 +253,7 @@ else if(hotfix_check_sp(win2008:3) > 0)
   {
     if(version_is_less(version:cabVer, test_version:"6.0.6002.18184")){
       report = report_fixed_ver(installed_version:cabVer, fixed_version:"6.0.6002.18184", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -272,6 +264,6 @@ else if(hotfix_check_sp(win7:1) > 0)
 {
   if(version_is_less(version:cabVer, test_version:"6.1.7600.16500")){
      report = report_fixed_ver(installed_version:cabVer, fixed_version:"6.1.7600.16500", install_path:sysPath);
-     security_message(data:report);
+     security_message(port: 0, data: report);
   }
 }

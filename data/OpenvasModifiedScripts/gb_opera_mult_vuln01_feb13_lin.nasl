@@ -83,6 +83,6 @@ if(!operaVer){
 
 if(version_is_less(version:operaVer, test_version:"12.13")){
   report = report_fixed_ver(installed_version:operaVer, fixed_version:"12.13");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

@@ -85,5 +85,5 @@ if(!quickVer){
 
 if(version_is_less(version:quickVer, test_version:"7.7.1")){
   report = report_fixed_ver(installed_version:quickVer, fixed_version:"7.7.1");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

@@ -91,7 +91,7 @@ if(hotfix_missing(name:"2345304") == 1)
             if(version_is_less(version:vers, test_version:"12.0.6539.5000"))
             {
               report = report_fixed_ver(installed_version:vers, fixed_version:"12.0.6539.5000", install_path:dllPath);
-              security_message(data:report);
+              security_message(port: 0, data: report);
               exit(0);
             }
           }
@@ -132,7 +132,7 @@ foreach item (registry_enum_keys(key:key))
     if(version_is_less(version:dllVer, test_version:"12.0.6545.5002"))
     {
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"12.0.6545.5002", install_path:dllPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
       exit(0);
     }
   }

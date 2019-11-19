@@ -79,7 +79,7 @@ foreach dir( make_list_unique( "/tangocms", "/cms", cgi_dirs( port:port ) ) ) {
     if(!isnull(version[1])) {
       if(version_is_less(version:version[1], test_version:"2.2.4")){
         report = report_fixed_ver(installed_version:version[1], fixed_version:"2.2.4");
-        security_message(data:report);
+        security_message(port: port, data: report);
         exit(0);
       }
     }

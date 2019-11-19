@@ -73,7 +73,7 @@ if(safe_checks()) {
 
     if(version_is_less(version: vers, test_version: "0.12.4")) {
       report = report_fixed_ver(installed_version:vers, fixed_version:"0.12.4");
-      security_message(data:report);
+      security_message(port: port, data: report);
       exit(0);
     }
 

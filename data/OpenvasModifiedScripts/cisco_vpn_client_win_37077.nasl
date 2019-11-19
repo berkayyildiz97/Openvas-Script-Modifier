@@ -66,7 +66,7 @@ if( ! version = get_kb_item( "SMB/CiscoVPNClient/Version" ) ) exit( 0 );
 
 if( version_is_less( version:version, test_version:"5.0.06.0100" ) ) {
   report = report_fixed_ver(installed_version:version, fixed_version:"5.0.06.0100");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit( 0 );
 }
 

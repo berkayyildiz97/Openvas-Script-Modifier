@@ -63,5 +63,5 @@ if(!audacityVer)
 
 if(version_is_less(version:audacityVer, test_version:"1.3.6")){
   report = report_fixed_ver(installed_version:audacityVer, fixed_version:"1.3.6");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

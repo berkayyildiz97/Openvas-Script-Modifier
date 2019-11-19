@@ -97,7 +97,7 @@ if(hotfix_check_sp(xp:4) > 0)
 {
   if(version_is_less(version:win32SysVer, test_version:"5.1.2600.6484")){
     report = report_fixed_ver(installed_version:win32SysVer, fixed_version:"5.1.2600.6484", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
   exit(0);
 }
@@ -106,7 +106,7 @@ if(hotfix_check_sp(xpx64:3,win2003x64:3,win2003:3) > 0)
 {
   if(version_is_less(version:win32SysVer, test_version:"5.2.3790.5263")){
     report = report_fixed_ver(installed_version:win32SysVer, fixed_version:"5.2.3790.5263", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
   exit(0);
 }

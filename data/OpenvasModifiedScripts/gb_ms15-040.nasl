@@ -91,7 +91,7 @@ if(adfs_ver)
   if(version_is_less(version:adfs_ver, test_version:"6.3.9600.17720"))
   {
     report = report_fixed_ver(installed_version:adfs_ver, fixed_version:"6.3.9600.17720", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

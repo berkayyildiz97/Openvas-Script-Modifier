@@ -80,7 +80,7 @@ if(vers = get_version_from_kb(port:port,app:"moodle")) {
   if(vers =~ "^1\.8") {
     if(version_is_less(version: vers, test_version: "1.8.13")) {
        report = report_fixed_ver(installed_version:vers, fixed_version:"1.8.13");
-       security_message(data:report);
+       security_message(port: port, data: report);
        exit(0);
     }
   }
@@ -88,7 +88,7 @@ if(vers = get_version_from_kb(port:port,app:"moodle")) {
   else if(vers =~ "^1\.9") {
     if(version_is_less(version: vers, test_version: "1.9.9")) {
       report = report_fixed_ver(installed_version:vers, fixed_version:"1.9.9");
-      security_message(data:report);
+      security_message(port: port, data: report);
       exit(0);
     }
   }

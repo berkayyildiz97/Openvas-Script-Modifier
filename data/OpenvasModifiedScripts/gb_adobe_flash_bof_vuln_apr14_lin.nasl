@@ -73,6 +73,6 @@ if(!playerVer = get_app_version(cpe:CPE)){
 if(version_is_less(version:playerVer, test_version:"11.2.202.356"))
 {
   report = report_fixed_ver(installed_version:playerVer, fixed_version:"11.2.202.356");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

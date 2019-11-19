@@ -87,7 +87,7 @@ if(!isnull(mysqlVer[1]) && mysqlVer[1] =~ "^5\.")
 {
   if(version_is_less(version:mysqlVer[1], test_version:"5.1.49")){
     report = report_fixed_ver(installed_version:mysqlVer[1], fixed_version:"5.1.49");
-    security_message(data:report);
+    security_message(port: sqlPort, data: report);
   }
 }
 

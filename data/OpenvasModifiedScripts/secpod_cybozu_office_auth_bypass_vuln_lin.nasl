@@ -85,7 +85,7 @@ foreach binaryName (cbofName)
   {
     if(version_is_less(version:cbofVer[1], test_version:"8.1.0.1")){
       report = report_fixed_ver(installed_version:cbofVer[1], fixed_version:"8.1.0.1");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 }

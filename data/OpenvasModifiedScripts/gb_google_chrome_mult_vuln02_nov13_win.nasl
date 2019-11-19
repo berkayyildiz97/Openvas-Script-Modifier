@@ -74,6 +74,6 @@ if(!my_app_ver = get_app_version(cpe:CPE)){
 if(version_is_less(version:my_app_ver, test_version:"31.0.1650.57"))
 {
   report = report_fixed_ver(installed_version:my_app_ver, fixed_version:"31.0.1650.57");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

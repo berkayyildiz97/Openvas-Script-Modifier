@@ -110,21 +110,21 @@ if(hotfix_check_sp(win2k:5) > 0)
   {
     if(version_is_less(version:dllVer, test_version:"6.1.9.733")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.1.9.733");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
   else if(directXver =~ "^4\.08")
   {
     if(version_is_less(version:dllVer, test_version:"6.3.1.890")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.3.1.890");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
   else if(directXver =~ "^4\.09")
   {
     if(version_is_less(version:dllVer, test_version:"6.5.1.908")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.1.908");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
   exit(0);
@@ -139,7 +139,7 @@ if(hotfix_check_sp(xp:4) > 0)
     {
       if(version_is_less(version:dllVer, test_version:"6.5.2600.3243")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.2600.3243");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
   }
@@ -154,14 +154,14 @@ if(hotfix_check_sp(win2003:3) > 0)
     {
       if(version_is_less(version:dllVer, test_version:"6.5.3790.3035")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.3790.3035");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
     else if("Service Pack 2" >< SP)
     {
       if(version_is_less(version:dllVer, test_version:"6.5.3790.4178")){
         report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.5.3790.4178");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
     }
   }
@@ -188,7 +188,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
     if(version_is_less(version:dllVer, test_version:"6.6.6000.16587")){
           report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.6.6000.16587");
-          security_message(data:report);
+          security_message(port: 0, data: report);
     }
          exit(0);
   }

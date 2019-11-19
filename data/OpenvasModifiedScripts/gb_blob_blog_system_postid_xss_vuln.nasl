@@ -74,7 +74,7 @@ if(bbsVer[1] != NULL)
 {
   if(version_is_less(version:bbsVer[1], test_version:"1.2")){
     report = report_fixed_ver(installed_version:bbsVer[1], fixed_version:"1.2");
-    security_message(data:report);
+    security_message(port: bbsPort, data: report);
     exit(0);
   }
 }

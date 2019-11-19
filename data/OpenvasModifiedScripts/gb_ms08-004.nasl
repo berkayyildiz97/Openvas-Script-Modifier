@@ -87,7 +87,7 @@ if(hotfix_check_sp(winVista:3) > 0)
 {
   if(version_is_less(version:sysVer, test_version:"6.0.6000.16627")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6000.16627");
-      security_message(data:report);
+      security_message(port: 0, data: report);
   }
   exit(0);
 }

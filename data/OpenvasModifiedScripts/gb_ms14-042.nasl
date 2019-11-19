@@ -93,6 +93,6 @@ if(!Win32sysVer){
 if(version_is_less(version:Win32sysVer, test_version:"2.1.40512.2"))
 {
   report = report_fixed_ver(installed_version:Win32sysVer, fixed_version:"2.1.40512.2", install_path:sysPath);
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

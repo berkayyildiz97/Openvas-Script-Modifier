@@ -112,7 +112,7 @@ if(docmanVer[1])
 {
   if(version_is_less(version:docmanVer[1], test_version:"1.2.5.2")){
     report = report_fixed_ver(installed_version:docmanVer[1], fixed_version:"1.2.5.2");
-    security_message(data:report);
+    security_message(port: docmanPort, data: report);
     exit(0);
   }
 }

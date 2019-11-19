@@ -77,6 +77,6 @@ if(vers = get_version_from_kb(port:port, app:"rt_tracker"))
 {
   if(version_is_less(version:vers, test_version:"3.8.9")){
     report = report_fixed_ver(installed_version:vers, fixed_version:"3.8.9");
-    security_message(data:report);
+    security_message(port: port, data: report);
   }
 }

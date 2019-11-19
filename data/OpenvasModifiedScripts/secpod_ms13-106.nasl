@@ -92,7 +92,7 @@ if(offVer =~ "^(12|14)\..*")
     if(version_is_less(version:fileVer, test_version:"5.70.51021"))
     {
       report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.70.51021", install_path:filePath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
       exit(0);
     }
   }

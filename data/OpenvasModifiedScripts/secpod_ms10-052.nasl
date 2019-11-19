@@ -98,7 +98,7 @@ if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_is_less(version:dllVer, test_version:"1.6.0.52")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"1.6.0.52");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -112,7 +112,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   {
     if(version_is_less(version:dllVer, test_version:"1.6.0.52")){
       report = report_fixed_ver(installed_version:dllVer, fixed_version:"1.6.0.52");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }

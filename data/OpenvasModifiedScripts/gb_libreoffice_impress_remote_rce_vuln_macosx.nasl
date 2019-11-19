@@ -79,7 +79,7 @@ if(libreVer =~ "^(4\.)")
   if(version_is_less(version:libreVer, test_version:"4.2.7"))
   {
     report = report_fixed_ver(installed_version:libreVer, fixed_version:"4.2.7");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }
 
@@ -88,7 +88,7 @@ if(libreVer =~ "^(4\.3)")
   if(version_is_less(version:libreVer, test_version:"4.3.3"))
   {
     report = report_fixed_ver(installed_version:libreVer, fixed_version:"4.3.3");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

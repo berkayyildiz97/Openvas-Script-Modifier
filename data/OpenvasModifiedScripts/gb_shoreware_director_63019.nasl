@@ -89,7 +89,7 @@ if(!build)exit(0);
 
 if(version_is_less(version: build, test_version: "18.61.7500.0")) {
     report = report_fixed_ver(installed_version:build, fixed_version:"18.61.7500.0");
-    security_message(data:report);
+    security_message(port: port, data: report);
     exit(0);
 }
 

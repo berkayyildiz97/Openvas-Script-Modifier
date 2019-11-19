@@ -69,6 +69,6 @@ if(xnviewVer != NULL)
 {
   if(version_is_less(version:xnviewVer, test_version:"1.97.2")){
    report = report_fixed_ver(installed_version:xnviewVer, fixed_version:"1.97.2");
-   security_message(data:report);
+   security_message(port: 0, data: report);
   }
 }

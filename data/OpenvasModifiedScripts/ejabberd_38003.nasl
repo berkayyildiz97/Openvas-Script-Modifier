@@ -72,7 +72,7 @@ if(!isnull(version)) {
 
   if(version_is_less(version: version, test_version: "2.1.3")) {
       report = report_fixed_ver(installed_version:version, fixed_version:"2.1.3");
-      security_message(data:report);
+      security_message(port: xmpp_port, data: report);
       exit(0);
   }
 

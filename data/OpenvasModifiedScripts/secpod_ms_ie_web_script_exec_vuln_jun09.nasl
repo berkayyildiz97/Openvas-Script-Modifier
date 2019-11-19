@@ -75,10 +75,9 @@ if(!ieVer){
 
 if(version_is_less(version:ieVer, test_version:"8.0")){
   report = report_fixed_ver(installed_version:ieVer, fixed_version:"8.0");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }
 else if(version_in_range(version:ieVer, test_version:"8.0",
                          test_version2:"8.0.6001.18782")){
-  report = report_fixed_ver(installed_version:ieVer, fixed_version:"8.0.6001.18782");
-  security_message(data:report);
+  security_message(port:0);
 }

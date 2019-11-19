@@ -116,6 +116,6 @@ if(version_is_less_equal(version:wizardVer[1], test_version:"2.0A"))
 
   if(version_is_less(version:dllVer, test_version:"4.0.11.530")){
     report = report_fixed_ver(installed_version:dllVer, fixed_version:"4.0.11.530", install_path:path);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

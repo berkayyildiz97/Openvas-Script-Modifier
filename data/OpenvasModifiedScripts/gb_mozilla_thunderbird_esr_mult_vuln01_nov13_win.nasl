@@ -93,6 +93,6 @@ if(ffVer && ffVer =~ "^17\.0")
 {
   if(version_is_less(version:ffVer, test_version:"17.0.10"))
     report = report_fixed_ver(installed_version:ffVer, fixed_version:"17.0.10");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
 }

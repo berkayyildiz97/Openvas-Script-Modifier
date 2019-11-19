@@ -79,5 +79,5 @@ if(!firefoxVer)
 
 if(version_is_less(version:firefoxVer ,test_version:"3.0.11")){
   report = report_fixed_ver(installed_version:firefoxVer, fixed_version:"3.0.11");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

@@ -105,7 +105,7 @@ if(hotfix_check_sp(win2003:3) > 0)
   {
      if(version_is_less(version:sysVer, test_version:"5.2.3790.4573")){
         report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.2.3790.4573", install_path:sysPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
      }
       exit(0);
   }
@@ -127,7 +127,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6001.18311")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6001.18311", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -136,7 +136,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
       if(version_is_less(version:sysVer, test_version:"6.0.6002.18091")){
         report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6002.18091", install_path:sysPath);
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
      exit(0);
   }
@@ -150,7 +150,7 @@ else if(hotfix_check_sp(win2008:3) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6001.18311")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6001.18311", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -159,7 +159,7 @@ else if(hotfix_check_sp(win2008:3) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6002.18091")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6002.18091", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }

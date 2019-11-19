@@ -71,5 +71,5 @@ if(!filecopaVer){
 
 if(version_is_less(version:filecopaVer, test_version:"5.03")){
   report = report_fixed_ver(installed_version:filecopaVer, fixed_version:"5.03");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

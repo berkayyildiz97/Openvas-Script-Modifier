@@ -70,7 +70,7 @@ if(chromeVer != NULL)
 {
   if(version_is_less(version:chromeVer, test_version:"2.0.172.37")){
     report = report_fixed_ver(installed_version:chromeVer, fixed_version:"2.0.172.37");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

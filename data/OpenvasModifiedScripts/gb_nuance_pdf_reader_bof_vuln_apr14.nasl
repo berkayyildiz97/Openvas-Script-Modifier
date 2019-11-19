@@ -73,6 +73,6 @@ if(!nuaVer = get_app_version(cpe:CPE)){
 if(version_is_less(version:nuaVer, test_version:"8.10.1302"))
 {
   report = report_fixed_ver(installed_version:nuaVer, fixed_version:"8.10.1302");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

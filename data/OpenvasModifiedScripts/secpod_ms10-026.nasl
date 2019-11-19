@@ -106,7 +106,7 @@ if(hotfix_check_sp(xp:4) > 0)
   if(version_is_less(version:sysVer, test_version:"1.6.0.51"))
   {
     report = report_fixed_ver(installed_version:sysVer, fixed_version:"1.6.0.51", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -124,7 +124,7 @@ if(hotfix_check_sp(winVista:3, win2008:3) > 0)
 {
   if(version_is_less(version:sysVer, test_version:"1.9.0.402")){
     report = report_fixed_ver(installed_version:sysVer, fixed_version:"1.9.0.402", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }
 

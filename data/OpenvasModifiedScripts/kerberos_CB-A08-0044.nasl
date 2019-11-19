@@ -136,7 +136,7 @@ foreach i (keys(rls)) {
       if(!isnull(version)) {
         if( version_is_less(version:version[1], test_version:ver[i]) ) {
           report = report_fixed_ver(installed_version:version[1], fixed_version:"test_version:ver[i");
-          security_message(data:report);
+          security_message(port: 0, data: report);
         } else {
           if( version_is_equal(version:version[1], test_version:ver[i]) ) {
             pat = version[0]+"~([0-9\.\-]+)";
@@ -144,7 +144,7 @@ foreach i (keys(rls)) {
             if(!isnull(release)) {
               if( version_is_less(version:release[1] ,test_version:rel[i]) ) {
                 report = report_fixed_ver(installed_version:release[1], fixed_version:"test_version:rel[i");
-                security_message(data:report);
+                security_message(port: 0, data: report);
               }
             }
           }

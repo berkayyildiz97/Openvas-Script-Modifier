@@ -76,6 +76,6 @@ if(!scpVer = get_app_version(cpe:CPE)){
 if(version_is_less(version:scpVer, test_version:"5.1.6"))
 {
   report = report_fixed_ver(installed_version:scpVer, fixed_version:"5.1.6");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

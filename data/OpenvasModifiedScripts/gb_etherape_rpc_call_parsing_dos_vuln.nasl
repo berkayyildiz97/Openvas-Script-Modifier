@@ -82,7 +82,7 @@ foreach binaryName (etherapeName)
     if(version_is_less(version:etherVer[1], test_version:"0.9.12"))
     {
       report = report_fixed_ver(installed_version:etherVer[1], fixed_version:"0.9.12");
-      security_message(data:report);
+      security_message(port: 0, data: report);
       close(sock);
       exit(0);
     }

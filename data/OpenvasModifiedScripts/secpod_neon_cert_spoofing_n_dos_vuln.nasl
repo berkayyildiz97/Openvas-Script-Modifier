@@ -71,5 +71,5 @@ if(!neonVer)
 
 if(version_is_less(version:neonVer, test_version:"0.28.6")){
   report = report_fixed_ver(installed_version:neonVer, fixed_version:"0.28.6");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

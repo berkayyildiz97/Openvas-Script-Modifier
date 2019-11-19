@@ -92,7 +92,7 @@ if(!safe_checks())
 
 if(version_is_less(version:httpdxVer, test_version:"1.4.1")){
   report = report_fixed_ver(installed_version:httpdxVer, fixed_version:"1.4.1");
-  security_message(data:report);
+  security_message(port: httpdxPort, data: report);
 }
 
 exit(99);

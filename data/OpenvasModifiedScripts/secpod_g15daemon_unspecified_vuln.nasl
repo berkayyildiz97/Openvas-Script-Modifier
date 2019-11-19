@@ -61,5 +61,5 @@ if(!g15dVer)
 
 if(version_is_less(version:g15dVer, test_version:"1.9.4")){
   report = report_fixed_ver(installed_version:g15dVer, fixed_version:"1.9.4");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

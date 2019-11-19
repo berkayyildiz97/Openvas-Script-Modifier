@@ -76,7 +76,7 @@ if(shareazaVer != NULL)
 {
   if(version_is_less(version:shareazaVer, test_version:"2.3.1.0")){
     report = report_fixed_ver(installed_version:shareazaVer, fixed_version:"2.3.1.0");
-    security_message(data:report);
+    security_message(port: shareazaPort, data: report);
     exit(0);
   }
 }

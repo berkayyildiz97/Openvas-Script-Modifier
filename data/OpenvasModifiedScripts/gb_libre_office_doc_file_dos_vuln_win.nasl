@@ -73,5 +73,5 @@ if(officeVer =~ "^3\..*")
 {
   if(version_is_less(version:officeVer, test_version:"3.4.3"))
   report = report_fixed_ver(installed_version:officeVer, fixed_version:"3.4.3");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

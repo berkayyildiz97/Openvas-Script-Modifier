@@ -96,7 +96,7 @@ foreach gnutlsBin (gnuPath)
   {
     if(version_is_less(version:gnutlsVer[1], test_version:"2.2.4")){
       report = report_fixed_ver(installed_version:gnutlsVer[1], fixed_version:"2.2.4", install_path:gnuPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     ssh_close_connection();
     exit(0);

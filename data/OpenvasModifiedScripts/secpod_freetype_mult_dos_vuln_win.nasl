@@ -77,6 +77,6 @@ if(ftVer != NULL)
 {
   if(version_is_less(version: ftVer, test_version: "2.4.2")){
     report = report_fixed_ver(installed_version:ftVer, fixed_version:"2.4.2");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

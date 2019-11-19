@@ -69,7 +69,7 @@ if( ! version = get_app_version( cpe:CPE, port:port ) ) exit( 0 );
 if( version_is_less( version:version, test_version:"4.1.3" ) )
 {
   report = report_fixed_ver(installed_version:version, fixed_version:"4.1.3");
-  security_message(data:report);
+  security_message(port: port, data: report);
   exit( 0 );
 }
 

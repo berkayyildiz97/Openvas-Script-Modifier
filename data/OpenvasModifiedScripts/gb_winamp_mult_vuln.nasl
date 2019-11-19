@@ -82,5 +82,5 @@ if(!winampVer){
 
 if(version_is_less(version:winampVer, test_version:"5.6")){
   report = report_fixed_ver(installed_version:winampVer, fixed_version:"5.6");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

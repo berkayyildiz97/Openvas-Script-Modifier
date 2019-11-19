@@ -70,5 +70,5 @@ if(!ghostVer){
 
 if(version_is_less(version:ghostVer, test_version:"8.71")){
    report = report_fixed_ver(installed_version:ghostVer, fixed_version:"8.71");
-   security_message(data:report);
+   security_message(port: 0, data: report);
 }

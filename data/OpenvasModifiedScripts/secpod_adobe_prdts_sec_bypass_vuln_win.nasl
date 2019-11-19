@@ -69,7 +69,7 @@ if(readerVer = get_app_version(cpe:CPE, nofork:TRUE))
   {
     if(version_is_less(version:readerVer, test_version:"10.1")) {
       report = report_fixed_ver(installed_version:readerVer, fixed_version:"10.1");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 
@@ -77,7 +77,7 @@ if(readerVer = get_app_version(cpe:CPE, nofork:TRUE))
   {
     if(version_is_less(version:readerVer, test_version:"9.4.5")) {
       report = report_fixed_ver(installed_version:readerVer, fixed_version:"9.4.5");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 
@@ -85,7 +85,7 @@ if(readerVer = get_app_version(cpe:CPE, nofork:TRUE))
   {
     if(version_is_less(version:readerVer, test_version:"8.3")){
       report = report_fixed_ver(installed_version:readerVer, fixed_version:"8.3");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 }
@@ -97,7 +97,7 @@ if(acrobatVer = get_app_version(cpe:CPE))
   if(acrobatVer =~ "^10\.") {
     if(version_is_less(version:acrobatVer, test_version:"10.1")) {
       report = report_fixed_ver(installed_version:acrobatVer, fixed_version:"10.1");
-      security_message(data:report);
+      security_message(port: 0, data: report);
       exit(0);
     }
   }
@@ -105,7 +105,7 @@ if(acrobatVer = get_app_version(cpe:CPE))
   if(acrobatVer =~ "^9\.") {
     if(version_is_less(version:acrobatVer, test_version:"9.4.5")) {
       report = report_fixed_ver(installed_version:acrobatVer, fixed_version:"9.4.5");
-      security_message(data:report);
+      security_message(port: 0, data: report);
       exit(0);
     }
   }
@@ -113,7 +113,7 @@ if(acrobatVer = get_app_version(cpe:CPE))
   if(acrobatVer =~ "^8\.") {
     if(version_is_less(version:acrobatVer, test_version:"8.3")) {
       report = report_fixed_ver(installed_version:acrobatVer, fixed_version:"8.3");
-      security_message(data:report);
+      security_message(port: 0, data: report);
       exit(0);
     }
   }

@@ -65,5 +65,5 @@ if(!torVer)
 
 if(version_is_less(version:torVer, test_version:"0.2.0.33")){
   report = report_fixed_ver(installed_version:torVer, fixed_version:"0.2.0.33");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

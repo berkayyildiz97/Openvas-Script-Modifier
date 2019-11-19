@@ -66,5 +66,5 @@ if(!amarokVer)
 
 if(version_is_less(version:amarokVer, test_version:"2.0.1.1")){
   report = report_fixed_ver(installed_version:amarokVer, fixed_version:"2.0.1.1");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

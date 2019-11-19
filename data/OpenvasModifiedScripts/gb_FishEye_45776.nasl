@@ -74,7 +74,7 @@ vers = get_kb_item(string("www/", port, "/FishEye"));
 if(vers) {
   if(version_is_less(version: vers, test_version: "2.4.4")) {
     report = report_fixed_ver(installed_version:vers, fixed_version:"2.4.4");
-    security_message(data:report);
+    security_message(port: port, data: report);
     exit(0);
   }
 }

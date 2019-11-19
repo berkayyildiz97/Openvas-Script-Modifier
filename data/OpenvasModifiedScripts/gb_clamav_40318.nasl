@@ -78,7 +78,7 @@ if(!ver)exit(0);
 
 if(version_is_less(version:ver, test_version:"0.96.1")){
   report = report_fixed_ver(installed_version:ver, fixed_version:"0.96.1");
-  security_message(data:report);
+  security_message(port: port, data: report);
 }
 
 exit(0);

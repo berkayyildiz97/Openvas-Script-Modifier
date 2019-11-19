@@ -87,7 +87,7 @@ if(!gcVer){
 
 if(version_is_less(version:gcVer, test_version:"4.1.249.1036")){
   report = report_fixed_ver(installed_version:gcVer, fixed_version:"4.1.249.1036");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }
 

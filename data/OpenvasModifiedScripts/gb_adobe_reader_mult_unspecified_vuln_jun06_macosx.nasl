@@ -75,7 +75,7 @@ if(readerVer)
   if(version_is_less(version:readerVer, test_version:"7.0.8"))
   {
     report = report_fixed_ver(installed_version:readerVer, fixed_version:"7.0.8");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

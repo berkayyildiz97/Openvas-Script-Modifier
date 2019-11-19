@@ -79,7 +79,7 @@ if(!mwgVer){
 if(version_is_less(version:mwgVer, test_version:"7.2.0.10"))
 {
   report = report_fixed_ver(installed_version:mwgVer, fixed_version:"7.2.0.10");
-  security_message(data:report);
+  security_message(port: mwgPort, data: report);
   exit(0);
 }
 
@@ -88,7 +88,7 @@ if(mwgVer =~ "^7\.4")
   if(version_is_less(version:mwgVer, test_version:"7.4.1"))
   {
     report = report_fixed_ver(installed_version:mwgVer, fixed_version:"7.4.1");
-    security_message(data:report);
+    security_message(port: mwgPort, data: report);
     exit(0);
   }
 }
@@ -98,7 +98,7 @@ if(mwgVer =~ "^7\.3")
   if(version_is_less(version:mwgVer, test_version:"7.3.2.6"))
   {
     report = report_fixed_ver(installed_version:mwgVer, fixed_version:"7.3.2.6");
-    security_message(data:report);
+    security_message(port: mwgPort, data: report);
     exit(0);
   }
 }

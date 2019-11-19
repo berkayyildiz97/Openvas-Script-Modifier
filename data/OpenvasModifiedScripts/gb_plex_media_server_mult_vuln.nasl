@@ -90,6 +90,6 @@ if(!plexVer = get_app_version(cpe:CPE, port:plexPort)){
 if(version_is_less(version:plexVer, test_version:"0.9.9.3"))
 {
   report = report_fixed_ver(installed_version:plexVer, fixed_version:"0.9.9.3");
-  security_message(data:report);
+  security_message(port: plexPort, data: report);
   exit(0);
 }

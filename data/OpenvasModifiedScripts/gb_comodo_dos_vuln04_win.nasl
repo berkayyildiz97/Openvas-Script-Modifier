@@ -61,7 +61,7 @@ if(Ver)
 {
   if(version_is_less(version:Ver, test_version:"3.11.108364.552")){
     report = report_fixed_ver(installed_version:Ver, fixed_version:"3.11.108364.552");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

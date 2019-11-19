@@ -91,7 +91,7 @@ foreach dir (make_list_unique("/dotclear", cgi_dirs(port:port)))
     if(version_is_less(version:ver[1], test_version:"2.2.3"))
     {
       report = report_fixed_ver(installed_version:ver[1], fixed_version:"2.2.3");
-      security_message(data:report);
+      security_message(port: port, data: report);
       exit(0);
     }
   }

@@ -90,8 +90,7 @@ playerVer = get_kb_item("AdobeFlashPlayer/Linux/Ver");
 if(playerVer != NULL)
 {
   if(version_in_range(version:playerVer, test_version:"10.0", test_version2:"10.0.42.33")){
-    report = report_fixed_ver(installed_version:playerVer, fixed_version:"10.0.42.34");
-    security_message(data:report);
+    security_message( port: 0, data: "The target host was found to be vulnerable" );
   }
 }
 
@@ -100,6 +99,6 @@ if(airVer != NULL)
 {
   if(version_is_less(version:airVer, test_version:"1.5.3")){
     report = report_fixed_ver(installed_version:airVer, fixed_version:"1.5.3");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

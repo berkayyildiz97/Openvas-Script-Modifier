@@ -76,7 +76,7 @@ if(dotVer[1] == NULL){
 
 if(version_is_less(version:dotVer[1], test_version:"2.1.2")){
   report = report_fixed_ver(installed_version:dotVer[1], fixed_version:"2.1.2");
-  security_message(data:report);
+  security_message(port: appPort, data: report);
   exit(0);
 }
 

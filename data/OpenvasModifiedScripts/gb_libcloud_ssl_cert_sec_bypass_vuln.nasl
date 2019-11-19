@@ -82,7 +82,7 @@ if(libName)
       if(version_is_less(version:libVer[1], test_version:"0.4.1"))
       {
         report = report_fixed_ver(installed_version:libVer[1], fixed_version:"0.4.1");
-        security_message(data:report);
+        security_message(port: 0, data: report);
         close(sock);
         exit(0);
       }

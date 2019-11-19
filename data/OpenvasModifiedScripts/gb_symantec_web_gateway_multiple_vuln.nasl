@@ -89,7 +89,7 @@ if("unknown" >!< vers && vers)
   if(version_is_less(version:vers, test_version:"5.1.1"))
   {
     report = report_fixed_ver(installed_version:vers, fixed_version:"5.1.1");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

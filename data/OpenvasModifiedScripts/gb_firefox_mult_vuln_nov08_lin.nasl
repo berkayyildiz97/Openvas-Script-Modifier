@@ -83,11 +83,10 @@ if(!ffVer){
 
 if(version_is_less(version:ffVer, test_version:"2.0.0.18")){
   report = report_fixed_ver(installed_version:ffVer, fixed_version:"2.0.0.18");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }
 
 if(version_in_range(version:ffVer, test_version:"3.0", test_version2:"3.0.3")){
-  report = report_fixed_ver(installed_version:ffVer, fixed_version:"2.0.0.183.0.4");
-  security_message(data:report);
+  security_message( port: 0, data: "The target host was found to be vulnerable" );
 }

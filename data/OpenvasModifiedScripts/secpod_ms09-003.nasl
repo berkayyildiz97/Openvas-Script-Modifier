@@ -105,7 +105,7 @@ if("Microsoft Exchange Server 2003" >< appName)
 
   if(version_is_less(version:fileVer, test_version:"6.5.7654.12")){
     report = report_fixed_ver(installed_version:fileVer, fixed_version:"6.5.7654.12");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }
 
@@ -123,6 +123,6 @@ else if("Microsoft Exchange Server 2007" >< appName)
   #  Check for version < 8.01.0336.0000
   if(version_is_less(version:fileVer, test_version:"8.01.0336.0000")){
     report = report_fixed_ver(installed_version:fileVer, fixed_version:"8.01.0336.0000");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

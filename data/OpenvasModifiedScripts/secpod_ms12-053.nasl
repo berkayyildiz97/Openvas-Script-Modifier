@@ -96,6 +96,6 @@ if(hotfix_check_sp(xp:4) > 0)
 {
   if(version_is_less(version:rdpVer, test_version:"5.1.2600.6258")){
      report = report_fixed_ver(installed_version:rdpVer, fixed_version:"5.1.2600.6258", install_path:sysPath);
-     security_message(data:report);
+     security_message(port: 0, data: report);
   }
 }

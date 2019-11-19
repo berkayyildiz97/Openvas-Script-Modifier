@@ -98,8 +98,7 @@ if(hotfix_check_sp(win2k:5) > 0)
 {
   if(version_in_range(version:telnetVer, test_version:"5.0",
                       test_version2:"5.0.33670.3")){
-    report = report_fixed_ver(installed_version:telnetVer, fixed_version:"5.0.33670.3");
-    security_message(data:report);
+    security_message( port: 0, data: "The target host was found to be vulnerable" );
   }
 }
 
@@ -110,8 +109,7 @@ else if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:telnetVer, test_version:"5.1",
                         test_version2:"5.1.2600.3586")){
-      report = report_fixed_ver(installed_version:telnetVer, fixed_version:"5.1.2600.3586");
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
      exit(0);
   }
@@ -119,8 +117,7 @@ else if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:telnetVer, test_version:"5.1",
                         test_version2:"5.1.2600.5828")){
-      report = report_fixed_ver(installed_version:telnetVer, fixed_version:"5.1.2600.5828");
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
      exit(0);
   }
@@ -134,8 +131,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   {
     if(version_in_range(version:telnetVer, test_version:"5.2",
                         test_version2:"5.2.3790.4527")){
-      report = report_fixed_ver(installed_version:telnetVer, fixed_version:"5.2.3790.4527");
-      security_message(data:report);
+      security_message( port: 0, data: "The target host was found to be vulnerable" );
     }
     exit(0);
   }
@@ -162,7 +158,7 @@ if(exeVer)
     {
       if(version_is_less(version:exeVer, test_version:"6.0.6001.18270")){
         report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6001.18270");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
       exit(0);
     }
@@ -171,7 +167,7 @@ if(exeVer)
     {
       if(version_is_less(version:exeVer, test_version:"6.0.6002.18049")){
         report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6002.18049");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
        exit(0);
     }
@@ -185,7 +181,7 @@ if(exeVer)
     {
       if(version_is_less(version:exeVer, test_version:"6.0.6001.18270")){
         report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6001.18270");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
        exit(0);
     }
@@ -194,7 +190,7 @@ if(exeVer)
     {
       if(version_is_less(version:exeVer, test_version:"6.0.6002.18049")){
         report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6002.18049");
-        security_message(data:report);
+        security_message(port: 0, data: report);
       }
       exit(0);
     }

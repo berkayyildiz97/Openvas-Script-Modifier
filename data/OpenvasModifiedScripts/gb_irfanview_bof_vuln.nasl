@@ -74,5 +74,5 @@ if(!irViewVer){
 
 if(version_is_less(version:irViewVer, test_version:"4.27")){
   report = report_fixed_ver(installed_version:irViewVer, fixed_version:"4.27");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

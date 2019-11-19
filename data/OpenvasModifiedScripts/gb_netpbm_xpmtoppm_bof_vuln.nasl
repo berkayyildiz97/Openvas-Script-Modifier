@@ -76,6 +76,6 @@ if(netpbmVer)
   # NetPBM version 10.47.07(10.47.7)
   if(version_is_less(version:netpbmVer, test_version:"10.47.7")){
     report = report_fixed_ver(installed_version:netpbmVer, fixed_version:"10.47.7");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

@@ -63,5 +63,5 @@ if(!zipVer)
 
 if(version_is_less(version:zipVer, test_version:"4.57")){
   report = report_fixed_ver(installed_version:zipVer, fixed_version:"4.57");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

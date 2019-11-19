@@ -174,7 +174,7 @@ if(dllVer)
     {
       if(version_is_less(version:dllVer, test_version:"2001.12.6931.18057")){
           report = report_fixed_ver(installed_version:dllVer, fixed_version:"2001.12.6931.18057", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
       }
          exit(0);
     }
@@ -187,7 +187,7 @@ if(dllVer)
     {
       if(version_is_less(version:dllVer, test_version:"2001.12.6931.18057")){
           report = report_fixed_ver(installed_version:dllVer, fixed_version:"2001.12.6931.18057", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
       }
          exit(0);
     }

@@ -85,10 +85,9 @@ if(!operaVer){
 
 if(version_is_less(version:operaVer, test_version:"9.25")){
   report = report_fixed_ver(installed_version:operaVer, fixed_version:"9.25");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }
 else if(version_in_range(version:operaVer, test_version:"9.25",
                          test_version2:"9.64")){
-  report = report_fixed_ver(installed_version:operaVer, fixed_version:"9.64");
-  security_message(data:report);
+  security_message(port:0);
 }

@@ -66,5 +66,5 @@ if(!tvncVer)
 
 if(version_is_less(version:tvncVer, test_version:"1.3.10")){
   report = report_fixed_ver(installed_version:tvncVer, fixed_version:"1.3.10");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

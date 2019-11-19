@@ -103,7 +103,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"5.1.2600.6007")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.1.2600.6007", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
         exit(0);
       }
@@ -117,7 +117,7 @@ if(sysPath)
       {
         if(version_is_less(version:sysVer, test_version:"5.2.3790.4737")){
           report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.2.3790.4737", install_path:sysPath);
-          security_message(data:report);
+          security_message(port: 0, data: report);
         }
         exit(0);
       }
@@ -143,7 +143,7 @@ if(hotfix_check_sp(winVista:2) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6001.18499")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6001.18499", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -152,7 +152,7 @@ if(hotfix_check_sp(winVista:2) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6002.18279")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6002.18279", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -166,7 +166,7 @@ else if(hotfix_check_sp(win2008:2) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6001.18499")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6001.18499", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -175,7 +175,7 @@ else if(hotfix_check_sp(win2008:2) > 0)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6002.18279")){
       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6002.18279", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -186,6 +186,6 @@ else if(hotfix_check_sp(win7:1) > 0)
 {
   if(version_is_less(version:sysVer, test_version:"6.1.7600.16625")){
     report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.1.7600.16625", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

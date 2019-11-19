@@ -106,7 +106,7 @@ if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_is_less(version:exeVer, test_version:"5.1.2600.5973")){
       report = report_fixed_ver(installed_version:exeVer, fixed_version:"5.1.2600.5973", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -129,7 +129,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
     if(version_is_less(version:exeVer, test_version:"6.0.6001.18488")){
       report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6001.18488", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -138,7 +138,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   {
       if(version_is_less(version:exeVer, test_version:"6.0.6002.18267")){
       report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6002.18267", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -152,7 +152,7 @@ else if(hotfix_check_sp(win2008:3) > 0)
   {
     if(version_is_less(version:exeVer, test_version:"6.0.6001.18488")){
       report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6001.18488", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
      exit(0);
   }
@@ -161,7 +161,7 @@ else if(hotfix_check_sp(win2008:3) > 0)
   {
     if(version_is_less(version:exeVer, test_version:"6.0.6002.18267")){
       report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6002.18267", install_path:sysPath);
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }
@@ -172,7 +172,7 @@ else if(hotfix_check_sp(win7:1) > 0)
 {
   if(version_is_less(version:exeVer, test_version:"6.1.7600.16617")){
      report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.1.7600.16617", install_path:sysPath);
-     security_message(data:report);
+     security_message(port: 0, data: report);
   }
 }
 

@@ -83,7 +83,7 @@ if(appVer[1] == NULL){
 if(version_is_less(version:appVer[1], test_version:"1.3.1.26"))
 {
   report = report_fixed_ver(installed_version:appVer[1], fixed_version:"1.3.1.26");
-  security_message(data:report);
+  security_message(port: appPort, data: report);
   exit(0);
 }
 

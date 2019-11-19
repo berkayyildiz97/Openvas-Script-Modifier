@@ -68,5 +68,5 @@ if(!bbdVer){
 
 if(version_is_less(version:bbdVer, test_version:"6.0.0.47")){
   report = report_fixed_ver(installed_version:bbdVer, fixed_version:"6.0.0.47");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

@@ -87,5 +87,5 @@ if(isnull(rpVer)){
 # Real player versions < 15.0.0
 if(version_is_less(version:rpVer, test_version:"15.0.0.198")){
   report = report_fixed_ver(installed_version:rpVer, fixed_version:"15.0.0.198");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

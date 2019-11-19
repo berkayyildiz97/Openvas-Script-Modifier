@@ -85,7 +85,7 @@ if(hotfix_check_sp(xp:4) > 0)
 {
   if(version_is_less(version:exeVer, test_version:"1.420.2600.6421")){
     report = report_fixed_ver(installed_version:exeVer, fixed_version:"1.420.2600.6421", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
   exit(0);
 }
@@ -94,7 +94,7 @@ else if(hotfix_check_sp(win2003:3, xpx64:3, win2003x64:3) > 0)
 {
   if(version_is_less(version:exeVer, test_version:"1.422.3790.5194")){
     report = report_fixed_ver(installed_version:exeVer, fixed_version:"1.422.3790.5194", install_path:sysPath);
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
   exit(0);
 }

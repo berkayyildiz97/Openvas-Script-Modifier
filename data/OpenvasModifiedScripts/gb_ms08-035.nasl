@@ -93,7 +93,7 @@ if((hotfix_missing(name:"949014") == 1) &&
         if(version_is_less(version:ntdsaVer, test_version:"5.0.2195.7155"))
         {
           report = report_fixed_ver(installed_version:ntdsaVer, fixed_version:"5.0.2195.7155");
-          security_message(data:report);
+          security_message(port: 0, data: report);
           exit(0);
         }
       }
@@ -104,7 +104,7 @@ if((hotfix_missing(name:"949014") == 1) &&
         {
           if(version_is_less(version:ntdsaVer, test_version:"5.2.3790.3122")){
             report = report_fixed_ver(installed_version:ntdsaVer, fixed_version:"5.2.3790.3122");
-            security_message(data:report);
+            security_message(port: 0, data: report);
           }
           exit(0);
         }
@@ -113,7 +113,7 @@ if((hotfix_missing(name:"949014") == 1) &&
         {
           if(version_is_less(version:ntdsaVer, test_version:"5.2.3790.4274")){
             report = report_fixed_ver(installed_version:ntdsaVer, fixed_version:"5.2.3790.4274");
-            security_message(data:report);
+            security_message(port: 0, data: report);
           }
           exit(0);
         }
@@ -136,7 +136,7 @@ if((hotfix_missing(name:"949014") == 1) &&
         {
           if(version_is_less(version:dllVer, test_version:"6.0.6001.18072")){
              report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6001.18072");
-             security_message(data:report);
+             security_message(port: 0, data: report);
           }
           exit(0);
         }
@@ -167,7 +167,7 @@ if((hotfix_missing(name:"949269") == 1) &&
         {
           if(version_is_less(version:adamdsaVer, test_version:"1.1.3790.4276")){
             report = report_fixed_ver(installed_version:adamdsaVer, fixed_version:"1.1.3790.4276");
-            security_message(data:report);
+            security_message(port: 0, data: report);
           }
           exit(0);
         }
@@ -176,7 +176,7 @@ if((hotfix_missing(name:"949269") == 1) &&
         {
           if(version_is_less(version:adamdsaVer, test_version:"1.1.3790.3129")){
             report = report_fixed_ver(installed_version:adamdsaVer, fixed_version:"1.1.3790.3129");
-            security_message(data:report);
+            security_message(port: 0, data: report);
           }
           exit(0);
         }
@@ -185,7 +185,7 @@ if((hotfix_missing(name:"949269") == 1) &&
         {
           if(version_is_less(version:adamdsaVer, test_version:"1.1.3790.4281")){
             report = report_fixed_ver(installed_version:adamdsaVer, fixed_version:"1.1.3790.4281");
-            security_message(data:report);
+            security_message(port: 0, data: report);
           }
           exit(0);
         }

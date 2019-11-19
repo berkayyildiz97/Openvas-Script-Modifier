@@ -70,5 +70,5 @@ if(!avVer){
 ## ClamAV version less than 0.97.2 (3.0.3.6870)
 if(version_is_less(version:avVer, test_version:"0.97.2")){
   report = report_fixed_ver(installed_version:avVer, fixed_version:"0.97.2");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

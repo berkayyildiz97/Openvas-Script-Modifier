@@ -97,14 +97,14 @@ if (version_is_greater(version:build2check, test_version:"20130212")) {
 
 if (version_is_less(version:version, test_version:"10.4R13")) {
   report = report_fixed_ver(installed_version:version, fixed_version:"10.4r13");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }
 
 if (ereg(pattern:"^11", string:version)) {
   if (version_is_less(version:version, test_version:"11.4.R6")) {
     report = report_fixed_ver(installed_version:version, fixed_version:"11.4.r6");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   } else if (version_is_less(version:version, test_version:"11.4X27.43") &&
              version_is_greater(version:version, test_version:"11.4.X")) {
@@ -116,7 +116,7 @@ if (ereg(pattern:"^11", string:version)) {
 if (ereg(pattern:"^12\.1", string:version)) {
   if (version_is_less(version:version, test_version:"12.1R5")) {
     report = report_fixed_ver(installed_version:version, fixed_version:"12.1r5");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   } else if (version_is_less(version:version, test_version:"12.1X44-D15") &&
              version_is_greater(version:version, test_version:"12.1X"))  {
@@ -128,7 +128,7 @@ if (ereg(pattern:"^12\.1", string:version)) {
 if (ereg(pattern:"^12\.2", string:version)) {
   if (version_is_less(version:version, test_version:"12.2R3")) {
     report = report_fixed_ver(installed_version:version, fixed_version:"12.2r3");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -136,7 +136,7 @@ if (ereg(pattern:"^12\.2", string:version)) {
 if (ereg(pattern:"^12\.3", string:version)) {
   if (version_is_less(version:version, test_version:"12.3R1")) {
     report = report_fixed_ver(installed_version:version, fixed_version:"12.3r1");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   } else if (version_is_less(version:version, test_version:"12.3X50-D11") &&
              version_is_greater(version:version, test_version:"12.3X")) {

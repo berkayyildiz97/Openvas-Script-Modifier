@@ -70,7 +70,7 @@ if(vers = get_app_version(cpe:CPE, port:port)) {
 
   if(version_is_less(version: vers, test_version: "6.1.0")) {
       report = report_fixed_ver(installed_version:vers, fixed_version:"6.1.0");
-      security_message(data:report);
+      security_message(port: port, data: report);
       exit(0);
   }
 

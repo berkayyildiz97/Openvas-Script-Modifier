@@ -80,7 +80,7 @@ if(azPath != NULL)
   {
     if(version_is_less(version:azVer, test_version:"5.85.1842.0")){
       report = report_fixed_ver(installed_version:azVer, fixed_version:"5.85.1842.0");
-      security_message(data:report);
+      security_message(port: 0, data: report);
     }
   }
 }

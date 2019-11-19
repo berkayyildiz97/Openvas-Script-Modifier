@@ -90,8 +90,7 @@ if(vers = get_version_from_kb(port:port, app:"CybozuGaroon"))
 {
   if(version_in_range(version:vers, test_version:"2.0.0", test_version2:"2.1.3"))
   {
-    report = report_fixed_ver(installed_version:vers, fixed_version:"2.1.4");
-    security_message(data:report);
+    security_message(port:port);
     exit(0);
   }
 }
@@ -101,7 +100,7 @@ if(vers = get_version_from_kb(port:port, app:"CybozuDezie"))
   if(version_is_less(version:vers, test_version:"6.1"))
   {
     report = report_fixed_ver(installed_version:vers, fixed_version:"6.1");
-    security_message(data:report);
+    security_message(port: port, data: report);
     exit(0);
   }
 }
@@ -110,6 +109,6 @@ if(vers = get_version_from_kb(port:port, app:"CybozuMailWise"))
 {
   if(version_is_less(version:vers, test_version:"3.1")){
     report = report_fixed_ver(installed_version:vers, fixed_version:"3.1");
-    security_message(data:report);
+    security_message(port: port, data: report);
   }
 }

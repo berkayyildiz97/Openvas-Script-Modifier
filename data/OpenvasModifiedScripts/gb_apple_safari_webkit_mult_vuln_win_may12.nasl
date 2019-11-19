@@ -72,5 +72,5 @@ if(!safVer){
 
 if(version_is_less(version:safVer, test_version:"5.34.57.2")){
   report = report_fixed_ver(installed_version:safVer, fixed_version:"5.34.57.2");
-  security_message(data:report);
+  security_message(port: 0, data: report);
 }

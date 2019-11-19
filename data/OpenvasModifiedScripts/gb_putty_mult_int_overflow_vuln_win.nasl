@@ -90,6 +90,6 @@ if(!puttyVer){
 if(version_is_less(version:puttyVer, test_version:"0.63"))
 {
   report = report_fixed_ver(installed_version:puttyVer, fixed_version:"0.63");
-  security_message(data:report);
+  security_message(port: 0, data: report);
   exit(0);
 }

@@ -69,7 +69,7 @@ if(ffVer)
   if(version_is_less(version:ffVer, test_version:"3.6.25"))
   {
     report = report_fixed_ver(installed_version:ffVer, fixed_version:"3.6.25");
-    security_message(data:report);
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -79,6 +79,6 @@ if(tbVer != NULL)
 {
   if(version_is_less(version:tbVer, test_version:"3.1.17")){
     report = report_fixed_ver(installed_version:tbVer, fixed_version:"3.1.17");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

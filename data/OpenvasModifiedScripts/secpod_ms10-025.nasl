@@ -100,6 +100,6 @@ if(hotfix_check_sp(win2k:5) > 0)
 {
   if(version_is_less(version:exeVer, test_version:"4.1.0.3939")){
     report = report_fixed_ver(installed_version:exeVer, fixed_version:"4.1.0.3939");
-    security_message(data:report);
+    security_message(port: 0, data: report);
   }
 }

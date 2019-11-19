@@ -91,7 +91,7 @@ if(hotfix_missing(name:"958624") == 1)
         {
           if(version_is_less(version:dllVer, test_version:"6.0.6001.18167")){
             report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6001.18167", install_path:sysPath);
-            security_message(data:report);
+            security_message(port: 0, data: report);
           }
           exit(0);
         }
@@ -104,7 +104,7 @@ if(hotfix_missing(name:"958624") == 1)
         {
           if(version_is_less(version:dllVer, test_version:"6.0.6001.18167")){
             report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.0.6001.18167", install_path:sysPath);
-            security_message(data:report);
+            security_message(port: 0, data: report);
           }
           exit(0);
         }
