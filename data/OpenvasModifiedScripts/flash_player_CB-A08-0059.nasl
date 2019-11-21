@@ -95,7 +95,7 @@ if(!flashVer){
   exit(0);
 }
 
-if(version_is_less_equal(version:flashVer, test_version:"9,0,115,0")){
-  report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to " + "9);
+if(version_is_less_equal(version:flashVer, test_version:"9.0.115.0")){
+  report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to " + "9.0.115.0");
   security_message(port: 0, data: report);
 }

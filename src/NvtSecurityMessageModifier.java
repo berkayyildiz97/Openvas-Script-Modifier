@@ -125,6 +125,14 @@ public class NvtSecurityMessageModifier {
 
             while (input.hasNextLine()) {
                 String line = input.nextLine();
+
+                //To correct test_version that is separated by ",". Because standart version separator is "." and comma separated version caused error in parsing.
+                //Reference (version_func.inc) :ver_sep = "."; # Set Standard Separator
+                //Comma separated test_version occurs only in flash_player_CB-A08-0059.nasl
+                if (file.getName().equals("flash_player_CB-A08-0059.nasl") && line.equals("if(version_is_less_equal(version:flashVer, test_version:\"9,0,115,0\")){")) {
+                    line = "if(version_is_less_equal(version:flashVer, test_version:\"9.0.115.0\")){";
+                }
+
                 String lineWithoutSpaceChars = line.replaceAll("\\s+","");
                 String lineWithoutSpaceCharsLowerCase = lineWithoutSpaceChars.toLowerCase();
 
