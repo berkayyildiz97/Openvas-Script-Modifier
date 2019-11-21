@@ -87,7 +87,8 @@ if(clonecdVer)
 {
   if(version_is_less_equal(version:clonecdVer, test_version:"5.3.1.3"))
   {
-    security_message( port: 0, data: "The target host was found to be vulnerable" );
+    report = report_fixed_ver(installed_version:clonecdVer, vulnerable_range:"Less than or equal to " + "5.3.1.3");
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -97,7 +98,8 @@ if(clonedvdVer)
 {
   if(version_is_less_equal(version:clonedvdVer, test_version:"2.9.2.0"))
   {
-    security_message( port: 0, data: "The target host was found to be vulnerable" );
+    report = report_fixed_ver(installed_version:clonedvdVer, vulnerable_range:"Less than or equal to " + "2.9.2.0");
+    security_message(port: 0, data: report);
     exit(0);
   }
 }
@@ -106,7 +108,8 @@ vcdVer = get_kb_item("VirtualCloneDrive/Ver");
 if(vcdVer)
 {
   if(version_is_less_equal(version:vcdVer, test_version:"5.4.2.3")){
-    security_message( port: 0, data: "The target host was found to be vulnerable" );
+    report = report_fixed_ver(installed_version:vcdVer, vulnerable_range:"Less than or equal to " + "5.4.2.3");
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

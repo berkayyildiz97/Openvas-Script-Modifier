@@ -81,7 +81,7 @@ port = get_http_port(default:80);
 
 if(vers = get_version_from_kb(port:port,app:"nagiosxi")) {
   if(version_is_less(version: vers, test_version: "2009R1.3")) {
-    report = report_fixed_ver(installed_version:vers, fixed_version:"2009r1.3");
+    report = report_fixed_ver(installed_version:vers, fixed_version:"2009R1.3");
     security_message(port: port, data: report);
     exit(0);
   }

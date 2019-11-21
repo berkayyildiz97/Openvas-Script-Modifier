@@ -73,7 +73,8 @@ if(playerVer = get_app_version(cpe:CPE, nofork:TRUE))
 {
   if(version_in_range(version:playerVer, test_version:"10.0", test_version2:"10.0.45.1"))
   {
-    security_message( port: 0, data: "The target host was found to be vulnerable" );
+    report = report_fixed_ver(installed_version:playerVer, vulnerable_range:"10.0" + " - " + "10.0.45.1");
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

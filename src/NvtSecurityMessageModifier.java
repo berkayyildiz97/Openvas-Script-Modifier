@@ -17,11 +17,26 @@ public class NvtSecurityMessageModifier {
 
     private final Pattern patternVersionInRange = Pattern.compile("if\\(version_in_range\\(version:([^,]*)");
 
+    private final Pattern patternVersionIsLessEqual = Pattern.compile("if\\(version_is_less_equal\\(version:([^,]*)");
+
+    private final Pattern patternVersionIsEqual = Pattern.compile("if\\(version_is_equal\\(version:([^,]*)");
+
     private final Pattern patternPortParameter = Pattern.compile("port:([^\\),]*)");
+
+    private final Pattern patternTestVersion = Pattern.compile("test_version:([^\\),]*)");
+
+    private final Pattern patternTestVersion2 = Pattern.compile("test_version2:([^\\),]*)");
 
     private final Pattern patternOid =  Pattern.compile("script_oid\\(\"([^\"]*)\"\\);");
 
     private final Pattern patternPath = Pattern.compile("[^[,'=\")&+(/;]?]*path=.*;");
+
+    private enum VersionFunction {
+        VERSION_IS_LESS,
+        VERSION_IN_RANGE,
+        VERSION_IS_LESS_EQUAL,
+        VERSION_IS_EQUAL
+    }
 
     public NvtSecurityMessageModifier(String nvtDirectoryPath, String nvtOidListPath, String outputDirectoryPath) {
         this.nvtDirectoryPath = nvtDirectoryPath;
@@ -36,7 +51,6 @@ public class NvtSecurityMessageModifier {
             String line = scannerOids.nextLine();
             targetOids.add(line);
         }
-
         ArrayList<File> nvtsShouldBeModified = new ArrayList<>();
         for(File nvt : allNvts) {
             Scanner scanner = new Scanner(new BufferedReader(new FileReader(nvt)));
@@ -44,8 +58,8 @@ public class NvtSecurityMessageModifier {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 //If nvt contains "WillNotFix", it means that there is no fixed version.
-                //If nvt contains "||", it means that there may be more than one version check functions in same if.
-                if (line.contains("WillNotFix") || line.contains("||")) {
+                //If nvt contains "||" or "&&", it means that there may be more than one version check functions in same if.
+                if (line.contains("WillNotFix") || line.contains("||") || line.contains("&&")) {
                     shouldNvtBeModified = false;
                     break;
                 }
@@ -85,7 +99,7 @@ public class NvtSecurityMessageModifier {
         }
 
         for(File file : nvts) {
-            boolean isVersionChecked = false;
+            boolean isScannerInVersionCheck = false;
             boolean isSecurityMessageFound = false;
             String nvtVersionVariable = "";
             Scanner input = new Scanner(file);
@@ -93,9 +107,17 @@ public class NvtSecurityMessageModifier {
             String nvtOid = "";
             String nvtPath = "";
             String nvtFixedVersion = "";
+            String nvtVulnerableRangeVersion1 = "";
+            String nvtVulnerableRangeVersion2 = "";
             boolean isNotCompletedVersionInRangeFound = false;
 
-            boolean isVersionIsLessOrVersionInRangeFunctionFound = false;
+            boolean isAnyVersionCheckFunctionFound = false;
+
+            //"{" --> countBracketsAfterVersionFunction++;
+            //"}" --> countBracketsAfterVersionFunction--;
+            int countBracketsAfterVersionFunction = 0;
+
+            VersionFunction versionFunction = null;
 
             File outputFile = new File(outputDirectoryPath + "/" + file.getName());
             PrintWriter printWriter = new PrintWriter(outputFile);
@@ -121,81 +143,107 @@ public class NvtSecurityMessageModifier {
                     if (matcherPath.find() && lineWithoutSpaceCharsLowerCase.matches("[^[,'=\")&+(/;]?]*path=.*;")) {
                         String matchedStr = matcherPath.group();
                         nvtPath = matchedStr.substring(0, matchedStr.indexOf('='));
-                        //nvtPath lowercase olan nvtPath değerini nvt'teki case durumuna getirmek için
+                        //To make nvtPath have original letter case
                         int pathIndex = line.toLowerCase().indexOf(nvtPath);
                         nvtPath = line.substring(pathIndex, pathIndex + nvtPath.length());
                     }
                 }
+                if (isScannerInVersionCheck && line.contains("{")) {
+                    int index = lineWithoutSpaceCharsLowerCase.indexOf("{");
+                    while (index >= 0) {
+                        countBracketsAfterVersionFunction++;
+                        index = lineWithoutSpaceCharsLowerCase.indexOf("{", index + 1);
+                    }
+                }
+                if (isScannerInVersionCheck && line.contains("}")) {
+                    int index = lineWithoutSpaceCharsLowerCase.indexOf("}");
+                    while (index >= 0) {
+                        countBracketsAfterVersionFunction--;
+                        index = lineWithoutSpaceCharsLowerCase.indexOf("}", index + 1);
+                        if (countBracketsAfterVersionFunction <= 0) {
+                            countBracketsAfterVersionFunction = 0;
+                            isScannerInVersionCheck = false;
+                            break;
+                        }
+                    }
+                }
                 //There are no fixed version patterns that I found in version_is_less_equal and version_is_equal functions. Fixed version is usually independent from checked version.
                 //Example: secpod_trendmicro_officescan_dos_vuln.nasl
-                //if (lineWithoutSpaceCharsLowerCase.contains("version_is_less(") || lineWithoutSpaceCharsLowerCase.contains("version_in_range(")) {
-                if (lineWithoutSpaceCharsLowerCase.contains("version_is_less(")) {
-                    isVersionIsLessOrVersionInRangeFunctionFound = true;
+                //No fixed version should be produced for version_in_range function. Therefore the code producing fixed version for version_in_ramge is removed.
+                //Because some of them have fixed versions in solution header that is independent from the checked version range.
+                //Example :secpod_adobe_prdts_mem_crptn_vuln_win_jun11.nasl
+                if (lineWithoutSpaceCharsLowerCase.contains("version_is_less(") || lineWithoutSpaceCharsLowerCase.contains("version_in_range(")
+                || lineWithoutSpaceCharsLowerCase.contains("version_is_equal(") || lineWithoutSpaceCharsLowerCase.contains("version_is_less_equal(")) {
+                    int index = lineWithoutSpaceCharsLowerCase.indexOf("{", lineWithoutSpaceCharsLowerCase.indexOf("version_i"));
+                    countBracketsAfterVersionFunction = 0;
+                    while (index >= 0) {
+                        countBracketsAfterVersionFunction++;
+                        index = lineWithoutSpaceCharsLowerCase.indexOf("{", index + 1);
+                    }
+
+                    isAnyVersionCheckFunctionFound = true;
+                    isScannerInVersionCheck = true;
                     nvtFixedVersion = "";
-                    String lineWithoutSpace = line.replaceAll("\\s+","");
-                    Matcher matcherVersion = patternVersionIsLess.matcher(lineWithoutSpace);
-                    //Fixed Version = test_version
+                    nvtVulnerableRangeVersion1 = "";
+                    nvtVulnerableRangeVersion2 = "";
+                    versionFunction = null;
+                    Matcher matcherVersion = patternVersionIsLess.matcher(lineWithoutSpaceChars);
+                    //For version_is_less, fixed Version = test_version
                     if (matcherVersion.find())
                     {
-                        isVersionChecked = true;
+                        versionFunction = VersionFunction.VERSION_IS_LESS;
                         nvtVersionVariable = matcherVersion.group(1);
-                        String lineAfterTestVersion = lineWithoutSpaceCharsLowerCase.substring(lineWithoutSpaceCharsLowerCase.indexOf("test_version:"));
-                        nvtFixedVersion = lineAfterTestVersion.substring(lineAfterTestVersion.indexOf('\"') + 1, lineAfterTestVersion.indexOf(')') - 1);
+                        nvtFixedVersion = getTestVersionParameter(patternTestVersion, lineWithoutSpaceChars);
                     }
-                    //No fixed version should be produced for version_in_range function. Therefore below code is commented.
-                    //Because some of them have fixed versions in solution header that is independent from the checked version range.
-                    //Example :secpod_adobe_prdts_mem_crptn_vuln_win_jun11.nasl
-//                    matcherVersion = patternVersionInRange.matcher(lineWithoutSpace);
-//                    //Fixed Version = test_version2 (Add +1 to number after last dot )
-//                    //If test_version and test_version both end with ".0", fixed version = test_version2 (Add +1 to number before last dot)
-//                    if (matcherVersion.find())
-//                    {
-//                        isVersionChecked = true;
-//                        nvtVersionVariable = matcherVersion.group(1);
-//                        if (lineWithoutSpaceCharsLowerCase.endsWith(",")) {
-//                            isNotCompletedVersionInRangeFound = true;
-//                            printWriter.println(line);
-//                            continue;
-//                        }
-//                        String lineAfterTestVersion2 = lineWithoutSpaceCharsLowerCase.substring(lineWithoutSpaceCharsLowerCase.indexOf("test_version2:"));
-//                        String version2 = lineAfterTestVersion2.substring(lineAfterTestVersion2.indexOf('\"') + 1, lineAfterTestVersion2.indexOf(')') - 1);
-//                        String[] version2Array = version2.split("\\.");
-//                        try {
-//                            if (version2Array[version2Array.length - 1].equals("0")) {
-//                                String lineAfterTestVersion1 = lineWithoutSpaceCharsLowerCase.substring(lineWithoutSpaceCharsLowerCase.indexOf("test_version:"));
-//                                String version1 = lineAfterTestVersion1.substring(lineAfterTestVersion1.indexOf('\"') + 1, lineAfterTestVersion1.indexOf(',') - 1);
-//                                String[] version1Array = version1.split("\\.");
-//                                if (version1Array[version1Array.length - 1].equals("0")) {
-//                                    version2Array[version2Array.length - 2] = Integer.parseInt(version2Array[version2Array.length - 2]) + 1 + "";
-//                                } else {
-//                                    version2Array[version2Array.length - 1] = Integer.parseInt(version2Array[version2Array.length - 1]) + 1 + "";
-//                                }
-//                            } else {
-//                                version2Array[version2Array.length - 1] = Integer.parseInt(version2Array[version2Array.length - 1]) + 1 + "";
-//                            }
-//                        //If the version contains letters like "b2", do not modify the script. Because fixed version cannot be determined.
-//                        } catch (NumberFormatException e) {
-//                            outputFile.delete();
-//                            break;
-//                        }
-//
-//
-//                        for (int i = 0;i<version2Array.length;i++) {
-//                            if (i == version2Array.length - 1) {
-//                                nvtFixedVersion = nvtFixedVersion + version2Array[i];
-//                            }
-//                            else {
-//                                nvtFixedVersion = nvtFixedVersion + version2Array[i] + ".";
-//                            }
-//                        }
-//                    }
+                    //For version_in_range, vulnerable_range = "test_version - test_version2"
+                    matcherVersion = patternVersionInRange.matcher(lineWithoutSpaceChars);
+                    if (matcherVersion.find())
+                    {
+                        versionFunction = VersionFunction.VERSION_IN_RANGE;
+                        nvtVersionVariable = matcherVersion.group(1);
+                        if (lineWithoutSpaceCharsLowerCase.contains("test_version:")) {
+                            nvtVulnerableRangeVersion1 = getTestVersionParameter(patternTestVersion, lineWithoutSpaceChars);
+                        }
+                        if (lineWithoutSpaceCharsLowerCase.endsWith(",")) {
+                            isNotCompletedVersionInRangeFound = true;
+                            printWriter.println(line);
+                            continue;
+                        }
+                        nvtVulnerableRangeVersion2 = getTestVersionParameter(patternTestVersion2, lineWithoutSpaceChars);
+                    }
+                    //For version_is_less_equal, vulnerable_range = "Less than or equal to test_version"
+                    matcherVersion = patternVersionIsLessEqual.matcher(lineWithoutSpaceChars);
+                    if (matcherVersion.find())
+                    {
+                        versionFunction = VersionFunction.VERSION_IS_LESS_EQUAL;
+                        nvtVersionVariable = matcherVersion.group(1);
+                        nvtVulnerableRangeVersion1 = getTestVersionParameter(patternTestVersion, lineWithoutSpaceChars);
+                    }
+                    //For version_is_equal, vulnerable_range = "Equal to test_version"
+                    matcherVersion = patternVersionIsEqual.matcher(lineWithoutSpaceChars);
+                    if (matcherVersion.find())
+                    {
+                        versionFunction = VersionFunction.VERSION_IS_EQUAL;
+                        nvtVersionVariable = matcherVersion.group(1);
+                        nvtVulnerableRangeVersion1 = getTestVersionParameter(patternTestVersion, lineWithoutSpaceChars);
+                    }
                 }
-//                if (isNotCompletedVersionInRangeFound) {
-//                    String lineAfterTestVersion = lineWithoutSpaceCharsLowerCase.substring(lineWithoutSpaceCharsLowerCase.indexOf("test_version2:"));
-//                    nvtFixedVersion = lineAfterTestVersion.substring(lineAfterTestVersion.indexOf('\"') + 1, lineAfterTestVersion.indexOf(')') - 1);
-//                    isNotCompletedVersionInRangeFound = false;
-//                }
-                if (isVersionChecked && line.contains("security_message")) {
+                //In some of version_in_range function calls have newline separated parameters. This occurs in only version_in_range.
+                //Example: gb_mozilla_firefox_esr_mult_vuln01_dec13_win.nasl
+                if (isNotCompletedVersionInRangeFound) {
+                    if (lineWithoutSpaceCharsLowerCase.contains("test_version:")) {
+                        nvtVulnerableRangeVersion1 = getTestVersionParameter(patternTestVersion, lineWithoutSpaceChars);
+                    }
+                    if (lineWithoutSpaceCharsLowerCase.contains("test_version2:")) {
+                        nvtVulnerableRangeVersion2 = getTestVersionParameter(patternTestVersion2, lineWithoutSpaceChars);
+                    }
+                    if (lineWithoutSpaceCharsLowerCase.endsWith(",")) {
+                        printWriter.println(line);
+                        continue;
+                    }
+                    isNotCompletedVersionInRangeFound = false;
+                }
+                if (isScannerInVersionCheck && line.contains("security_message")) {
                     String portParameter = "0";
                     Matcher matcherPortParameter = patternPortParameter.matcher(lineWithoutSpaceChars);
                     if (matcherPortParameter.find()) {
@@ -205,23 +253,17 @@ public class NvtSecurityMessageModifier {
                     isSecurityMessageFound = true;
 
                     String leadingSpaceChars = line.substring(0, line.indexOf("security_message"));
-                    if (nvtPath.equals("")) {
-                        printWriter.println(leadingSpaceChars + "report = report_fixed_ver(installed_version:"+nvtVersionVariable+", fixed_version:\""+nvtFixedVersion+"\");");
-                    }
-                    else {
-                        printWriter.println(leadingSpaceChars + "report = report_fixed_ver(installed_version:"+nvtVersionVariable+", fixed_version:\""+nvtFixedVersion+"\", install_path:"+nvtPath+");");
-                    }
+                    String report = createReportCode(versionFunction, nvtVersionVariable, nvtFixedVersion, nvtVulnerableRangeVersion1, nvtVulnerableRangeVersion2, nvtPath);
+                    printWriter.println(leadingSpaceChars + report);
                     printWriter.println(leadingSpaceChars + "security_message(port: "+portParameter+", data: report);");
                 }
                 else {
                     printWriter.println(line);
                 }
-                if (isVersionChecked && line.contains("}")) {
-                    isVersionChecked = false;
-                }
             }
             printWriter.close();
-            if ( (!isVersionIsLessOrVersionInRangeFunctionFound) || (!isSecurityMessageFound)) {
+            if ( (!isAnyVersionCheckFunctionFound) || (!isSecurityMessageFound)) {
+                System.out.println(file.getAbsolutePath());
                 outputFile.delete();
             }
         }
@@ -245,5 +287,35 @@ public class NvtSecurityMessageModifier {
             }
         }
         return listOfNvtPaths;
+    }
+
+    private String createReportCode(VersionFunction versionFunction, String nvtVersionVariable, String nvtFixedVersion, String nvtVulnerableRangeVersion1, String nvtVulnerableRangeVersion2, String nvtPath) {
+        String report = "report = report_fixed_ver(installed_version:"+nvtVersionVariable;
+        if ( (versionFunction == VersionFunction.VERSION_IS_LESS) && (!nvtFixedVersion.equals("")) ) {
+            report = report + ", fixed_version:" + nvtFixedVersion;
+        }
+        if ( (versionFunction == VersionFunction.VERSION_IN_RANGE) && (!nvtVulnerableRangeVersion1.equals("")) && (!nvtVulnerableRangeVersion2.equals("")) ) {
+            report = report + ", vulnerable_range:" + nvtVulnerableRangeVersion1 + " + \" - \" + " + nvtVulnerableRangeVersion2;
+        }
+        if ( (versionFunction == VersionFunction.VERSION_IS_LESS_EQUAL) && (!nvtVulnerableRangeVersion1.equals("")) ) {
+            report = report + ", vulnerable_range:" + "\"Less than or equal to \" + " + nvtVulnerableRangeVersion1;
+        }
+        if ( (versionFunction == VersionFunction.VERSION_IS_EQUAL) && (!nvtVulnerableRangeVersion1.equals("")) ) {
+            report = report + ", vulnerable_range:" + "\"Equal to \" + " + nvtVulnerableRangeVersion1;        }
+        if (!nvtPath.equals("")) {
+            report = report + ", install_path:" + nvtPath;
+        }
+        report = report + ");";
+        return report;
+
+    }
+
+    private String getTestVersionParameter(Pattern pattern, String lineWithoutSpaceChars) {
+        String testVersion = "";
+        Matcher matcherTestVersion = pattern.matcher(lineWithoutSpaceChars);
+        if (matcherTestVersion.find()) {
+            testVersion = matcherTestVersion.group(1);
+        }
+        return testVersion;
     }
 }

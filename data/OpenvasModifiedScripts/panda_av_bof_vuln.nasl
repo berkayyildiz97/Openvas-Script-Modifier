@@ -68,7 +68,7 @@ last_update = ereg_replace(pattern:"^(.*)-(.*)-(.*)$", replace:"\3.\2.\1", strin
 vuln_update = ereg_replace(pattern:"^(.*)-(.*)-(.*)$", replace:"\3.\2.\1",  string:vuln_update);
 
 if(version_is_less(version: last_update, test_version:vuln_update)){
-  report = report_fixed_ver(installed_version:last_update, fixed_version:"test_version:vuln_updat");
+  report = report_fixed_ver(installed_version:last_update, fixed_version:vuln_update);
   security_message(port: 0, data: report);
   exit(0);
 }

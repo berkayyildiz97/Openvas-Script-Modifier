@@ -68,7 +68,8 @@ if(ffVer)
 {
   if(version_in_range(version:ffVer, test_version:"4.0", test_version2:"6.0"))
   {
-    security_message( port: 0, data: "The target host was found to be vulnerable" );
+    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"4.0" + " - " + "6.0");
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

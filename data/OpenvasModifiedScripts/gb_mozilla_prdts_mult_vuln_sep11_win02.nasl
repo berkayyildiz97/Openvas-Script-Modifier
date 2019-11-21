@@ -88,7 +88,8 @@ ffVer = get_kb_item("Firefox/Win/Ver");
 if(ffVer)
 {
   if(version_in_range(version:ffVer, test_version:"4.0", test_version2:"5.0.1")){
-     security_message( port: 0, data: "The target host was found to be vulnerable" );
+     report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"4.0" + " - " + "5.0.1");
+     security_message(port: 0, data: report);
      exit(0);
   }
 }
@@ -98,7 +99,8 @@ if(seaVer)
 {
   if(version_in_range(version:seaVer, test_version:"2.0", test_version2:"2.2"))
   {
-     security_message( port: 0, data: "The target host was found to be vulnerable" );
+     report = report_fixed_ver(installed_version:seaVer, vulnerable_range:"2.0" + " - " + "2.2");
+     security_message(port: 0, data: report);
      exit(0);
   }
 }

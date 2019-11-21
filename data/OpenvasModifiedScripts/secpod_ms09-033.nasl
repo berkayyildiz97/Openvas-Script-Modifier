@@ -92,15 +92,18 @@ if(registry_key_exists(key:"SOFTWARE\Microsoft\Virtual PC"))
   {
     if(version_in_range(version:pcVer, test_version:"1.1.400.0",
                                        test_version2:"1.1.465.14")){
-      security_message( port: 0, data: "The target host was found to be vulnerable" );
+      report = report_fixed_ver(installed_version:pcVer, vulnerable_range:"1.1.400.0" + " - " + "1.1.465.14");
+      security_message(port: 0, data: report);
     }
     else if(version_in_range(version:pcVer, test_version:"1.1.500.0",
                                             test_version2:"1.1.597.0")){
-      security_message( port: 0, data: "The target host was found to be vulnerable" );
+      report = report_fixed_ver(installed_version:pcVer, vulnerable_range:"1.1.500.0" + " - " + "1.1.597.0");
+      security_message(port: 0, data: report);
     }
     else if(version_in_range(version:pcVer, test_version:"1.1.600.0",
                                             test_version2:"1.1.655.0")){
-      security_message( port: 0, data: "The target host was found to be vulnerable" );
+      report = report_fixed_ver(installed_version:pcVer, vulnerable_range:"1.1.600.0" + " - " + "1.1.655.0");
+      security_message(port: 0, data: report);
     }
     exit(0);
   }

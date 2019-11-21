@@ -90,7 +90,8 @@ if(vers = get_version_from_kb(port:port, app:"CybozuGaroon"))
 {
   if(version_in_range(version:vers, test_version:"2.0.0", test_version2:"2.1.3"))
   {
-    security_message(port:port);
+    report = report_fixed_ver(installed_version:vers, vulnerable_range:"2.0.0" + " - " + "2.1.3");
+    security_message(port: port, data: report);
     exit(0);
   }
 }

@@ -81,7 +81,8 @@ if(rubyVer)
 {
   if(version_in_range(version:rubyVer, test_version:"1.9.3.0", test_version2:"2.1.0"))
   {
-    security_message( port: 0, data: "The target host was found to be vulnerable" );
+    report = report_fixed_ver(installed_version:rubyVer, vulnerable_range:"1.9.3.0" + " - " + "2.1.0");
+    security_message(port: 0, data: report);
   }
 }
 

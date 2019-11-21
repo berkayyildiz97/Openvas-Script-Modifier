@@ -71,7 +71,8 @@ if(ichitaroVer)
 {
   if(version_in_range(version:ichitaroVer, test_version:"2005", test_version2:"2011"))
   {
-    security_message( port: 0, data: "The target host was found to be vulnerable" );
+    report = report_fixed_ver(installed_version:ichitaroVer, vulnerable_range:"2005" + " - " + "2011");
+    security_message(port: 0, data: report);
     exit(0);
   }
 }

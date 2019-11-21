@@ -102,7 +102,7 @@ if(trendMicroOffVer =~ "^(8|10)")
     exit(0);
 
   if(version_is_less(version:dllVer, test_version:minRequireVer)){
-    report = report_fixed_ver(installed_version:dllVer, fixed_version:"test_version:minrequireve", install_path:trendMicroOffPath);
+    report = report_fixed_ver(installed_version:dllVer, fixed_version:minRequireVer, install_path:trendMicroOffPath);
     security_message(port: 0, data: report);
     exit(0);
   }

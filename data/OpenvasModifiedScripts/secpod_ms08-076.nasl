@@ -120,30 +120,36 @@ if(dllVer)
       {
         if(version_in_range(version:dllVer, test_version:"9.0",
                             test_version2:"9.0.0.3267")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"9.0" + " - " + "9.0.0.3267", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
         else if(version_in_range(version:dllVer, test_version:"10.0",
                                  test_version2:"10.0.0.3702")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0" + " - " + "10.0.0.3702", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
         else if(version_in_range(version:dllVer, test_version:"11.0",
                                  test_version2:"11.0.5721.5250")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.5721.5250", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
       }
       else if("Service Pack 3" >< SP)
       {
         if(version_in_range(version:dllVer, test_version:"9.0",
                             test_version2:"9.0.0.4503")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"9.0" + " - " + "9.0.0.4503", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
         else if(version_in_range(version:dllVer, test_version:"10.0",
                                  test_version2:"10.0.0.3702")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0" + " - " + "10.0.0.3702", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
         else if(version_in_range(version:dllVer, test_version:"11.0",
                                  test_version2:"11.0.5721.5250")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.5721.5250", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
       }
       else security_message( port: 0, data: "The target host was found to be vulnerable" );
@@ -156,14 +162,16 @@ if(dllVer)
       {
         if(version_in_range(version:dllVer, test_version:"10.0",
                             test_version2:"10.0.0.3710")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0" + " - " + "10.0.0.3710", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
       }
       else if("Service Pack 2" >< SP)
       {
         if(version_in_range(version:dllVer, test_version:"10.0",
                             test_version2:"10.0.0.4000")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0" + " - " + "10.0.0.4000", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
       }
       else security_message( port: 0, data: "The target host was found to be vulnerable" );
@@ -187,7 +195,8 @@ if(dllVer)
       if("Service Pack 1" >< SP)
       {
         if(version_in_range(version:dllVer, test_version:"11.0", test_version2:"11.0.6001.7000")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7000", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
          exit(0);
       }
@@ -199,7 +208,8 @@ if(dllVer)
       if("Service Pack 1" >< SP)
       {
         if(version_in_range(version:dllVer, test_version:"11.0", test_version2:"11.0.6001.7000")){
-          security_message( port: 0, data: "The target host was found to be vulnerable" );
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7000", install_path:sysPath);
+          security_message(port: 0, data: report);
         }
         exit(0);
       }

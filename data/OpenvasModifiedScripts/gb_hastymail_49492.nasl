@@ -70,7 +70,7 @@ include("version_func.inc");
 port = get_http_port(default:80);
 if(vers = get_version_from_kb(port:port,app:"Hastymail2")) {
   if(version_is_less(version: vers, test_version: "1.1 RC1")) {
-    report = report_fixed_ver(installed_version:vers, fixed_version:"1.1rc1");
+    report = report_fixed_ver(installed_version:vers, fixed_version:"1.1RC1");
     security_message(port: port, data: report);
     exit(0);
   }

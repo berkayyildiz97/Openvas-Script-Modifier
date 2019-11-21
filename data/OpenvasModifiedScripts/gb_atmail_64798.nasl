@@ -84,7 +84,7 @@ if ( vers  =~ "^7\." )
 
 if( check_version ) {
   if(version_is_less(version: vers, test_version: check_version)) {
-    report = report_fixed_ver(installed_version:vers, fixed_version:"test_version:check_versio");
+    report = report_fixed_ver(installed_version:vers, fixed_version:check_version);
     security_message(port: port, data: report);
     exit(0);
   }

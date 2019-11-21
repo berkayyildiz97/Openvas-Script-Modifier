@@ -79,7 +79,7 @@ version = get_kb_item("IBM/Lotus/Symphony/Lin/Ver");
 if(version =~ "^3\..*")
 {
   if(version_is_less(version:version, test_version:"3.0.0.FP3")){
-    report = report_fixed_ver(installed_version:version, fixed_version:"3.0.0.fp3");
+    report = report_fixed_ver(installed_version:version, fixed_version:"3.0.0.FP3");
     security_message(port: 0, data: report);
   }
 }

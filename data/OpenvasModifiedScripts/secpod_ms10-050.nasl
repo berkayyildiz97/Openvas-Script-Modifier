@@ -106,7 +106,8 @@ if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:moviemkVer, test_version:"2.1",
                                             test_version2:"2.1.4027.0")){
-      security_message( port: 0, data: "The target host was found to be vulnerable" );
+      report = report_fixed_ver(installed_version:moviemkVer, vulnerable_range:"2.1" + " - " + "2.1.4027.0", install_path:moviemkPath);
+      security_message(port: 0, data: report);
     }
     exit(0);
   }

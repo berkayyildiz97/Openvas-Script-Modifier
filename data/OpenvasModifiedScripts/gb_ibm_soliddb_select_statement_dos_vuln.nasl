@@ -85,5 +85,6 @@ if(ibmVer =~ "^6\.5\.*")
 }
 
 if(version_is_equal(version:ibmVer, test_version:"7.0.0.0")){
-  security_message(port:ibmPort);
+  report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"Equal to " + "7.0.0.0");
+  security_message(port: ibmPort, data: report);
 }
