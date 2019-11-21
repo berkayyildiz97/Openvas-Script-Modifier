@@ -95,7 +95,7 @@ if(hotfix_check_sp(xp:4) > 0)
   if("Service Pack 3" >< SP)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.2900.6052")){
-      report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.2900.6052", install_path:sysPath);
+      report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.2900.6052", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -109,7 +109,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   if("Service Pack 2" >< SP)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.3790.4799")){
-       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.3790.4799", install_path:sysPath);
+       report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.3790.4799", install_path:dllPath);
        security_message(port: 0, data: report);
     }
     exit(0);

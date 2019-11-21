@@ -98,7 +98,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   if("Service Pack 1" >< SP)
   {
     if(version_is_less(version:exeVer, test_version:"6.0.6001.18561")){
-      report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6001.18561", install_path:sysPath);
+      report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6001.18561", install_path:exePath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -107,7 +107,7 @@ if(hotfix_check_sp(winVista:3) > 0)
   if("Service Pack 2" >< SP)
   {
     if(version_is_less(version:exeVer, test_version:"6.0.6002.18353")){
-      report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6002.18353", install_path:sysPath);
+      report = report_fixed_ver(installed_version:exeVer, fixed_version:"6.0.6002.18353", install_path:exePath);
       security_message(port: 0, data: report);
     }
     exit(0);

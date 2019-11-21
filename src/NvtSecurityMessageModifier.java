@@ -104,7 +104,6 @@ public class NvtSecurityMessageModifier {
             String nvtVersionVariable = "";
             Scanner input = new Scanner(file);
 
-            String nvtOid = "";
             String nvtPath = "";
             String nvtFixedVersion = "";
             String nvtVulnerableRangeVersion1 = "";
@@ -129,16 +128,7 @@ public class NvtSecurityMessageModifier {
                 String lineWithoutSpaceChars = line.replaceAll("\\s+","");
                 String lineWithoutSpaceCharsLowerCase = lineWithoutSpaceChars.toLowerCase();
 
-                if (lineWithoutSpaceChars.contains("script_oid(")) {
-                    Matcher matcherOid = patternOid.matcher(lineWithoutSpaceChars);
-                    if (matcherOid.find()) {
-                        nvtOid = matcherOid.group(1);
-                    }
-                    if (!targetOids.contains(nvtOid)) {
-                        break;
-                    }
-                }
-                else if (lineWithoutSpaceCharsLowerCase.contains("path") && nvtPath.equals("")) {
+                if (lineWithoutSpaceCharsLowerCase.contains("path")) {
                     Matcher matcherPath = patternPath.matcher(lineWithoutSpaceCharsLowerCase);
                     if (matcherPath.find() && lineWithoutSpaceCharsLowerCase.matches("[^[,'=\")&+(/;]?]*path=.*;")) {
                         String matchedStr = matcherPath.group();

@@ -97,7 +97,7 @@ if(hotfix_check_sp(xp:4) > 0)
   if("Service Pack 3" >< SP)
   {
     if(version_is_less(version:dllVer, test_version:"5.1.2600.6055")){
-      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.1.2600.6055", install_path:sysPath);
+      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.1.2600.6055", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -111,7 +111,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   if("Service Pack 2" >< SP)
   {
     if(version_is_less(version:dllVer, test_version:"5.2.3790.4803")){
-      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.2.3790.4803", install_path:sysPath);
+      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.2.3790.4803", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);

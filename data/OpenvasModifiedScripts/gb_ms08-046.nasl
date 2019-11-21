@@ -99,7 +99,7 @@ if(!fileVer){
 if(hotfix_check_sp(win2k:5) > 0)
 {
   if(version_is_less(version:fileVer, test_version:"5.0.2195.7162")){
-    report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.0.2195.7162", install_path:sysPath);
+    report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.0.2195.7162", install_path:dllPath);
     security_message(port: 0, data: report);
   }
   exit(0);
@@ -111,7 +111,7 @@ else if(hotfix_check_sp(xp:4) > 0)
   {
     # < 5.1.2600.3396
     if(version_is_less(version:fileVer, test_version:"5.1.2600.3396")){
-      report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.1.2600.3396", install_path:sysPath);
+      report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.1.2600.3396", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -119,7 +119,7 @@ else if(hotfix_check_sp(xp:4) > 0)
   else if("Service Pack 3" >< SP)
   {
     if(version_is_less(version:fileVer, test_version:"5.1.2600.5627")){
-      report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.1.2600.5627", install_path:sysPath);
+      report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.1.2600.5627", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -132,7 +132,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   if("Service Pack 1" >< SP)
   {
     if(version_is_less(version:fileVer, test_version:"5.2.3790.3163")){
-      report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.2.3790.3163", install_path:sysPath);
+      report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.2.3790.3163", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -140,7 +140,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   else if("Service Pack 2" >< SP)
   {
     if(version_is_less(version:fileVer, test_version:"5.2.3790.4320")){
-      report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.2.3790.4320", install_path:sysPath);
+      report = report_fixed_ver(installed_version:fileVer, fixed_version:"5.2.3790.4320", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);

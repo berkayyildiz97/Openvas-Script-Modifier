@@ -93,7 +93,7 @@ if(hotfix_check_sp(win2003:3) > 0)
   if("Service Pack 2" >< SP)
   {
      if(version_is_less(version:sysVer, test_version:"5.2.3790.4760")){
-        report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.2.3790.4760", install_path:sysPath);
+        report = report_fixed_ver(installed_version:sysVer, fixed_version:"5.2.3790.4760", install_path:dllPath);
         security_message(port: 0, data: report);
      }
      exit(0);
@@ -108,7 +108,7 @@ if(hotfix_check_sp(win2008:3) > 0)
   if("Service Pack 1" >< SP)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6001.18529")){
-      report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6001.18529", install_path:sysPath);
+      report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6001.18529", install_path:dllPath);
       security_message(port: 0, data: report);
     }
      exit(0);
@@ -117,7 +117,7 @@ if(hotfix_check_sp(win2008:3) > 0)
   if("Service Pack 2" >< SP)
   {
     if(version_is_less(version:sysVer, test_version:"6.0.6002.18316")){
-      report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6002.18316", install_path:sysPath);
+      report = report_fixed_ver(installed_version:sysVer, fixed_version:"6.0.6002.18316", install_path:dllPath);
       security_message(port: 0, data: report);
     }
      exit(0);

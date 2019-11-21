@@ -104,7 +104,7 @@ if(hotfix_check_sp(xp:4) > 0)
   if("Service Pack 3" >< SP)
   {
     if(version_is_less(version:dllVer, test_version:"5.82.2900.6028")){
-      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.82.2900.6028", install_path:sysPath);
+      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.82.2900.6028", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -118,7 +118,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   if("Service Pack 2" >< SP)
   {
     if(version_is_less(version:dllVer, test_version:"5.82.3790.4770")){
-      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.82.3790.4770", install_path:sysPath);
+      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.82.3790.4770", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -137,7 +137,7 @@ else if(hotfix_check_sp(winVista:2, win2008:2) > 0)
   if("Service Pack 1" >< SP)
   {
     if(version_is_less(version:dllVer, test_version:"5.82.6001.18523")){
-      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.82.6001.18523", install_path:sysPath);
+      report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.82.6001.18523", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -146,7 +146,7 @@ else if(hotfix_check_sp(winVista:2, win2008:2) > 0)
   if("Service Pack 2" >< SP)
   {
     if(version_is_less(version:dllVer, test_version:"6.10.6002.18305")){
-      report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.10.6002.18305", install_path:sysPath);
+      report = report_fixed_ver(installed_version:dllVer, fixed_version:"6.10.6002.18305", install_path:dllPath);
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -157,7 +157,7 @@ else if(hotfix_check_sp(winVista:2, win2008:2) > 0)
 else if(hotfix_check_sp(win7:1) > 0)
 {
   if(version_is_less(version:dllVer, test_version:"5.82.7600.16661")){
-    report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.82.7600.16661", install_path:sysPath);
+    report = report_fixed_ver(installed_version:dllVer, fixed_version:"5.82.7600.16661", install_path:dllPath);
     security_message(port: 0, data: report);
   }
 }

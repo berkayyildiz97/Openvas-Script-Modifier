@@ -195,7 +195,7 @@ if(dllVer)
       if("Service Pack 1" >< SP)
       {
         if(version_in_range(version:dllVer, test_version:"11.0", test_version2:"11.0.6001.7000")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7000", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7000", install_path:dllPath);
           security_message(port: 0, data: report);
         }
          exit(0);
@@ -208,7 +208,7 @@ if(dllVer)
       if("Service Pack 1" >< SP)
       {
         if(version_in_range(version:dllVer, test_version:"11.0", test_version2:"11.0.6001.7000")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7000", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7000", install_path:dllPath);
           security_message(port: 0, data: report);
         }
         exit(0);
@@ -225,7 +225,7 @@ if(hotfix_missing(name:"952068") == 1)
     if(dllVer != NULL)
     {
       if(version_is_less(version:dllVer, test_version:"4.1.0.3936")){
-        report = report_fixed_ver(installed_version:dllVer, fixed_version:"4.1.0.3936", install_path:sysPath);
+        report = report_fixed_ver(installed_version:dllVer, fixed_version:"4.1.0.3936", install_path:dllPath);
         security_message(port: 0, data: report);
       }
     }
@@ -239,14 +239,14 @@ if(hotfix_missing(name:"952068") == 1)
       if("Service Pack 1" >< SP)
       {
         if(version_is_less(version:dllVer, test_version:"9.1.1.3845")){
-          report = report_fixed_ver(installed_version:dllVer, fixed_version:"9.1.1.3845", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, fixed_version:"9.1.1.3845", install_path:dllPath);
           security_message(port: 0, data: report);
         }
       }
       else if("Service Pack 2" >< SP)
       {
         if(version_is_less(version:dllVer, test_version:"9.1.1.5000")){
-          report = report_fixed_ver(installed_version:dllVer, fixed_version:"9.1.1.5000", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, fixed_version:"9.1.1.5000", install_path:dllPath);
           security_message(port: 0, data: report);
         }
       }
@@ -268,7 +268,7 @@ if(hotfix_missing(name:"952068") == 1)
       if("Service Pack 1" >< SP)
       {
         if(version_is_less(version:dllVer, test_version:"9.5.6001.18161")){
-            report = report_fixed_ver(installed_version:dllVer, fixed_version:"9.5.6001.18161", install_path:sysPath);
+            report = report_fixed_ver(installed_version:dllVer, fixed_version:"9.5.6001.18161", install_path:dllPath);
             security_message(port: 0, data: report);
         }
            exit(0);
