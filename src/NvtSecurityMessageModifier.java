@@ -27,8 +27,6 @@ public class NvtSecurityMessageModifier {
 
     private final Pattern patternTestVersion2 = Pattern.compile("test_version2:([^\\),]*)");
 
-    private final Pattern patternOid =  Pattern.compile("script_oid\\(\"([^\"]*)\"\\);");
-
     private final Pattern patternPath = Pattern.compile("[^[,'=\")&+(/;]?]*path=.*;");
 
     private enum VersionFunction {
@@ -44,59 +42,11 @@ public class NvtSecurityMessageModifier {
         this.outputDirectoryPath = outputDirectoryPath;
     }
 
-    private ArrayList<File> getNvtsShouldBeModified(ArrayList<File> allNvts) throws FileNotFoundException {
-        ArrayList<String> targetOids = new ArrayList<>();
-        Scanner scannerOids = new Scanner(new File(nvtOidListPath));
-        while (scannerOids.hasNextLine()) {
-            String line = scannerOids.nextLine();
-            targetOids.add(line);
-        }
-        ArrayList<File> nvtsShouldBeModified = new ArrayList<>();
-        for(File nvt : allNvts) {
-            Scanner scanner = new Scanner(new BufferedReader(new FileReader(nvt)));
-            boolean shouldNvtBeModified = true;
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                //If nvt contains "WillNotFix", it means that there is no fixed version.
-                //If nvt contains "||" or "&&", it means that there may be more than one version check functions in same if.
-                if (line.contains("WillNotFix") || line.contains("||") || line.contains("&&")) {
-                    shouldNvtBeModified = false;
-                    break;
-                }
-
-                if (line.contains("script_oid(")) {
-                    Matcher matcherOid = patternOid.matcher(line);
-                    String nvtOid = "";
-                    if (matcherOid.find()) {
-                        nvtOid = matcherOid.group(1);
-                    }
-                    if (!targetOids.contains(nvtOid)) {
-                        shouldNvtBeModified = false;
-                        break;
-                    }
-                }
-            }
-            scanner.close();
-            if (shouldNvtBeModified) {
-                nvtsShouldBeModified.add(nvt);
-            }
-        }
-        return nvtsShouldBeModified;
-    }
-
     public void modifyNvtSecurityMessages() throws FileNotFoundException {
-        File folder = new File(nvtDirectoryPath);
-        ArrayList<File> allNvts = new ArrayList<>();
-        allNvts = getNVTFiles(folder, allNvts);
+        NvtProvider nvtProvider = new NvtProvider();
+        ArrayList<File> allNvts = nvtProvider.getNVTFiles(nvtDirectoryPath);
 
-        ArrayList<File> nvts = getNvtsShouldBeModified(allNvts);
-
-        ArrayList<String> targetOids = new ArrayList<>();
-        Scanner scannerOids = new Scanner(new File(nvtOidListPath));
-        while (scannerOids.hasNextLine()) {
-            String line = scannerOids.nextLine();
-            targetOids.add(line);
-        }
+        ArrayList<File> nvts = nvtProvider.getNvtsShouldBeModified(allNvts, nvtOidListPath);
 
         for(File file : nvts) {
             boolean isScannerInVersionCheck = false;
@@ -265,26 +215,6 @@ public class NvtSecurityMessageModifier {
                 outputFile.delete();
             }
         }
-    }
-
-    private ArrayList<File> getNVTFiles(File folder, ArrayList<File> listOfNvtPaths) {
-        if (folder.isFile()) {
-            if (folder.getName().endsWith(".nasl"))
-                listOfNvtPaths.add(folder);
-            return listOfNvtPaths;
-        } else if (folder.isDirectory()) {
-            File[] arrayOfFiles = folder.listFiles();
-
-            for (int i = 0; i < arrayOfFiles.length; i++) {
-                if (arrayOfFiles[i].isFile()) {
-                    if (arrayOfFiles[i].getName().endsWith(".nasl"))
-                        listOfNvtPaths.add(arrayOfFiles[i]);
-                } else if (arrayOfFiles[i].isDirectory()) {
-                    getNVTFiles(arrayOfFiles[i], listOfNvtPaths);
-                }
-            }
-        }
-        return listOfNvtPaths;
     }
 
     private String createReportCode(VersionFunction versionFunction, String nvtVersionVariable, String nvtFixedVersion, String nvtVulnerableRangeVersion1, String nvtVulnerableRangeVersion2, String nvtPath) {
