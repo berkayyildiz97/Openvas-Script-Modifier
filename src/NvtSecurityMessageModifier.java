@@ -68,7 +68,20 @@ public class NvtSecurityMessageModifier {
 
             VersionFunction versionFunction = null;
 
-            File outputFile = new File(outputDirectoryPath + "/" + file.getName());
+
+            String nvtParentPath = file.getParentFile().getAbsolutePath();
+            File outputFile = null;
+            if (nvtParentPath.equals(nvtDirectoryPath)) {
+                outputFile = new File(outputDirectoryPath + "/" + file.getName());
+            }
+            else {
+                File nvtDirectoryFile = new File(nvtDirectoryPath);
+                String nvtDirectoryName = nvtDirectoryFile.getName();
+                String nvtDirectoryPathAfterPlugins = nvtParentPath.substring(nvtParentPath.indexOf(nvtDirectoryName) + nvtDirectoryName.length() + 1);
+                //To create directories of nvt
+                new File(outputDirectoryPath + "/" + nvtDirectoryPathAfterPlugins).mkdirs();
+                outputFile = new File(outputDirectoryPath + "/" + nvtDirectoryPathAfterPlugins + "/" + file.getName());
+            }
             PrintWriter printWriter = new PrintWriter(outputFile);
 
 
