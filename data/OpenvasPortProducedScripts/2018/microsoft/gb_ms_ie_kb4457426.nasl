@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.814001");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2018-8447", "CVE-2018-8452", "CVE-2018-8315", "CVE-2018-8457",
                 "CVE-2018-8470");
   script_tag(name:"cvss_base", value:"7.6");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:H/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2018-09-12 09:30:00 +0530 (Wed, 12 Sep 2018)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Internet Explorer Multiple Vulnerabilities (KB4457426)");
@@ -56,7 +56,7 @@ if(description)
   belonging to web pages currently opened (or cached) by the browser and disclose
   sensitive information.");
 
-  script_tag(name:"affected", value:"Microsoft Internet Explorer version 9.x, 10.x
+  script_tag(name:"affected", value:"- Microsoft Internet Explorer version 9.x, 10.x
   and 11.x");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");

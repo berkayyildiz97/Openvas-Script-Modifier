@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_ms_office_outlook_spoofing_vuln_macosx.nasl 11816 2018-10-10 10:42:56Z mmartin $
 #
 # Microsoft Office Outlook Spoofing Vulnerability (Mac OS X)
 #
@@ -29,12 +28,12 @@ CPE = "cpe:/a:microsoft:office";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.810956");
-  script_version("$Revision: 11816 $");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2017-8545");
   script_bugtraq_id(98917);
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-10 12:42:56 +0200 (Wed, 10 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2017-06-21 14:14:04 +0530 (Wed, 21 Jun 2017)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Outlook Spoofing Vulnerability (Mac OS X)");

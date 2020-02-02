@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_ms_exchange_server_eol.nasl 11835 2018-10-11 08:38:49Z mmartin $
 #
 # Microsoft Exchange Server End Of Life Detection
 #
@@ -30,10 +29,10 @@ CPE = "cpe:/a:microsoft:exchange_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.108202");
-  script_version("$Revision: 11835 $");
+  script_version("2019-12-05T15:10:00+0000");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-11 10:38:49 +0200 (Thu, 11 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2017-08-07 08:00:00 +0200 (Mon, 07 Aug 2017)");
   script_name("Microsoft Exchange Server End Of Life Detection");
   script_copyright("Copyright (c) 2017 Greenbone Networks GmbH");
@@ -60,7 +59,6 @@ if(description)
 
 include("misc_func.inc");
 include("products_eol.inc");
-include("version_func.inc");
 include("host_details.inc");
 
 if( ! version = get_app_version( cpe:CPE ) ) exit( 0 );

@@ -28,14 +28,14 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805112");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2019-12-20T12:48:41+0000");
   script_cve_id("CVE-2014-6327", "CVE-2014-6329", "CVE-2014-6330", "CVE-2014-6366",
                 "CVE-2014-6369", "CVE-2014-6373", "CVE-2014-6374", "CVE-2014-6375",
                 "CVE-2014-6376", "CVE-2014-8966");
   script_bugtraq_id(71446, 71447, 71448, 71450, 71452, 71453, 71454, 71455, 71456, 71457);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 12:48:41 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-12-10 08:42:28 +0530 (Wed, 10 Dec 2014)");
   script_name("Microsoft Internet Explorer Multiple Vulnerabilities (3008923)");
 
@@ -51,7 +51,7 @@ if(description)
   to disclose potentially sensitive information, bypass certain security
   restrictions, and compromise a user's system.");
 
-  script_tag(name:"affected", value:"Microsoft Internet Explorer version
+  script_tag(name:"affected", value:"- Microsoft Internet Explorer version
   6.x/7.x/8.x/9.x/10.x/11.x");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
@@ -59,7 +59,6 @@ if(description)
   script_tag(name:"solution_type", value:"VendorFix");
   script_tag(name:"qod_type", value:"registry");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/61144");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/3008923");
   script_xref(name:"URL", value:"https://technet.microsoft.com/library/security/ms14-080");
 

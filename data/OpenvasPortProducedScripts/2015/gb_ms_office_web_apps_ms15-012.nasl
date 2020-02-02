@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:office_web_apps";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805048");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2015-0064");
   script_bugtraq_id(72463);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2015-02-11 12:20:06 +0530 (Wed, 11 Feb 2015)");
   script_name("Microsoft Office Web Apps Remote Code Execution Vulnerability (3032328)");
 
@@ -49,7 +49,7 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   attackers to execute arbitrary code on the affected system.");
 
-  script_tag(name:"affected", value:"Microsoft Web Applications 2010 Service Pack 2 and prior.");
+  script_tag(name:"affected", value:"Microsoft Web Applications 2010 Service Pack 2 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

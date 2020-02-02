@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:office";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.807846");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2016-0025");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2016-06-16 09:43:02 +0530 (Thu, 16 Jun 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Remote Code Execution Vulnerability-3163610(Mac OS X)");

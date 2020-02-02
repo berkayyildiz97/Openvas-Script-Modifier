@@ -28,7 +28,7 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805773");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-2427", "CVE-2015-6064", "CVE-2015-6065", "CVE-2015-6066",
                 "CVE-2015-6068", "CVE-2015-6069", "CVE-2015-6070", "CVE-2015-6071",
                 "CVE-2015-6072", "CVE-2015-6073", "CVE-2015-6074", "CVE-2015-6075",
@@ -38,7 +38,7 @@ if(description)
                 "CVE-2015-6089");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-11-11 08:52:04 +0530 (Wed, 11 Nov 2015)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Internet Explorer Multiple Vulnerabilities (3104517)");
@@ -60,7 +60,7 @@ if(description)
   corrupt memory and potentially execute arbitrary code in the context of the
   current user.");
 
-  script_tag(name:"affected", value:"Microsoft Internet Explorer version
+  script_tag(name:"affected", value:"- Microsoft Internet Explorer version
   7.x/8.x/9.x/10.x/11.x");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");

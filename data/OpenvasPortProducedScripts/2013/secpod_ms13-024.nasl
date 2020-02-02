@@ -26,20 +26,19 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.902953");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_bugtraq_id(58372, 58370, 58367, 58371);
   script_cve_id("CVE-2013-0080", "CVE-2013-0083", "CVE-2013-0084", "CVE-2013-0085");
   script_tag(name:"cvss_base", value:"7.8");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2013-03-13 11:50:53 +0530 (Wed, 13 Mar 2013)");
   script_name("Microsoft SharePoint Server Privilege Elevation Vulnerabilities (2780176)");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/52551");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2687418");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2553407");
   script_xref(name:"URL", value:"http://www.securitytracker.com/id/1028278");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms13-024");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-024");
 
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (C) 2013 SecPod");
@@ -50,8 +49,9 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation could allow an attacker to bypass certain security
   restrictions, disclose certain system data and conduct cross-site scripting
   and spoofing attacks.");
-  script_tag(name:"affected", value:"Microsoft SharePoint Server 2010 Service Pack 1
-  Microsoft SharePoint Foundation 2010 Service Pack 1");
+  script_tag(name:"affected", value:"- Microsoft SharePoint Server 2010 Service Pack 1
+
+  - Microsoft SharePoint Foundation 2010 Service Pack 1");
   script_tag(name:"insight", value:"- The application allows users to perform certain actions via HTTP requests
     without performing proper validity checks to verify the requests.
 
@@ -67,7 +67,7 @@ if(description)
   script_tag(name:"qod_type", value:"registry");
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms13-0-24");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-0-24");
   exit(0);
 }
 

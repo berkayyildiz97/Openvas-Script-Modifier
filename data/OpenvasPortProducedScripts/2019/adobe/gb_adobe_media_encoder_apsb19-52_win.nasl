@@ -23,12 +23,12 @@ CPE = "cpe:/a:adobe:media_encoder";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815666");
-  script_version("2019-11-14T12:44:20+0000");
+  script_version("2019-11-27T15:23:21+0000");
   script_cve_id("CVE-2019-8241", "CVE-2019-8242", "CVE-2019-8243", "CVE-2019-8244",
                 "CVE-2019-8246");
-  script_tag(name:"cvss_base", value:"6.8");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-11-14 12:44:20 +0000 (Thu, 14 Nov 2019)");
+  script_tag(name:"cvss_base", value:"10.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
+  script_tag(name:"last_modification", value:"2019-11-27 15:23:21 +0000 (Wed, 27 Nov 2019)");
   script_tag(name:"creation_date", value:"2019-11-14 12:23:49 +0530 (Thu, 14 Nov 2019)");
   script_name("Adobe Media Encoder Security Updates(APSB19-52)-Windows");
 

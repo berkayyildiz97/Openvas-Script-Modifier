@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:office_web_apps";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.810693");
-  script_version("2019-05-03T08:55:39+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2017-0195");
   script_tag(name:"cvss_base", value:"3.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:S/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 08:55:39 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2017-04-13 11:14:05 +0530 (Thu, 13 Apr 2017)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Web Apps XSS Elevation of Privileges Vulnerability (KB3178725)");
@@ -52,7 +52,7 @@ if(description)
   perform cross-site scripting attacks on affected systems and run script in the
   security context of the current user.");
 
-  script_tag(name:"affected", value:"Microsoft Office Web Apps Server 2013 Service Pack 1 and prior.");
+  script_tag(name:"affected", value:"Microsoft Office Web Apps Server 2013 Service Pack 1 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:office_live_meeting";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805084");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2015-2431", "CVE-2015-2435", "CVE-2015-2455", "CVE-2015-2456",
                 "CVE-2015-2463", "CVE-2015-2464");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2015-08-12 12:58:42 +0530 (Wed, 12 Aug 2015)");
   script_name("Microsoft Live Meeting Remote Code Execution Vulnerabilities (3078662)");
 

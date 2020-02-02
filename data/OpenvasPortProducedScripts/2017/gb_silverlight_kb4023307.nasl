@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:silverlight";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.810909");
-  script_version("2019-05-03T10:54:50+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2017-0283", "CVE-2017-8527");
   script_bugtraq_id(63676);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 10:54:50 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2017-06-14 09:21:37 +0530 (Wed, 14 Jun 2017)");
   script_name("Microsoft Silverlight Multiple Remote Code Execution Vulnerabilities (KB4023307)");
   script_category(ACT_GATHER_INFO);
@@ -60,7 +60,7 @@ if(description)
   programs. View, change, or delete data or create new accounts with full user
   rights.");
 
-  script_tag(name:"affected", value:"Microsoft Silverlight version 5 on Windows.");
+  script_tag(name:"affected", value:"Microsoft Silverlight version 5");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

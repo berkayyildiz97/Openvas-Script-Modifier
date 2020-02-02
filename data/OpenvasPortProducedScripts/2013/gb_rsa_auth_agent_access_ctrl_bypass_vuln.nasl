@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_rsa_auth_agent_access_ctrl_bypass_vuln.nasl 11865 2018-10-12 10:03:43Z cfischer $
 #
 # EMC RSA Authentication Agent Access Control Bypass Vulnerability (Windows)
 #
@@ -29,12 +28,12 @@ CPE = "cpe:/a:emc:rsa_authentication_agent";
 if (description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.802059");
-  script_version("$Revision: 11865 $");
+  script_version("2019-12-05T15:10:00+0000");
   script_cve_id("CVE-2012-2287");
   script_bugtraq_id(55662);
   script_tag(name:"cvss_base", value:"8.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:S/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-12 12:03:43 +0200 (Fri, 12 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2013-08-29 12:11:58 +0530 (Thu, 29 Aug 2013)");
   script_name("EMC RSA Authentication Agent Access Control Bypass Vulnerability (Windows)");
 
@@ -66,7 +65,6 @@ Windows credentials.");
 
 
 include("secpod_reg.inc");
-include("version_func.inc");
 include("host_details.inc");
 
 if(hotfix_check_sp(xp:4, xpx64:3, win2003:3, win2003x64:3) <= 0){

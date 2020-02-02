@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809833");
-  script_version("2019-05-03T08:55:39+0000");
+  script_version("2019-12-20T12:42:55+0000");
   script_cve_id("CVE-2016-7202", "CVE-2016-7278", "CVE-2016-7279", "CVE-2016-7281",
-		"CVE-2016-7282", "CVE-2016-7283", "CVE-2016-7284", "CVE-2016-7287");
+                "CVE-2016-7282", "CVE-2016-7283", "CVE-2016-7284", "CVE-2016-7287");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 08:55:39 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 12:42:55 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-12-14 09:44:46 +0530 (Wed, 14 Dec 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Internet Explorer Multiple Vulnerabilities (3204059)");
@@ -57,7 +57,7 @@ if(description)
   could gain the same user rights as the current user, and obtain information
   to further compromise the user's system.");
 
-  script_tag(name:"affected", value:"Microsoft Internet Explorer version
+  script_tag(name:"affected", value:"- Microsoft Internet Explorer version
   9.x/10.x/11.x");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
@@ -73,7 +73,6 @@ if(description)
   script_mandatory_keys("MS/IE/Version");
   exit(0);
 }
-
 
 include("smb_nt.inc");
 include("secpod_reg.inc");

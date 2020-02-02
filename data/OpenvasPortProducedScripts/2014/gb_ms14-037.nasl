@@ -28,7 +28,7 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.804713");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2014-2783", "CVE-2014-1763", "CVE-2014-1765", "CVE-2014-2785",
                 "CVE-2014-2786", "CVE-2014-2787", "CVE-2014-2788", "CVE-2014-2789",
                 "CVE-2014-2790", "CVE-2014-2791", "CVE-2014-2792", "CVE-2014-2794",
@@ -40,7 +40,7 @@ if(description)
                     68383, 68384, 68385, 68386, 68387, 68388, 68389, 68390);
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2014-07-09 10:07:32 +0530 (Wed, 09 Jul 2014)");
   script_tag(name:"solution_type", value:"VendorFix");
   script_name("Microsoft Internet Explorer Multiple Vulnerabilities (2975687)");
@@ -65,7 +65,6 @@ if(description)
 
   script_tag(name:"qod_type", value:"registry");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/59775");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2962872");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2963952");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2975687");

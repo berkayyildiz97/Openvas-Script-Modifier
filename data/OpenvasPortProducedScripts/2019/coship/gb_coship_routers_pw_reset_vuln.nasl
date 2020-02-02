@@ -27,8 +27,8 @@
 if (description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.141884");
-  script_version("2019-04-05T06:55:01+0000");
-  script_tag(name:"last_modification", value:"2019-04-05 06:55:01 +0000 (Fri, 05 Apr 2019)");
+  script_version("2020-01-20T08:55:19+0000");
+  script_tag(name:"last_modification", value:"2020-01-20 08:55:19 +0000 (Mon, 20 Jan 2020)");
   script_tag(name:"creation_date", value:"2019-01-17 13:02:49 +0700 (Thu, 17 Jan 2019)");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
@@ -37,7 +37,7 @@ if (description)
 
   script_tag(name:"qod_type", value:"remote_banner");
 
-  script_tag(name:"solution_type", value:"NoneAvailable");
+  script_tag(name:"solution_type", value:"WillNotFix");
 
   script_name("Coship Wireless Router Password Reset Vulnerability");
 
@@ -56,8 +56,9 @@ Coship WM3300 - 5.0.0.55, Coship RT7620 - 10.0.0.49 and probably prior versions.
 
   script_tag(name:"vuldetect", value:"Checks if a vulnerable version is present on the target host.");
 
-  script_tag(name:"solution", value:"No known solution is available as of 29th March, 2019.
-  Information regarding this issue will be updated once solution details are available.");
+  script_tag(name:"solution", value:"No known solution was made available for at least one year since the disclosure
+  of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer
+  release, disable respective features, remove the product or replace the product by another one.");
 
   script_xref(name:"URL", value:"https://packetstormsecurity.com/files/151202/Coship-Wireless-Router-Unauthenticated-Admin-Password-Reset.html");
 

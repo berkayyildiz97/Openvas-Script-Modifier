@@ -23,12 +23,12 @@ CPE = "cpe:/a:microsoft:exchange_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815516");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2019-1136", "CVE-2019-1084");
   script_bugtraq_id(109030, 108929);
   script_tag(name:"cvss_base", value:"5.1");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:H/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2019-07-10 09:35:44 +0530 (Wed, 10 Jul 2019)");
   script_name("Microsoft Exchange Server Multiple Vulnerabilities (KB4509410)");
 

@@ -27,8 +27,8 @@
 if( description )
 {
   script_oid("1.3.6.1.4.1.25623.1.0.113195");
-  script_version("2019-10-07T14:34:48+0000");
-  script_tag(name:"last_modification", value:"2019-10-07 14:34:48 +0000 (Mon, 07 Oct 2019)");
+  script_version("2020-01-24T09:25:23+0000");
+  script_tag(name:"last_modification", value:"2020-01-24 09:25:23 +0000 (Fri, 24 Jan 2020)");
   script_tag(name:"creation_date", value:"2018-05-24 12:32:45 +0200 (Thu, 24 May 2018)");
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:N/A:P");
@@ -39,20 +39,24 @@ if( description )
 
   script_cve_id("CVE-2017-17314");
 
-  script_name("Huawei Products Invalid Memory Access Vulnerability");
+  script_name("Huawei Products Invalid Memory Access Vulnerability (huawei-sa-20180425-02-buffer)");
 
   script_category(ACT_GATHER_INFO);
 
   script_copyright("Copyright (C) 2018 Greenbone Networks GmbH");
-  script_family("Denial of Service");
+  script_family("Huawei");
   script_dependencies("gb_huawei_switch_detect.nasl");
   script_mandatory_keys("huawei_switch/detected", "huawei_switch/model", "huawei_switch/version");
 
   script_tag(name:"summary", value:"Multiple Huawei Switches are prone to an invalid memory access vulnerability.");
+
   script_tag(name:"vuldetect", value:"Checks if a vulnerable version is present on the target host.");
+
   script_tag(name:"insight", value:"An unauthenticated attacker can send malformed SCCP messages to the host.
   Due to insufficient input validation of some values in the messages, buffer errors can be caused.");
+
   script_tag(name:"impact", value:"Successful exploitation could lead to Denial of Service or execution of arbitrary code.");
+
   script_tag(name:"affected", value:"The following products and firmware versions are affected:
 
   - DP300: V500R002C00
@@ -62,13 +66,14 @@ if( description )
   - TE30 / TE60: V100R001C10, V500R002C00, V600R006C00
 
   - TE40 / TE50: V500R002C00, V600R006C00");
+
   script_tag(name:"solution", value:"The following device/firmware combinations contain a fix:
 
   - DP300: V500R002C00SPCb00
 
   - RP200 / TE30 / TE40 / TE50 / TE60: V600R006C00SPC500");
 
-  script_xref(name:"URL", value:"http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20180425-02-buffer-en");
+  script_xref(name:"URL", value:"https://www.huawei.com/en/psirt/security-advisories/huawei-sa-20180425-02-buffer-en");
 
   exit(0);
 }

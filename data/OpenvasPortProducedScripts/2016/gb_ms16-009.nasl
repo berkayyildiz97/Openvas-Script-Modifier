@@ -28,14 +28,14 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.806680");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-0041", "CVE-2016-0059", "CVE-2016-0060", "CVE-2016-0061",
                 "CVE-2016-0062", "CVE-2016-0063", "CVE-2016-0064", "CVE-2016-0067",
                 "CVE-2016-0068", "CVE-2016-0069", "CVE-2016-0071", "CVE-2016-0072",
                 "CVE-2016-0077");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-02-10 08:17:47 +0530 (Wed, 10 Feb 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Internet Explorer Multiple Vulnerabilities (3134220)");
@@ -63,7 +63,7 @@ if(description)
   information, conduct redirection attack and gain elevated privileges on the
   affected system.");
 
-  script_tag(name:"affected", value:"Microsoft Internet Explorer version
+  script_tag(name:"affected", value:"- Microsoft Internet Explorer version
   9.x/10.x/11.x");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");

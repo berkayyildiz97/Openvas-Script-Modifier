@@ -17,7 +17,7 @@ public class NvtPortProducer {
         this.outputDirectoryPath = outputDirectoryPath;
     }
 
-    public void producePortForSecurityMessage() throws IOException, ClassNotFoundException {
+    public void producePortForSecurityMessage(String nvtDirectoryPath) throws IOException, ClassNotFoundException {
         FileInputStream fileInputStream = new FileInputStream(new File(portProducibleNvtFileListPath));
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         ArrayList<File> portProducibleNvtFileList = (ArrayList<File>) objectInputStream.readObject();
@@ -29,11 +29,13 @@ public class NvtPortProducer {
             boolean isCpeFound = false;
             String nvtParentPath = nvt.getParentFile().getAbsolutePath();
             File outputFile = null;
-            if (nvtParentPath.equals("/var/lib/openvas/plugins")) {
+            if (nvtParentPath.equals(nvtDirectoryPath)) {
                 outputFile = new File(outputDirectoryPath + "/" + nvt.getName());
             }
             else {
-                String nvtDirectoryPathAfterPlugins = nvtParentPath.substring(nvtParentPath.indexOf("plugins") + 8);
+                File nvtDirectoryFile = new File(nvtDirectoryPath);
+                String nvtDirectoryName = nvtDirectoryFile.getName();
+                String nvtDirectoryPathAfterPlugins = nvtParentPath.substring(nvtParentPath.indexOf(nvtDirectoryName) + nvtDirectoryName.length() + 1);
                 //To create directories of nvt
                 new File(outputDirectoryPath + "/" + nvtDirectoryPathAfterPlugins).mkdirs();
                 outputFile = new File(outputDirectoryPath + "/" + nvtDirectoryPathAfterPlugins + "/" + nvt.getName());

@@ -24,7 +24,7 @@ CPE = "cpe:/a:google:chrome";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815700");
-  script_version("2019-09-16T07:48:47+0000");
+  script_version("2019-12-06T10:04:22+0000");
   script_cve_id("CVE-2019-5870", "CVE-2019-5871", "CVE-2019-5872", "CVE-2019-5873",
                 "CVE-2019-5874", "CVE-2019-5875", "CVE-2019-5876", "CVE-2019-5877",
                 "CVE-2019-5878", "CVE-2019-5879", "CVE-2019-5880", "CVE-2019-5881",
@@ -34,9 +34,9 @@ if(description)
                 "CVE-2019-13671", "CVE-2019-13673", "CVE-2019-13674", "CVE-2019-13675",
                 "CVE-2019-13676", "CVE-2019-13677", "CVE-2019-13678", "CVE-2019-13679",
                 "CVE-2019-13680", "CVE-2019-13681", "CVE-2019-13682", "CVE-2019-13683");
-  script_tag(name:"cvss_base", value:"5.0");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:P");
-  script_tag(name:"last_modification", value:"2019-09-16 07:48:47 +0000 (Mon, 16 Sep 2019)");
+  script_tag(name:"cvss_base", value:"6.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
+  script_tag(name:"last_modification", value:"2019-12-06 10:04:22 +0000 (Fri, 06 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-09-13 15:05:26 +0530 (Fri, 13 Sep 2019)");
   script_name("Google Chrome Security Updates(stable-channel-update-for-desktop-2019-09)-MAC OS X");
 

@@ -26,12 +26,12 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.902927");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_bugtraq_id(55797);
   script_cve_id("CVE-2012-2520");
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2012-10-10 10:34:20 +0530 (Wed, 10 Oct 2012)");
   script_name("Microsoft Products HTML Sanitisation Component XSS Vulnerability (2741517)");
 
@@ -48,19 +48,31 @@ if(description)
   script_mandatory_keys("SMB/WindowsVersion");
   script_tag(name:"impact", value:"Successful exploitation could allow an attacker to bypass certain security
   restrictions and conduct cross-site scripting and spoofing attacks.");
-  script_tag(name:"affected", value:"Microsoft Lync 2010
-  Microsoft Lync 2010 Attendee
-  Microsoft Communicator 2007 R2
-  Microsoft InfoPath 2007 Service Pack 2
-  Microsoft InfoPath 2007 Service Pack 3
-  Microsoft InfoPath 2010 Service Pack 1
-  Microsoft Groove Server 2010 Service Pack 1
-  Microsoft Office Web Apps 2010 Service Pack 1
-  Microsoft SharePoint Server 2010 Service Pack 1
-  Microsoft SharePoint Server 2007 Service Pack 2
-  Microsoft SharePoint Server 2007 Service Pack 3
-  Microsoft SharePoint Foundation 2010 Service Pack 1
-  Microsoft Windows SharePoint Services 3.0 Service Pack 2");
+  script_tag(name:"affected", value:"- Microsoft Lync 2010
+
+  - Microsoft Lync 2010 Attendee
+
+  - Microsoft Communicator 2007 R2
+
+  - Microsoft InfoPath 2007 Service Pack 2
+
+  - Microsoft InfoPath 2007 Service Pack 3
+
+  - Microsoft InfoPath 2010 Service Pack 1
+
+  - Microsoft Groove Server 2010 Service Pack 1
+
+  - Microsoft Office Web Apps 2010 Service Pack 1
+
+  - Microsoft SharePoint Server 2010 Service Pack 1
+
+  - Microsoft SharePoint Server 2007 Service Pack 2
+
+  - Microsoft SharePoint Server 2007 Service Pack 3
+
+  - Microsoft SharePoint Foundation 2010 Service Pack 1
+
+  - Microsoft Windows SharePoint Services 3.0 Service Pack 2");
   script_tag(name:"insight", value:"Certain unspecified input is not properly sanitised within the HTML
   Sanitisation component before being returned to the user. This can be
   exploited to execute arbitrary HTML and script code in a user's
@@ -73,7 +85,7 @@ if(description)
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2687439");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2687440");
   script_xref(name:"URL", value:"http://packetstormsecurity.org/files/117220/sa50855.txt");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms12-066");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-066");
   exit(0);
 }
 

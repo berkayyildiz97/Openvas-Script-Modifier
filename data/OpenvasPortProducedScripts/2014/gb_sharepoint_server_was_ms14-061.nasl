@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:sharepoint_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.804497");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T12:48:41+0000");
   script_cve_id("CVE-2014-4117");
   script_bugtraq_id(70360);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 12:48:41 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-10-15 11:51:19 +0530 (Wed, 15 Oct 2014)");
 
   script_name("Microsoft SharePoint Server WAS Memory Corruption Vulnerability (3000434)");
@@ -51,7 +51,7 @@ if(description)
   attackers to execute the arbitrary code, cause memory corruption and
   compromise the system.");
 
-  script_tag(name:"affected", value:"Microsoft SharePoint Server 2010
+  script_tag(name:"affected", value:"- Microsoft SharePoint Server 2010
 
   Word Automation Services Service Pack 2 and prior");
 
@@ -59,7 +59,6 @@ if(description)
   script_tag(name:"qod_type", value:"executable_version");
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/60973");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2883098");
   script_xref(name:"URL", value:"https://technet.microsoft.com/library/security/MS14-061");
   script_category(ACT_GATHER_INFO);

@@ -28,7 +28,7 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.806646");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-6083", "CVE-2015-6134", "CVE-2015-6135", "CVE-2015-6136",
                 "CVE-2015-6138", "CVE-2015-6139", "CVE-2015-6140", "CVE-2015-6141",
                 "CVE-2015-6142", "CVE-2015-6143", "CVE-2015-6144", "CVE-2015-6145",
@@ -39,7 +39,7 @@ if(description)
                 "CVE-2015-6162", "CVE-2015-6164");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-12-09 11:34:00 +0530 (Wed, 09 Dec 2015)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Internet Explorer Multiple Vulnerabilities (3116180)");
@@ -76,7 +76,7 @@ if(description)
   elevate privileges, bypass certain security restrictions and execute arbitrary
   HTML and script code in a user's browser session in context of an affected site.");
 
-  script_tag(name:"affected", value:"Microsoft Internet Explorer version
+  script_tag(name:"affected", value:"- Microsoft Internet Explorer version
   7.x/8.x/9.x/10.x/11.x");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");

@@ -23,11 +23,11 @@ CPE = "cpe:/a:microsoft:.net_core";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.814698");
-  script_version("2019-05-03T08:55:39+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2019-0757");
   script_tag(name:"cvss_base", value:"4.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 08:55:39 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-03-13 08:37:41 +0530 (Wed, 13 Mar 2019)");
   script_name("Microsoft .NET Core NuGet Package Manager Tampering Vulnerability - Linux");
 
@@ -45,8 +45,8 @@ if(description)
   An attacker who successfully exploited this vulnerability could potentially
   modify files and folders that are unpackaged on a system.");
 
-  script_tag(name:"affected", value:"Microsoft .NET Core 1.0 before 1.0.15, 1.1 before 1.1.12,
-  2.1 before 2.1.9 and 2.2 before 2.2.3 on Linux.");
+  script_tag(name:"affected", value:"- Microsoft .NET Core 1.0 before 1.0.15, 1.1 before 1.1.12,
+  2.1 before 2.1.9 and 2.2 before 2.2.3");
 
   script_tag(name:"solution", value:"Upgrade to Microsoft .NET Core version 1.0.15 or 1.1.12
   or 2.1.9 or 2.2.3 or later. Please see the references for more information.");
@@ -62,7 +62,6 @@ if(description)
   script_mandatory_keys("dotnet/core/runtime/Linux/Ver");
   exit(0);
 }
-
 
 include("host_details.inc");
 include("version_func.inc");

@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:sharepoint_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805167");
-  script_version("2019-05-03T10:54:50+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-1653");
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 10:54:50 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-04-15 15:21:41 +0530 (Wed, 15 Apr 2015)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("MS SharePoint Server and Foundation Elevation of Privilege Vulnerability (3052044)");
@@ -48,9 +48,9 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   authenticated attackers to execute arbitrary HTML and script code.");
 
-  script_tag(name:"affected", value:"Microsoft SharePoint Server 2013 Service Pack 1,
+  script_tag(name:"affected", value:"- Microsoft SharePoint Server 2013 Service Pack 1,
 
-  Microsoft SharePoint Foundation 2013 Service Pack 1");
+  - Microsoft SharePoint Foundation 2013 Service Pack 1");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

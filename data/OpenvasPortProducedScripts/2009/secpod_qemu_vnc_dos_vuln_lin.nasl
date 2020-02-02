@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: secpod_qemu_vnc_dos_vuln_lin.nasl 12690 2018-12-06 14:56:20Z cfischer $
 #
 # QEMU VNC Server Denial of Service Vulnerability (Linux)
 #
@@ -24,13 +23,11 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 ###############################################################################
 
-CPE = 'cpe:/a:qemu:qemu';
-
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.900970");
-  script_version("$Revision: 12690 $");
-  script_tag(name:"last_modification", value:"$Date: 2018-12-06 15:56:20 +0100 (Thu, 06 Dec 2018) $");
+  script_version("2020-01-20T15:09:17+0000");
+  script_tag(name:"last_modification", value:"2020-01-20 15:09:17 +0000 (Mon, 20 Jan 2020)");
   script_tag(name:"creation_date", value:"2009-10-31 09:54:01 +0100 (Sat, 31 Oct 2009)");
   script_tag(name:"cvss_base", value:"8.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:S/C:C/I:C/A:C");
@@ -61,22 +58,28 @@ if(description)
 
   script_tag(name:"solution", value:"Apply the available patches from the referenced repositories.");
 
-  script_tag(name:"qod_type", value:"executable_version");
+  script_tag(name:"qod_type", value:"executable_version_unreliable");
   script_tag(name:"solution_type", value:"VendorFix");
 
   exit(0);
 }
 
-include("version_func.inc");
-include("host_details.inc");
+CPE = "cpe:/a:qemu:qemu";
 
-if(!ver = get_app_version(cpe:CPE)) exit(0);
+include( "host_details.inc" );
+include( "version_func.inc" );
 
-if(version_is_less_equal(version:ver, test_version:"0.10.6")){
-  report = report_fixed_ver(installed_version:ver, fixed_version:"0.11.0");
+if( ! infos = get_app_version_and_location( cpe: CPE, exit_no_version: TRUE ) )
+  exit( 0 );
+
+location = infos["location"];
+version = infos["version"];
+
+if( version_is_less( version: version, test_version:"0.10.6" ) ) {
+  report = report_fixed_ver( installed_version: version, fixed_version: "0.11.0", install_path: location );
   if(!port = get_app_port(cpe: CPE)) port = 0;
   security_message(port:port, data:report);
-  exit(0);
+  exit( 0 );
 }
 
-exit(99);
+exit( 99 );

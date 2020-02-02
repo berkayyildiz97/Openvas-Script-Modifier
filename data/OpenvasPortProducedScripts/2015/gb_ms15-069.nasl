@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:rdp";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805721");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-2368", "CVE-2015-2369");
   script_tag(name:"cvss_base", value:"6.9");
   script_tag(name:"cvss_base_vector", value:"AV:L/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-07-15 12:14:36 +0530 (Wed, 15 Jul 2015)");
   script_name("Microsoft Windows Remote Code Execution (3072631)");
 
@@ -48,19 +48,19 @@ if(description)
   attackers to bypass security, gain elevated privileges and execute arbitrary
   code on affected system.");
 
-  script_tag(name:"affected", value:"Microsoft Windows Server 2012 R2
+  script_tag(name:"affected", value:"- Microsoft Windows Server 2012 R2
 
-  Microsoft Windows 8.1 x32/x64 Edition
+  - Microsoft Windows 8.1 x32/x64 Edition
 
-  Microsoft Windows 2003 x32/x64 Edition Service Pack 2 and prior
+  - Microsoft Windows 2003 x32/x64 Edition Service Pack 2 and prior
 
-  Microsoft Windows Vista x32/x64 Edition Service Pack 2 and prior
+  - Microsoft Windows Vista x32/x64 Edition Service Pack 2 and prior
 
-  Microsoft Windows Server 2008 x32/x64 Edition Service Pack 2 and prior
+  - Microsoft Windows Server 2008 x32/x64 Edition Service Pack 2 and prior
 
-  Microsoft Windows 7 x32/x64 Edition Service Pack 1 and prior
+  - Microsoft Windows 7 x32/x64 Edition Service Pack 1 and prior
 
-  Microsoft Windows Server 2008 R2 x64 Edition Service Pack 1 and prior");
+  - Microsoft Windows Server 2008 R2 x64 Edition Service Pack 1 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

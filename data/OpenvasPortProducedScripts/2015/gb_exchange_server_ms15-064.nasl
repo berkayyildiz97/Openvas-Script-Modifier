@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:exchange_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805198");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-1764", "CVE-2015-1771", "CVE-2015-2359");
   script_bugtraq_id(75007, 75011, 75013);
   script_tag(name:"cvss_base", value:"6.8");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-06-10 10:26:35 +0530 (Wed, 10 Jun 2015)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Exchange Server Privilege Escalation Vulnerability (3062157)");
@@ -51,7 +51,7 @@ if(description)
   inaccessible from the outside world, enumerate and attack services that are
   running on these host systems and exploit host-based authentication services.");
 
-  script_tag(name:"affected", value:"Microsoft Exchange Server 2013 SP1
+  script_tag(name:"affected", value:"- Microsoft Exchange Server 2013 SP1
 
   and Microsoft Exchange Server 2013 Cumulative Update 8");
 

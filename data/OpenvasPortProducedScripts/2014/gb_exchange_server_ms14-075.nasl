@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:exchange_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805115");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2019-12-20T12:48:41+0000");
   script_cve_id("CVE-2014-6319", "CVE-2014-6325", "CVE-2014-6326", "CVE-2014-6336");
   script_bugtraq_id(71437, 71440, 71441, 71443);
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 12:48:41 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-12-10 15:28:46 +0530 (Wed, 10 Dec 2014)");
   script_name("Microsoft Exchange Server Multiple Vulnerabilities (3009712)");
 
@@ -55,19 +55,18 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   attackers to conduct spoofing and cross-site scripting attacks.");
 
-  script_tag(name:"affected", value:"Microsoft Exchange Server 2007 Service Pack 3 and prior
+  script_tag(name:"affected", value:"- Microsoft Exchange Server 2007 Service Pack 3 and prior
 
-  Microsoft Exchange Server 2010 Service Pack 3 and prior
+  - Microsoft Exchange Server 2010 Service Pack 3 and prior
 
-  Microsoft Exchange Server 2013 Service Pack 1 and prior
+  - Microsoft Exchange Server 2013 Service Pack 1 and prior
 
-  Microsoft Exchange Server 2013 Cumulative Update 6.");
+  - Microsoft Exchange Server 2013 Cumulative Update 6");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/61155");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2996150");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2986475");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/3011140");

@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:yammer";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.814324");
-  script_version("2019-05-17T10:45:27+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2018-8569");
   script_tag(name:"cvss_base", value:"6.8");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-05-17 10:45:27 +0000 (Fri, 17 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2018-11-22 11:37:14 +0530 (Thu, 22 Nov 2018)");
   script_name("Microsoft Yammer Desktop Remote Code Execution Vulnerability (Windows)");
 
@@ -51,7 +51,7 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow an attacker
   to run arbitrary code in the context of the current user");
 
-  script_tag(name:"affected", value:"Microsoft Yammer Desktop versions prior to 2.0.0 on Windows");
+  script_tag(name:"affected", value:"Microsoft Yammer Desktop versions prior to 2.0.0");
 
   script_tag(name:"solution", value:"Upgrade to Microsoft Yammer Desktop 2.0.0 or later. Please see the references for more information.");
 

@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:exchange_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.811761");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2017-11761", "CVE-2017-8758");
   script_bugtraq_id(100731, 100723);
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2017-09-14 10:51:52 +0530 (Thu, 14 Sep 2017)");
   script_name("Microsoft Exchange Server Multiple Vulnerabilities (KB4036108)");
 
@@ -48,11 +48,15 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow attacker
   to gain access to potentially sensitive information.");
 
-  script_tag(name:"affected", value:"Microsoft Exchange Server 2016 CU5
-  Microsoft Exchange Server 2016 CU6
-  Microsoft Exchange Server 2013 CU16
-  Microsoft Exchange Server 2013 CU17
-  Microsoft Exchange Server 2013 SP1");
+  script_tag(name:"affected", value:"- Microsoft Exchange Server 2016 CU5
+
+  - Microsoft Exchange Server 2016 CU6
+
+  - Microsoft Exchange Server 2013 CU16
+
+  - Microsoft Exchange Server 2013 CU17
+
+  - Microsoft Exchange Server 2013 SP1");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

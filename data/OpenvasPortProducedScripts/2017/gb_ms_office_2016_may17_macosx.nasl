@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_ms_office_2016_may17_macosx.nasl 11989 2018-10-19 11:25:26Z cfischer $
 #
 # Microsoft Office 2016 Memory Corruption Vulnerability (Mac OS X)
 #
@@ -29,12 +28,12 @@ CPE = "cpe:/a:microsoft:office";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.811048");
-  script_version("$Revision: 11989 $");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2017-0254");
   script_bugtraq_id(98101);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-19 13:25:26 +0200 (Fri, 19 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2017-05-19 15:20:17 +0530 (Fri, 19 May 2017)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office 2016 Memory Corruption Vulnerability (Mac OS X)");

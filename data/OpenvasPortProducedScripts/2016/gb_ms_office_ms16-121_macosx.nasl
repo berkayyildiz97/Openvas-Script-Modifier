@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_ms_office_ms16-121_macosx.nasl 12153 2018-10-29 13:38:34Z cfischer $
 #
 # Microsoft Office Remote Code Execution Vulnerability-3194063(Mac OS X)
 #
@@ -28,12 +27,12 @@ CPE = "cpe:/a:microsoft:office";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809701");
-  script_version("$Revision: 12153 $");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-7193");
   script_bugtraq_id(93372);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-29 14:38:34 +0100 (Mon, 29 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-10-12 10:42:50 +0530 (Wed, 12 Oct 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Remote Code Execution Vulnerability-3194063(Mac OS X)");
@@ -49,8 +48,9 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow a remote
   attacker to run arbitrary code in the context of the current user.");
 
-  script_tag(name:"affected", value:"Microsoft Office 2011 on Mac OS X
-  Microsoft Office 2016 on Mac OS X");
+  script_tag(name:"affected", value:"- Microsoft Office 2011 on Mac OS X
+
+  - Microsoft Office 2016 on Mac OS X");
 
   script_tag(name:"solution", value:"Apply the patch from the referenced advisory.");
 

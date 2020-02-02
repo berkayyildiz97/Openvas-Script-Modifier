@@ -23,12 +23,12 @@ CPE = "cpe:/a:google:chrome";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815498");
-  script_version("2019-10-15T06:42:05+0000");
+  script_version("2019-12-05T07:54:08+0000");
   script_cve_id("CVE-2019-13693", "CVE-2019-13694", "CVE-2019-13695", "CVE-2019-13696",
                 "CVE-2019-13697");
-  script_tag(name:"cvss_base", value:"4.3");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:N/A:P");
-  script_tag(name:"last_modification", value:"2019-10-15 06:42:05 +0000 (Tue, 15 Oct 2019)");
+  script_tag(name:"cvss_base", value:"6.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
+  script_tag(name:"last_modification", value:"2019-12-05 07:54:08 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-10-11 15:29:39 +0530 (Fri, 11 Oct 2019)");
   script_name("Google Chrome Security Updates(stable-channel-update-for-desktop-2019-10)-Windows");
 

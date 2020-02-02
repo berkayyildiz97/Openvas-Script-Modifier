@@ -28,13 +28,13 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.807837");
-  script_version("2019-05-03T08:55:39+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-0199", "CVE-2016-0200", "CVE-2016-3202", "CVE-2016-3205",
                 "CVE-2016-3206", "CVE-2016-3207", "CVE-2016-3210", "CVE-2016-3211",
                 "CVE-2016-3212", "CVE-2016-3213");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 08:55:39 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-06-15 08:02:15 +0530 (Wed, 15 Jun 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Internet Explorer Multiple Vulnerabilities (3163649)");
@@ -61,7 +61,7 @@ if(description)
   attackers to bypass security, gain elevated privileges and execute arbitrary code
   on the affected system.");
 
-  script_tag(name:"affected", value:"Microsoft Internet Explorer version
+  script_tag(name:"affected", value:"- Microsoft Internet Explorer version
   9.x/10.x/11.x");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");

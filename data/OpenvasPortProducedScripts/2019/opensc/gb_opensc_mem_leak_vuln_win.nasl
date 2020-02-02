@@ -21,8 +21,8 @@
 if (description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.112499");
-  script_version("2019-04-16T07:10:04+0000");
-  script_tag(name:"last_modification", value:"2019-04-16 07:10:04 +0000 (Tue, 16 Apr 2019)");
+  script_version("2020-01-28T09:44:58+0000");
+  script_tag(name:"last_modification", value:"2020-01-28 09:44:58 +0000 (Tue, 28 Jan 2020)");
   script_tag(name:"creation_date", value:"2019-01-24 15:36:12 +0100 (Thu, 24 Jan 2019)");
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:P");
@@ -31,9 +31,9 @@ if (description)
 
   script_tag(name:"qod_type", value:"registry");
 
-  script_tag(name:"solution_type", value:"NoneAvailable");
+  script_tag(name:"solution_type", value:"VendorFix");
 
-  script_name("OpenSC <= 0.19.0 Memory Leak Vulnerability (Windows)");
+  script_name("OpenSC < 0.20.0 Memory Leak Vulnerability (Windows)");
 
   script_category(ACT_GATHER_INFO);
 
@@ -45,9 +45,8 @@ if (description)
   script_tag(name:"summary", value:"OpenSC is prone to a memory leak vulnerability.");
   script_tag(name:"insight", value:"sc_context_create in ctx.c in libopensc in OpenSC has a memory leak, via a call from eidenv.c.");
   script_tag(name:"vuldetect", value:"Checks if a vulnerable version is present on the target host.");
-  script_tag(name:"affected", value:"OpenSC through version 0.19.0.");
-  script_tag(name:"solution", value:"No known solution is available as of 03rd April, 2019.
-  Information regarding this issue will be updated once solution details are available.");
+  script_tag(name:"affected", value:"OpenSC prior to version 0.20.0.");
+  script_tag(name:"solution", value:"Update to OpenSC version 0.20.0 or later.");
 
   script_xref(name:"URL", value:"https://github.com/OpenSC/OpenSC/issues/1586");
 
@@ -65,8 +64,8 @@ if(!infos = get_app_version_and_location(cpe:CPE, exit_no_version:TRUE))
 vers = infos['version'];
 path = infos['location'];
 
-if(version_is_less_equal(version: vers, test_version: "0.19.0")) {
-  report = report_fixed_ver(installed_version: vers, fixed_version: "None", install_path: path);
+if(version_is_less(version: vers, test_version: "0.20.0")) {
+  report = report_fixed_ver(installed_version: vers, fixed_version: "0.20.0", install_path: path);
   if(!port = get_app_port(cpe: CPE)) port = 0;
   security_message(port:port, data:report);
   exit(0);

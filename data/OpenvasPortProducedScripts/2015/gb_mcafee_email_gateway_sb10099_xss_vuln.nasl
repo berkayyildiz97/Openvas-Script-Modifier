@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_mcafee_email_gateway_sb10099_xss_vuln.nasl 11975 2018-10-19 06:54:12Z cfischer $
 #
 # McAfee Email Gateway Secure Web Mail Client UI Cross-Site Scripting Vulnerability
 #
@@ -29,11 +28,11 @@ CPE = "cpe:/a:mcafee:email_gateway";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805290");
-  script_version("$Revision: 11975 $");
+  script_version("2019-12-05T15:10:00+0000");
   script_cve_id("CVE-2015-1619");
   script_tag(name:"cvss_base", value:"3.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:S/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-19 08:54:12 +0200 (Fri, 19 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-03-02 11:56:43 +0530 (Mon, 02 Mar 2015)");
   script_name("McAfee Email Gateway Secure Web Mail Client UI Cross-Site Scripting Vulnerability");
 
@@ -74,7 +73,6 @@ if(description)
 }
 
 include("host_details.inc");
-include("version_func.inc");
 
 if(!version = get_app_version(cpe:CPE))exit(0);
 

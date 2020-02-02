@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:asp.net_core";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.813044");
-  script_version("2019-05-17T10:45:27+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2018-0808");
   script_bugtraq_id(103225);
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:P");
-  script_tag(name:"last_modification", value:"2019-05-17 10:45:27 +0000 (Fri, 17 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2018-03-16 11:09:04 +0530 (Fri, 16 Mar 2018)");
   script_name("ASP.NET Core ANCM Denial of Service Vulnerability (Windows)");
 
@@ -48,7 +48,7 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow an attacker
   to cause a denial of service against an ASP.NET Core web application.");
 
-  script_tag(name:"affected", value:"Microsoft ASP.NET Core 1.0, 1.1 and 2.0
+  script_tag(name:"affected", value:"- Microsoft ASP.NET Core 1.0, 1.1 and 2.0
   running AspNetCoreModule (ANCM) prior to 7.1.1990.0");
 
   script_tag(name:"solution", value:"Upgrade to AspNetCoreModule (ANCM) version

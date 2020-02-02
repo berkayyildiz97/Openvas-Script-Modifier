@@ -27,12 +27,12 @@ CPE = "cpe:/a:microsoft:frontpage";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.903321");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_cve_id("CVE-2013-3137");
   script_bugtraq_id(62185);
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2013-09-11 11:12:46 +0530 (Wed, 11 Sep 2013)");
   script_name("Microsoft FrontPage Information Disclosure Vulnerability (2825621)");
 
@@ -49,14 +49,14 @@ of a file on a target system.");
   script_tag(name:"solution_type", value:"VendorFix");
 
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2825621");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/MS13-078");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-078");
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (c) 2013 SecPod");
   script_family("Windows : Microsoft Bulletins");
   script_dependencies("gb_ms_frontpage_detect.nasl");
   script_require_ports(139, 445);
   script_mandatory_keys("Microsoft/FrontPage/Ver");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms13-078");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-078");
   exit(0);
 }
 

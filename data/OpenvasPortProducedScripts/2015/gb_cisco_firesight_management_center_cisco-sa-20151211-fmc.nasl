@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_cisco_firesight_management_center_cisco-sa-20151211-fmc.nasl 12106 2018-10-26 06:33:36Z cfischer $
 #
 # Cisco FireSIGHT Management Center GET Request Information Disclosure Vulnerability
 #
@@ -33,7 +32,7 @@ if (description)
   script_cve_id("CVE-2015-6419");
   script_tag(name:"cvss_base", value:"6.8");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:C/I:N/A:N");
-  script_version("$Revision: 12106 $");
+  script_version("2019-12-05T15:10:00+0000");
 
   script_name("Cisco FireSIGHT Management Center GET Request Information Disclosure Vulnerability ");
 
@@ -52,7 +51,7 @@ if (description)
   script_tag(name:"solution_type", value:"VendorFix");
   script_tag(name:"qod_type", value:"package");
 
-  script_tag(name:"last_modification", value:"$Date: 2018-10-26 08:33:36 +0200 (Fri, 26 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-12-15 10:41:43 +0100 (Tue, 15 Dec 2015)");
   script_category(ACT_GATHER_INFO);
   script_family("CISCO");
@@ -64,7 +63,6 @@ if (description)
 }
 
 include("host_details.inc");
-include("version_func.inc");
 
 if( ! version = get_app_version( cpe:CPE, nofork:TRUE ) ) exit( 0 );
 

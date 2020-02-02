@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:microsoft_forefront_protection";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.903430");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2014-0294");
   script_bugtraq_id(65397);
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2014-02-12 10:41:31 +0530 (Wed, 12 Feb 2014)");
   script_name("Microsoft Forefront Protection For Exchange RCE Vulnerability (2927022)");
 
@@ -49,7 +49,6 @@ specially crafted email message and compromise a vulnerable system.");
   script_tag(name:"qod_type", value:"registry");
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/56788");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2927022");
   script_xref(name:"URL", value:"https://technet.microsoft.com/en-us/security/bulletin/ms14-008");
   script_category(ACT_GATHER_INFO);

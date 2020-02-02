@@ -23,12 +23,12 @@ CPE = "cpe:/a:apple:icloud";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815496");
-  script_version("2019-10-11T07:39:42+0000");
+  script_version("2019-12-31T10:02:33+0000");
   script_cve_id("CVE-2019-8745", "CVE-2019-8625", "CVE-2019-8719", "CVE-2019-8707",
                 "CVE-2019-8763", "CVE-2019-8726", "CVE-2019-8733", "CVE-2019-8735");
-  script_tag(name:"cvss_base", value:"9.3");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-10-11 07:39:42 +0000 (Fri, 11 Oct 2019)");
+  script_tag(name:"cvss_base", value:"6.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
+  script_tag(name:"last_modification", value:"2019-12-31 10:02:33 +0000 (Tue, 31 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-10-10 11:25:57 +0530 (Thu, 10 Oct 2019)");
   script_name("Apple iCloud Security Updates(HT210637_HT210636)");
 

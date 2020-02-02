@@ -19,8 +19,8 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.113566");
-  script_version("2019-11-14T10:41:32+0000");
-  script_tag(name:"last_modification", value:"2019-11-14 10:41:32 +0000 (Thu, 14 Nov 2019)");
+  script_version("2019-12-03T13:21:01+0000");
+  script_tag(name:"last_modification", value:"2019-12-03 13:21:01 +0000 (Tue, 03 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-11-14 11:32:42 +0000 (Thu, 14 Nov 2019)");
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:N/A:P");
@@ -38,15 +38,20 @@ if(description)
   script_copyright("Copyright (C) 2019 Greenbone Networks GmbH");
   script_family("Denial of Service");
   script_dependencies("gb_imagemagick_detect_macosx.nasl");
-  script_mandatory_keys("ImageMagick/MacOSX/Ver");
+  script_mandatory_keys("ImageMagick/MacOSX/Version");
 
   script_tag(name:"summary", value:"ImageMagick is prone to a denial of service (DoS) vulnerability.");
+
   script_tag(name:"vuldetect", value:"Checks if a vulnerable version is present on the target host.");
+
   script_tag(name:"insight", value:"The vulnerability exists because
   XML_PARSE_HUGE is not properly restricted in coders/svg.c.");
+
   script_tag(name:"impact", value:"Successful exploitation would allow an attacker to exhaust
   the target system's resources.");
+
   script_tag(name:"affected", value:"ImageMagick through version 7.0.8-68.");
+
   script_tag(name:"solution", value:"Update to version 7.0.9-0 or later.");
 
   script_xref(name:"URL", value:"https://fortiguard.com/zeroday/FG-VD-19-136");

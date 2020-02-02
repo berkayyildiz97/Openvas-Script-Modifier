@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:office_web_apps";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805186");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-1682", "CVE-2015-1683");
   script_bugtraq_id(74481, 74484);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-05-13 16:44:04 +0530 (Wed, 13 May 2015)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Web Apps RCE Vulnerability (3057181)");
@@ -50,9 +50,9 @@ if(description)
   context-dependent attacker to corrupt memory and potentially
   execute arbitrary code.");
 
-  script_tag(name:"affected", value:"Microsoft Office Web Apps 2010 Service Pack 2 and prior,
+  script_tag(name:"affected", value:"- Microsoft Office Web Apps 2010 Service Pack 2 and prior,
 
-  Microsoft Office Web Apps Server 2013 Service Pack 1 and prior.");
+  - Microsoft Office Web Apps Server 2013 Service Pack 1 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

@@ -26,18 +26,17 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.902847");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_bugtraq_id(53842, 54312, 54313, 54314, 54315, 54316);
   script_cve_id("CVE-2012-1858", "CVE-2012-1859", "CVE-2012-1860", "CVE-2012-1861",
                 "CVE-2012-1862", "CVE-2012-1863");
   script_tag(name:"cvss_base", value:"6.8");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2012-07-11 11:11:11 +0530 (Wed, 11 Jul 2012)");
   script_name("Microsoft SharePoint Multiple Privilege Elevation Vulnerabilities (2695502)");
-  script_xref(name:"URL", value:"http://secunia.com/advisories/49875");
   script_xref(name:"URL", value:"http://www.securitytracker.com/id/1027232");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms12-050");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-050");
 
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (C) 2012 SecPod");
@@ -49,21 +48,35 @@ if(description)
   script_mandatory_keys("SMB/WindowsVersion");
   script_tag(name:"impact", value:"Successful exploitation could allow an attacker to bypass certain security
   restrictions and conduct cross-site scripting and spoofing attacks.");
-  script_tag(name:"affected", value:"Microsoft InfoPath 2010
-  Microsoft Groove Server 2010
-  Microsoft Office Web Apps 2010
-  Microsoft SharePoint Server 2010
-  Microsoft SharePoint Foundation 2010
-  Microsoft InfoPath 2007 Service Pack 2
-  Microsoft InfoPath 2007 Service Pack 3
-  Microsoft InfoPath 2010 Service Pack 1
-  Microsoft Groove Server 2010 Service Pack 1
-  Microsoft Office Web Apps 2010 Service Pack 1
-  Microsoft SharePoint Server 2010 Service Pack 1
-  Microsoft SharePoint Foundation 2010 Service Pack 1
-  Microsoft Office SharePoint Server 2007 Service Pack 2
-  Microsoft Office SharePoint Server 2007 Service Pack 3
-  Microsoft Windows SharePoint Services 3.0 Service Pack 2");
+  script_tag(name:"affected", value:"- Microsoft InfoPath 2010
+
+  - Microsoft Groove Server 2010
+
+  - Microsoft Office Web Apps 2010
+
+  - Microsoft SharePoint Server 2010
+
+  - Microsoft SharePoint Foundation 2010
+
+  - Microsoft InfoPath 2007 Service Pack 2
+
+  - Microsoft InfoPath 2007 Service Pack 3
+
+  - Microsoft InfoPath 2010 Service Pack 1
+
+  - Microsoft Groove Server 2010 Service Pack 1
+
+  - Microsoft Office Web Apps 2010 Service Pack 1
+
+  - Microsoft SharePoint Server 2010 Service Pack 1
+
+  - Microsoft SharePoint Foundation 2010 Service Pack 1
+
+  - Microsoft Office SharePoint Server 2007 Service Pack 2
+
+  - Microsoft Office SharePoint Server 2007 Service Pack 3
+
+  - Microsoft Windows SharePoint Services 3.0 Service Pack 2");
   script_tag(name:"insight", value:"- Certain input is not properly sanitised in the 'SafeHTML' API before being
     returned to the user.
 

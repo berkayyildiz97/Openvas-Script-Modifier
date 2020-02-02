@@ -23,11 +23,11 @@ CPE = "cpe:/a:apple:safari";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815476");
-  script_version("2019-10-01T10:38:58+0000");
+  script_version("2019-12-28T10:21:15+0000");
   script_cve_id("CVE-2019-8654", "CVE-2019-8725");
-  script_tag(name:"cvss_base", value:"9.3");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-10-01 10:38:58 +0000 (Tue, 01 Oct 2019)");
+  script_tag(name:"cvss_base", value:"5.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
+  script_tag(name:"last_modification", value:"2019-12-28 10:21:15 +0000 (Sat, 28 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-09-27 18:07:39 +0530 (Fri, 27 Sep 2019)");
   script_name("Apple Safari Security Updates (HT210605)");
 

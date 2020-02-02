@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.903229");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2019-12-20T12:48:41+0000");
   script_cve_id("CVE-2014-0271");
   script_bugtraq_id(65395);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 12:48:41 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-02-12 09:18:06 +0530 (Wed, 12 Feb 2014)");
   script_name("Microsoft VBScript Remote Code Execution Vulnerability (2928390)");
   script_category(ACT_GATHER_INFO);
@@ -43,7 +43,6 @@ if(description)
   script_require_ports(139, 445);
   script_mandatory_keys("MS/IE/Version");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/56796");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2928390");
   script_xref(name:"URL", value:"https://technet.microsoft.com/en-us/security/bulletin/ms14-011");
 
@@ -57,29 +56,29 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow attackers to execute arbitrary code and
   corrupt memory.");
 
-  script_tag(name:"affected", value:"Microsoft Windows XP Service Pack 3 and prior
+  script_tag(name:"affected", value:"- Microsoft Windows XP Service Pack 3 and prior
 
-  Microsoft Windows XP x64 Edition Service Pack 2 and prior
+  - Microsoft Windows XP x64 Edition Service Pack 2 and prior
 
-  Microsoft Windows 2003 x32 Pack 3 and prior
+  - Microsoft Windows 2003 x32 Pack 3 and prior
 
-  Microsoft Windows 2003 x64 Service Pack 2 and prior
+  - Microsoft Windows 2003 x64 Service Pack 2 and prior
 
-  Microsoft Windows Vista x32/x64 Service Pack 2 and prior
+  - Microsoft Windows Vista x32/x64 Service Pack 2 and prior
 
-  Microsoft Windows Server 2008 x32/x64 Service Pack 2 and prior
+  - Microsoft Windows Server 2008 x32/x64 Service Pack 2 and prior
 
-  Microsoft Windows 7 x32/x64 Service Pack 1 and prior
+  - Microsoft Windows 7 x32/x64 Service Pack 1 and prior
 
-  Microsoft Windows Server 2008 R2 x64 Service Pack 1 and prior
+  - Microsoft Windows Server 2008 R2 x64 Service Pack 1 and prior
 
-  Microsoft Windows 8 x32/x64
+  - Microsoft Windows 8 x32/x64
 
-  Microsoft Windows 8.1 x32/x64
+  - Microsoft Windows 8.1 x32/x64
 
-  Microsoft Windows Server 2012
+  - Microsoft Windows Server 2012
 
-  Microsoft Windows Server 2012 R2");
+  - Microsoft Windows Server 2012 R2");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

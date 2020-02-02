@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.810853");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2017-0201");
   script_bugtraq_id(97454);
   script_tag(name:"cvss_base", value:"7.6");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:H/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2017-03-15 12:07:36 +0530 (Wed, 15 Mar 2017)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Internet Explorer Remote Code Execution Vulnerability (KB4014661)");

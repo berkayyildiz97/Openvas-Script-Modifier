@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805206");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2014-6363");
   script_bugtraq_id(71504);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-12-10 08:42:37 +0530 (Wed, 10 Dec 2014)");
   script_tag(name:"solution_type", value:"VendorFix");
   script_name("MS Windows VBScript Remote Code Execution Vulnerability (3016711)");
@@ -49,15 +49,15 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   attackers to execute arbitrary code and corrupt memory.");
 
-  script_tag(name:"affected", value:"Microsoft Windows 2003 x32/x64 Service Pack 2 and prior
+  script_tag(name:"affected", value:"- Microsoft Windows 2003 x32/x64 Service Pack 2 and prior
 
-  Microsoft Windows Vista x32/x64 Service Pack 2 and prior
+  - Microsoft Windows Vista x32/x64 Service Pack 2 and prior
 
-  Microsoft Windows Server 2008 x32/x64 Service Pack 2 and prior
+  - Microsoft Windows Server 2008 x32/x64 Service Pack 2 and prior
 
-  Microsoft Windows 7 x32/x64 Service Pack 1 and prior
+  - Microsoft Windows 7 x32/x64 Service Pack 1 and prior
 
-  Microsoft Windows Server 2008 R2 x64 Service Pack 1 and prior.");
+  - Microsoft Windows Server 2008 R2 x64 Service Pack 1 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
   script_tag(name:"qod_type", value:"registry");

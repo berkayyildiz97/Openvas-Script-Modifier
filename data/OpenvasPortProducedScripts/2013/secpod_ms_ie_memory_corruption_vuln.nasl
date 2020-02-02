@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.903213");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_cve_id("CVE-2013-3343");
   script_bugtraq_id(60478);
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2013-06-12 16:51:29 +0530 (Wed, 12 Jun 2013)");
   script_name("Microsoft Internet Explorer Memory Corruption Vulnerability (2755801)");
 
@@ -46,11 +46,11 @@ if(description)
 
   script_tag(name:"insight", value:"Unspecified flaw due to improper sanitization of user-supplied input.");
 
-  script_tag(name:"affected", value:"Microsoft Windows 8
+  script_tag(name:"affected", value:"- Microsoft Windows 8
 
-  Microsoft Windows 8.1
+  - Microsoft Windows 8.1
 
-  Microsoft Windows Server 2012");
+  - Microsoft Windows Server 2012");
 
   script_tag(name:"impact", value:"Successful exploitation will allow attackers to execute arbitrary code,
   corrupt memory or cause a denial of service condition.");
@@ -59,7 +59,7 @@ if(description)
   script_tag(name:"solution_type", value:"VendorFix");
 
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2847928");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/advisory/2755801");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/SecurityAdvisories/2016/2755801");
   script_xref(name:"URL", value:"http://www.adobe.com/support/security/bulletins/apsb13-16.html");
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (C) 2013 SecPod");

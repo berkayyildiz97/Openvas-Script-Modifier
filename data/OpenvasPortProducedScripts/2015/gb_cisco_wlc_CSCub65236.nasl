@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_cisco_wlc_CSCub65236.nasl 14184 2019-03-14 13:29:04Z cfischer $
 #
 # Cisco Wireless LAN Controller 802.11i Management Frame DoS
 #
@@ -31,8 +30,8 @@ if(description)
   script_cve_id("CVE-2015-6311");
   script_tag(name:"cvss_base", value:"6.1");
   script_tag(name:"cvss_base_vector", value:"AV:A/AC:L/Au:N/C:N/I:N/A:C");
-  script_version("$Revision: 14184 $");
-  script_tag(name:"last_modification", value:"$Date: 2019-03-14 14:29:04 +0100 (Thu, 14 Mar 2019) $");
+  script_version("2019-12-05T15:10:00+0000");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-10-14 14:24:59 +0200 (Wed, 14 Oct 2015)");
   script_name("Cisco Wireless LAN Controller 802.11i Management Frame DoS");
 
@@ -62,7 +61,6 @@ if(description)
 }
 
 include("host_details.inc");
-include("version_func.inc");
 
 CPE = 'cpe:/o:cisco:wireless_lan_controller_software';
 

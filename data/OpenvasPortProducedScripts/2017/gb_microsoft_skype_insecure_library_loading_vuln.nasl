@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_microsoft_skype_insecure_library_loading_vuln.nasl 11874 2018-10-12 11:28:04Z mmartin $
 #
 # Microsoft Skype Insecure Library Loading Vulnerability
 #
@@ -29,12 +28,12 @@ CPE = "cpe:/a:skype:skype";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.810905");
-  script_version("$Revision: 11874 $");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2017-6517");
   script_bugtraq_id(96969);
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-12 13:28:04 +0200 (Fri, 12 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2017-04-05 16:33:26 +0530 (Wed, 05 Apr 2017)");
   script_name("Microsoft Skype Insecure Library Loading Vulnerability");
 
@@ -51,7 +50,7 @@ if(description)
   will allow remote attackers to execute arbitrary code on the target system
   without the user's knowledge.");
 
-  script_tag(name:"affected", value:"Microsoft Skype version 7.16.0.102 on Windows.");
+  script_tag(name:"affected", value:"Microsoft Skype version 7.16.0.102");
 
   script_tag(name:"solution", value:"No known solution was made available for at least one year since the disclosure
   of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer

@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:visual_studio_team_foundation_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.901227");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2013-5042");
   script_bugtraq_id(64093);
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2013-12-11 10:49:08 +0530 (Wed, 11 Dec 2013)");
   script_name("Microsoft VS Team Foundation Server SignalR XSS Vulnerability (2905244)");
 

@@ -27,11 +27,11 @@ CPE = "cpe:/a:microsoft:exchange_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809010");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-0028");
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-08-24 17:40:12 +0530 (Wed, 24 Aug 2016)");
   script_tag(name:"qod_type", value:"registry");
   script_name("Microsoft Exchange Server Information Disclosure Vulnerability (3160339)");
@@ -49,15 +49,15 @@ if(description)
   also combine this vulnerability with another one, such as a
   Cross-Site Request Forgery (CSRF), to amplify the attack.");
 
-  script_tag(name:"affected", value:"Microsoft Exchange Server 2013 Service Pack 1
+  script_tag(name:"affected", value:"- Microsoft Exchange Server 2013 Service Pack 1
 
-  Microsoft Exchange Server 2013 Cumulative Update 11
+  - Microsoft Exchange Server 2013 Cumulative Update 11
 
-  Microsoft Exchange Server 2013 Cumulative Update 12
+  - Microsoft Exchange Server 2013 Cumulative Update 12
 
-  Microsoft Exchange Server 2016
+  - Microsoft Exchange Server 2016
 
-  Microsoft Exchange Server 2016 Cumulative Update 1");
+  - Microsoft Exchange Server 2016 Cumulative Update 1");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

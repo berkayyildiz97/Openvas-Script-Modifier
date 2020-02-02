@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:sharepoint_foundation";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809708");
-  script_version("2019-05-03T08:55:39+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-0022", "CVE-2016-0052", "CVE-2016-0053", "CVE-2016-0039");
   script_bugtraq_id(82508, 82652, 82787, 82512);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 08:55:39 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-10-19 15:25:36 +0530 (Wed, 19 Oct 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("MS SharePoint Server and Foundation Multiple Vulnerabilities (3134226)");
@@ -51,9 +51,9 @@ if(description)
   attacker to run arbitrary code in the context of the current user and perform
   XSS attacks.");
 
-  script_tag(name:"affected", value:"Microsoft SharePoint Server 2013 Service Pack 1,
+  script_tag(name:"affected", value:"- Microsoft SharePoint Server 2013 Service Pack 1,
 
-  Microsoft SharePoint Foundation 2013 Service Pack 1");
+  - Microsoft SharePoint Foundation 2013 Service Pack 1");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

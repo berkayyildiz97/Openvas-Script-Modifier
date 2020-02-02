@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_mysql_eol_win.nasl 12175 2018-10-31 06:20:00Z ckuersteiner $
 #
 # MySQL End Of Life Detection (Windows)
 #
@@ -28,10 +27,10 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.108189");
-  script_version("$Revision: 12175 $");
+  script_version("2019-12-05T15:10:00+0000");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-31 07:20:00 +0100 (Wed, 31 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2017-06-26 13:48:20 +0200 (Mon, 26 Jun 2017)");
   script_name("MySQL End Of Life Detection (Windows)");
   script_copyright("Copyright (c) 2017 Greenbone Networks GmbH");
@@ -59,7 +58,6 @@ if(description)
 
 include("misc_func.inc");
 include("products_eol.inc");
-include("version_func.inc");
 include("host_details.inc");
 
 # mysql:mysql is <= 5.5.9, newer versions have oracle:mysql

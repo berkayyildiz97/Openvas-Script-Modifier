@@ -27,12 +27,12 @@ CPE = "cpe:/a:microsoft:sharepoint_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.903322");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_cve_id("CVE-2013-1330", "CVE-2013-3179", "CVE-2013-3180", "CVE-2013-0081");
   script_bugtraq_id(62221, 62227, 62254, 62205);
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2013-09-13 16:29:08 +0530 (Fri, 13 Sep 2013)");
   script_name("Microsoft SharePoint Server Remote Code Execution vulnerability (2834052)");
 
@@ -57,24 +57,25 @@ Bulletin MS13-067.");
    the user.
 
   - Multiple unspecified errors.");
-  script_tag(name:"affected", value:"Microsoft SharePoint Server 2013
-Microsoft SharePoint Server 2007 Service Pack 3
-Microsoft SharePoint Server 2010 Service Pack 2 and prior");
+  script_tag(name:"affected", value:"- Microsoft SharePoint Server 2013
+
+  - Microsoft SharePoint Server 2007 Service Pack 3
+
+  - Microsoft SharePoint Server 2010 Service Pack 2 and prior");
   script_tag(name:"impact", value:"Successful exploitation will allow attackers to conduct script insertion
 attacks, cause a DoS (Denial of Service), and compromise a vulnerable system.");
   script_tag(name:"qod_type", value:"executable_version");
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/54741");
   script_xref(name:"URL", value:"http://www.vulnerability-lab.com/get_content.php?id=812");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/MS13-067");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-067");
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (c) 2013 SecPod");
   script_family("Windows : Microsoft Bulletins");
   script_dependencies("gb_ms_sharepoint_sever_n_foundation_detect.nasl");
   script_mandatory_keys("MS/SharePoint/Server/Ver");
   script_require_ports(139, 445);
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms13-067");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-067");
   exit(0);
 }
 

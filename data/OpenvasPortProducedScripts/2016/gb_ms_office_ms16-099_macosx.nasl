@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_ms_office_ms16-099_macosx.nasl 11989 2018-10-19 11:25:26Z cfischer $
 #
 # Microsoft Office Multiple Vulnerabilities-3177451(Mac OS X)
 #
@@ -28,12 +27,12 @@ CPE = "cpe:/a:microsoft:office";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.807881");
-  script_version("$Revision: 11989 $");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-3317", "CVE-2016-3313", "CVE-2016-3315", "CVE-2016-3316");
   script_bugtraq_id(92303, 92289, 92294, 92300);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-19 13:25:26 +0200 (Fri, 19 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-08-23 14:12:30 +0530 (Tue, 23 Aug 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Multiple Vulnerabilities-3177451(Mac OS X)");
@@ -53,8 +52,9 @@ if(description)
   attackers to gain access to potentially sensitive information and run arbitrary
   code in the context of the current user.");
 
-  script_tag(name:"affected", value:"Microsoft Office 2011 on Mac OS X
-  Microsoft Office 2016 on Mac OS X");
+  script_tag(name:"affected", value:"- Microsoft Office 2011 on Mac OS X
+
+  - Microsoft Office 2016 on Mac OS X");
 
   script_tag(name:"solution", value:"Apply the patch from the referenced advisory.");
 

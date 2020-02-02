@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_silverlight_ms14-014_macosx.nasl 11878 2018-10-12 12:40:08Z cfischer $
 #
 # Microsoft Silverlight Security Bypass Vulnerability (2932677) (Mac OS X)
 #
@@ -29,12 +28,12 @@ CPE = "cpe:/a:microsoft:silverlight";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.804408");
-  script_version("$Revision: 11878 $");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2014-0319");
   script_bugtraq_id(66046);
   script_tag(name:"cvss_base", value:"7.1");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:C/A:N");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-12 14:40:08 +0200 (Fri, 12 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2014-03-12 08:10:37 +0530 (Wed, 12 Mar 2014)");
   script_name("Microsoft Silverlight Security Bypass Vulnerability (2932677) (Mac OS X)");
 

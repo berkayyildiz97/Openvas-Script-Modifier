@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805614");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-1684", "CVE-2015-1686");
   script_bugtraq_id(74530, 74522);
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-05-13 11:43:10 +0530 (Wed, 13 May 2015)");
   script_name("Microsoft Windows JScript & VBScript Security Bypass Vulnerability (3057263)");
 
@@ -51,9 +51,11 @@ if(description)
   context-dependent attacker to bypass certain security restrictions and execute
   arbitrary code in conjunction with some another vulnerability.");
 
-  script_tag(name:"affected", value:"Microsoft Windows 2003 x32/x64 Service Pack 2 and prior
-  Microsoft Windows Vista x32/x64 Service Pack 2 and prior
-  Microsoft Windows Server 2008 x32/x64 Service Pack 2 and prior.");
+  script_tag(name:"affected", value:"- Microsoft Windows 2003 x32/x64 Service Pack 2 and prior
+
+  - Microsoft Windows Vista x32/x64 Service Pack 2 and prior
+
+  - Microsoft Windows Server 2008 x32/x64 Service Pack 2 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:office_web_apps";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805992");
-  script_version("2019-05-03T10:54:50+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-6037");
   script_tag(name:"cvss_base", value:"3.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:S/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 10:54:50 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-10-14 10:47:07 +0530 (Wed, 14 Oct 2015)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Web Apps XSS Spoofing Vulnerability (3096440)");
@@ -49,9 +49,9 @@ if(description)
   context-dependent attacker to perform cross-site scripting attacks on
   affected systems and run script in the security context of the current user.");
 
-  script_tag(name:"affected", value:"Microsoft Office Web Apps 2010 Service Pack 2 and prior,
+  script_tag(name:"affected", value:"- Microsoft Office Web Apps 2010 Service Pack 2 and prior,
 
-  Microsoft Office Web Apps Server 2013 Service Pack 1 and prior.");
+  - Microsoft Office Web Apps Server 2013 Service Pack 1 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

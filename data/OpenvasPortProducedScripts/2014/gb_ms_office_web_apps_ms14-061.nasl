@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:office_web_apps";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.804498");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T12:48:41+0000");
   script_cve_id("CVE-2014-4117");
   script_bugtraq_id(70360);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 12:48:41 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-10-15 12:08:25 +0530 (Wed, 15 Oct 2014)");
 
   script_name("Microsoft Office Web Apps Memory Corruption Vulnerability (3000434)");
@@ -51,14 +51,13 @@ if(description)
   attackers to execute the arbitrary code, cause memory corruption and
   compromise the system.");
 
-  script_tag(name:"affected", value:"Microsoft Office Web Apps 2010 Service Pack 2
-  and prior.");
+  script_tag(name:"affected", value:"- Microsoft Office Web Apps 2010 Service Pack 2
+  and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
   script_tag(name:"qod_type", value:"registry");
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/60973");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2889827");
   script_xref(name:"URL", value:"https://technet.microsoft.com/library/security/MS14-061");
   script_category(ACT_GATHER_INFO);

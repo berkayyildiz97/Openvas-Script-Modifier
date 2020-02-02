@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:rdp";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.807064");
-  script_version("2019-05-20T06:45:30+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-0036");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 06:45:30 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-02-10 09:02:28 +0530 (Wed, 10 Feb 2016)");
   script_name("Microsoft Windows Remote Desktop Elevation of Privilege Vulnerability (3134700)");
 
@@ -50,15 +50,15 @@ if(description)
   attackers to execute arbitrary code with elevated privileges. Failed exploit
   attempts will result in a denial of service condition.");
 
-  script_tag(name:"affected", value:"Microsoft Windows 8.1 x32/x64
+  script_tag(name:"affected", value:"- Microsoft Windows 8.1 x32/x64
 
-  Microsoft Windows Server 2012
+  - Microsoft Windows Server 2012
 
-  Microsoft Windows Server 2012 R2
+  - Microsoft Windows Server 2012 R2
 
-  Microsoft Windows 10 x32/x64
+  - Microsoft Windows 10 x32/x64
 
-  Microsoft Windows 7 x32/x64 Service Pack 1 and prior");
+  - Microsoft Windows 7 x32/x64 Service Pack 1 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

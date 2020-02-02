@@ -23,16 +23,16 @@ CPE = "cpe:/a:apple:safari";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.814892");
-  script_version("2019-05-22T13:05:41+0000");
+  script_version("2020-01-07T08:25:23+0000");
   script_cve_id("CVE-2019-8607", "CVE-2019-6237", "CVE-2019-8571", "CVE-2019-8583",
                 "CVE-2019-8584", "CVE-2019-8586", "CVE-2019-8587", "CVE-2019-8594",
                 "CVE-2019-8595", "CVE-2019-8596", "CVE-2019-8597", "CVE-2019-8601",
                 "CVE-2019-8608", "CVE-2019-8609", "CVE-2019-8610", "CVE-2019-8611",
                 "CVE-2019-8615", "CVE-2019-8619", "CVE-2019-8622", "CVE-2019-8623",
                 "CVE-2019-8628");
-  script_tag(name:"cvss_base", value:"9.3");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-22 13:05:41 +0000 (Wed, 22 May 2019)");
+  script_tag(name:"cvss_base", value:"6.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
+  script_tag(name:"last_modification", value:"2020-01-07 08:25:23 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2019-05-14 10:44:48 +0530 (Tue, 14 May 2019)");
   script_name("Apple Safari Security Updates (HT210123)");
 

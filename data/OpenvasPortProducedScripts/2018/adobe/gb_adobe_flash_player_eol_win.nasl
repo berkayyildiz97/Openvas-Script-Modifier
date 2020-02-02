@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_adobe_flash_player_eol_win.nasl 11624 2018-09-26 12:00:34Z santu $
 #
 # Adobe Flash Player End Of Life Detection (Windows)
 #
@@ -29,10 +28,10 @@ CPE = "cpe:/a:adobe:flash_player";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.814038");
-  script_version("$Revision: 11624 $");
+  script_version("2019-12-05T15:10:00+0000");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-09-26 14:00:34 +0200 (Wed, 26 Sep 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2018-09-21 12:06:57 +0530 (Fri, 21 Sep 2018)");
   script_name("Adobe Flash Player End Of Life Detection (Windows)");
   script_copyright("Copyright (C) 2018 Greenbone Networks GmbH");
@@ -64,7 +63,6 @@ if(description)
 
 include("misc_func.inc");
 include("products_eol.inc");
-include("version_func.inc");
 include("host_details.inc");
 
 if( ! version = get_app_version( cpe:CPE ) ) exit( 0 );

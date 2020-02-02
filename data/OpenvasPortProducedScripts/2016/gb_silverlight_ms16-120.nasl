@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:silverlight";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.807373");
-  script_version("2019-05-03T10:54:50+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2016-3209");
   script_bugtraq_id(93385);
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 10:54:50 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2016-10-12 11:57:27 +0530 (Wed, 12 Oct 2016)");
   script_name("Microsoft Silverlight Information Disclosure Vulnerability (3192884)");
   script_category(ACT_GATHER_INFO);
@@ -56,7 +56,7 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation allow an attacker to
   disclosure information of a targeted system.");
 
-  script_tag(name:"affected", value:"Microsoft Silverlight version 5 on Windows.");
+  script_tag(name:"affected", value:"Microsoft Silverlight version 5");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

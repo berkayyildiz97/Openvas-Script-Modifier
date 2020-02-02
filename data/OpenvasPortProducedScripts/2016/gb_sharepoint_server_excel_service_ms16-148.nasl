@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:sharepoint_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809756");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-7265");
   script_bugtraq_id(94721);
   script_tag(name:"cvss_base", value:"5.8");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:N/A:P");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-12-14 12:47:22 +0530 (Wed, 14 Dec 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("MS SharePoint Server Excel Services Information Disclosure Vulnerability (3204068)");
@@ -49,9 +49,9 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   attackers to gain access to potentially sensitive information.");
 
-  script_tag(name:"affected", value:"Microsoft SharePoint Server 2007 Service Pack 3 Excel Services.
+  script_tag(name:"affected", value:"- Microsoft SharePoint Server 2007 Service Pack 3 Excel Services
 
-  Microsoft SharePoint Server 2010 Excel Services.");
+  - Microsoft SharePoint Server 2010 Excel Services");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

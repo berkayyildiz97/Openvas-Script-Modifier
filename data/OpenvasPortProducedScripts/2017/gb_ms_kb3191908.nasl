@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:onenote";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.811096");
-  script_version("2019-07-08T07:18:25+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2017-8509");
   script_bugtraq_id(98812);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-07-08 07:18:25 +0000 (Mon, 08 Jul 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2017-06-14 12:44:26 +0530 (Wed, 14 Jun 2017)");
   script_name("Microsoft OneNote Remote Code Execution Vulnerability (KB3191908)");
 

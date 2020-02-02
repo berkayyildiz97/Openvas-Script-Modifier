@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_zarafa_eol.nasl 12175 2018-10-31 06:20:00Z ckuersteiner $
 #
 # Zarafa Products End Of Life
 #
@@ -28,8 +27,8 @@
 if( description )
 {
   script_oid("1.3.6.1.4.1.25623.1.0.113150");
-  script_version("$Revision: 12175 $");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-31 07:20:00 +0100 (Wed, 31 Oct 2018) $");
+  script_version("2019-12-05T15:10:00+0000");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2018-04-04 15:26:25 +0200 (Wed, 04 Apr 2018)");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
@@ -64,7 +63,6 @@ if( description )
 }
 
 include( "host_details.inc" );
-include( "version_func.inc" );
 include( "misc_func.inc" );
 include( "products_eol.inc" );
 include( "http_func.inc" ); # For report_vuln_url()

@@ -28,8 +28,8 @@ CPE = "cpe:/a:microsoft:money";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.800218");
-  script_version("2019-07-24T08:39:52+0000");
-  script_tag(name:"last_modification", value:"2019-07-24 08:39:52 +0000 (Wed, 24 Jul 2019)");
+  script_version("2020-01-07T08:11:35+0000");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2009-01-08 14:06:04 +0100 (Thu, 08 Jan 2009)");
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:N/A:P");
@@ -46,7 +46,7 @@ if(description)
 
   script_tag(name:"impact", value:"Successful exploitation will allow attacker to change the vulnerable
   EIP value and can cause denial of service to the application.");
-  script_tag(name:"affected", value:"Microsoft Money 2006 on Windows.");
+  script_tag(name:"affected", value:"Microsoft Money 2006");
   script_tag(name:"insight", value:"The flaw is due to an error in the Windows Based Script Host which lets
   the attacker execute arbitrary codes in the vulnerable buffer to crash
   the application.");

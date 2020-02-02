@@ -23,14 +23,14 @@ CPE = "cpe:/a:mozilla:firefox_esr";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815449");
-  script_version("2019-09-10T08:05:24+0000");
+  script_version("2020-01-16T07:57:40+0000");
   script_cve_id("CVE-2019-11751", "CVE-2019-11746", "CVE-2019-11744", "CVE-2019-11742",
                 "CVE-2019-11736", "CVE-2019-11753", "CVE-2019-11752", "CVE-2019-9812",
                 "CVE-2019-11743", "CVE-2019-11748", "CVE-2019-11749", "CVE-2019-11750",
                 "CVE-2019-11738", "CVE-2019-11747", "CVE-2019-11735", "CVE-2019-11740");
-  script_tag(name:"cvss_base", value:"10.0");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-09-10 08:05:24 +0000 (Tue, 10 Sep 2019)");
+  script_tag(name:"cvss_base", value:"9.3");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
+  script_tag(name:"last_modification", value:"2020-01-16 07:57:40 +0000 (Thu, 16 Jan 2020)");
   script_tag(name:"creation_date", value:"2019-09-05 11:28:56 +0530 (Thu, 05 Sep 2019)");
   script_name("Mozilla Firefox ESR Security Updates(mfsa_2019-25_2019-27)-Windows");
 

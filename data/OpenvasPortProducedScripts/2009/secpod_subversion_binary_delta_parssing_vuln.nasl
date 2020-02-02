@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: secpod_subversion_binary_delta_parssing_vuln.nasl 14031 2019-03-07 10:47:29Z cfischer $
 #
 # Subversion Binary Delta Processing Multiple Integer Overflow Vulnerabilities
 #
@@ -24,13 +23,13 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 ###############################################################################
 
-CPE = 'cpe:/a:subversion:subversion';
+CPE = "cpe:/a:subversion:subversion";
 
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.101104");
-  script_version("$Revision: 14031 $");
-  script_tag(name:"last_modification", value:"$Date: 2019-03-07 11:47:29 +0100 (Thu, 07 Mar 2019) $");
+  script_version("2020-01-25T06:51:23+0000");
+  script_tag(name:"last_modification", value:"2020-01-25 06:51:23 +0000 (Sat, 25 Jan 2020)");
   script_tag(name:"creation_date", value:"2009-08-20 09:27:17 +0200 (Thu, 20 Aug 2009)");
   script_tag(name:"cvss_base", value:"8.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:S/C:C/I:C/A:C");
@@ -41,12 +40,11 @@ if(description)
   script_copyright("Copyright (C) 2009 SecPod");
   script_family("Buffer overflow");
   script_dependencies("secpod_subversion_detect.nasl");
-  script_mandatory_keys("Subversion/Ver");
+  script_mandatory_keys("subversion/detected");
 
   script_xref(name:"URL", value:"http://secunia.com/advisories/36184/");
   script_xref(name:"URL", value:"http://securitytracker.com/alerts/2009/Aug/1022697.html");
   script_xref(name:"URL", value:"http://subversion.tigris.org/security/CVE-2009-2411-advisory.txt");
-  script_xref(name:"URL", value:"http://subversion.tigris.org/project_packages.html");
 
   script_tag(name:"impact", value:"Attackers can exploit these issues to compromise an application using the library
   or crash the application, resulting into a denial of service conditions.");
@@ -71,12 +69,15 @@ if(description)
 include("version_func.inc");
 include("host_details.inc");
 
-if(!ver = get_app_version(cpe:CPE))
+if(!infos = get_app_version_and_location(cpe:CPE, exit_no_version:TRUE))
   exit(0);
 
-if(version_is_less(version:ver, test_version:"1.5.7")||
-   version_in_range(version:ver, test_version:"1.6",test_version2:"1.6.3")){
-  report = report_fixed_ver(installed_version:ver, fixed_version:"1.5.7/1.6.4");
+location = infos["location"];
+version = infos["version"];
+
+if(version_is_less(version:version, test_version:"1.5.7") ||
+   version_in_range(version:version, test_version:"1.6", test_version2:"1.6.3")) {
+  report = report_fixed_ver(installed_version:version, fixed_version:"1.5.7/1.6.4", install_path:location);
   if(!port = get_app_port(cpe: CPE)) port = 0;
   security_message(port:port, data:report);
   exit(0);

@@ -28,14 +28,14 @@ CPE = "cpe:/a:microsoft:office";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809759");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-7263", "CVE-2016-7264", "CVE-2016-7268", "CVE-2016-7266",
                 "CVE-2016-7257", "CVE-2016-7290", "CVE-2016-7291", "CVE-2016-7276",
                 "CVE-2016-7298");
   script_bugtraq_id(94769, 94668, 94662, 94672, 94670, 94671, 94755, 94720);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-12-14 13:38:09 +0530 (Wed, 14 Dec 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Multiple Vulnerabilities-3204068(Mac OS X)");
@@ -58,8 +58,9 @@ if(description)
   attacker to gain access to potentially sensitive information and run arbitrary
   code in the context of the current user.");
 
-  script_tag(name:"affected", value:"Microsoft Office 2011 on Mac OS X
-  Microsoft Office 2016 on Mac OS X");
+  script_tag(name:"affected", value:"- Microsoft Office 2011 on Mac OS X
+
+  - Microsoft Office 2016 on Mac OS X");
 
   script_tag(name:"solution", value:"Apply the patch from the referenced advisory.");
 

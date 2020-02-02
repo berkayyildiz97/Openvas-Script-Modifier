@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:iis";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805016");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T12:48:41+0000");
   script_cve_id("CVE-2014-4078");
   script_bugtraq_id(70937);
   script_tag(name:"cvss_base", value:"5.1");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:H/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 12:48:41 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-11-12 13:00:44 +0530 (Wed, 12 Nov 2014)");
   script_name("MS Internet Information Services Security Feature Bypass Vulnerability (2982998)");
 
@@ -48,7 +48,7 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   attackers to bypass certain security restrictions.");
 
-  script_tag(name:"affected", value:"Microsoft Internet Information Services 8.0/8.5
+  script_tag(name:"affected", value:"- Microsoft Internet Information Services 8.0/8.5
   on Microsoft Windows 8 x32/x64 and Microsoft Windows 8.1 x32/x64 Edition");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
@@ -56,7 +56,6 @@ if(description)
   script_tag(name:"solution_type", value:"VendorFix");
   script_tag(name:"qod_type", value:"registry");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/60354");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2982998");
   script_xref(name:"URL", value:"https://technet.microsoft.com/library/security/MS14-076");
   script_category(ACT_GATHER_INFO);

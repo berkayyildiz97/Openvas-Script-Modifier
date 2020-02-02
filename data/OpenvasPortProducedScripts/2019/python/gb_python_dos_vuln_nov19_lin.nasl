@@ -19,8 +19,8 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.113562");
-  script_version("2019-11-13T08:06:35+0000");
-  script_tag(name:"last_modification", value:"2019-11-13 08:06:35 +0000 (Wed, 13 Nov 2019)");
+  script_version("2019-12-03T13:21:01+0000");
+  script_tag(name:"last_modification", value:"2019-12-03 13:21:01 +0000 (Tue, 03 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-11-11 15:10:49 +0000 (Mon, 11 Nov 2019)");
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:P");
@@ -38,16 +38,21 @@ if(description)
   script_copyright("Copyright (C) 2019 Greenbone Networks GmbH");
   script_family("Denial of Service");
   script_dependencies("gb_python_detect_lin.nasl");
-  script_mandatory_keys("python/lin/detected");
+  script_mandatory_keys("python/linux/detected");
 
   script_tag(name:"summary", value:"Python is prone to a denial of service (DoS) vulnerability.");
+
   script_tag(name:"vuldetect", value:"Checks if a vulnerable version is present on the target host.");
+
   script_tag(name:"insight", value:"A specially crafted X509 certificate can cause a NULL pointer dereference,
   resulting in a denial of service. An attacker can initiate or accept TLS
   connections using crafted certificates to trigger this vulnerability.");
+
   script_tag(name:"impact", value:"Successful exploitation would allow an attacker to crash the application.");
+
   script_tag(name:"affected", value:"Python versions 2.0.0 through 2.7.11 and 3.0.0 through 3.6.6.");
-  script_tag(name:"solution", value:"Update to version 2.7.12 or 3.6.7 respectively");
+
+  script_tag(name:"solution", value:"Update to version 2.7.12 or 3.6.7 respectively.");
 
   script_xref(name:"URL", value:"https://talosintelligence.com/vulnerability_reports/TALOS-2019-0758");
 

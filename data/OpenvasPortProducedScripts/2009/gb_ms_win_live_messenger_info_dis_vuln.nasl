@@ -28,8 +28,8 @@ CPE = "cpe:/a:microsoft:windows_live_messenger";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.800332");
-  script_version("2019-05-17T10:45:27+0000");
-  script_tag(name:"last_modification", value:"2019-05-17 10:45:27 +0000 (Fri, 17 May 2019)");
+  script_version("2020-01-07T08:11:35+0000");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2009-01-08 07:43:30 +0100 (Thu, 08 Jan 2009)");
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
@@ -46,7 +46,7 @@ if(description)
   script_dependencies("gb_ms_win_live_messenger_detect.nasl");
   script_mandatory_keys("MS/LiveMessenger/Installed");
   script_tag(name:"impact", value:"Successful exploitation could lead to unauthorized information disclosure.");
-  script_tag(name:"affected", value:"Microsoft, Windows Live Messenger Client version 8.5.1302.1018 and prior.");
+  script_tag(name:"affected", value:"Microsoft, Windows Live Messenger Client version 8.5.1302.1018 and prior");
   script_tag(name:"insight", value:"The vulnerability is due to field error in IPv4InternalAddrsAndPorts,
   IPv4Internal-Addrs and IPv4Internal-Port headers, which allow to discover
   IP address and port numbers via MSNP15 protocol used over a NAT session.");
@@ -56,7 +56,7 @@ if(description)
   script_tag(name:"summary", value:"This host has Windows Live Messenger Client installed and is prone
   to Information Disclosure vulnerability.");
   script_tag(name:"solution_type", value:"WillNotFix");
-  script_xref(name:"URL", value:"http://get.live.com/messenger/overview");
+
   exit(0);
 }
 

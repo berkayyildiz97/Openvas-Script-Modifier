@@ -28,8 +28,8 @@ CPE = "cpe:/a:microsoft:silverlight";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.801935");
-  script_version("2019-05-17T10:45:27+0000");
-  script_tag(name:"last_modification", value:"2019-05-17 10:45:27 +0000 (Fri, 17 May 2019)");
+  script_version("2020-01-07T08:11:35+0000");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2011-05-16 15:25:30 +0200 (Mon, 16 May 2011)");
   script_cve_id("CVE-2011-1844", "CVE-2011-1845");
   script_tag(name:"cvss_base", value:"7.8");

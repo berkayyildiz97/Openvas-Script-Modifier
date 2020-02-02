@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805299");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-0032");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-03-11 08:22:50 +0530 (Wed, 11 Mar 2015)");
   script_name("Microsoft Windows VBScript Remote Code Execution Vulnerability (3040297)");
 
@@ -47,9 +47,11 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   attackers to execute arbitrary code and corrupt memory.");
 
-  script_tag(name:"affected", value:"Microsoft Windows 2003 x32/x64 Service Pack 2 and prior
-  Microsoft Windows Vista x32/x64 Service Pack 2 and prior
-  Microsoft Windows Server 2008 x32/x64 Service Pack 2 and prior.");
+  script_tag(name:"affected", value:"- Microsoft Windows 2003 x32/x64 Service Pack 2 and prior
+
+  - Microsoft Windows Vista x32/x64 Service Pack 2 and prior
+
+  - Microsoft Windows Server 2008 x32/x64 Service Pack 2 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

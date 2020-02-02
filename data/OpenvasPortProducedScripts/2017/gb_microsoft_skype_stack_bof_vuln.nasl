@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_microsoft_skype_stack_bof_vuln.nasl 11977 2018-10-19 07:28:56Z mmartin $
 #
 # Microsoft Skype 'MSFTEDIT.DLL' Buffer Overflow Vulnerability
 #
@@ -29,12 +28,12 @@ CPE = "cpe:/a:skype:skype";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.811521");
-  script_version("$Revision: 11977 $");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2017-9948");
   script_bugtraq_id(99281);
   script_tag(name:"cvss_base", value:"6.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-19 09:28:56 +0200 (Fri, 19 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2017-07-13 11:45:57 +0530 (Thu, 13 Jul 2017)");
   script_name("Microsoft Skype 'MSFTEDIT.DLL' Buffer Overflow Vulnerability");
 
@@ -55,8 +54,8 @@ if(description)
   attackers to execute own codes on the affected and connected computer systems via
   skype software.");
 
-  script_tag(name:"affected", value:"Microsoft Skype versions 7.2, 7.35.103,
-  7.36.0.101 and 7.36.0.150 on Windows.");
+  script_tag(name:"affected", value:"- Microsoft Skype versions 7.2, 7.35.103,
+  7.36.0.101 and 7.36.0.150");
 
   script_tag(name:"solution", value:"Upgrade to Skype version 7.37 or later.");
 

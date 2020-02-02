@@ -26,15 +26,14 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.902937");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_cve_id("CVE-2012-2539");
   script_bugtraq_id(56834);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2012-12-12 10:23:39 +0530 (Wed, 12 Dec 2012)");
   script_name("Microsoft Office Word Remote Code Execution Vulnerability (2780642)");
-  script_xref(name:"URL", value:"http://secunia.com/advisories/51467/");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2760497");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2760498");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2760421");
@@ -42,7 +41,7 @@ if(description)
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2760410");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2760405");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2687412");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms12-079");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-079");
 
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (C) 2012 SecPod");
@@ -56,15 +55,23 @@ if(description)
   script_require_ports(139, 445);
   script_tag(name:"impact", value:"Successful exploitation could allow attackers to execute arbitrary code by
   tricking a user into opening a specially crafted word and RTF files.");
-  script_tag(name:"affected", value:"Microsoft Word Viewer
-  Microsoft Office 2003 Service Pack 3
-  Microsoft Office 2007 Service Pack 2
-  Microsoft Office 2007 Service Pack 3
-  Microsoft Office 2010 Service Pack 1
-  Microsoft Office Web Apps 2010 Service Pack 1
-  Microsoft SharePoint Server 2010 Service Pack 1
-  Microsoft Office Compatibility Pack Service Pack 2
-  Microsoft Office Compatibility Pack Service Pack 3");
+  script_tag(name:"affected", value:"- Microsoft Word Viewer
+
+  - Microsoft Office 2003 Service Pack 3
+
+  - Microsoft Office 2007 Service Pack 2
+
+  - Microsoft Office 2007 Service Pack 3
+
+  - Microsoft Office 2010 Service Pack 1
+
+  - Microsoft Office Web Apps 2010 Service Pack 1
+
+  - Microsoft SharePoint Server 2010 Service Pack 1
+
+  - Microsoft Office Compatibility Pack Service Pack 2
+
+  - Microsoft Office Compatibility Pack Service Pack 3");
   script_tag(name:"insight", value:"The flaw is due to an error when parsing Rich Text Format (RTF) data related
   to the listoverridecount and can be exploited to corrupt memory.");
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");

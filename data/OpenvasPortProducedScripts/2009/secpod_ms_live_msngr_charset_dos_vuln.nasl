@@ -28,8 +28,8 @@ CPE = "cpe:/a:microsoft:windows_live_messenger";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.900461");
-  script_version("2019-09-09T13:48:19+0000");
-  script_tag(name:"last_modification", value:"2019-09-09 13:48:19 +0000 (Mon, 09 Sep 2019)");
+  script_version("2020-01-07T08:11:35+0000");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2009-02-26 05:27:20 +0100 (Thu, 26 Feb 2009)");
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:P");
@@ -44,7 +44,7 @@ if(description)
   script_dependencies("gb_ms_win_live_messenger_detect.nasl");
   script_mandatory_keys("MS/LiveMessenger/Installed");
 
-  script_tag(name:"affected", value:"Microsoft Live Messenger version 14.0.8064.206 and prior.");
+  script_tag(name:"affected", value:"Microsoft Live Messenger version 14.0.8064.206 and prior");
 
   script_tag(name:"insight", value:"This flaw is due to failure in handling charset of the message which user
   sends.");

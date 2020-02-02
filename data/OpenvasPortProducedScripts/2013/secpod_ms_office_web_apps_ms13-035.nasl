@@ -27,17 +27,16 @@ CPE = "cpe:/a:microsoft:office_web_apps";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.902964");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_bugtraq_id(58883);
   script_cve_id("CVE-2013-1289");
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2013-04-10 11:55:11 +0530 (Wed, 10 Apr 2013)");
   script_name("Microsoft Office Web Apps HTML Sanitisation Component XSS Vulnerability (2821818)");
-  script_xref(name:"URL", value:"http://secunia.com/advisories/52928/");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2760777");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms13-035");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-035");
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (C) 2013 SecPod");
   script_family("Windows : Microsoft Bulletins");

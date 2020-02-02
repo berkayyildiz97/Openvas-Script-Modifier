@@ -27,12 +27,12 @@ CPE = "cpe:/a:microsoft:sharepoint_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.903331");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_cve_id("CVE-2013-5059");
   script_bugtraq_id(64081);
   script_tag(name:"cvss_base", value:"6.8");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2014-01-08 15:22:36 +0530 (Wed, 08 Jan 2014)");
   script_name("Microsoft SharePoint Server Remote Code Execution Vulnerability (2904244)");
 
@@ -48,15 +48,14 @@ the privileges of the W3WP service account.");
   script_tag(name:"qod_type", value:"executable_version");
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/55985");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/MS13-100");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-100");
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (C) 2014 SecPod");
   script_family("Windows : Microsoft Bulletins");
   script_dependencies("gb_ms_sharepoint_sever_n_foundation_detect.nasl");
   script_mandatory_keys("MS/SharePoint/Server/Ver");
   script_require_ports(139, 445);
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/ms13-100");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-100");
   exit(0);
 }
 

@@ -23,11 +23,11 @@ CPE = "cpe:/a:adobe:bridge_cc";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815664");
-  script_version("2019-11-14T12:44:20+0000");
+  script_version("2019-11-27T15:23:21+0000");
   script_cve_id("CVE-2019-8239", "CVE-2019-8240");
-  script_tag(name:"cvss_base", value:"4.3");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-11-14 12:44:20 +0000 (Thu, 14 Nov 2019)");
+  script_tag(name:"cvss_base", value:"5.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
+  script_tag(name:"last_modification", value:"2019-11-27 15:23:21 +0000 (Wed, 27 Nov 2019)");
   script_tag(name:"creation_date", value:"2019-11-14 12:23:49 +0530 (Thu, 14 Nov 2019)");
   script_name("Adobe Bridge CC Security Updates (apsb19-53)-Mac OS X");
 

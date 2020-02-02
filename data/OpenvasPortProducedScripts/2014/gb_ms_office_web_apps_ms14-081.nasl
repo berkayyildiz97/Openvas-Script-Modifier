@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:office_web_apps";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805028");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T12:48:41+0000");
   script_cve_id("CVE-2014-6356", "CVE-2014-6357");
   script_bugtraq_id(71469, 71470);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 12:48:41 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-12-10 12:57:43 +0530 (Wed, 10 Dec 2014)");
   script_name("Microsoft Office Web Apps Remote Code Execution Vulnerabilities (3017301)");
 
@@ -54,17 +54,16 @@ if(description)
   attackers to execute the arbitrary code, cause memory corruption and
   compromise the system.");
 
-  script_tag(name:"affected", value:"Microsoft Web Applications 2010 Service Pack 2 and prior,
+  script_tag(name:"affected", value:"- Microsoft Web Applications 2010 Service Pack 2 and prior,
 
-  Microsoft Web Applications 2013 Service Pack 1 and prior.
+  - Microsoft Web Applications 2013 Service Pack 1 and prior
 
-  Microsoft Office Compatibility Pack SP3 and prior.");
+  - Microsoft Office Compatibility Pack SP3 and prior");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 
   script_tag(name:"solution_type", value:"VendorFix");
   script_tag(name:"qod_type", value:"registry");
-  script_xref(name:"URL", value:"http://secunia.com/advisories/61149");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2889851");
   script_xref(name:"URL", value:"https://support.microsoft.com/kb/2910892");
   script_xref(name:"URL", value:"https://technet.microsoft.com/library/security/MS14-081");

@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_netsparker_rce_vuln_win.nasl 11452 2018-09-18 11:24:16Z mmartin $
 #
 # Netsparker Remote Code Execution Vulnerability (Windows)
 #
@@ -29,10 +28,10 @@ CPE = "cpe:/a:netsparker:wass";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.805961");
-  script_version("$Revision: 11452 $");
+  script_version("2019-12-05T15:10:00+0000");
   script_tag(name:"cvss_base", value:"6.4");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:N");
-  script_tag(name:"last_modification", value:"$Date: 2018-09-18 13:24:16 +0200 (Tue, 18 Sep 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-08-24 11:47:10 +0530 (Mon, 24 Aug 2015)");
   script_name("Netsparker Remote Code Execution Vulnerability (Windows)");
 
@@ -69,7 +68,6 @@ if(description)
 
 
 include("host_details.inc");
-include("version_func.inc");
 
 
 if(!netVer = get_app_version(cpe:CPE)){

@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:sharepoint_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809724");
-  script_version("2019-05-03T08:55:39+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2016-7236");
   script_bugtraq_id(94025);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 08:55:39 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2016-11-09 15:43:11 +0530 (Wed, 09 Nov 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("MS SharePoint Server Excel Services Remote Code Execution Vulnerability (3199168)");
@@ -50,7 +50,7 @@ if(description)
   attackers to execute arbitrary code in the context of the currently logged-in
   user.");
 
-  script_tag(name:"affected", value:"Microsoft SharePoint Server 2010 Excel Services.");
+  script_tag(name:"affected", value:"Microsoft SharePoint Server 2010 Excel Services");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

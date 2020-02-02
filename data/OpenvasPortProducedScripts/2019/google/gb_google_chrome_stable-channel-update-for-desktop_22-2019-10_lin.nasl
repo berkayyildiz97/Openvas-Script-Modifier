@@ -24,16 +24,16 @@ CPE = "cpe:/a:google:chrome";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.815814");
-  script_version("2019-10-25T11:55:21+0000");
+  script_version("2019-12-05T07:54:08+0000");
   script_cve_id("CVE-2019-13699", "CVE-2019-13700", "CVE-2019-13701", "CVE-2019-13702",
                 "CVE-2019-13703", "CVE-2019-13704", "CVE-2019-13705", "CVE-2019-13706",
                 "CVE-2019-13707", "CVE-2019-13708", "CVE-2019-13709", "CVE-2019-13710",
                 "CVE-2019-13711", "CVE-2019-15903", "CVE-2019-13713", "CVE-2019-13714",
                 "CVE-2019-13715", "CVE-2019-13716", "CVE-2019-13717", "CVE-2019-13718",
                 "CVE-2019-13719");
-  script_tag(name:"cvss_base", value:"5.0");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:P");
-  script_tag(name:"last_modification", value:"2019-10-25 11:55:21 +0000 (Fri, 25 Oct 2019)");
+  script_tag(name:"cvss_base", value:"6.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
+  script_tag(name:"last_modification", value:"2019-12-05 07:54:08 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-10-24 15:26:22 +0530 (Thu, 24 Oct 2019)");
   script_name("Google Chrome Security Updates(stable-channel-update-for-desktop_22-2019-10)-Linux");
 

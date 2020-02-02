@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_cisco_wsa_cisco-sa-20160119-wsa.nasl 11961 2018-10-18 10:49:40Z asteins $
 #
 # Cisco Web Security Appliance Security Bypass Vulnerability
 #
@@ -33,7 +32,7 @@ if (description)
   script_cve_id("CVE-2016-1296");
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:P/A:N");
-  script_version("$Revision: 11961 $");
+  script_version("2019-12-05T15:10:00+0000");
 
   script_name("Cisco Web Security Appliance Security Bypass Vulnerability");
 
@@ -50,7 +49,7 @@ if (description)
   script_tag(name:"solution_type", value:"VendorFix");
   script_tag(name:"qod_type", value:"package");
 
-  script_tag(name:"last_modification", value:"$Date: 2018-10-18 12:49:40 +0200 (Thu, 18 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-01-20 12:21:34 +0100 (Wed, 20 Jan 2016)");
   script_category(ACT_GATHER_INFO);
   script_family("CISCO");
@@ -62,7 +61,6 @@ if (description)
 }
 
 include("host_details.inc");
-include("version_func.inc");
 
 if( ! version = get_app_version( cpe:CPE ) ) exit( 0 );
 

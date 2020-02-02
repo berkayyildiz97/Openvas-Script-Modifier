@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_adobe_reader_oldplugin_sig_bypass_vuln_win.nasl 11402 2018-09-15 09:13:36Z cfischer $
 #
 # Adobe Reader Old Plugin Signature Bypass Vulnerability (Windows)
 #
@@ -29,11 +28,11 @@ CPE = "cpe:/a:adobe:acrobat_reader";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.804627");
-  script_version("$Revision: 11402 $");
+  script_version("2019-12-05T15:10:00+0000");
   script_cve_id("CVE-2003-0142");
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:P/A:N");
-  script_tag(name:"last_modification", value:"$Date: 2018-09-15 11:13:36 +0200 (Sat, 15 Sep 2018) $");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-06-05 10:39:40 +0530 (Thu, 05 Jun 2014)");
   script_name("Adobe Reader Old Plugin Signature Bypass Vulnerability (Windows)");
 
@@ -63,7 +62,6 @@ General solution options are to upgrade to a newer release, disable respective f
 }
 
 include("host_details.inc");
-include("version_func.inc");
 
 if(!readerVer = get_app_version(cpe:CPE)){
   exit(0);

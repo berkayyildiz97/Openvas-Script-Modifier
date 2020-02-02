@@ -28,14 +28,14 @@ CPE = "cpe:/a:adobe:flash_player_internet_explorer";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.810638");
-  script_version("2019-05-03T10:54:50+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-4273", "CVE-2016-4286", "CVE-2016-6981", "CVE-2016-6982",
                 "CVE-2016-6983", "CVE-2016-6984", "CVE-2016-6985", "CVE-2016-6986",
                 "CVE-2016-6987", "CVE-2016-6989", "CVE-2016-6990", "CVE-2016-6992");
   script_bugtraq_id(93490, 93497, 93492);
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 10:54:50 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2017-03-17 17:49:38 +0530 (Fri, 17 Mar 2017)");
   script_name("Microsoft IE And Microsoft Edge Flash Player Multiple Vulnerabilities (3194343)");
 
@@ -55,15 +55,15 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation of these
   vulnerabilities will allow remote attackers conduct code execution.");
 
-  script_tag(name:"affected", value:"Microsoft Windows 8.1 x32/x64
+  script_tag(name:"affected", value:"- Microsoft Windows 8.1 x32/x64
 
-  Microsoft Windows Server 2012/2012R2
+  - Microsoft Windows Server 2012/2012R2
 
-  Microsoft Windows 10 x32/x64
+  - Microsoft Windows 10 x32/x64
 
-  Microsoft Windows 10 Version 1511 x32/x64
+  - Microsoft Windows 10 Version 1511 x32/x64
 
-  Microsoft Windows 10 Version 1607 x32/x64");
+  - Microsoft Windows 10 Version 1607 x32/x64");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

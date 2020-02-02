@@ -28,7 +28,7 @@ CPE = "cpe:/a:microsoft:ie";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.903320");
-  script_version("2019-05-20T11:12:48+0000");
+  script_version("2020-01-07T09:06:32+0000");
   script_cve_id("CVE-2013-3201", "CVE-2013-3202", "CVE-2013-3203", "CVE-2013-3204",
                 "CVE-2013-3205", "CVE-2013-3206", "CVE-2013-3207", "CVE-2013-3208",
                 "CVE-2013-3209", "CVE-2013-3845");
@@ -36,7 +36,7 @@ if(description)
                  62214);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-20 11:12:48 +0000 (Mon, 20 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2013-09-11 07:47:44 +0530 (Wed, 11 Sep 2013)");
   script_name("Microsoft Internet Explorer Multiple Memory Corruption Vulnerabilities (2870699)");
 
@@ -57,9 +57,8 @@ if(description)
   script_tag(name:"qod_type", value:"registry");
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_xref(name:"URL", value:"http://secunia.com/advisories/54725");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2870699");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/bulletin/MS13-069");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-069");
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (c) 2013 SecPod");
   script_family("Windows : Microsoft Bulletins");

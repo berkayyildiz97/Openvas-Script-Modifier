@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_microsoft_skype_dll_hijacking_vuln.nasl 11874 2018-10-12 11:28:04Z mmartin $
 #
 # Microsoft Skype DLL Hijacking Vulnerability
 #
@@ -29,12 +28,12 @@ CPE = "cpe:/a:skype:skype";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809881");
-  script_version("$Revision: 11874 $");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2016-5720");
   script_bugtraq_id(95859);
   script_tag(name:"cvss_base", value:"7.2");
   script_tag(name:"cvss_base_vector", value:"AV:L/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-10-12 13:28:04 +0200 (Fri, 12 Oct 2018) $");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2017-02-03 13:26:18 +0530 (Fri, 03 Feb 2017)");
   script_name("Microsoft Skype DLL Hijacking Vulnerability");
 
@@ -52,8 +51,7 @@ if(description)
   will allow remote attackers to execute arbitrary code and conduct DLL hijacking
   attacks via a Trojan horse.");
 
-  script_tag(name:"affected", value:"Microsoft Skype prior to 7.30.80.103
-  on Windows.");
+  script_tag(name:"affected", value:"Microsoft Skype prior to 7.30.80.103");
 
   script_tag(name:"solution", value:"Upgrade to Microsoft skype Version
   7.30.80.103 or later.");

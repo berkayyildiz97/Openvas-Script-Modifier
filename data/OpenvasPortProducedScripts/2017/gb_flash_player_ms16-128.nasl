@@ -28,12 +28,12 @@ CPE = "cpe:/a:adobe:flash_player_internet_explorer";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.810634");
-  script_version("2019-05-21T14:04:10+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-7855");
   script_bugtraq_id(93861);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-21 14:04:10 +0000 (Tue, 21 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2017-03-17 16:51:17 +0530 (Fri, 17 Mar 2017)");
   script_name("Microsoft IE And Microsoft Edge Flash Player RCE Vulnerability (3201860)");
 
@@ -48,17 +48,17 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation of this
   vulnerability will allow remote attackers to take control of the affected system.");
 
-  script_tag(name:"affected", value:"Microsoft Windows 8.1 x32/x64
+  script_tag(name:"affected", value:"- Microsoft Windows 8.1 x32/x64
 
-  Microsoft Windows Server 2012/2012R2
+  - Microsoft Windows Server 2012/2012R2
 
-  Microsoft Windows 10 x32/x64
+  - Microsoft Windows 10 x32/x64
 
-  Microsoft Windows 10 Version 1511 x32/x64
+  - Microsoft Windows 10 Version 1511 x32/x64
 
-  Microsoft Windows 10 Version 1607 x32/x64
+  - Microsoft Windows 10 Version 1607 x32/x64
 
-  Microsoft Windows Server 2016 x64");
+  - Microsoft Windows Server 2016 x64");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:sharepoint_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.811023");
-  script_version("2019-05-03T10:54:50+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2017-0254", "CVE-2017-0281");
   script_bugtraq_id(98101, 98297);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 10:54:50 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2017-05-10 09:00:39 +0530 (Wed, 10 May 2017)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft SharePoint Server WAS Multiple RCE Vulnerabilities (3191839)");
@@ -52,9 +52,9 @@ if(description)
   take control of the affected system. An attacker could then install programs /
   view, change, or delete data / or create new accounts with full user rights.");
 
-  script_tag(name:"affected", value:"Microsoft SharePoint Server 2010 Service Pack 2 Word Automation Services
+  script_tag(name:"affected", value:"- Microsoft SharePoint Server 2010 Service Pack 2 Word Automation Services
 
-  Microsoft SharePoint Server 2010 Service Pack 2");
+  - Microsoft SharePoint Server 2010 Service Pack 2");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

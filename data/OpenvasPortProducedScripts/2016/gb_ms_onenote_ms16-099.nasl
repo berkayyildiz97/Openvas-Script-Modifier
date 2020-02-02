@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:onenote";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.807871");
-  script_version("2019-05-03T08:55:39+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-3315");
   script_bugtraq_id(92294);
   script_tag(name:"cvss_base", value:"4.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-05-03 08:55:39 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-08-10 10:27:21 +0530 (Wed, 10 Aug 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft OneNote Information Disclosure Vulnerability (3177451)");
@@ -49,13 +49,13 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   attackers to gain access to potentially sensitive information.");
 
-  script_tag(name:"affected", value:"Microsoft OneNote 2007 Service Pack 3
+  script_tag(name:"affected", value:"- Microsoft OneNote 2007 Service Pack 3
 
-  Microsoft OneNote 2010 Service Pack 2
+  - Microsoft OneNote 2010 Service Pack 2
 
-  Microsoft OneNote 2013 Service Pack 1
+  - Microsoft OneNote 2013 Service Pack 1
 
-  Microsoft OneNote 2016");
+  - Microsoft OneNote 2016");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

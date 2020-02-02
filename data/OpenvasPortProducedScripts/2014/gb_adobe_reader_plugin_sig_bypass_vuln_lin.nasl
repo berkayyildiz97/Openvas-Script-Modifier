@@ -28,12 +28,12 @@ CPE = "cpe:/a:adobe:acrobat_reader";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.804626");
-  script_version("2019-07-05T09:29:25+0000");
+  script_version("2019-12-05T15:10:00+0000");
   script_cve_id("CVE-2002-0030");
   script_bugtraq_id(7174);
   script_tag(name:"cvss_base", value:"4.6");
   script_tag(name:"cvss_base_vector", value:"AV:L/AC:L/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-07-05 09:29:25 +0000 (Fri, 05 Jul 2019)");
+  script_tag(name:"last_modification", value:"2019-12-05 15:10:00 +0000 (Thu, 05 Dec 2019)");
   script_tag(name:"creation_date", value:"2014-06-04 17:27:52 +0530 (Wed, 04 Jun 2014)");
   script_name("Adobe Reader Plugin Signature Bypass Vulnerability (Linux)");
 
@@ -62,7 +62,6 @@ bypass signature checks and execute malicious code on the system.");
 }
 
 include("host_details.inc");
-include("version_func.inc");
 
 if(!readerVer = get_app_version(cpe:CPE)){
   exit(0);

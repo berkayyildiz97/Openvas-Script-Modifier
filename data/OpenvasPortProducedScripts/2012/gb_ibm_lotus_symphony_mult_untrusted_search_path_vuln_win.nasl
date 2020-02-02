@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_ibm_lotus_symphony_mult_untrusted_search_path_vuln_win.nasl 12634 2018-12-04 07:26:26Z cfischer $
 #
 # IBM Lotus Symphony Multiple Untrusted Search Path Vulnerabilities (Windows)
 #
@@ -29,18 +28,18 @@ CPE = "cpe:/a:ibm:lotus_symphony";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.802963");
-  script_version("$Revision: 12634 $");
+  script_version("2020-01-07T09:06:32+0000");
   script_cve_id("CVE-2010-5204");
   script_tag(name:"cvss_base", value:"6.9");
   script_tag(name:"cvss_base_vector", value:"AV:L/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"$Date: 2018-12-04 08:26:26 +0100 (Tue, 04 Dec 2018) $");
+  script_tag(name:"last_modification", value:"2020-01-07 09:06:32 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2012-09-17 15:01:39 +0530 (Mon, 17 Sep 2012)");
   script_name("IBM Lotus Symphony Multiple Untrusted Search Path Vulnerabilities (Windows)");
 
   script_xref(name:"URL", value:"http://secunia.com/advisories/41400");
   script_xref(name:"URL", value:"http://support.microsoft.com/kb/2264107");
   script_xref(name:"URL", value:"http://seclists.org/fulldisclosure/2010/Sep/220");
-  script_xref(name:"URL", value:"http://technet.microsoft.com/en-us/security/advisory/2269637#EGF");
+  script_xref(name:"URL", value:"https://docs.microsoft.com/en-us/security-updates/SecurityAdvisories/2010/2269637");
   script_xref(name:"URL", value:"http://core.yehg.net/lab/pr0js/advisories/dll_hijacking/%5Bibm_lotus_symphony%5D_3-beta-4_insecure_dll_hijacking");
 
   script_category(ACT_GATHER_INFO);

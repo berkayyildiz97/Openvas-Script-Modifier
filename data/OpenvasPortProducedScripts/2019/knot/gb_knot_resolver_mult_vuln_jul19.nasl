@@ -19,13 +19,13 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.113449");
-  script_version("2019-10-07T14:34:48+0000");
-  script_tag(name:"last_modification", value:"2019-10-07 14:34:48 +0000 (Mon, 07 Oct 2019)");
+  script_version("2019-12-19T09:16:40+0000");
+  script_tag(name:"last_modification", value:"2019-12-19 09:16:40 +0000 (Thu, 19 Dec 2019)");
   script_tag(name:"creation_date", value:"2019-07-22 15:39:45 +0000 (Mon, 22 Jul 2019)");
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:P/A:N");
 
-  script_tag(name:"qod_type", value:"executable_version");
+  script_tag(name:"qod_type", value:"executable_version_unreliable");
 
   script_tag(name:"solution_type", value:"VendorFix");
 
@@ -41,16 +41,21 @@ if(description)
   script_mandatory_keys("knot/resolver/detected");
 
   script_tag(name:"summary", value:"Knot Resolver is prone to multiple vulnerabilities.");
+
   script_tag(name:"vuldetect", value:"Checks if a vulnerable version is present on the target host.");
+
   script_tag(name:"insight", value:"The following vulnerabilities exist:
 
   - The NXDOMAIN answer could get passed through to the client
-    if its DNSSEC validation failed, instead of sending a SERVFAIL packet.
+  if its DNSSEC validation failed, instead of sending a SERVFAIL packet.
 
   - Remote attackers can downgrade DNSSEC-secure domains, to an DNSSEC-insecure state,
-    opening a possibility of domain hijacking using attacks against insecure DNS protocol.");
+  opening a possibility of domain hijacking using attacks against insecure DNS protocol.");
+
   script_tag(name:"impact", value:"Successful exploitation could allow an attacker to poison the DNS cache or hijack the domain.");
+
   script_tag(name:"affected", value:"knot resolver through version 4.0.0.");
+
   script_tag(name:"solution", value:"Update to version 4.1.0.");
 
   script_xref(name:"URL", value:"https://www.knot-resolver.cz/2019-07-10-knot-resolver-4.1.0.html");
@@ -60,12 +65,14 @@ if(description)
   exit(0);
 }
 
-CPE = "cpe:/a:knot-resolver:knot_resolver";
+CPE = "cpe:/a:nic:knot_resolver";
 
 include( "host_details.inc" );
 include( "version_func.inc" );
 
-if( ! infos = get_app_version_and_location( cpe: CPE, exit_no_version: TRUE ) ) exit( 0 );
+if( ! infos = get_app_version_and_location( cpe: CPE, exit_no_version: TRUE ) )
+  exit( 0 );
+
 version = infos["version"];
 location = infos["location"];
 

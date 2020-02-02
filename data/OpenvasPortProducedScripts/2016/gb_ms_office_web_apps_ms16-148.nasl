@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:office_web_apps";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809758");
-  script_version("2019-05-03T08:55:39+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2016-7268", "CVE-2016-7290", "CVE-2016-7291");
   script_bugtraq_id(94672, 94670, 94671);
   script_tag(name:"cvss_base", value:"5.8");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:N/A:P");
-  script_tag(name:"last_modification", value:"2019-05-03 08:55:39 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2016-12-14 13:18:47 +0530 (Wed, 14 Dec 2016)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Office Web Apps Multiple Information Disclosure Vulnerabilities (3204068)");

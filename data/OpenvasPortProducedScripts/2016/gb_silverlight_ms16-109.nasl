@@ -28,12 +28,12 @@ CPE = "cpe:/a:microsoft:silverlight";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809309");
-  script_version("2019-05-03T10:54:50+0000");
+  script_version("2020-01-07T08:11:35+0000");
   script_cve_id("CVE-2016-3367");
   script_bugtraq_id(92837);
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 10:54:50 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2020-01-07 08:11:35 +0000 (Tue, 07 Jan 2020)");
   script_tag(name:"creation_date", value:"2016-09-14 08:56:33 +0530 (Wed, 14 Sep 2016)");
   script_name("Microsoft Silverlight Remote Code Execution Vulnerability (3182373)");
   script_category(ACT_GATHER_INFO);
@@ -56,7 +56,7 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation could corrupt system
   memory, which could allow an attacker to execute arbitrary code.");
 
-  script_tag(name:"affected", value:"Microsoft Silverlight version 5 on Windows.");
+  script_tag(name:"affected", value:"Microsoft Silverlight version 5");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

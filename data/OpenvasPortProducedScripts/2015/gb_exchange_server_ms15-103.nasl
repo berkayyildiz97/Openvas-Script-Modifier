@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:exchange_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.806108");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-2505", "CVE-2015-2543", "CVE-2015-2544");
   script_tag(name:"cvss_base", value:"5.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-09-09 09:39:00 +0530 (Wed, 09 Sep 2015)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft Exchange Server information Disclosure Vulnerability (3089250)");
@@ -50,11 +50,11 @@ if(description)
   inaccessible from the outside world, enumerate and attack services that are
   running on these host systems and exploit host-based authentication services.");
 
-  script_tag(name:"affected", value:"Microsoft Exchange Server 2013 SP1,
+  script_tag(name:"affected", value:"- Microsoft Exchange Server 2013 SP1,
 
-  Microsoft Exchange Server 2013 Cumulative Update 9 and
+  - Microsoft Exchange Server 2013 Cumulative Update 9 and
 
-  Microsoft Exchange Server 2013 Cumulative Update 8");
+  - Microsoft Exchange Server 2013 Cumulative Update 8");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

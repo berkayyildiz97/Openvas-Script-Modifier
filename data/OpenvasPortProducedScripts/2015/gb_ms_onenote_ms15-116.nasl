@@ -28,11 +28,11 @@ CPE = "cpe:/a:microsoft:onenote";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.806163");
-  script_version("2019-05-03T12:31:27+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2015-2503");
   script_tag(name:"cvss_base", value:"9.3");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2019-05-03 12:31:27 +0000 (Fri, 03 May 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2015-11-11 14:34:29 +0530 (Wed, 11 Nov 2015)");
   script_tag(name:"qod_type", value:"executable_version");
   script_name("Microsoft OneNote Privilege Elevation Vulnerability (3104540)");
@@ -50,10 +50,13 @@ if(description)
   attackers to gain elevated privileges and break out of the Internet Explorer
   sandbox.");
 
-  script_tag(name:"affected", value:"Microsoft OneNote 2010 Service Pack 2
-  Microsoft OneNote 2013 Service Pack 1
-  Microsoft OneNote 2007 Service Pack 3
-  Microsoft OneNote 2016 Service Pack 1");
+  script_tag(name:"affected", value:"- Microsoft OneNote 2010 Service Pack 2
+
+  - Microsoft OneNote 2013 Service Pack 1
+
+  - Microsoft OneNote 2007 Service Pack 3
+
+  - Microsoft OneNote 2016 Service Pack 1");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 

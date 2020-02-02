@@ -27,12 +27,12 @@ CPE = "cpe:/a:microsoft:exchange_server";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.809314");
-  script_version("2019-11-13T14:36:15+0000");
+  script_version("2019-12-20T10:24:46+0000");
   script_cve_id("CVE-2016-0138");
   script_bugtraq_id(92806);
   script_tag(name:"cvss_base", value:"4.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:P/I:N/A:N");
-  script_tag(name:"last_modification", value:"2019-11-13 14:36:15 +0000 (Wed, 13 Nov 2019)");
+  script_tag(name:"last_modification", value:"2019-12-20 10:24:46 +0000 (Fri, 20 Dec 2019)");
   script_tag(name:"creation_date", value:"2016-09-14 10:21:52 +0530 (Wed, 14 Sep 2016)");
   script_tag(name:"qod_type", value:"registry");
   script_name("Microsoft Exchange Server Information Disclosure Vulnerabilities (3185883)");
@@ -49,19 +49,19 @@ if(description)
   an attacker to discover confidential user information that is contained in
   Microsoft Outlook applications.");
 
-  script_tag(name:"affected", value:"Microsoft Exchange Server 2007 Service Pack 3
+  script_tag(name:"affected", value:"- Microsoft Exchange Server 2007 Service Pack 3
 
-  Microsoft Exchange Server 2010 Service Pack 3
+  - Microsoft Exchange Server 2010 Service Pack 3
 
-  Microsoft Exchange Server 2013 Service Pack 1
+  - Microsoft Exchange Server 2013 Service Pack 1
 
-  Microsoft Exchange Server 2013 Cumulative Update 12
+  - Microsoft Exchange Server 2013 Cumulative Update 12
 
-  Microsoft Exchange Server 2013 Cumulative Update 13
+  - Microsoft Exchange Server 2013 Cumulative Update 13
 
-  Microsoft Exchange Server 2016 Cumulative Update 1
+  - Microsoft Exchange Server 2016 Cumulative Update 1
 
-  Microsoft Exchange Server 2016 Cumulative Update 2");
+  - Microsoft Exchange Server 2016 Cumulative Update 2");
 
   script_tag(name:"solution", value:"The vendor has released updates. Please see the references for more information.");
 
