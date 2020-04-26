@@ -73,7 +73,7 @@ if(!wcVer){
 }
 
 if(version_is_less_equal(version:wcVer, test_version:"5.3.2.410")){
-  report = report_fixed_ver(installed_version:wcVer, vulnerable_range:"Less than or equal to " + "5.3.2.410");
+  report = report_fixed_ver(installed_version:wcVer, vulnerable_range:"Less than or equal to 5.3.2.410");
   security_message(port: 0, data: report);
   exit(0);
 }

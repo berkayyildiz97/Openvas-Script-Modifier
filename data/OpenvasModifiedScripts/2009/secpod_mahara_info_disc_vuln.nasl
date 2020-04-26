@@ -75,7 +75,7 @@ if(ver[1] != NULL)
 {
   if(version_in_range(version:ver[1], test_version:"1.1",
                                       test_version2:"1.1.4")){
-    report = report_fixed_ver(installed_version:ver[1], vulnerable_range:"1.1" + " - " + "1.1.4");
+    report = report_fixed_ver(installed_version:ver[1], vulnerable_range:"1.1 - 1.1.4");
     security_message(port: maharaPort, data: report);
     exit(0);
   }

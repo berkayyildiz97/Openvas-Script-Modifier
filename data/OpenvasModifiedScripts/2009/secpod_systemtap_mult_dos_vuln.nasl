@@ -76,6 +76,6 @@ if(!systapVer)
   exit(0);
 
 if(version_is_less_equal(version:systapVer, test_version:"1.0")){
-  report = report_fixed_ver(installed_version:systapVer, vulnerable_range:"Less than or equal to " + "1.0");
+  report = report_fixed_ver(installed_version:systapVer, vulnerable_range:"Less than or equal to 1.0");
   security_message(port: 0, data: report);
 }

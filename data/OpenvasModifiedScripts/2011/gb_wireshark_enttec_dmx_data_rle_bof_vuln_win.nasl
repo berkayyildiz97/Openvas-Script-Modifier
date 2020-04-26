@@ -75,6 +75,6 @@ if(!sharkVer){
 }
 
 if(version_is_equal(version:sharkVer, test_version:"1.4.2")){
-  report = report_fixed_ver(installed_version:sharkVer, vulnerable_range:"Equal to " + "1.4.2");
+  report = report_fixed_ver(installed_version:sharkVer, vulnerable_range:"Equal to 1.4.2");
   security_message(port: 0, data: report);
 }

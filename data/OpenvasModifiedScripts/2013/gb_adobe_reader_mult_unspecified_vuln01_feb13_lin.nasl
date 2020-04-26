@@ -73,7 +73,7 @@ if(readerVer =~ "^9")
 {
   if(version_in_range(version:readerVer, test_version:"9.0", test_version2: "9.5.3"))
   {
-     report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"9.0" + " - " + "9.5.3");
+     report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"9.0 - 9.5.3");
      security_message(port: 0, data: report);
      exit(0);
   }

@@ -74,7 +74,7 @@ novVer = eregmatch(pattern:"v([0-9.]+)", string:iPrintVer);
 if(novVer[1] != NULL)
 {
   if(version_is_less_equal(version:novVer[1], test_version:"5.06")){
-    report = report_fixed_ver(installed_version:novVer[1], vulnerable_range:"Less than or equal to " + "5.06");
+    report = report_fixed_ver(installed_version:novVer[1], vulnerable_range:"Less than or equal to 5.06");
     security_message(port: 0, data: report);
   }
 }

@@ -76,7 +76,7 @@ pacificTSVer = eregmatch(pattern:"^(.+) under (/.*)$", string:pacificTSVer);
 if(pacificTSVer[1] != NULL)
 {
   if(version_is_equal(version:pacificTSVer[1], test_version:"6.74.363")) {
-    report = report_fixed_ver(installed_version:pacificTSVer[1], vulnerable_range:"Equal to " + "6.74.363");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:pacificTSVer[1], vulnerable_range:"Equal to 6.74.363");
+    security_message(port: pacificTSPort, data: report);
   }
 }

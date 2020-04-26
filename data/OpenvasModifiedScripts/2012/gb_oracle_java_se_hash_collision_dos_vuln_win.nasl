@@ -68,7 +68,7 @@ jreVer = get_kb_item("Sun/Java/JRE/Win/Ver");
 if(jreVer)
 {
   if(version_in_range(version:jreVer, test_version:"1.7", test_version2:"1.7.0.5")){
-    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.7" + " - " + "1.7.0.5");
+    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.7 - 1.7.0.5");
     security_message(port: 0, data: report);
   }
 }

@@ -66,6 +66,6 @@ if(!quaggaVer)
   exit(0);
 
 if(version_is_less_equal(version:quaggaVer, test_version:"0.99.11")){
-  report = report_fixed_ver(installed_version:quaggaVer, vulnerable_range:"Less than or equal to " + "0.99.11");
+  report = report_fixed_ver(installed_version:quaggaVer, vulnerable_range:"Less than or equal to 0.99.11");
   security_message(port: 0, data: report);
 }

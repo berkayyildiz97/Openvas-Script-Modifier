@@ -67,7 +67,7 @@ vmfusionVer = get_kb_item("VMware/Fusion/MacOSX/Version");
 if(vmfusionVer != NULL )
 {
   if(version_in_range(version:vmfusionVer, test_version:"3.1.0", test_version2:"3.1.2")){
-    report = report_fixed_ver(installed_version:vmfusionVer, vulnerable_range:"3.1.0" + " - " + "3.1.2");
+    report = report_fixed_ver(installed_version:vmfusionVer, vulnerable_range:"3.1.0 - 3.1.2");
     security_message(port: 0, data: report);
   }
 }

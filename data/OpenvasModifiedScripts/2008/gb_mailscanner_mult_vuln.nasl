@@ -81,7 +81,7 @@ if(sock)
     if(scanner_ver[1] != NULL)
     {
       if(version_is_less_equal(version:scanner_ver[1], test_version:"4.74.7")){
-        report = report_fixed_ver(installed_version:scanner_ver[1], vulnerable_range:"Less than or equal to " + "4.74.7");
+        report = report_fixed_ver(installed_version:scanner_ver[1], vulnerable_range:"Less than or equal to 4.74.7");
         security_message(port: 0, data: report);
       }
     }

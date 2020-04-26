@@ -71,7 +71,7 @@ tsftpVer = get_kb_item("TYPSoft/FTP/Ver");
 if(tsftpVer != NULL)
 {
   if(version_is_less_equal(version:tsftpVer, test_version:"1.10")){
-    report = report_fixed_ver(installed_version:tsftpVer, vulnerable_range:"Less than or equal to " + "1.10");
+    report = report_fixed_ver(installed_version:tsftpVer, vulnerable_range:"Less than or equal to 1.10");
     security_message(port: 0, data: report);
   }
 }

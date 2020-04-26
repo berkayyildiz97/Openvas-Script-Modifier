@@ -87,7 +87,7 @@ if(!fileVer)
 
 # OfficeScan 8.0 build 3110 and prior (SP1 Patch 1/8.0.0.3110)
 if(version_is_less_equal(version:fileVer, test_version:"8.0.0.3110")){
-  report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"Less than or equal to " + "8.0.0.3110", install_path:scanPath);
+  report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"Less than or equal to 8.0.0.3110", install_path:scanPath);
   security_message(port: 0, data: report);
   exit(0);
 }

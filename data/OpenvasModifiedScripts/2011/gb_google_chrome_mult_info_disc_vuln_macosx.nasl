@@ -72,6 +72,6 @@ if(!chromeVer){
 }
 
 if(version_in_range(version:chromeVer, test_version:"4.0", test_version2:"4.2")){
-  report = report_fixed_ver(installed_version:chromeVer, vulnerable_range:"4.0" + " - " + "4.2");
+  report = report_fixed_ver(installed_version:chromeVer, vulnerable_range:"4.0 - 4.2");
   security_message(port: 0, data: report);
 }

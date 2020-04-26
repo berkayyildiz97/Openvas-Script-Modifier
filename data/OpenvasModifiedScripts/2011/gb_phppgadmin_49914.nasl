@@ -75,7 +75,7 @@ port = get_http_port(default:80);
 
 if(vers = get_version_from_kb(port:port,app:"phpPgAdmin")) {
   if(version_in_range(version: vers, test_version: "5", test_version2:"5.0.2")) {
-    report = report_fixed_ver(installed_version:vers, vulnerable_range:"5" + " - " + "5.0.2");
+    report = report_fixed_ver(installed_version:vers, vulnerable_range:"5 - 5.0.2");
     security_message(port: port, data: report);
     exit(0);
   }

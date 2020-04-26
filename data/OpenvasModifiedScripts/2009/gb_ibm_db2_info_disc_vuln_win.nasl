@@ -83,7 +83,7 @@ if( ! version = get_app_version( cpe: CPE ) ) exit( 0 );
 # version 9.1 FP6a => 9.1.601.768
 if( version_in_range( version: version, test_version: "9.1", test_version2: "9.1.601.768" ) ) {
   report = report_fixed_ver( installed_version: version, fixed_version: "9.1 FP7" );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"9.1" + " - " + "9.1.601.768");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"9.1 - 9.1.601.768");
   security_message(port: 0, data: report);
   exit( 0 );
 }

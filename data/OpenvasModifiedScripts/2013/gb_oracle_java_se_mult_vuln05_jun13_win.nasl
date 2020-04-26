@@ -72,7 +72,7 @@ if( ! version = get_single_app_versions_from_list( cpe_list: cpe_list ) ) exit( 
 if( version_in_range(version: version, test_version: "1.5.0.0", test_version2: "1.5.0.45" ) )
 {
   report = report_fixed_ver( installed_version: version, fixed_version: "Java SE Version 6" );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"1.5.0.0" + " - " + "1.5.0.45");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"1.5.0.0 - 1.5.0.45");
   security_message(port: 0, data: report);
   exit( 0 );
 }

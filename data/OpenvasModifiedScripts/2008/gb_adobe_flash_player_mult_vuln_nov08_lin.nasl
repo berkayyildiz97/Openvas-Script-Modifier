@@ -66,6 +66,6 @@ if(!adobeVer){
 }
 
 if(version_is_less_equal(version:adobeVer, test_version:"9.0.124.0")){
-  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"Less than or equal to " + "9.0.124.0");
+  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"Less than or equal to 9.0.124.0");
   security_message(port: 0, data: report);
 }

@@ -68,7 +68,7 @@ uTorrentVer = get_kb_item("utorrent/win/version");
 if(!uTorrentVer) exit(0);
 
 if(version_is_less_equal(version:uTorrentVer, test_version:"2.0.3")) {
-      report = report_fixed_ver(installed_version:uTorrentVer, vulnerable_range:"Less than or equal to " + "2.0.3");
+      report = report_fixed_ver(installed_version:uTorrentVer, vulnerable_range:"Less than or equal to 2.0.3");
       security_message(port: 0, data: report);
 }
 

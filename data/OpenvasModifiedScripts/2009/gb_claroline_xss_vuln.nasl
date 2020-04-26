@@ -82,7 +82,7 @@ clarolineVer = eregmatch(pattern:"^(.+) under (/.*)$", string:clarolineVer);
 if(clarolineVer[1] != NULL)
 {
   if(version_is_less_equal(version:clarolineVer[1], test_version:"1.8.11")){
-    report = report_fixed_ver(installed_version:clarolineVer[1], vulnerable_range:"Less than or equal to " + "1.8.11");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:clarolineVer[1], vulnerable_range:"Less than or equal to 1.8.11");
+    security_message(port: clarolinPort, data: report);
   }
 }

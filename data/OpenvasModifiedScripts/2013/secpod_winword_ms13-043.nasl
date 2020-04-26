@@ -72,7 +72,7 @@ if(winwordVer)
 {
   if(version_in_range(version:winwordVer, test_version:"11.0", test_version2:"11.0.8401"))
   {
-    report = report_fixed_ver(installed_version:winwordVer, vulnerable_range:"11.0" + " - " + "11.0.8401");
+    report = report_fixed_ver(installed_version:winwordVer, vulnerable_range:"11.0 - 11.0.8401");
     security_message(port: 0, data: report);
     exit(0);
   }

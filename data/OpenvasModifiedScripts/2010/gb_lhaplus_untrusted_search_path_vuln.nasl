@@ -88,7 +88,7 @@ if(!isnull(lhpPath))
   if(lhpVer != NULL)
   {
     if(version_is_less_equal(version:lhpVer, test_version:"1.5.7")){
-        report = report_fixed_ver(installed_version:lhpVer, vulnerable_range:"Less than or equal to " + "1.5.7", install_path:lhpPath);
+        report = report_fixed_ver(installed_version:lhpVer, vulnerable_range:"Less than or equal to 1.5.7", install_path:lhpPath);
         security_message(port: 0, data: report);
     }
   }

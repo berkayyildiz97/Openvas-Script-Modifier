@@ -90,6 +90,6 @@ if(evalSMSIVer[1] != NULL)
 {
   if(version_is_less(version:evalSMSIVer[1], test_version:"2.0.00")){
     report = report_fixed_ver(installed_version:evalSMSIVer[1], fixed_version:"2.0.00");
-    security_message(port: 0, data: report);
+    security_message(port: evalSMSIPort, data: report);
   }
 }

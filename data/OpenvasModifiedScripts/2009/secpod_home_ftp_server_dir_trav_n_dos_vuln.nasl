@@ -117,6 +117,6 @@ if(!hftpVer){
 }
 
 if(version_is_less_equal(version:hftpVer, test_version:"1.10.1.139")){
-  report = report_fixed_ver(installed_version:hftpVer, vulnerable_range:"Less than or equal to " + "1.10.1.139");
-  security_message(port: 0, data: report);
+  report = report_fixed_ver(installed_version:hftpVer, vulnerable_range:"Less than or equal to 1.10.1.139");
+  security_message(port: hftpPort, data: report);
 }

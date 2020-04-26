@@ -75,7 +75,7 @@ citrixVer = eregmatch(pattern:"([0-9.]+)", string:ver);
 if(citrixVer[1])
 {
   if(version_is_less_equal(version:citrixVer[1], test_version:"11.6.1")){
-    report = report_fixed_ver(installed_version:citrixVer[1], vulnerable_range:"Less than or equal to " + "11.6.1");
+    report = report_fixed_ver(installed_version:citrixVer[1], vulnerable_range:"Less than or equal to 11.6.1");
     security_message(port: 0, data: report);
   }
 }

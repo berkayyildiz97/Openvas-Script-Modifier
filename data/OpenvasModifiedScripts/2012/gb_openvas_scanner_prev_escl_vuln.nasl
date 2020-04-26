@@ -86,7 +86,7 @@ foreach command (make_list("openvasd"))
     {
       if(version_is_less_equal(version:openvasVer[2], test_version:"3.2.4"))
       {
-        report = report_fixed_ver(installed_version:openvasVer[2], vulnerable_range:"Less than or equal to " + "3.2.4");
+        report = report_fixed_ver(installed_version:openvasVer[2], vulnerable_range:"Less than or equal to 3.2.4");
         security_message(port: 0, data: report);
         close(sock);
         exit(0);

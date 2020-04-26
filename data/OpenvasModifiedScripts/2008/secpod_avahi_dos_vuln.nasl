@@ -70,6 +70,6 @@ if(!avahiVer){
 }
 
 if(version_is_less_equal(version:avahiVer, test_version:"0.6.23")){
-  report = report_fixed_ver(installed_version:avahiVer, vulnerable_range:"Less than or equal to " + "0.6.23");
+  report = report_fixed_ver(installed_version:avahiVer, vulnerable_range:"Less than or equal to 0.6.23");
   security_message(port: 0, data: report);
 }

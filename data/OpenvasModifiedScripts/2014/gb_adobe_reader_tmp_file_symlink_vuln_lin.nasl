@@ -71,7 +71,7 @@ if(readerVer  =~ "^4\.")
 {
   if(version_is_equal(version:readerVer, test_version:"4.0.5"))
   {
-    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Equal to " + "4.0.5");
+    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Equal to 4.0.5");
     security_message(port: 0, data: report);
     exit(0);
   }

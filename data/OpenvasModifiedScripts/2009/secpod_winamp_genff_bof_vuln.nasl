@@ -85,7 +85,7 @@ if(version_is_less_equal(version:winampVer, test_version:"5.5.5.2405"))
   file = ereg_replace(pattern:"[A-Z]:(.*)", replace:"\1", string:winPath);
   dllSize = get_file_size(share:share, file:file);
   if(dllSize){
-    report = report_fixed_ver(installed_version:winampVer, vulnerable_range:"Less than or equal to " + "5.5.5.2405", install_path:winPath);
+    report = report_fixed_ver(installed_version:winampVer, vulnerable_range:"Less than or equal to 5.5.5.2405", install_path:winPath);
     security_message(port: 0, data: report);
   }
 }

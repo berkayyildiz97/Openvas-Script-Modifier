@@ -73,8 +73,8 @@ if("Server: IBM_HTTP_Server" >< ibmWebSer) {
   ver = eregmatch(pattern:"IBM_HTTP_Server/([0-9.]+)", string:ibmWebSer);
   if(ver[1]) {
     if(version_is_less_equal(version:ver[1], test_version:"2.0.47")) {
-      report = report_fixed_ver(installed_version:ver[1], vulnerable_range:"Less than or equal to " + "2.0.47");
-      security_message(port: 0, data: report);
+      report = report_fixed_ver(installed_version:ver[1], vulnerable_range:"Less than or equal to 2.0.47");
+      security_message(port: port, data: report);
       exit(0);
     }
   }

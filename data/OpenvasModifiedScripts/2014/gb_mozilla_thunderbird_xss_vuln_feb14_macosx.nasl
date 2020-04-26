@@ -73,7 +73,7 @@ if(!tbVer = get_app_version(cpe:CPE)){
 
 if(version_in_range(version:tbVer, test_version:"17.0", test_version2:"17.0.8"))
 {
-  report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"17.0" + " - " + "17.0.8");
+  report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"17.0 - 17.0.8");
   security_message(port: 0, data: report);
   exit(0);
 }

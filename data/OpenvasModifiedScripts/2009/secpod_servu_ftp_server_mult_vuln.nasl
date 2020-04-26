@@ -76,6 +76,6 @@ if(!servuVer){
 }
 
 if(version_is_less_equal(version:servuVer, test_version:"7.4.0.1")){
-  report = report_fixed_ver(installed_version:servuVer, vulnerable_range:"Less than or equal to " + "7.4.0.1");
+  report = report_fixed_ver(installed_version:servuVer, vulnerable_range:"Less than or equal to 7.4.0.1");
   security_message(port: 0, data: report);
 }

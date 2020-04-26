@@ -66,6 +66,6 @@ if(!chromeVer){
 }
 
 if(version_is_equal(version:chromeVer, test_version:"14.0.792.0")){
-  report = report_fixed_ver(installed_version:chromeVer, vulnerable_range:"Equal to " + "14.0.792.0");
+  report = report_fixed_ver(installed_version:chromeVer, vulnerable_range:"Equal to 14.0.792.0");
   security_message(port: 0, data: report);
 }

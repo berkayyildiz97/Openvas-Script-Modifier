@@ -71,7 +71,7 @@ if(exeVer =~ "^12\..*")
 {
   if(version_in_range(version:exeVer, test_version:"12.0", test_version2:"12.0.6550.5003"))
   {
-    report = report_fixed_ver(installed_version:exeVer, vulnerable_range:"12.0" + " - " + "12.0.6550.5003");
+    report = report_fixed_ver(installed_version:exeVer, vulnerable_range:"12.0 - 12.0.6550.5003");
     security_message(port: 0, data: report);
     exit(0);
   }

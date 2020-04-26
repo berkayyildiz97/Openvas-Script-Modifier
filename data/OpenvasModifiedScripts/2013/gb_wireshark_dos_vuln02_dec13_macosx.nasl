@@ -72,7 +72,7 @@ if(sharkVer  =~ "^(1\.10)")
 {
   if(version_in_range(version:sharkVer, test_version:"1.10.0", test_version2:"1.10.3"))
   {
-    report = report_fixed_ver(installed_version:sharkVer, vulnerable_range:"1.10.0" + " - " + "1.10.3");
+    report = report_fixed_ver(installed_version:sharkVer, vulnerable_range:"1.10.0 - 1.10.3");
     security_message(port: 0, data: report);
     exit(0);
   }

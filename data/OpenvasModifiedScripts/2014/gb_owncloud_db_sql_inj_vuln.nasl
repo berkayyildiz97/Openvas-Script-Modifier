@@ -77,7 +77,7 @@ if(!ownVer = get_app_version(cpe:CPE, port:ownPort)){
 
 if(version_in_range(version:ownVer, test_version:"5.0", test_version2:"5.0.5"))
 {
-  report = report_fixed_ver(installed_version:ownVer, vulnerable_range:"5.0" + " - " + "5.0.5");
+  report = report_fixed_ver(installed_version:ownVer, vulnerable_range:"5.0 - 5.0.5");
   security_message(port: ownPort, data: report);
   exit(0);
 }

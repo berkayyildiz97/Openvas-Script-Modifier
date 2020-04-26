@@ -81,7 +81,7 @@ mailVer = eregmatch(pattern:"([0-9.]+)", string:mailVer);
 if(mailVer[1] != NULL)
 {
   if(version_is_less_equal(version:mailVer[1], test_version:"5.8.5.3710")){
-    report = report_fixed_ver(installed_version:mailVer[1], vulnerable_range:"Less than or equal to " + "5.8.5.3710");
+    report = report_fixed_ver(installed_version:mailVer[1], vulnerable_range:"Less than or equal to 5.8.5.3710");
     security_message(port: 0, data: report);
   }
 }

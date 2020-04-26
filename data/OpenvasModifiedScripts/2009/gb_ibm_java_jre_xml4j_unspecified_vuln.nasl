@@ -69,7 +69,7 @@ if( ! version = get_single_app_versions_from_list( cpe_list: cpe_list ) ) exit( 
 
 if( version_in_range( version: version, test_version: "1.5", test_version2: "1.5.0.SR9" ) ) {
   report = report_fixed_ver( installed_version: version, fixed_version: "1.5.0.SR10" );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"1.5" + " - " + "1.5.0.SR9");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"1.5 - 1.5.0.SR9");
   security_message(port: 0, data: report);
   exit( 0 );
 }

@@ -78,7 +78,7 @@ if('ASAS Web Management Console Login' >< res)
   if(!isnull(asVer[1]))
   {
     if(version_is_less_equal(version:asVer[1], test_version:"3.1.0.3")){
-      report = report_fixed_ver(installed_version:asVer[1], vulnerable_range:"Less than or equal to " + "3.1.0.3");
+      report = report_fixed_ver(installed_version:asVer[1], vulnerable_range:"Less than or equal to 3.1.0.3");
       security_message(port: port, data: report);
     }
   }

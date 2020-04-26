@@ -68,6 +68,6 @@ if(!hwVer){
 
 if(version_in_range(version:hwVer, test_version:"1.0",
                                    test_version2:"5.1.4.4188")){
-  report = report_fixed_ver(installed_version:hwVer, vulnerable_range:"1.0" + " - " + "5.1.4.4188");
+  report = report_fixed_ver(installed_version:hwVer, vulnerable_range:"1.0 - 5.1.4.4188");
   security_message(port: 0, data: report);
 }

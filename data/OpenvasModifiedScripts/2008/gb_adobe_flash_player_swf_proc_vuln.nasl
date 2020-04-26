@@ -70,11 +70,11 @@ if(!adobeVer){
 # Version match 9.0 to 9.0.151.0 and 10.0 to 10.0.12.36
 if(version_in_range(version:adobeVer, test_version:"9.0",
                     test_version2:"9.0.151.0")){
-  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"9.0" + " - " + "9.0.151.0");
+  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"9.0 - 9.0.151.0");
   security_message(port: 0, data: report);
 }
 else if(version_in_range(version:adobeVer, test_version:"10.0",
                          test_version2:"10.0.12.36")){
-  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"10.0" + " - " + "10.0.12.36");
+  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"10.0 - 10.0.12.36");
   security_message(port: 0, data: report);
 }

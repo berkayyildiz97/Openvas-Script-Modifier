@@ -85,7 +85,7 @@ wcver = eregmatch(pattern:"^(.+) under (/.*)$", string:wcver);
 if(!isnull(wcver[1]))
 {
   if(version_is_less_equal(version:wcver[1], test_version:"1.2.0")){
-    report = report_fixed_ver(installed_version:wcver[1], vulnerable_range:"Less than or equal to " + "1.2.0");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:wcver[1], vulnerable_range:"Less than or equal to 1.2.0");
+    security_message(port: wcport, data: report);
   }
 }

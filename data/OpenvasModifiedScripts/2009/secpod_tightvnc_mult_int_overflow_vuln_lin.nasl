@@ -65,6 +65,6 @@ if(!tvncVer)
   exit(0);
 
 if(version_is_less_equal(version:tvncVer, test_version:"1.3.9")){
-  report = report_fixed_ver(installed_version:tvncVer, vulnerable_range:"Less than or equal to " + "1.3.9");
+  report = report_fixed_ver(installed_version:tvncVer, vulnerable_range:"Less than or equal to 1.3.9");
   security_message(port: 0, data: report);
 }

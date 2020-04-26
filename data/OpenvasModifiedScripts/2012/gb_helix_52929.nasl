@@ -83,7 +83,7 @@ if(isnull(version[1]))
   exit(0);
 
 if(version_in_range(version:version[1], test_version:"14", test_version2:"14.2")) {
-  report = report_fixed_ver(installed_version:version[1], vulnerable_range:"14" + " - " + "14.2");
+  report = report_fixed_ver(installed_version:version[1], vulnerable_range:"14 - 14.2");
   security_message(port: port, data: report);
   exit(0);
 }

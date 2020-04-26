@@ -68,7 +68,7 @@ if(!stardictVer){
 if(stardictVer)
 {
   if(version_is_equal(version:stardictVer, test_version:"3.0.1")){
-    report = report_fixed_ver(installed_version:stardictVer, vulnerable_range:"Equal to " + "3.0.1");
+    report = report_fixed_ver(installed_version:stardictVer, vulnerable_range:"Equal to 3.0.1");
     security_message(port: 0, data: report);
   }
 }

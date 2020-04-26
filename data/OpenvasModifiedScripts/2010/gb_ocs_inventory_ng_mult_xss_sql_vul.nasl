@@ -93,7 +93,7 @@ foreach dir (make_list_unique("/", "/ocsreports", cgi_dirs(port:port)))
       if(version_in_range(version:ver[1], test_version:"1.02",
                                           test_version2:"1.02.1"))
       {
-        report = report_fixed_ver(installed_version:ver[1], vulnerable_range:"1.02" + " - " + "1.02.1");
+        report = report_fixed_ver(installed_version:ver[1], vulnerable_range:"1.02 - 1.02.1");
         security_message(port: port, data: report);
         exit(0);
       }

@@ -77,8 +77,8 @@ if(typoVer = get_app_version(cpe:CPE, port:typoPort))
   if( typoVer !~ "[0-9]+\.[0-9]+\.[0-9]+" ) exit( 0 ); # Version is not exact enough
   if(version_in_range(version:typoVer, test_version:"4.2.0", test_version2:"4.2.6"))
   {
-    report = report_fixed_ver(installed_version:typoVer, vulnerable_range:"4.2.0" + " - " + "4.2.6");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:typoVer, vulnerable_range:"4.2.0 - 4.2.6");
+    security_message(port: typoPort, data: report);
     exit(0);
   }
 }

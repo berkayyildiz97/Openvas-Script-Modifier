@@ -77,8 +77,8 @@ httpdxVer = get_kb_item("httpdx/" + httpdxPort + "/Ver");
 if(!isnull(httpdxVer))
 {
   if(version_in_range(version:httpdxVer, test_version:"1.4", test_version2:"1.5")){
-    report = report_fixed_ver(installed_version:httpdxVer, vulnerable_range:"1.4" + " - " + "1.5");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:httpdxVer, vulnerable_range:"1.4 - 1.5");
+    security_message(port: httpdxPort, data: report);
   }
 }
 

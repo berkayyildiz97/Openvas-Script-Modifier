@@ -95,14 +95,14 @@ if (hotfix_check_sp(win2k:5) > 0) {
     is_vuln2 = version_in_range(version:version, test_version:"6.00.2462.0000", test_version2:"6.00.3790.3959");
     if (is_vuln1) {
        if(version_in_range(version:vers, test_version:"5.0", test_version2:"5.0.3849.499")) {
-          report = report_fixed_ver(installed_version:vers, vulnerable_range:"5.0" + " - " + "5.0.3849.499", install_path:dllPath);
+          report = report_fixed_ver(installed_version:vers, vulnerable_range:"5.0 - 5.0.3849.499", install_path:dllPath);
           security_message(port: 0, data: report);
        }
        exit (0);
     }
     else if (is_vuln2) {
        if(version_in_range(version:vers, test_version:"6.0", test_version2:"6.0.2800.1588")) {
-          report = report_fixed_ver(installed_version:vers, vulnerable_range:"6.0" + " - " + "6.0.2800.1588", install_path:dllPath);
+          report = report_fixed_ver(installed_version:vers, vulnerable_range:"6.0 - 6.0.2800.1588", install_path:dllPath);
           security_message(port: 0, data: report);
        }
        exit (0);
@@ -118,14 +118,14 @@ else if (hotfix_check_sp(xp:4) > 0) {
     is_vuln2 = version_in_range(version:version, test_version:"7.00.5730.1100", test_version2:"7.00.6001.1800");
     if (is_vuln1) {
        if(version_in_range(version:vers, test_version:"6.0", test_version2:"6.0.2900.3058")) {
-          report = report_fixed_ver(installed_version:vers, vulnerable_range:"6.0" + " - " + "6.0.2900.3058", install_path:dllPath);
+          report = report_fixed_ver(installed_version:vers, vulnerable_range:"6.0 - 6.0.2900.3058", install_path:dllPath);
           security_message(port: 0, data: report);
        }
        exit (0);
     }
     else if (is_vuln2) {
        if(version_in_range(version:vers, test_version:"7.0", test_version2:"7.0.6000.16413")) {
-          report = report_fixed_ver(installed_version:vers, vulnerable_range:"7.0" + " - " + "7.0.6000.16413", install_path:dllPath);
+          report = report_fixed_ver(installed_version:vers, vulnerable_range:"7.0 - 7.0.6000.16413", install_path:dllPath);
           security_message(port: 0, data: report);
        }
        exit (0);
@@ -138,14 +138,14 @@ else if (hotfix_check_sp(win2003:3) > 0) {
     is_vuln2 = version_in_range(version:version, test_version:"6.00.3663.0000", test_version2:"6.00.3718.0000");
     if (is_vuln1) {
        if(version_in_range(version:vers, test_version:"7.0", test_version2:"7.0.6000.16413")) {
-          report = report_fixed_ver(installed_version:vers, vulnerable_range:"7.0" + " - " + "7.0.6000.16413", install_path:dllPath);
+          report = report_fixed_ver(installed_version:vers, vulnerable_range:"7.0 - 7.0.6000.16413", install_path:dllPath);
           security_message(port: 0, data: report);
        }
        exit (0);
     }
     else if (is_vuln2) {
        if(version_in_range(version:vers, test_version:"6.0", test_version2:"6.0.3790.629")) {
-          report = report_fixed_ver(installed_version:vers, vulnerable_range:"6.0" + " - " + "6.0.3790.629", install_path:dllPath);
+          report = report_fixed_ver(installed_version:vers, vulnerable_range:"6.0 - 6.0.3790.629", install_path:dllPath);
           security_message(port: 0, data: report);
        }
        exit (0);

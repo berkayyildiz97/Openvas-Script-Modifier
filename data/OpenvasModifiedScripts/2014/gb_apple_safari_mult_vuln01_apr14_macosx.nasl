@@ -69,7 +69,7 @@ if(!safVer = get_app_version(cpe:CPE)){
 
 if(version_is_equal(version:safVer, test_version:"7.0.2"))
 {
-  report = report_fixed_ver(installed_version:safVer, vulnerable_range:"Equal to " + "7.0.2");
+  report = report_fixed_ver(installed_version:safVer, vulnerable_range:"Equal to 7.0.2");
   security_message(port: 0, data: report);
   exit(0);
 }

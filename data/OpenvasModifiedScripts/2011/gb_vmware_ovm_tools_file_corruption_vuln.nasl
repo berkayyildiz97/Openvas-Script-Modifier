@@ -80,7 +80,7 @@ if(version[1])
   }
 
   if(version_is_less_equal(version:ver, test_version:"8.4.2.261024")){
-    report = report_fixed_ver(installed_version:ver, vulnerable_range:"Less than or equal to " + "8.4.2.261024");
+    report = report_fixed_ver(installed_version:ver, vulnerable_range:"Less than or equal to 8.4.2.261024");
     security_message(port: 0, data: report);
   }
 }

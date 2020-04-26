@@ -100,7 +100,7 @@ if(hotfix_check_sp(win2k:5) > 0)
 {
   if(version_in_range(version:telnetVer, test_version:"5.0",
                       test_version2:"5.0.33670.3")){
-    report = report_fixed_ver(installed_version:telnetVer, vulnerable_range:"5.0" + " - " + "5.0.33670.3");
+    report = report_fixed_ver(installed_version:telnetVer, vulnerable_range:"5.0 - 5.0.33670.3");
     security_message(port: 0, data: report);
   }
 }
@@ -112,7 +112,7 @@ else if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:telnetVer, test_version:"5.1",
                         test_version2:"5.1.2600.3586")){
-      report = report_fixed_ver(installed_version:telnetVer, vulnerable_range:"5.1" + " - " + "5.1.2600.3586");
+      report = report_fixed_ver(installed_version:telnetVer, vulnerable_range:"5.1 - 5.1.2600.3586");
       security_message(port: 0, data: report);
     }
      exit(0);
@@ -121,7 +121,7 @@ else if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:telnetVer, test_version:"5.1",
                         test_version2:"5.1.2600.5828")){
-      report = report_fixed_ver(installed_version:telnetVer, vulnerable_range:"5.1" + " - " + "5.1.2600.5828");
+      report = report_fixed_ver(installed_version:telnetVer, vulnerable_range:"5.1 - 5.1.2600.5828");
       security_message(port: 0, data: report);
     }
      exit(0);
@@ -136,7 +136,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   {
     if(version_in_range(version:telnetVer, test_version:"5.2",
                         test_version2:"5.2.3790.4527")){
-      report = report_fixed_ver(installed_version:telnetVer, vulnerable_range:"5.2" + " - " + "5.2.3790.4527");
+      report = report_fixed_ver(installed_version:telnetVer, vulnerable_range:"5.2 - 5.2.3790.4527");
       security_message(port: 0, data: report);
     }
     exit(0);

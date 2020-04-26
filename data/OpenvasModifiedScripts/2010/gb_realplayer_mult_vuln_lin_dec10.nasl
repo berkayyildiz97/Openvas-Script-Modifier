@@ -104,6 +104,6 @@ if(isnull(rpVer)){
 
 ## Realplayer version 11.0.2.2315
 if(version_is_equal(version:rpVer, test_version:"11.0.2.1744")) {
-  report = report_fixed_ver(installed_version:rpVer, vulnerable_range:"Equal to " + "11.0.2.1744");
+  report = report_fixed_ver(installed_version:rpVer, vulnerable_range:"Equal to 11.0.2.1744");
   security_message(port: 0, data: report);
 }

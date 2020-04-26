@@ -72,7 +72,7 @@ if(!port = get_app_port(cpe:CPE))exit(0);
 if(!version = get_app_version(cpe:CPE, port:port))exit(0);
 
 if(version_is_equal(version:version, test_version:"2.2.0")) {
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to " + "2.2.0");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to 2.2.0");
   security_message(port: port, data: report);
   exit(0);
 }

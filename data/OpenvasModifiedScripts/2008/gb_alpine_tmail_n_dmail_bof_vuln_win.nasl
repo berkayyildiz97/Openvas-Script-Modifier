@@ -84,6 +84,6 @@ if(!apVer){
 
 apVer = apVer - "Alpine ";
 if(version_is_less_equal(version:apVer, test_version:"2.00")){
-  report = report_fixed_ver(installed_version:apVer, vulnerable_range:"Less than or equal to " + "2.00");
+  report = report_fixed_ver(installed_version:apVer, vulnerable_range:"Less than or equal to 2.00");
   security_message(port: 0, data: report);
 }

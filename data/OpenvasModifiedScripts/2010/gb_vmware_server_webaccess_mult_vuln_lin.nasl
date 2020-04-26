@@ -78,7 +78,7 @@ vmserVer = get_kb_item("VMware/Server/Linux/Ver");
 if(vmserVer)
 {
   if(version_is_equal(version:vmserVer, test_version:"2.0")){
-    report = report_fixed_ver(installed_version:vmserVer, vulnerable_range:"Equal to " + "2.0");
+    report = report_fixed_ver(installed_version:vmserVer, vulnerable_range:"Equal to 2.0");
     security_message(port: 0, data: report);
   }
 }

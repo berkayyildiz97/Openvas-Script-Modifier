@@ -87,7 +87,7 @@ foreach item (registry_enum_keys(key:key))
     {
       if(version_is_less_equal(version:ftpVer, test_version:"9.0.2"))
       {
-        report = report_fixed_ver(installed_version:ftpVer, vulnerable_range:"Less than or equal to " + "9.0.2");
+        report = report_fixed_ver(installed_version:ftpVer, vulnerable_range:"Less than or equal to 9.0.2");
         security_message(port: 0, data: report);
         exit(0);
       }

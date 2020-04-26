@@ -89,7 +89,7 @@ if("cwRsync" >< rsyncName)
     if(rsyncVer != NULL)
     {
       if(version_in_range(version:rsyncVer, test_version:"3.0", test_version2:"3.0.7")){
-        report = report_fixed_ver(installed_version:rsyncVer, vulnerable_range:"3.0" + " - " + "3.0.7", install_path:rsyncPath);
+        report = report_fixed_ver(installed_version:rsyncVer, vulnerable_range:"3.0 - 3.0.7", install_path:rsyncPath);
         security_message(port: 0, data: report);
       }
     }

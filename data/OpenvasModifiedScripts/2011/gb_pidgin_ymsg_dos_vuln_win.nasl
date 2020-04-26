@@ -65,7 +65,7 @@ pidginVer = get_kb_item("Pidgin/Win/Ver");
 if(pidginVer != NULL)
 {
   if(version_in_range(version:pidginVer, test_version:"2.6.0", test_version2:"2.7.10")){
-    report = report_fixed_ver(installed_version:pidginVer, vulnerable_range:"2.6.0" + " - " + "2.7.10");
+    report = report_fixed_ver(installed_version:pidginVer, vulnerable_range:"2.6.0 - 2.7.10");
     security_message(port: 0, data: report);
   }
 }

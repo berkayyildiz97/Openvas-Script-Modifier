@@ -66,7 +66,7 @@ tbVer = get_kb_item("Thunderbird/Win/Ver");
 if(tbVer)
 {
   if(version_is_less_equal(version:tbVer, test_version:"3.0")){
-    report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"Less than or equal to " + "3.0");
+    report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"Less than or equal to 3.0");
     security_message(port: 0, data: report);
   }
 }

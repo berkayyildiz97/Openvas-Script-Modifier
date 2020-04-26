@@ -77,7 +77,7 @@ dpiVer = eregmatch(pattern:"^(.+) under (/.*)$", string:dpiVer);
 if(dpiVer[1] != NULL)
 {
   if(version_is_less_equal(version:dpiVer[1], test_version:"1.1.Final")){
-    report = report_fixed_ver(installed_version:dpiVer[1], vulnerable_range:"Less than or equal to " + "1.1.Final");
+    report = report_fixed_ver(installed_version:dpiVer[1], vulnerable_range:"Less than or equal to 1.1.Final");
     security_message(port: dpiPort, data: report);
     exit(0);
   }

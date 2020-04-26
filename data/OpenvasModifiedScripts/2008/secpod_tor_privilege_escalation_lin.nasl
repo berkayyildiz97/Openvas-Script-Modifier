@@ -73,7 +73,7 @@ ver = get_kb_item("Tor/Linux/Ver");
 if(ver)
 {
   if(version_is_less_equal(version:ver, test_version:"0.2.0.31")){
-    report = report_fixed_ver(installed_version:ver, vulnerable_range:"Less than or equal to " + "0.2.0.31");
+    report = report_fixed_ver(installed_version:ver, vulnerable_range:"Less than or equal to 0.2.0.31");
     security_message(port: 0, data: report);
   }
 }

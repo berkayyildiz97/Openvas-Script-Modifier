@@ -73,7 +73,7 @@ version = get_kb_item("IBM/Lotus/Symphony/Win/Ver");
 if(version =~ "^3\.")
 {
   if(version_is_less_equal(version:version, test_version:"3.0.10289")){
-    report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to " + "3.0.10289");
+    report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to 3.0.10289");
     security_message(port: 0, data: report);
   }
 }

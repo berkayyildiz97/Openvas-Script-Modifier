@@ -69,6 +69,6 @@ if(!lotusVer){
 ## IBM Lotus Notes Version 8.5.3 FP2 versions is 8.5.32.12184
 if(version_in_range(version:lotusVer, test_version:"8.5.0",
                                       test_version2:"8.5.32.12184")){
-  report = report_fixed_ver(installed_version:lotusVer, vulnerable_range:"8.5.0" + " - " + "8.5.32.12184");
+  report = report_fixed_ver(installed_version:lotusVer, vulnerable_range:"8.5.0 - 8.5.32.12184");
   security_message(port: 0, data: report);
 }

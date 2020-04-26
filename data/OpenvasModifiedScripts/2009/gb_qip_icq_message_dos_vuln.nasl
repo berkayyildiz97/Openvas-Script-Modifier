@@ -62,6 +62,6 @@ if(!qipVer)
   exit(0);
 
 if(version_is_less_equal(version:qipVer, test_version:"8.0.8.2")){
-  report = report_fixed_ver(installed_version:qipVer, vulnerable_range:"Less than or equal to " + "8.0.8.2");
+  report = report_fixed_ver(installed_version:qipVer, vulnerable_range:"Less than or equal to 8.0.8.2");
   security_message(port: 0, data: report);
 }

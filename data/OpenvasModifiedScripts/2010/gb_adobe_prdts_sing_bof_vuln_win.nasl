@@ -80,7 +80,7 @@ CPE = "cpe:/a:adobe:acrobat";
 if(acrobatVer = get_app_version(cpe:CPE))
 {
   if(version_is_less_equal(version:acrobatVer, test_version:"9.3.4")){
-    report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"Less than or equal to " + "9.3.4");
+    report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"Less than or equal to 9.3.4");
     security_message(port: 0, data: report);
     exit(0);
   }

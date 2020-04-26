@@ -71,7 +71,7 @@ if(!readerVer = get_app_version(cpe:CPE)){
 
 if(version_is_less_equal(version:readerVer, test_version:"6.0.4"))
 {
-  report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Less than or equal to " + "6.0.4");
+  report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Less than or equal to 6.0.4");
   security_message(port: 0, data: report);
   exit(0);
 }

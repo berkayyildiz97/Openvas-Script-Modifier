@@ -83,7 +83,7 @@ if(vers !~ "^(8\.4|9\.[0-3])\.")
 
 if(version_in_range(version:vers, test_version:"8.4", test_version2:"9.3.3")) {
   report = report_fixed_ver(installed_version:vers, fixed_version:"See references", install_path:loc);
-  report = report_fixed_ver(installed_version:vers, vulnerable_range:"8.4" + " - " + "9.3.3");
+  report = report_fixed_ver(installed_version:vers, vulnerable_range:"8.4 - 9.3.3");
   security_message(port: port, data: report);
   exit(0);
 }

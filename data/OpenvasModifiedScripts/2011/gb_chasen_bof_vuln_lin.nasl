@@ -84,7 +84,7 @@ foreach binaryName(chaName) {
   if(!isnull(chaVer[1])) {
     if(version_in_range(version:chaVer[1], test_version:"2.4.0", test_version2:"2.4.4")) {
       report = report_fixed_ver(installed_version:chaVer[1], fixed_version:"2.3.3 or a later 2.4 version");
-      report = report_fixed_ver(installed_version:chaVer[1], vulnerable_range:"2.4.0" + " - " + "2.4.4");
+      report = report_fixed_ver(installed_version:chaVer[1], vulnerable_range:"2.4.0 - 2.4.4");
       security_message(port: 0, data: report);
       ssh_close_connection();
       exit(0);

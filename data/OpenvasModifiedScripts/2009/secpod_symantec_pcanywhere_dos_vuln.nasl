@@ -65,6 +65,6 @@ if(!pcawVer)
   exit(0);
 
 if(version_is_less_equal(version:pcawVer, test_version:"12.5.0.442")){
-  report = report_fixed_ver(installed_version:pcawVer, vulnerable_range:"Less than or equal to " + "12.5.0.442");
+  report = report_fixed_ver(installed_version:pcawVer, vulnerable_range:"Less than or equal to 12.5.0.442");
   security_message(port: 0, data: report);
 }

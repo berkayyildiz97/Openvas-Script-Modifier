@@ -96,7 +96,7 @@ if("Microsoft Lync Server 2010" >< ms_lync_name)
     {
       if(version_in_range(version:wrtces_ver, test_version:"4.0", test_version2:"4.0.7577.229"))
       {
-        report = report_fixed_ver(installed_version:wrtces_ver, vulnerable_range:"4.0" + " - " + "4.0.7577.229", install_path:ms_lync_path);
+        report = report_fixed_ver(installed_version:wrtces_ver, vulnerable_range:"4.0 - 4.0.7577.229", install_path:ms_lync_path);
         security_message(port: 0, data: report);
         exit(0);
       }
@@ -109,7 +109,7 @@ if("Microsoft Lync Server 2010" >< ms_lync_name)
     {
       if(version_in_range(version:workflow_ver, test_version:"4.0", test_version2:"4.0.7577.275"))
       {
-        report = report_fixed_ver(installed_version:workflow_ver, vulnerable_range:"4.0" + " - " + "4.0.7577.275", install_path:ms_lync_path);
+        report = report_fixed_ver(installed_version:workflow_ver, vulnerable_range:"4.0 - 4.0.7577.275", install_path:ms_lync_path);
         security_message(port: 0, data: report);
         exit(0);
       }
@@ -130,7 +130,7 @@ if("Microsoft Lync Server 2013" >< ms_lync_name)
     {
       if(version_in_range(version:sip_ver, test_version:"5.0", test_version2:"5.0.8308.802"))
       {
-        report = report_fixed_ver(installed_version:sip_ver, vulnerable_range:"5.0" + " - " + "5.0.8308.802", install_path:ms_lync_path);
+        report = report_fixed_ver(installed_version:sip_ver, vulnerable_range:"5.0 - 5.0.8308.802", install_path:ms_lync_path);
         security_message(port: 0, data: report);
         exit(0);
       }
@@ -143,7 +143,7 @@ if("Microsoft Lync Server 2013" >< ms_lync_name)
     {
       if(version_in_range(version:workflow_ver, test_version:"5.0", test_version2:"5.0.8308.802"))
       {
-        report = report_fixed_ver(installed_version:workflow_ver, vulnerable_range:"5.0" + " - " + "5.0.8308.802", install_path:ms_lync_path);
+        report = report_fixed_ver(installed_version:workflow_ver, vulnerable_range:"5.0 - 5.0.8308.802", install_path:ms_lync_path);
         security_message(port: 0, data: report);
         exit(0);
       }
@@ -156,7 +156,7 @@ if("Microsoft Lync Server 2013" >< ms_lync_name)
     {
       if(version_in_range(version:resources_ver, test_version:"5.0", test_version2:"5.0.8308.419"))
       {
-        report = report_fixed_ver(installed_version:resources_ver, vulnerable_range:"5.0" + " - " + "5.0.8308.419", install_path:ms_lync_path);
+        report = report_fixed_ver(installed_version:resources_ver, vulnerable_range:"5.0 - 5.0.8308.419", install_path:ms_lync_path);
         security_message(port: 0, data: report);
         exit(0);
       }
@@ -169,7 +169,7 @@ if("Microsoft Lync Server 2013" >< ms_lync_name)
     {
       if(version_in_range(version:autodiscover_ver, test_version:"5.0", test_version2:"5.0.8308.725"))
       {
-        report = report_fixed_ver(installed_version:autodiscover_ver, vulnerable_range:"5.0" + " - " + "5.0.8308.725", install_path:ms_lync_path);
+        report = report_fixed_ver(installed_version:autodiscover_ver, vulnerable_range:"5.0 - 5.0.8308.725", install_path:ms_lync_path);
         security_message(port: 0, data: report);
         exit(0);
       }

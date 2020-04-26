@@ -90,7 +90,7 @@ tematresVer = eregmatch(pattern:"^(.+) under (/.*)$", string:tematresVer);
 if(tematresVer[1] != NULL)
 {
   if(version_is_less_equal(version:tematresVer[1], test_version:"1.031")){
-    report = report_fixed_ver(installed_version:tematresVer[1], vulnerable_range:"Less than or equal to " + "1.031");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:tematresVer[1], vulnerable_range:"Less than or equal to 1.031");
+    security_message(port: tematresPort, data: report);
   }
 }

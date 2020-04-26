@@ -74,6 +74,6 @@ if(!imVer){
 }
 
 if(version_is_less_equal(version:imVer, test_version:"8.4.16")) {
-  report = report_fixed_ver(installed_version:imVer, vulnerable_range:"Less than or equal to " + "8.4.16");
+  report = report_fixed_ver(installed_version:imVer, vulnerable_range:"Less than or equal to 8.4.16");
   security_message(port: 0, data: report);
 }

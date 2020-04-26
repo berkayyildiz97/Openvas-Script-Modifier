@@ -68,7 +68,7 @@ port = get_http_port(default:80);
 
 if(vers = get_version_from_kb(port:port, app:"UseBB")) {
   if(version_is_less_equal(version: vers, test_version: "1.0.11")) {
-    report = report_fixed_ver(installed_version:vers, vulnerable_range:"Less than or equal to " + "1.0.11");
+    report = report_fixed_ver(installed_version:vers, vulnerable_range:"Less than or equal to 1.0.11");
     security_message(port: port, data: report);
     exit(0);
   }

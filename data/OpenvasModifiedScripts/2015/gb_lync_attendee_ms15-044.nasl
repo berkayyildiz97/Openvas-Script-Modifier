@@ -81,7 +81,7 @@ if(path)
   {
     if(version_in_range(version:oglVer, test_version:"4.0", test_version2:"4.0.7577.4460"))
     {
-      report = report_fixed_ver(installed_version:oglVer, vulnerable_range:"4.0" + " - " + "4.0.7577.4460", install_path:path);
+      report = report_fixed_ver(installed_version:oglVer, vulnerable_range:"4.0 - 4.0.7577.4460", install_path:path);
       security_message(port: 0, data: report);
       exit(0);
     }

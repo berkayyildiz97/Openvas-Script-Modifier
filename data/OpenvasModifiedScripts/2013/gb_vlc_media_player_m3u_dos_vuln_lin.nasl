@@ -70,7 +70,7 @@ if(!vlcVer){
 
 if(version_is_less_equal(version:vlcVer, test_version:"2.0.8"))
 {
-  report = report_fixed_ver(installed_version:vlcVer, vulnerable_range:"Less than or equal to " + "2.0.8");
+  report = report_fixed_ver(installed_version:vlcVer, vulnerable_range:"Less than or equal to 2.0.8");
   security_message(port: 0, data: report);
   exit(0);
 }

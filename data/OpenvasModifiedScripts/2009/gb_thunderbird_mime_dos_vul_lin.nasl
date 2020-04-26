@@ -71,6 +71,6 @@ if(!tbVer){
 }
 
 if(version_is_less_equal(version:tbVer, test_version:"2.0.0.14")){
-  report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"Less than or equal to " + "2.0.0.14");
+  report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"Less than or equal to 2.0.0.14");
   security_message(port: 0, data: report);
 }

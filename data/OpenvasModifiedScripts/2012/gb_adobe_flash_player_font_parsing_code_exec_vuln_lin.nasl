@@ -68,6 +68,6 @@ if(!flashVer){
 flashVer = ereg_replace(pattern:",", string:flashVer, replace: ".");
 
 if(version_is_less_equal(version:flashVer, test_version:"11.2.202.236")){
-  report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to " + "11.2.202.236");
+  report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to 11.2.202.236");
   security_message(port: 0, data: report);
 }

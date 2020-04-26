@@ -69,6 +69,6 @@ if(!fpVer){
 }
 
 if(version_in_range(version:fpVer, test_version:"3.6.b1", test_version2:"3.6.b2")){
-  report = report_fixed_ver(installed_version:fpVer, vulnerable_range:"3.6.b1" + " - " + "3.6.b2");
+  report = report_fixed_ver(installed_version:fpVer, vulnerable_range:"3.6.b1 - 3.6.b2");
   security_message(port: 0, data: report);
 }

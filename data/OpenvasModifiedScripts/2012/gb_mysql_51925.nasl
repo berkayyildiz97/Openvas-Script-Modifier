@@ -76,7 +76,7 @@ mysqlVer = eregmatch(pattern:"([0-9.a-z]+)", string:mysqlVer);
 if(!isnull(mysqlVer[1]))
 {
   if(version_is_equal(version:mysqlVer[1], test_version:"5.5.20")){
-    report = report_fixed_ver(installed_version:mysqlVer[1], vulnerable_range:"Equal to " + "5.5.20");
+    report = report_fixed_ver(installed_version:mysqlVer[1], vulnerable_range:"Equal to 5.5.20");
     security_message(port: sqlPort, data: report);
   }
 }

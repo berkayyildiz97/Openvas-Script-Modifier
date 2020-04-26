@@ -95,17 +95,17 @@ if(registry_key_exists(key:"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
 
   if(version_in_range(version:fileVer, test_version:"5.0.5720",
                       test_version2:"5.0.5720.171")){
-    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"5.0.5720" + " - " + "5.0.5720.171");
+    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"5.0.5720 - 5.0.5720.171");
     security_message(port: 0, data: report);
   }
   else if(version_in_range(version:fileVer, test_version:"5.0.5721",
                             test_version2:"5.0.5721.260")){
-    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"5.0.5721" + " - " + "5.0.5721.260");
+    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"5.0.5721 - 5.0.5721.260");
     security_message(port: 0, data: report);
   }
   else if(version_in_range(version:fileVer, test_version:"5.0.5723",
                             test_version2:"5.0.5723.510")){
-    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"5.0.5723" + " - " + "5.0.5723.510");
+    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"5.0.5723 - 5.0.5723.510");
     security_message(port: 0, data: report);
   }
   exit(0);
@@ -120,12 +120,12 @@ else if(registry_key_exists(key:"SOFTWARE\Microsoft\Windows\CurrentVersion\Unins
   }
   if(version_in_range(version:fileVer, test_version:"4.0.3445",
                       test_version2:"4.0.3445.908")){
-    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"4.0.3445" + " - " + "4.0.3445.908");
+    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"4.0.3445 - 4.0.3445.908");
     security_message(port: 0, data: report);
   }
   else if(version_in_range(version:fileVer, test_version:"4.0.2167",
                             test_version2:"4.0.2167.908")){
-    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"4.0.2167" + " - " + "4.0.2167.908");
+    report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"4.0.2167 - 4.0.2167.908");
     security_message(port: 0, data: report);
   }
   exit(0);

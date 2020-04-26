@@ -66,6 +66,6 @@ if(!bimVer)
   exit(0);
 
 if(version_is_less_equal(version:bimVer, test_version:"2.4.8.2")){
-  report = report_fixed_ver(installed_version:bimVer, vulnerable_range:"Less than or equal to " + "2.4.8.2");
+  report = report_fixed_ver(installed_version:bimVer, vulnerable_range:"Less than or equal to 2.4.8.2");
   security_message(port: 0, data: report);
 }

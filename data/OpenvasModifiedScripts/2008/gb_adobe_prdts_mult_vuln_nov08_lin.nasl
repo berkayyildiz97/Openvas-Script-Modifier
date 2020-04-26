@@ -86,7 +86,7 @@ if(!adobeVer = get_app_version(cpe:CPE)){
 
 if(version_is_less_equal(version:adobeVer, test_version:"8.1.2"))
 {
-  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"Less than or equal to " + "8.1.2");
+  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"Less than or equal to 8.1.2");
   security_message(port: 0, data: report);
   exit(0);
 }

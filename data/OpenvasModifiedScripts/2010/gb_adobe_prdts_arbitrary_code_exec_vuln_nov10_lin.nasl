@@ -75,7 +75,7 @@ if(readerVer)
 {
   if(version_in_range(version:readerVer, test_version:"9.0.0", test_version2:"9.4"))
   {
-    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"9.0.0" + " - " + "9.4");
+    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"9.0.0 - 9.4");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -86,7 +86,7 @@ flashVer = ereg_replace(pattern:",", string:flashVer, replace: ".");
 if(flashVer)
 {
   if(version_is_less_equal(version:flashVer, test_version:"10.1.85.3")){
-    report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to " + "10.1.85.3");
+    report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to 10.1.85.3");
     security_message(port: 0, data: report);
   }
 }

@@ -74,7 +74,7 @@ if(mikmodVer != NULL)
 {
   if(version_in_range(version:mikmodVer, test_version:"3.1.11",
                                          test_version2:"3.2.0")){
-    report = report_fixed_ver(installed_version:mikmodVer, vulnerable_range:"3.1.11" + " - " + "3.2.0");
+    report = report_fixed_ver(installed_version:mikmodVer, vulnerable_range:"3.1.11 - 3.2.0");
     security_message(port: 0, data: report);
     exit(0);
   }

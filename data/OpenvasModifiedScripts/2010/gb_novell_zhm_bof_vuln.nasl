@@ -75,7 +75,7 @@ zhmVer = get_kb_item("Novell/ZHM/Ver");
 if(zhmVer)
 {
   if(version_in_range(version:zhmVer, test_version:"7.0", test_version2:"7.0.2.61213")){
-    report = report_fixed_ver(installed_version:zhmVer, vulnerable_range:"7.0" + " - " + "7.0.2.61213");
+    report = report_fixed_ver(installed_version:zhmVer, vulnerable_range:"7.0 - 7.0.2.61213");
     security_message(port: 0, data: report);
   }
 }

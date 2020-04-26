@@ -70,6 +70,6 @@ if(!icqVer){
 }
 
 if(version_in_range(version:icqVer, test_version:"7.0", test_version2:"7.2.0.3525")){
- report = report_fixed_ver(installed_version:icqVer, vulnerable_range:"7.0" + " - " + "7.2.0.3525");
+ report = report_fixed_ver(installed_version:icqVer, vulnerable_range:"7.0 - 7.2.0.3525");
  security_message(port: 0, data: report);
 }

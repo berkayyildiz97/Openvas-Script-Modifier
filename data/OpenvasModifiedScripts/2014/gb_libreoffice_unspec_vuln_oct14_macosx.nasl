@@ -77,7 +77,7 @@ if(!libreVer = get_app_version(cpe:CPE)){
 
 if(version_in_range(version:libreVer, test_version:"4.1.4", test_version2:"4.2.4"))
 {
-  report = report_fixed_ver(installed_version:libreVer, vulnerable_range:"4.1.4" + " - " + "4.2.4");
+  report = report_fixed_ver(installed_version:libreVer, vulnerable_range:"4.1.4 - 4.2.4");
   security_message(port: 0, data: report);
   exit(0);
 }

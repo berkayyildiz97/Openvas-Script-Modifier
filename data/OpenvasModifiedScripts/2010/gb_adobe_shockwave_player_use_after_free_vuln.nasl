@@ -67,6 +67,6 @@ if(!shockVer){
 }
 
 if(version_is_equal(version:shockVer, test_version:"11.5.9.615")){
-  report = report_fixed_ver(installed_version:shockVer, vulnerable_range:"Equal to " + "11.5.9.615");
+  report = report_fixed_ver(installed_version:shockVer, vulnerable_range:"Equal to 11.5.9.615");
   security_message(port: 0, data: report);
 }

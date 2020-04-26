@@ -97,7 +97,7 @@ if(dllVer != NULL)
   {
     # Workaround check
     if(is_killbit_set(clsid:"{3F1D494B-0CEF-4468-96C9-386E2E4DEC90}") == 0){
-      report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"Less than or equal to " + "2.1.0.2", install_path:dllPath);
+      report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"Less than or equal to 2.1.0.2", install_path:dllPath);
       security_message(port: 0, data: report);
     }
   }

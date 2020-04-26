@@ -76,6 +76,6 @@ if(!ibmVer){
 }
 
 if(version_in_range(version:ibmVer, test_version:"8.1",test_version2:"8.1.17")){
-  report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"8.1" + " - " + "8.1.17");
+  report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"8.1 - 8.1.17");
   security_message(port: 0, data: report);
 }

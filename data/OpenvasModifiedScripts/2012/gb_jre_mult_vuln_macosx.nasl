@@ -71,6 +71,6 @@ if(!javaVer){
 javaVer = ereg_replace(pattern:"_", string:javaVer, replace: ".");
 
 if(version_is_equal(version:javaVer, test_version:"1.6.0.29")){
-  report = report_fixed_ver(installed_version:javaVer, vulnerable_range:"Equal to " + "1.6.0.29");
+  report = report_fixed_ver(installed_version:javaVer, vulnerable_range:"Equal to 1.6.0.29");
   security_message(port: 0, data: report);
 }

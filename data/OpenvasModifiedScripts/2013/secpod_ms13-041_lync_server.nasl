@@ -85,7 +85,7 @@ if("Microsoft Lync Server 2013" >< ms_lync_name)
     {
       if(version_in_range(version:dll_ver, test_version:"5.0", test_version2:"5.0.8308.300"))
       {
-        report = report_fixed_ver(installed_version:dll_ver, vulnerable_range:"5.0" + " - " + "5.0.8308.300", install_path:ms_lync_path);
+        report = report_fixed_ver(installed_version:dll_ver, vulnerable_range:"5.0 - 5.0.8308.300", install_path:ms_lync_path);
         security_message(port: 0, data: report);
         exit(0);
       }

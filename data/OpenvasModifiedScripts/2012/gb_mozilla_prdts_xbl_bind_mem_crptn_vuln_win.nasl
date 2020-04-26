@@ -73,7 +73,7 @@ if(!isnull(ffVer))
 {
   if(version_is_equal(version:ffVer, test_version:"10.0"))
   {
-     report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"Equal to " + "10.0");
+     report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"Equal to 10.0");
      security_message(port: 0, data: report);
      exit(0);
   }
@@ -84,7 +84,7 @@ if(!isnull(seaVer))
 {
   if(version_is_equal(version:seaVer, test_version:"2.7"))
   {
-    report = report_fixed_ver(installed_version:seaVer, vulnerable_range:"Equal to " + "2.7");
+    report = report_fixed_ver(installed_version:seaVer, vulnerable_range:"Equal to 2.7");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -94,7 +94,7 @@ tbVer = get_kb_item("Thunderbird/Win/Ver");
 if(!isnull(tbVer))
 {
   if(version_is_equal(version:tbVer, test_version:"10.0")){
-    report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"Equal to " + "10.0");
+    report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"Equal to 10.0");
     security_message(port: 0, data: report);
   }
 }

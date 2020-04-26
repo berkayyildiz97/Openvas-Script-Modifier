@@ -1,8 +1,7 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_wd_mycloud_rce_95201.nasl 12561 2018-11-28 13:48:33Z cfischer $
 #
-# WD MyCloud Products Multiple Remote Command Injection Vulnerabilities
+# Western Digital My Cloud Products Multiple Remote Command Injection Vulnerabilities
 #
 # Authors:
 # Christian Fischer <christian.fischer@greenbone.net>
@@ -29,16 +28,16 @@ CPE_PREFIX = "cpe:/o:wdc";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.108035");
-  script_version("$Revision: 12561 $");
+  script_version("2020-02-03T07:55:34+0000");
   script_cve_id("CVE-2016-10107", "CVE-2016-10108");
   script_bugtraq_id(95200, 95201);
-  script_tag(name:"last_modification", value:"$Date: 2018-11-28 14:48:33 +0100 (Wed, 28 Nov 2018) $");
+  script_tag(name:"last_modification", value:"2020-02-03 07:55:34 +0000 (Mon, 03 Feb 2020)");
   script_tag(name:"creation_date", value:"2017-01-04 10:00:00 +0100 (Wed, 04 Jan 2017)");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_name("WD MyCloud Products Multiple Remote Command Injection Vulnerabilities");
+  script_name("Western Digital MyCloud Products Multiple Remote Command Injection Vulnerabilities");
   script_category(ACT_ATTACK);
-  script_copyright("Copyright (c) 2017 Greenbone Networks GmbH");
+  script_copyright("Copyright (C) 2017 Greenbone Networks GmbH");
   script_family("Web application abuses");
   script_dependencies("gb_wd_mycloud_consolidation.nasl");
   script_require_ports("Services/www", 80);
@@ -49,7 +48,7 @@ if(description)
   script_xref(name:"URL", value:"http://www.securityfocus.com/bid/95201");
   script_xref(name:"URL", value:"https://www.stevencampbell.info/2016/12/command-injection-in-western-digital-mycloud-nas/");
 
-  script_tag(name:"summary", value:"Western Digital MyCloud Products are prone to multiple remote command injection vulnerabilities.");
+  script_tag(name:"summary", value:"Western Digital My Cloud Products are prone to multiple remote command injection vulnerabilities.");
 
   script_tag(name:"vuldetect", value:"Send a crafted HTTP POST request and check the response.");
 

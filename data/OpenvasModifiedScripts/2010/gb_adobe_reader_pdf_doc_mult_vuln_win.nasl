@@ -80,7 +80,7 @@ if(!readerVer = get_app_version(cpe:CPE)){
 if(readerVer =~ "^9")
 {
   if(version_is_equal(version:readerVer, test_version:"9.3.1")){
-    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Equal to " + "9.3.1");
+    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Equal to 9.3.1");
     security_message(port: 0, data: report);
   }
 }

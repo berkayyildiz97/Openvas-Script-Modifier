@@ -71,6 +71,6 @@ if(!wiresharkVer){
 }
 
 if(version_in_range(version:wiresharkVer, test_version:"1.6.0", test_version2:"1.6.2")){
-  report = report_fixed_ver(installed_version:wiresharkVer, vulnerable_range:"1.6.0" + " - " + "1.6.2");
+  report = report_fixed_ver(installed_version:wiresharkVer, vulnerable_range:"1.6.0 - 1.6.2");
   security_message(port: 0, data: report);
 }

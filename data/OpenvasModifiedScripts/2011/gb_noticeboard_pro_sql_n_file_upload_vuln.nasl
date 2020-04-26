@@ -89,7 +89,7 @@ foreach dir (make_list_unique("/NoticeBoardPro", "/noticeboardpro", "/", cgi_dir
     if(nbVer[1] != NULL)
     {
       if(version_is_equal(version:nbVer[1], test_version:"1.0")){
-        report = report_fixed_ver(installed_version:nbVer[1], vulnerable_range:"Equal to " + "1.0");
+        report = report_fixed_ver(installed_version:nbVer[1], vulnerable_range:"Equal to 1.0");
         security_message(port: port, data: report);
         exit(0);
       }

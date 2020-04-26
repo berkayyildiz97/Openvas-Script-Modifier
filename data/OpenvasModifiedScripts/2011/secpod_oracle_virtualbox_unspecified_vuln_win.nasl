@@ -74,7 +74,7 @@ location = infos["location"];
 
 if( version_is_equal( version: version, test_version: "4.0.0" ) ) {
   report = report_fixed_ver( installed_version: version, fixed_version: "Apply the patch" );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to " + "4.0.0");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to 4.0.0");
   security_message(port: 0, data: report);
   exit( 0 );
 }

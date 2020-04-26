@@ -77,7 +77,7 @@ if( ! version = get_app_version( cpe:CPE ) )
 
 if( version_in_range( version:version, test_version:"8.1",test_version2:"8.1.17" ) ) {
   report = report_fixed_ver( installed_version:version, fixed_version:"8.1 Fixpak 18" );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"8.1" + " - " + "8.1.17");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"8.1 - 8.1.17");
   security_message(port: 0, data: report);
   exit( 0 );
 }

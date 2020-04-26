@@ -71,6 +71,6 @@ if(!torVer)
   exit(0);
 
 if(version_is_less_equal(version:torVer, test_version:"0.2.0.34")){
-  report = report_fixed_ver(installed_version:torVer, vulnerable_range:"Less than or equal to " + "0.2.0.34");
+  report = report_fixed_ver(installed_version:torVer, vulnerable_range:"Less than or equal to 0.2.0.34");
   security_message(port: 0, data: report);
 }

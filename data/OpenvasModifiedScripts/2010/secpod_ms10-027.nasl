@@ -92,7 +92,7 @@ if(hotfix_check_sp(win2k:5) > 0)
 {
   if(version_in_range(version:windowsMediaPlayerVer, test_version:"9",
                                                     test_version2:"9.0.0.3366")){
-    report = report_fixed_ver(installed_version:windowsMediaPlayerVer, vulnerable_range:"9" + " - " + "9.0.0.3366");
+    report = report_fixed_ver(installed_version:windowsMediaPlayerVer, vulnerable_range:"9 - 9.0.0.3366");
     security_message(port: 0, data: report);
   }
   exit(0);
@@ -105,7 +105,7 @@ if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:windowsMediaPlayerVer, test_version:"9",
                                             test_version2:"9.0.0.3366")){
-      report = report_fixed_ver(installed_version:windowsMediaPlayerVer, vulnerable_range:"9" + " - " + "9.0.0.3366");
+      report = report_fixed_ver(installed_version:windowsMediaPlayerVer, vulnerable_range:"9 - 9.0.0.3366");
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -114,7 +114,7 @@ if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:windowsMediaPlayerVer, test_version:"9",
                                             test_version2:"9.0.0.4507")){
-      report = report_fixed_ver(installed_version:windowsMediaPlayerVer, vulnerable_range:"9" + " - " + "9.0.0.4507");
+      report = report_fixed_ver(installed_version:windowsMediaPlayerVer, vulnerable_range:"9 - 9.0.0.4507");
       security_message(port: 0, data: report);
     }
     exit(0);

@@ -85,7 +85,7 @@ if(dnsVer != NULL)
   if(get_kb_item("SMB/Win2K/ServicePack")) # Win-2000 SP4 and prior
   {
     if(version_is_less_equal(version:dnsVer, test_version:"5.0.2195.7147")){
-      report = report_fixed_ver(installed_version:dnsVer, vulnerable_range:"Less than or equal to " + "5.0.2195.7147");
+      report = report_fixed_ver(installed_version:dnsVer, vulnerable_range:"Less than or equal to 5.0.2195.7147");
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -95,7 +95,7 @@ if(dnsVer != NULL)
   if("Service Pack 1" >< SP) # Win-2003 SP1
   {
     if(version_is_less_equal(version:dnsVer, test_version:"5.2.3790.3027")){
-      report = report_fixed_ver(installed_version:dnsVer, vulnerable_range:"Less than or equal to " + "5.2.3790.3027");
+      report = report_fixed_ver(installed_version:dnsVer, vulnerable_range:"Less than or equal to 5.2.3790.3027");
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -103,7 +103,7 @@ if(dnsVer != NULL)
   else if("Service Pack 2" >< SP) # Win-2003 SP2
   {
     if(version_is_less_equal(version:dnsVer, test_version:"5.2.3790.4171")){
-      report = report_fixed_ver(installed_version:dnsVer, vulnerable_range:"Less than or equal to " + "5.2.3790.4171");
+      report = report_fixed_ver(installed_version:dnsVer, vulnerable_range:"Less than or equal to 5.2.3790.4171");
       security_message(port: 0, data: report);
     }
     exit(0);

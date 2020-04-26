@@ -68,7 +68,7 @@ if(!foxitVer){
 }
 
 if(version_is_less_equal(version:foxitVer, test_version:"5.4.4.1128")){
-  report = report_fixed_ver(installed_version:foxitVer, vulnerable_range:"Less than or equal to " + "5.4.4.1128");
+  report = report_fixed_ver(installed_version:foxitVer, vulnerable_range:"Less than or equal to 5.4.4.1128");
   security_message(port: 0, data: report);
   exit(0);
 }

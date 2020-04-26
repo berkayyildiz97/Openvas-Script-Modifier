@@ -82,7 +82,7 @@ ver = get_version_from_kb(port:port, app:"SnitzForums");
 if(ver)
 {
   if(version_is_equal(version:ver, test_version:"3.4.07")){
-    report = report_fixed_ver(installed_version:ver, vulnerable_range:"Equal to " + "3.4.07");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:ver, vulnerable_range:"Equal to 3.4.07");
+    security_message(port: port, data: report);
   }
 }

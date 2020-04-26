@@ -69,7 +69,7 @@ flashVer = eregmatch(pattern:"CS[0-9.]+ ([0-9.]+)", string:flashVer);
 if(flashVer[1])
 {
   if(version_is_less_equal(version:flashVer[1], test_version:"11.5.1.349")){
-    report = report_fixed_ver(installed_version:flashVer[1], vulnerable_range:"Less than or equal to " + "11.5.1.349");
+    report = report_fixed_ver(installed_version:flashVer[1], vulnerable_range:"Less than or equal to 11.5.1.349");
     security_message(port: 0, data: report);
   }
 }

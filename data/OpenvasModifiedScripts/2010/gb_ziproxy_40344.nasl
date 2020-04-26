@@ -71,7 +71,7 @@ port = get_http_port(default:8080);
 if(!vers = get_kb_item(string("www/",port,"/Ziproxy")))exit(0);
 
 if(version_is_equal(version: vers, test_version: "3.0")) {
-  report = report_fixed_ver(installed_version:vers, vulnerable_range:"Equal to " + "3.0");
+  report = report_fixed_ver(installed_version:vers, vulnerable_range:"Equal to 3.0");
   security_message(port: port, data: report);
   exit(0);
 }

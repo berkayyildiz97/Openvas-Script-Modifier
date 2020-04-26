@@ -65,6 +65,6 @@ if(!ultraVer)
   exit(0);
 
 if(version_is_less_equal(version:ultraVer, test_version:"9.3.3.2685")){
-  report = report_fixed_ver(installed_version:ultraVer, vulnerable_range:"Less than or equal to " + "9.3.3.2685");
+  report = report_fixed_ver(installed_version:ultraVer, vulnerable_range:"Less than or equal to 9.3.3.2685");
   security_message(port: 0, data: report);
 }

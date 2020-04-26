@@ -93,7 +93,7 @@ if(shareVer =~ "^15\..*")
     {
       if(version_in_range(version:dllVer, test_version:"15.0", test_version2:"15.0.4641.999"))
       {
-        report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"15.0" + " - " + "15.0.4641.999", install_path:path);
+        report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"15.0 - 15.0.4641.999", install_path:path);
         security_message(port: 0, data: report);
         exit(0);
       }

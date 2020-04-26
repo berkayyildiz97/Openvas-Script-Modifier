@@ -70,7 +70,7 @@ if(readerVer)
 {
   if(version_is_less_equal(version:readerVer, test_version:"8.0"))
   {
-    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Less than or equal to " + "8.0");
+    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Less than or equal to 8.0");
     security_message(port: 0, data: report);
     exit(0);
   }

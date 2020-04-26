@@ -1,7 +1,7 @@
 ##############################################################################
 # OpenVAS Vulnerability Test
 #
-# Western Digital MyCloud NAS Default Credentials (HTTP)
+# Western Digital My Cloud NAS Default Credentials (HTTP)
 #
 # Authors:
 # Christian Fischer <christian.fischer@greenbone.net>
@@ -29,12 +29,12 @@ CPE_PREFIX = "cpe:/o:wdc";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.108485");
-  script_version("2019-09-06T14:17:49+0000");
+  script_version("2020-02-03T07:55:34+0000");
   script_tag(name:"cvss_base", value:"7.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-09-06 14:17:49 +0000 (Fri, 06 Sep 2019)");
+  script_tag(name:"last_modification", value:"2020-02-03 07:55:34 +0000 (Mon, 03 Feb 2020)");
   script_tag(name:"creation_date", value:"2018-11-23 17:50:04 +0100 (Fri, 23 Nov 2018)");
-  script_name("Western Digital MyCloud NAS Default Credentials (HTTP)");
+  script_name("Western Digital My Cloud NAS Default Credentials (HTTP)");
   script_category(ACT_ATTACK);
   script_copyright("Copyright (C) 2018 Greenbone Networks GmbH");
   script_family("Default Accounts");
@@ -43,7 +43,7 @@ if(description)
   script_mandatory_keys("wd-mycloud/http/detected");
   script_exclude_keys("default_credentials/disable_default_account_checks");
 
-  script_tag(name:"summary", value:"The Western Digital MyCloud device is using known
+  script_tag(name:"summary", value:"The Western Digital My Cloud device is using known
   and default credentials for the HTTP based web interface.");
 
   script_tag(name:"impact", value:"This issue may be exploited by a remote attacker to
@@ -59,15 +59,15 @@ if(description)
   exit(0);
 }
 
-if(get_kb_item("default_credentials/disable_default_account_checks"))
-  exit(0);
+if( get_kb_item( "default_credentials/disable_default_account_checks" ) )
+  exit( 0 );
 
 include("host_details.inc");
 include("http_func.inc");
 include("http_keepalive.inc");
 include("misc_func.inc");
 
-# nb: Tested with MyCloud Mirror 1st Gen 2.11.178 and MyCloud EX2 Ultra 2.30.183/2.31.149
+# nb: Tested with My Cloud Mirror 1st Gen 2.11.178 and My Cloud EX2 Ultra 2.30.183/2.31.149
 
 username = "admin"; # nb: The default username on a new device
 

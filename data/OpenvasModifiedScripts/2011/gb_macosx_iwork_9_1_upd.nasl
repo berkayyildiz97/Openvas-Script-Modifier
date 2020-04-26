@@ -73,6 +73,6 @@ if(!iworkVer){
 ## http://en.wikipedia.org/wiki/IWork
 ## After installing the update, keynote version will gets update
 if(version_in_range(version:iworkVer, test_version:"5.0", test_version2:"5.0.5")){
-  report = report_fixed_ver(installed_version:iworkVer, vulnerable_range:"5.0" + " - " + "5.0.5");
+  report = report_fixed_ver(installed_version:iworkVer, vulnerable_range:"5.0 - 5.0.5");
   security_message(port: 0, data: report);
 }

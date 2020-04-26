@@ -79,7 +79,7 @@ version = get_kb_item("Symantec/Endpoint/Protection");
 if(version)
 {
   if(version_in_range(version:version, test_version:"11.0.600", test_version2:"11.0.6300")){
-    report = report_fixed_ver(installed_version:version, vulnerable_range:"11.0.600" + " - " + "11.0.6300");
+    report = report_fixed_ver(installed_version:version, vulnerable_range:"11.0.600 - 11.0.6300");
     security_message(port: 0, data: report);
   }
 }

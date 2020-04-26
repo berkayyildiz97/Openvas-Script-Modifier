@@ -77,7 +77,7 @@ if(faVer[1])
 {
   if(version_in_range(version:faVer[1], test_version:"2.2.0",
                                        test_version2:"2.2.Beta")){
-    report = report_fixed_ver(installed_version:faVer[1], vulnerable_range:"2.2.0" + " - " + "2.2.Beta");
+    report = report_fixed_ver(installed_version:faVer[1], vulnerable_range:"2.2.0 - 2.2.Beta");
     security_message(port: faPort, data: report);
     exit(0);
   }

@@ -68,7 +68,7 @@ if(kavVer != NULL)
 {
   ## Kaspersky Anti-Virus 2010 before 9.0.0.736
   if(version_in_range(version:kavVer, test_version:"9.0", test_version2:"9.0.0.735")){
-    report = report_fixed_ver(installed_version:kavVer, vulnerable_range:"9.0" + " - " + "9.0.0.735");
+    report = report_fixed_ver(installed_version:kavVer, vulnerable_range:"9.0 - 9.0.0.735");
     security_message(port: 0, data: report);
   }
 }

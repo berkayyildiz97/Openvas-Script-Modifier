@@ -63,6 +63,6 @@ if(!openVer)
 
 if(version_in_range(version:openVer, test_version:"1.1.2",
                                      test_version2:"1.1.5")){
-  report = report_fixed_ver(installed_version:openVer, vulnerable_range:"1.1.2" + " - " + "1.1.5");
+  report = report_fixed_ver(installed_version:openVer, vulnerable_range:"1.1.2 - 1.1.5");
   security_message(port: 0, data: report);
 }

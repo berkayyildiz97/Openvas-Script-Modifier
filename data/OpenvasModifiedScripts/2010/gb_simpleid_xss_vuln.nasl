@@ -69,6 +69,6 @@ if(simidVer != NULL)
 {
   if(version_is_less(version: simidVer, test_version: "0.6.5")){
     report = report_fixed_ver(installed_version:simidVer, fixed_version:"0.6.5");
-    security_message(port: 0, data: report);
+    security_message(port: simidPort, data: report);
   }
 }

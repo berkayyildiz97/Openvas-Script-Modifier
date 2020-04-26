@@ -85,7 +85,7 @@ if(mssqlVer =~ "^12\.0")
   if(version_in_range(version:mssqlVer, test_version:"12.0.5400.0", test_version2:"12.0.5552.0"))
   {
     report  = 'Vulnerable range: ' + "12.0.5400.0 - 12.0.5552.0" + '\n' ;
-    report = report_fixed_ver(installed_version:mssqlVer, vulnerable_range:"12.0.5400.0" + " - " + "12.0.5552.0");
+    report = report_fixed_ver(installed_version:mssqlVer, vulnerable_range:"12.0.5400.0 - 12.0.5552.0");
     security_message(port: mssqlPort, data: report);
     exit(0);
   }

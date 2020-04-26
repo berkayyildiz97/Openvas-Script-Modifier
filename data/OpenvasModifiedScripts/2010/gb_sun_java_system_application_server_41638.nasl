@@ -74,7 +74,7 @@ if (!version = get_app_version(cpe: CPE, port: port))
   exit(0);
 
 if (version_in_range(version: version, test_version: "8",test_version2: "8.2")) {
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"8" + " - " + "8.2");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"8 - 8.2");
   security_message(port: port, data: report);
   exit(0);
 }

@@ -70,6 +70,6 @@ if(isnull(pmailVer)){
 }
 
 if(version_is_less_equal(version:pmailVer, test_version:"4.5.1.0")){
-  report = report_fixed_ver(installed_version:pmailVer, vulnerable_range:"Less than or equal to " + "4.5.1.0");
+  report = report_fixed_ver(installed_version:pmailVer, vulnerable_range:"Less than or equal to 4.5.1.0");
   security_message(port: 0, data: report);
 }

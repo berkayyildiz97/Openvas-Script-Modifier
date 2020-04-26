@@ -68,6 +68,6 @@ if(!safVer){
 }
 
 if(version_is_less_equal(version:safVer, test_version:"5.33.18.5")){
-  report = report_fixed_ver(installed_version:safVer, vulnerable_range:"Less than or equal to " + "5.33.18.5");
+  report = report_fixed_ver(installed_version:safVer, vulnerable_range:"Less than or equal to 5.33.18.5");
   security_message(port: 0, data: report);
 }

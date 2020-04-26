@@ -88,7 +88,7 @@ if("#" >< version) {
 }
 
 if (version_is_equal(version: version, test_version: "4.0.1")) {
-   report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to " + "4.0.1");
+   report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to 4.0.1");
    security_message(port: port, data: report);
    exit(0);
 }

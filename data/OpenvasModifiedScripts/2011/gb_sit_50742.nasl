@@ -72,7 +72,7 @@ port = get_http_port(default:80);
 
 if(vers = get_version_from_kb(port:port,app:"support_incident_tracker")) {
   if(version_in_range(version: vers, test_version: "3.45", test_version2: "3.65")) {
-    report = report_fixed_ver(installed_version:vers, vulnerable_range:"3.45" + " - " + "3.65");
+    report = report_fixed_ver(installed_version:vers, vulnerable_range:"3.45 - 3.65");
     security_message(port: port, data: report);
     exit(0);
   }

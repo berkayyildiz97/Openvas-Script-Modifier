@@ -78,7 +78,7 @@ if(!pythonVer = get_app_version(cpe:CPE)){
 
 if(version_in_range(version:pythonVer, test_version:"2.7", test_version2:"2.7.7"))
 {
-  report = report_fixed_ver(installed_version:pythonVer, vulnerable_range:"2.7" + " - " + "2.7.7");
+  report = report_fixed_ver(installed_version:pythonVer, vulnerable_range:"2.7 - 2.7.7");
   security_message(port: 0, data: report);
   exit(0);
 }

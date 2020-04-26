@@ -66,7 +66,7 @@ version = get_kb_item("IBM/Informix/Dynamic/Server/Lin/Ver");
 if(version)
 {
   if(version_is_equal(version:version, test_version:"11.50")){
-    report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to " + "11.50");
+    report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to 11.50");
     security_message(port: 0, data: report);
   }
 }

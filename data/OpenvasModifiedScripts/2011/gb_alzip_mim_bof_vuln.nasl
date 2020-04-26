@@ -70,7 +70,7 @@ if(!version = registry_get_sz(key:key, item:"Version"))
 
 if(version_is_less_equal(version:version, test_version:"8.12")) {
   report = report_fixed_ver(installed_version:version, fixed_version:"Version 8.21 published after June 29th, 2011.");
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to " + "8.12");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to 8.12");
   security_message(port: 0, data: report);
   exit(0);
 }

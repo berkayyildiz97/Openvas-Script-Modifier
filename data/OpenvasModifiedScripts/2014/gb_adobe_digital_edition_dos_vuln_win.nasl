@@ -72,7 +72,7 @@ if(!ediVer = get_app_version(cpe:CPE)){
 
 if(version_is_equal(version:ediVer, test_version:"2.0.1"))
 {
-  report = report_fixed_ver(installed_version:ediVer, vulnerable_range:"Equal to " + "2.0.1");
+  report = report_fixed_ver(installed_version:ediVer, vulnerable_range:"Equal to 2.0.1");
   security_message(port: 0, data: report);
   exit(0);
 }

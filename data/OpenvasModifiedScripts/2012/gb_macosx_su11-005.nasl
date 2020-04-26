@@ -71,7 +71,7 @@ if("Mac OS X" >< osName)
   if(version_is_equal(version:osVer, test_version:"10.6.8"))
   {
     if(isosxpkgvuln(fixed:"com.apple.pkg.update.security.", diff:"2011.005")){
-      report = report_fixed_ver(installed_version:osVer, vulnerable_range:"Equal to " + "10.6.8");
+      report = report_fixed_ver(installed_version:osVer, vulnerable_range:"Equal to 10.6.8");
       security_message(port: 0, data: report);
     }
   }

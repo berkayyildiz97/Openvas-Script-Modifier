@@ -73,7 +73,7 @@ webDriveVer = get_kb_item("SouthRiverWebDrive/Win/Ver");
 if(webDriveVer != NULL)
 {
   if(version_is_less_equal(version:webDriveVer, test_version:"9.02.2232")){
-    report = report_fixed_ver(installed_version:webDriveVer, vulnerable_range:"Less than or equal to " + "9.02.2232");
+    report = report_fixed_ver(installed_version:webDriveVer, vulnerable_range:"Less than or equal to 9.02.2232");
     security_message(port: 0, data: report);
   }
 }

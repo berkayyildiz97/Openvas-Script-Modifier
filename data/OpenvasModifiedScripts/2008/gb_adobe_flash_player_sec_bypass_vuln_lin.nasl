@@ -82,6 +82,6 @@ if(!adobeVer){
 
 if(version_in_range(version:adobeVer, test_version:"9.0",
                     test_version2:"9.0.124.0")){
-  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"9.0" + " - " + "9.0.124.0");
+  report = report_fixed_ver(installed_version:adobeVer, vulnerable_range:"9.0 - 9.0.124.0");
   security_message(port: 0, data: report);
 }

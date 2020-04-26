@@ -86,7 +86,7 @@ location = infos["location"];
 
 if(version_is_less_equal(version:version, test_version:"1.0.4")) {
   report = report_fixed_ver(installed_version:version, fixed_version:"See references", install_path:location);
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to " + "1.0.4");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to 1.0.4");
   security_message(port: 0, data: report);
   exit(0);
 }

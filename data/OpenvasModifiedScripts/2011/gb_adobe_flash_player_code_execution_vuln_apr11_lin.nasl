@@ -67,7 +67,7 @@ flashVer = ereg_replace(pattern:",", string:flashVer, replace: ".");
 if(flashVer)
 {
   if(version_is_less_equal(version:flashVer, test_version:"10.2.153.1")){
-    report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to " + "10.2.153.1");
+    report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to 10.2.153.1");
     security_message(port: 0, data: report);
   }
 }

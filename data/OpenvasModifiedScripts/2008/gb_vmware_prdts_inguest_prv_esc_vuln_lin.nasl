@@ -74,7 +74,7 @@ vmserverVer = get_kb_item("VMware/Server/Linux/Ver");
 if(vmserverVer)
 {
   if(version_is_less_equal(version:vmserverVer, test_version:"1.0.7")){
-    report = report_fixed_ver(installed_version:vmserverVer, vulnerable_range:"Less than or equal to " + "1.0.7");
+    report = report_fixed_ver(installed_version:vmserverVer, vulnerable_range:"Less than or equal to 1.0.7");
     security_message(port: 0, data: report);
   }
   exit(0);
@@ -85,13 +85,13 @@ if(vmplayerVer)
 {
   if(version_is_less_equal(version:vmplayerVer, test_version:"1.0.8"))
   {
-    report = report_fixed_ver(installed_version:vmplayerVer, vulnerable_range:"Less than or equal to " + "1.0.8");
+    report = report_fixed_ver(installed_version:vmplayerVer, vulnerable_range:"Less than or equal to 1.0.8");
     security_message(port: 0, data: report);
     exit(0);
   }
   else if(version_in_range(version:vmplayerVer, test_version:"2.0",
           test_version2:"2.0.5")){
-    report = report_fixed_ver(installed_version:vmplayerVer, vulnerable_range:"2.0" + " - " + "2.0.5");
+    report = report_fixed_ver(installed_version:vmplayerVer, vulnerable_range:"2.0 - 2.0.5");
     security_message(port: 0, data: report);
   }
   exit(0);
@@ -103,13 +103,13 @@ if(vmworkstnVer)
   if(version_in_range(version:vmworkstnVer, test_version:"5.0",
                       test_version2:"5.5.8"))
   {
-    report = report_fixed_ver(installed_version:vmworkstnVer, vulnerable_range:"5.0" + " - " + "5.5.8");
+    report = report_fixed_ver(installed_version:vmworkstnVer, vulnerable_range:"5.0 - 5.5.8");
     security_message(port: 0, data: report);
     exit(0);
   }
   else if(version_in_range(version:vmworkstnVer, test_version:"6.0",
           test_version2:"6.0.5")){
-    report = report_fixed_ver(installed_version:vmworkstnVer, vulnerable_range:"6.0" + " - " + "6.0.5");
+    report = report_fixed_ver(installed_version:vmworkstnVer, vulnerable_range:"6.0 - 6.0.5");
     security_message(port: 0, data: report);
   }
   exit(0);

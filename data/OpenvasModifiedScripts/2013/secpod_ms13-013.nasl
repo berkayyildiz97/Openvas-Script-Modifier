@@ -77,6 +77,6 @@ if(!dllVer){
 }
 
 if(version_in_range(version:dllVer, test_version:"8.3.7.000", test_version2:"8.3.7.206")){
-  report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"8.3.7.000" + " - " + "8.3.7.206", install_path:dllPath);
+  report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"8.3.7.000 - 8.3.7.206", install_path:dllPath);
   security_message(port: 0, data: report);
 }

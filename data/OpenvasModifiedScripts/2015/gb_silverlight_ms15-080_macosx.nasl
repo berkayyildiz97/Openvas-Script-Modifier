@@ -81,7 +81,7 @@ if(msl_ver=~ "^5\.")
 {
   if(version_in_range(version:msl_ver, test_version:"5.0", test_version2:"5.1.40727"))
   {
-    report = report_fixed_ver(installed_version:msl_ver, vulnerable_range:"5.0" + " - " + "5.1.40727");
+    report = report_fixed_ver(installed_version:msl_ver, vulnerable_range:"5.0 - 5.1.40727");
     security_message(port: 0, data: report);
     exit(0);
   }

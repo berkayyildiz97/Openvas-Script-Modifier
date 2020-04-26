@@ -67,7 +67,7 @@ if(roboftpVer != NULL)
 {
   # Robo-FTP 3.6.17 (3.6.17.13)
   if(version_is_less_equal(version:roboftpVer, test_version:"3.6.17.13")){
-   report = report_fixed_ver(installed_version:roboftpVer, vulnerable_range:"Less than or equal to " + "3.6.17.13");
+   report = report_fixed_ver(installed_version:roboftpVer, vulnerable_range:"Less than or equal to 3.6.17.13");
    security_message(port: 0, data: report);
   }
 }

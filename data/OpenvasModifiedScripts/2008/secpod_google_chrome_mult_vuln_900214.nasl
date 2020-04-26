@@ -73,7 +73,7 @@ chromeVer = get_kb_item("GoogleChrome/Win/Ver");
 if(chromeVer != NULL)
 {
   if(version_is_equal(version:chromeVer, test_version:"0.2.149.27")){
-     report = report_fixed_ver(installed_version:chromeVer, vulnerable_range:"Equal to " + "0.2.149.27");
+     report = report_fixed_ver(installed_version:chromeVer, vulnerable_range:"Equal to 0.2.149.27");
      security_message(port: 0, data: report);
      exit(0);
    }

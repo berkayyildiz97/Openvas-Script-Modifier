@@ -69,7 +69,7 @@ if(apVer)
 {
   if(version_in_range(version:apVer, test_version:"5.10", test_version2:"5.10.1"))
   {
-    report = report_fixed_ver(installed_version:apVer, vulnerable_range:"5.10" + " - " + "5.10.1");
+    report = report_fixed_ver(installed_version:apVer, vulnerable_range:"5.10 - 5.10.1");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -79,7 +79,7 @@ spVer = get_kb_item("Strawberry/Perl/Ver");
 if(spVer)
 {
   if(version_in_range(version:spVer, test_version:"5.10", test_version2:"5.10.1")){
-    report = report_fixed_ver(installed_version:spVer, vulnerable_range:"5.10" + " - " + "5.10.1");
+    report = report_fixed_ver(installed_version:spVer, vulnerable_range:"5.10 - 5.10.1");
     security_message(port: 0, data: report);
   }
 }

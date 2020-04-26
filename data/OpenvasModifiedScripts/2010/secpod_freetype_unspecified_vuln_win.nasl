@@ -70,7 +70,7 @@ if(!ftVer) {
 if(ftVer != NULL)
 {
   if(version_in_range(version: ftVer, test_version: "2.3.9", test_version2: "2.4.1")) {
-     report = report_fixed_ver(installed_version:ftVer, vulnerable_range:"2.3.9" + " - " + "2.4.1");
+     report = report_fixed_ver(installed_version:ftVer, vulnerable_range:"2.3.9 - 2.4.1");
      security_message(port: 0, data: report);
   }
 }

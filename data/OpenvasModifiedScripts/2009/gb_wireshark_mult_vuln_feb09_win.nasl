@@ -70,6 +70,6 @@ if(!wireshark)
   exit(0);
 
 if(version_in_range(version:wireshark, test_version:"0.99.6", test_version2:"1.0.5")){
-  report = report_fixed_ver(installed_version:wireshark, vulnerable_range:"0.99.6" + " - " + "1.0.5");
+  report = report_fixed_ver(installed_version:wireshark, vulnerable_range:"0.99.6 - 1.0.5");
   security_message(port: 0, data: report);
 }

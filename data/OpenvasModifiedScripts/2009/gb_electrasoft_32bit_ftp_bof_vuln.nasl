@@ -74,6 +74,6 @@ if(!bitftpVer)
   exit(0);
 
 if(version_is_less_equal(version:bitftpVer, test_version:"09.04.24")){
-  report = report_fixed_ver(installed_version:bitftpVer, vulnerable_range:"Less than or equal to " + "09.04.24");
+  report = report_fixed_ver(installed_version:bitftpVer, vulnerable_range:"Less than or equal to 09.04.24");
   security_message(port: 0, data: report);
 }

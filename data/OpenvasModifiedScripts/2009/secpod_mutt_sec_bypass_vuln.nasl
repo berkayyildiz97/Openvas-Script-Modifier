@@ -66,6 +66,6 @@ if(!muttVer)
   exit(0);
 
 if(version_is_equal(version:muttVer, test_version:"1.5.19")){
-  report = report_fixed_ver(installed_version:muttVer, vulnerable_range:"Equal to " + "1.5.19");
+  report = report_fixed_ver(installed_version:muttVer, vulnerable_range:"Equal to 1.5.19");
   security_message(port: 0, data: report);
 }

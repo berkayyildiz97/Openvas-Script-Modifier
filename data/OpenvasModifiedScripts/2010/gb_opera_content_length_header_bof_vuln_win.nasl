@@ -70,7 +70,7 @@ if(!operaVer){
 }
 
 if(version_in_range(version:operaVer, test_version:"10.10",test_version2:"10.50")){
-  report = report_fixed_ver(installed_version:operaVer, vulnerable_range:"10.10" + " - " + "10.50");
+  report = report_fixed_ver(installed_version:operaVer, vulnerable_range:"10.10 - 10.50");
   security_message(port: 0, data: report);
   exit(0);
 }

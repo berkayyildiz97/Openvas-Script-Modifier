@@ -80,7 +80,7 @@ if(!gomVer = get_app_version(cpe:CPE)){
 
 if( version_is_less_equal(version:gomVer, test_version:"2.2.51.5149"))
 {
-  report = report_fixed_ver(installed_version:gomVer, vulnerable_range:"Less than or equal to " + "2.2.51.5149");
+  report = report_fixed_ver(installed_version:gomVer, vulnerable_range:"Less than or equal to 2.2.51.5149");
   security_message(port: 0, data: report);
   exit(0);
 }

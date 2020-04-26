@@ -74,6 +74,6 @@ if(!ibmVer){
 # IBM DB2 9.1 FP8 =>9.1.0.8
 if(version_in_range(version:ibmVer, test_version:"9.1",
                                     test_version2:"9.1.0.7")){
-  report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"9.1" + " - " + "9.1.0.7");
+  report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"9.1 - 9.1.0.7");
   security_message(port: 0, data: report);
 }

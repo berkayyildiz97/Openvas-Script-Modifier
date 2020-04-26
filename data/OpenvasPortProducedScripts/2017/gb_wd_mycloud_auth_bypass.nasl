@@ -1,8 +1,7 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_wd_mycloud_auth_bypass.nasl 12561 2018-11-28 13:48:33Z cfischer $
 #
-# WD MyCloud Products Authentication Bypass and Remote Command Injection Vulnerability
+# Western Digital My Cloud Products Authentication Bypass and Remote Command Injection Vulnerability
 #
 # Authors:
 # Christian Fischer <christian.fischer@greenbone.net>
@@ -29,16 +28,16 @@ CPE_PREFIX = "cpe:/o:wdc";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.108305");
-  script_version("$Revision: 12561 $");
+  script_version("2020-02-03T07:55:34+0000");
   script_cve_id("CVE-2018-17153");
   script_bugtraq_id(105359);
-  script_tag(name:"last_modification", value:"$Date: 2018-11-28 14:48:33 +0100 (Wed, 28 Nov 2018) $");
+  script_tag(name:"last_modification", value:"2020-02-03 07:55:34 +0000 (Mon, 03 Feb 2020)");
   script_tag(name:"creation_date", value:"2017-11-30 08:00:00 +0100 (Thu, 30 Nov 2017)");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_name("WD MyCloud Products Authentication Bypass and Remote Command Injection Vulnerability");
+  script_name("Western Digital My Cloud Products Authentication Bypass and Remote Command Injection Vulnerability");
   script_category(ACT_ATTACK);
-  script_copyright("Copyright (c) 2017 Greenbone Networks GmbH");
+  script_copyright("Copyright (C) 2017 Greenbone Networks GmbH");
   script_family("Web application abuses");
   script_dependencies("gb_wd_mycloud_consolidation.nasl");
   script_mandatory_keys("wd-mycloud/http/detected");
@@ -50,7 +49,7 @@ if(description)
   script_xref(name:"URL", value:"https://securify.nl/nl/advisory/SFY20180102/authentication-bypass-vulnerability-in-western-digital-my-cloud-allows-escalation-to-admin-privileges.html");
   script_xref(name:"URL", value:"http://www.securityfocus.com/bid/105359");
 
-  script_tag(name:"summary", value:"Western Digital MyCloud Products are prone to an authentication bypass and
+  script_tag(name:"summary", value:"Western Digital My Cloud Products are prone to an authentication bypass and
   multiple remote command injection vulnerabilities.");
 
   script_tag(name:"vuldetect", value:"Send a crafted HTTP GET and HTTP POST request and check the response.");
@@ -95,7 +94,7 @@ res = http_keepalive_send_recv( port:port, data:req );
 
 # now we're able to access the system information without a previous login as long as the
 # "admin" user is a valid / existing account.
-# nb: This file / cgi is available on e.g a MyCloud Mirror 2.11.x or MyCloud EX4100 2.30.x
+# nb: This file / cgi is available on e.g a My Cloud Mirror 2.11.x or My Cloud EX4100 2.30.x
 url2 = dir + "/cgi-bin/home_mgr.cgi";
 data = "cmd=2";
 cookie = "isAdmin=1;username=admin";

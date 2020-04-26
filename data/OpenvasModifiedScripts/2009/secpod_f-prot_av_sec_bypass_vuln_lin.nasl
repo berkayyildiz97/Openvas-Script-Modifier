@@ -66,6 +66,6 @@ if(!avVer){
 }
 
 if(version_is_less_equal(version:avVer, test_version:"6.2.1.4252")){
-  report = report_fixed_ver(installed_version:avVer, vulnerable_range:"Less than or equal to " + "6.2.1.4252");
+  report = report_fixed_ver(installed_version:avVer, vulnerable_range:"Less than or equal to 6.2.1.4252");
   security_message(port: 0, data: report);
 }

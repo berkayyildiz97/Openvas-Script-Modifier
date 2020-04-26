@@ -1,8 +1,7 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_wd_mycloud_dropbox_rce.nasl 12561 2018-11-28 13:48:33Z cfischer $
 #
-# WD MyCloud Products Dropbox App Remote Command Execution Vulnerability
+# Western Digital My Cloud Products Dropbox App Remote Command Execution Vulnerability
 #
 # Authors:
 # Tameem Eissa <tameem.eissa@greenbone.net>
@@ -29,14 +28,14 @@ CPE_PREFIX = "cpe:/o:wdc";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.108246");
-  script_version("$Revision: 12561 $");
-  script_tag(name:"last_modification", value:"$Date: 2018-11-28 14:48:33 +0100 (Wed, 28 Nov 2018) $");
+  script_version("2020-02-03T07:55:34+0000");
+  script_tag(name:"last_modification", value:"2020-02-03 07:55:34 +0000 (Mon, 03 Feb 2020)");
   script_tag(name:"creation_date", value:"2017-09-26 08:00:00 +0200 (Tue, 26 Sep 2017)");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_name("WD MyCloud Products Dropbox App Remote Command Execution Vulnerability");
+  script_name("Western Digital My Cloud Products Dropbox App Remote Command Execution Vulnerability");
   script_category(ACT_ATTACK);
-  script_copyright("Copyright (c) 2017 Greenbone Networks GmbH");
+  script_copyright("Copyright (C) 2017 Greenbone Networks GmbH");
   script_family("Web application abuses");
   script_dependencies("gb_wd_mycloud_consolidation.nasl");
   script_require_ports("Services/www", 80);
@@ -45,7 +44,7 @@ if(description)
   script_xref(name:"URL", value:"https://blogs.securiteam.com/index.php/archives/3397");
   script_xref(name:"URL", value:"https://community.wd.com/t/new-release-my-cloud-dropbox-2-00-8-22-17/214582");
 
-  script_tag(name:"summary", value:"The Dropbox App of Western Digital MyCloud products ins prone to an
+  script_tag(name:"summary", value:"The Dropbox App of Western Digital My Cloud products ins prone to an
   unauthenticated remote command execution vulnerability.");
 
   script_tag(name:"vuldetect", value:"Send a crafted HTTP GET request and check the response.");

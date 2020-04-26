@@ -80,7 +80,7 @@ foreach path (make_list_unique("/", "/F3Site/SYSTEM", "/F3Site", cgi_dirs(port:p
       exit(0);
 
     if(version_is_less_equal(version:version[1], test_version:"2009")) {
-      report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Less than or equal to " + "2009");
+      report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Less than or equal to 2009");
       security_message(port: port, data: report);
       exit(0);
     }

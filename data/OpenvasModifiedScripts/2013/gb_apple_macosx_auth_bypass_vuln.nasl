@@ -73,7 +73,7 @@ if("Mac OS X" >< osName)
 {
   if(version_in_range(version:osVer, test_version:"10.8.0", test_version2:"10.8.5"))
   {
-    report = report_fixed_ver(installed_version:osVer, vulnerable_range:"10.8.0" + " - " + "10.8.5");
+    report = report_fixed_ver(installed_version:osVer, vulnerable_range:"10.8.0 - 10.8.5");
     security_message(port: 0, data: report);
     exit(0);
   }

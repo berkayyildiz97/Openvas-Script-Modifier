@@ -80,6 +80,6 @@ if(!operaVer){
 }
 
 if(version_is_less_equal(version:operaVer, test_version:"11.65")){
-  report = report_fixed_ver(installed_version:operaVer, vulnerable_range:"Less than or equal to " + "11.65");
+  report = report_fixed_ver(installed_version:operaVer, vulnerable_range:"Less than or equal to 11.65");
   security_message(port: 0, data: report);
 }

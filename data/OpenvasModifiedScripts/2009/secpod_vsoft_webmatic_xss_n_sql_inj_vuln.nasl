@@ -82,6 +82,6 @@ if(webmaticVer[1])
 {
   if(version_is_less(version:webmaticVer[1], test_version:"3.0.3")){
     report = report_fixed_ver(installed_version:webmaticVer[1], fixed_version:"3.0.3");
-    security_message(port: 0, data: report);
+    security_message(port: webmaticPort, data: report);
   }
 }

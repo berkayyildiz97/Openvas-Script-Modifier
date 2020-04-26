@@ -79,7 +79,7 @@ ffVer = get_kb_item("Firefox/Linux/Ver");
 if(ffVer)
 {
   if(version_in_range(version:ffVer, test_version:"3.5", test_version2:"3.5.5")){
-    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"3.5" + " - " + "3.5.5");
+    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"3.5 - 3.5.5");
     security_message(port: 0, data: report);
   }
 }

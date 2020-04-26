@@ -77,7 +77,7 @@ robohelpVer = eregmatch(pattern:"^(.+) under (/.*)$", string:robohelpVer);
 if(robohelpVer[1] != NULL)
 {
   if(version_is_equal(version:robohelpVer[1], test_version:"8.0")){
-    report = report_fixed_ver(installed_version:robohelpVer[1], vulnerable_range:"Equal to " + "8.0");
+    report = report_fixed_ver(installed_version:robohelpVer[1], vulnerable_range:"Equal to 8.0");
     security_message(port: robohelpPort, data: report);
     exit(0);
   }

@@ -67,6 +67,6 @@ if(!pdfVer){
 }
 
 if(version_is_equal(version:pdfVer, test_version:"8.0")){
-  report = report_fixed_ver(installed_version:pdfVer, vulnerable_range:"Equal to " + "8.0");
+  report = report_fixed_ver(installed_version:pdfVer, vulnerable_range:"Equal to 8.0");
   security_message(port: 0, data: report);
 }

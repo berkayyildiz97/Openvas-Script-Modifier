@@ -78,7 +78,7 @@ if("ChaSen" >< chaName)
   if(chaVer[1] != NULL)
   {
     if(version_in_range(version:chaVer[1], test_version:"2.4.0", test_version2:"2.4.4")){
-      report = report_fixed_ver(installed_version:chaVer[1], vulnerable_range:"2.4.0" + " - " + "2.4.4");
+      report = report_fixed_ver(installed_version:chaVer[1], vulnerable_range:"2.4.0 - 2.4.4");
       security_message(port: 0, data: report);
     }
   }

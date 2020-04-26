@@ -87,7 +87,7 @@ if(version = get_app_version(cpe:CPE))
       {
         if(version_in_range(version:dllVer, test_version:"14.0", test_version2:"14.0.6128.4999"))
         {
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"14.0" + " - " + "14.0.6128.4999", install_path:path);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"14.0 - 14.0.6128.4999", install_path:path);
           security_message(port: 0, data: report);
           exit(0);
         }

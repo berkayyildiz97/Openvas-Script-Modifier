@@ -86,7 +86,7 @@ if(jreVer =~ "^(1\.7)")
 {
   if(version_in_range(version:jreVer, test_version:"1.7", test_version2:"1.7.0.45"))
   {
-    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.7" + " - " + "1.7.0.45");
+    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.7 - 1.7.0.45");
     security_message(port: 0, data: report);
     exit(0);
   }

@@ -72,6 +72,6 @@ if(!slurmVer)
   exit(0);
 
 if(version_in_range(version:slurmVer, test_version:"1.2", test_version2:"1.3.13")){
-  report = report_fixed_ver(installed_version:slurmVer, vulnerable_range:"1.2" + " - " + "1.3.13");
+  report = report_fixed_ver(installed_version:slurmVer, vulnerable_range:"1.2 - 1.3.13");
   security_message(port: 0, data: report);
 }

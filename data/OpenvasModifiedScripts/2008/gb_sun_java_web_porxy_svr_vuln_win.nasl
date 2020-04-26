@@ -95,7 +95,7 @@ if(banner =~ "Server: Sun-Java-System-Web-Proxy-Server/4\.0")
   }
 
   if(version_in_range(version:proxyVer[0], test_version:"4.0", test_version2:"4.0.7")){
-    report = report_fixed_ver(installed_version:proxyVer[0], vulnerable_range:"4.0" + " - " + "4.0.7");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:proxyVer[0], vulnerable_range:"4.0 - 4.0.7");
+    security_message(port: sunPort, data: report);
   }
 }

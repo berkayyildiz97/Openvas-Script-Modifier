@@ -84,6 +84,6 @@ if(isnull(simpnewsVer[1]))
   exit(0);
 
 if(version_is_less_equal(version:simpnewsVer[1], test_version:"2.47.03")){
-  report = report_fixed_ver(installed_version:simpnewsVer[1], vulnerable_range:"Less than or equal to " + "2.47.03");
+  report = report_fixed_ver(installed_version:simpnewsVer[1], vulnerable_range:"Less than or equal to 2.47.03");
   security_message(port: snPort, data: report);
 }

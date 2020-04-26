@@ -73,6 +73,6 @@ if(!gsVer){
 }
 
 if(version_in_range(version:gsVer, test_version:"7.0", test_version2:"7.1.6859")){
-  report = report_fixed_ver(installed_version:gsVer, vulnerable_range:"7.0" + " - " + "7.1.6859");
+  report = report_fixed_ver(installed_version:gsVer, vulnerable_range:"7.0 - 7.1.6859");
   security_message(port: 0, data: report);
 }

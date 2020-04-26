@@ -78,7 +78,7 @@ if("IBM WebSphere Portlet Factory" >< ibmName)
   if(ibmVer != NULL)
   {
     if(version_in_range(version:ibmVer, test_version:"7.0", test_version2:"7.0.1.0")){
-      report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"7.0" + " - " + "7.0.1.0");
+      report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"7.0 - 7.0.1.0");
       security_message(port: 0, data: report);
     }
   }

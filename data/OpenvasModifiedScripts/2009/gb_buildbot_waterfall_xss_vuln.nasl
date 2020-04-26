@@ -66,6 +66,6 @@ if(!buildbotVer)
   exit(0);
 
 if(version_in_range(version:buildbotVer, test_version:"0.7.6", test_version2:"0.7.11.p1")){
-  report = report_fixed_ver(installed_version:buildbotVer, vulnerable_range:"0.7.6" + " - " + "0.7.11.p1");
+  report = report_fixed_ver(installed_version:buildbotVer, vulnerable_range:"0.7.6 - 0.7.11.p1");
   security_message(port: 0, data: report);
 }

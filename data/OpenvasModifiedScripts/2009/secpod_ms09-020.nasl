@@ -105,7 +105,7 @@ if(hotfix_check_sp(win2k:5) > 0)
 {
   if(version_in_range(version:httpVer, test_version:"5.0",
                       test_version2:"5.0.2195.7289")){
-    report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"5.0" + " - " + "5.0.2195.7289");
+    report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"5.0 - 5.0.2195.7289");
     security_message(port: 0, data: report);
   }
 }
@@ -117,7 +117,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   {
     if(version_in_range(version:httpVer, test_version:"6.0",
                        test_version2:"6.0.3790.4517")){
-      report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"6.0" + " - " + "6.0.3790.4517");
+      report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"6.0 - 6.0.3790.4517");
       security_message(port: 0, data: report);
     }
   }
@@ -131,7 +131,7 @@ else if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:httpVer, test_version:"6.0",
                        test_version2:"6.0.2600.3573")){
-      report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"6.0" + " - " + "6.0.2600.3573");
+      report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"6.0 - 6.0.2600.3573");
       security_message(port: 0, data: report);
     }
   }
@@ -139,7 +139,7 @@ else if(hotfix_check_sp(xp:4) > 0)
   {
     if(version_in_range(version:httpVer, test_version:"6.0",
                        test_version2:"6.0.2600.5816")){
-      report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"6.0" + " - " + "6.0.2600.5816");
+      report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"6.0 - 6.0.2600.5816");
       security_message(port: 0, data: report);
     }
   }

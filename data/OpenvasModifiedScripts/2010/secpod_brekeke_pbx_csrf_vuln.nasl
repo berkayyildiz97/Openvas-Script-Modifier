@@ -79,8 +79,8 @@ if(">Brekeke PBX<" >< res)
   if(version[1] != NULL)
   {
     if(version_is_equal(version:version[1], test_version:"2.4.4.8")){
-      report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Equal to " + "2.4.4.8");
-      security_message(port: 0, data: report);
+      report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Equal to 2.4.4.8");
+      security_message(port: port, data: report);
     }
   }
 }

@@ -78,7 +78,7 @@ mysqlVer = get_app_version(cpe:CPE, port:sqlPort);
 if(mysqlVer != NULL)
 {
   if(version_in_range(version:mysqlVer, test_version:"4.0", test_version2:"5.0.83")){
-    report = report_fixed_ver(installed_version:mysqlVer, vulnerable_range:"4.0" + " - " + "5.0.83");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:mysqlVer, vulnerable_range:"4.0 - 5.0.83");
+    security_message(port: sqlPort, data: report);
   }
 }

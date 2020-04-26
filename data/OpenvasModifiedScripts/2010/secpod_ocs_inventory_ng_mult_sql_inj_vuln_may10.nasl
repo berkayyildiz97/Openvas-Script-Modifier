@@ -77,6 +77,6 @@ if(ocsVer[1] != NULL)
 {
   if(version_is_less(version:ocsVer[1], test_version:"1.02.3")){
     report = report_fixed_ver(installed_version:ocsVer[1], fixed_version:"1.02.3");
-    security_message(port: 0, data: report);
+    security_message(port: ocsPort, data: report);
   }
 }

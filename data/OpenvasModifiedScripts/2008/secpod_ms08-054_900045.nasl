@@ -118,7 +118,7 @@ if(hotfix_check_sp(winVista:2) > 0)
   if("Service Pack 1" >< SP)
   {
     if(version_in_range(version:dllVer, test_version:"11.0", test_version2:"11.0.6001.7001")){
-       report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7001", install_path:sysPath);
+       report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0 - 11.0.6001.7001", install_path:sysPath);
        security_message(port: 0, data: report);
     }
          exit(0);
@@ -131,7 +131,7 @@ else if(hotfix_check_sp(win2008:2) > 0)
   if("Service Pack 1" >< SP)
   {
     if(version_in_range(version:dllVer, test_version:"11.0", test_version2:"11.0.6001.7001")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7001", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0 - 11.0.6001.7001", install_path:sysPath);
           security_message(port: 0, data: report);
     }
       exit(0);

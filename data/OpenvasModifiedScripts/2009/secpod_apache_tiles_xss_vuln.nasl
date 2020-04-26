@@ -74,7 +74,7 @@ if(version[1] == NULL){
 
 if(version_in_range(version:version[1], test_version:"2.1",
                     test_version2:"2.1.1")){
-  report = report_fixed_ver(installed_version:version[1], vulnerable_range:"2.1" + " - " + "2.1.1");
+  report = report_fixed_ver(installed_version:version[1], vulnerable_range:"2.1 - 2.1.1");
   security_message(port: tilesPort, data: report);
   exit(0);
 }

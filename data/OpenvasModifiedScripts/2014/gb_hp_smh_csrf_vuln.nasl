@@ -76,7 +76,7 @@ if(!smhVer = get_app_version(cpe:CPE, port:smhPort)) exit(0);
 
 if(version_in_range(version:smhVer, test_version:"7.1", test_version2:"7.2.2"))
 {
-  report = report_fixed_ver(installed_version:smhVer, vulnerable_range:"7.1" + " - " + "7.2.2");
-  security_message(port: 0, data: report);
+  report = report_fixed_ver(installed_version:smhVer, vulnerable_range:"7.1 - 7.2.2");
+  security_message(port: smhPort, data: report);
   exit(0);
 }

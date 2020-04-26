@@ -81,6 +81,6 @@ if(!appVer){
 
 # version 9.1 FP6 => 9.1.0.6
 if(version_in_range(version:appVer, test_version:"9.1", test_version2:"9.1.0.6")){
-  report = report_fixed_ver(installed_version:appVer, vulnerable_range:"9.1" + " - " + "9.1.0.6");
+  report = report_fixed_ver(installed_version:appVer, vulnerable_range:"9.1 - 9.1.0.6");
   security_message(port: 0, data: report);
 }

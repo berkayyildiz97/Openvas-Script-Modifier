@@ -70,7 +70,7 @@ if(vmplayerVer != NULL )
 {
   if(version_in_range(version:vmplayerVer, test_version:"3.0", test_version2:"3.1.4"))
   {
-    report = report_fixed_ver(installed_version:vmplayerVer, vulnerable_range:"3.0" + " - " + "3.1.4");
+    report = report_fixed_ver(installed_version:vmplayerVer, vulnerable_range:"3.0 - 3.1.4");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -80,7 +80,7 @@ vmworkstnVer = get_kb_item("VMware/Workstation/Linux/Ver");
 if(vmworkstnVer != NULL)
 {
   if(version_in_range(version:vmworkstnVer, test_version:"7.0", test_version2:"7.1.4")){
-      report = report_fixed_ver(installed_version:vmworkstnVer, vulnerable_range:"7.0" + " - " + "7.1.4");
+      report = report_fixed_ver(installed_version:vmworkstnVer, vulnerable_range:"7.0 - 7.1.4");
       security_message(port: 0, data: report);
   }
 }

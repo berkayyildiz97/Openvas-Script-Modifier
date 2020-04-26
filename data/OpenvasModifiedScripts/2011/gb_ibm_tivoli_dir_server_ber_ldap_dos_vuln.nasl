@@ -72,6 +72,6 @@ if(!tdsVer){
 }
 
 if(version_in_range(version: tdsVer, test_version: "6.0", test_version2:"6.0.0.8")) {
-  report = report_fixed_ver(installed_version:tdsVer, vulnerable_range:"6.0" + " - " + "6.0.0.8");
+  report = report_fixed_ver(installed_version:tdsVer, vulnerable_range:"6.0 - 6.0.0.8");
   security_message(port: 0, data: report);
 }

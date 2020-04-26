@@ -90,7 +90,7 @@ version = infos["version"];
 
 if( version_is_less_equal( version:version, test_version:"0.9.6" ) ) {
   report = report_fixed_ver( installed_version:version, fixed_version:"See references", install_path:location );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to " + "0.9.6");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to 0.9.6");
   security_message(port: 0, data: report);
   exit( 0 );
 }

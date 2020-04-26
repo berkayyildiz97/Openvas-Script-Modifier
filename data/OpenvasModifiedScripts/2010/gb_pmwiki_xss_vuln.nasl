@@ -76,6 +76,6 @@ if(wikiVer[1]!= NULL)
 {
   if(version_is_less(version: wikiVer[1], test_version: "2.2.16")){
     report = report_fixed_ver(installed_version:wikiVer[1], fixed_version:"2.2.16");
-    security_message(port: 0, data: report);
+    security_message(port: port, data: report);
   }
 }

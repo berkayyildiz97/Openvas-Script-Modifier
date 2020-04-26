@@ -72,6 +72,6 @@ if(!version)
   exit(0);
 
 if(version_is_less_equal(version:version, test_version:"6.00.206")){
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to " + "6.00.206");
-  security_message(port: 0, data: report);
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to 6.00.206");
+  security_message(port: port, data: report);
 }

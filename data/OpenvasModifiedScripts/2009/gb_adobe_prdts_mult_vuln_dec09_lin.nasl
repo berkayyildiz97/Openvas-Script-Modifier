@@ -90,7 +90,7 @@ playerVer = get_kb_item("AdobeFlashPlayer/Linux/Ver");
 if(playerVer != NULL)
 {
   if(version_in_range(version:playerVer, test_version:"10.0", test_version2:"10.0.42.33")){
-    report = report_fixed_ver(installed_version:playerVer, vulnerable_range:"10.0" + " - " + "10.0.42.33");
+    report = report_fixed_ver(installed_version:playerVer, vulnerable_range:"10.0 - 10.0.42.33");
     security_message(port: 0, data: report);
   }
 }

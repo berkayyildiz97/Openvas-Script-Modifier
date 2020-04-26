@@ -81,6 +81,6 @@ if(!sigVer){
 }
 
 if(version_is_equal(version:sigVer, test_version:"3.95")){
-  report = report_fixed_ver(installed_version:sigVer, vulnerable_range:"Equal to " + "3.95");
+  report = report_fixed_ver(installed_version:sigVer, vulnerable_range:"Equal to 3.95");
   security_message(port: 0, data: report);
 }

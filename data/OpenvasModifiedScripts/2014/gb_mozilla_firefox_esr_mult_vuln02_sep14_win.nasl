@@ -89,7 +89,7 @@ if(ffVer =~ "^31\.")
 {
   if(version_is_equal(version:ffVer, test_version:"31.0"))
   {
-    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"Equal to " + "31.0");
+    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"Equal to 31.0");
     security_message(port: 0, data: report);
     exit(0);
   }

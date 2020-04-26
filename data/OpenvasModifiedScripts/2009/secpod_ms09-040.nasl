@@ -99,7 +99,7 @@ if(hotfix_check_sp(win2k:5) > 0)
 {
   if(version_in_range(version:exeVer, test_version:"5.0",
                       test_version2:"5.0.0.807")){
-    report = report_fixed_ver(installed_version:exeVer, vulnerable_range:"5.0" + " - " + "5.0.0.807");
+    report = report_fixed_ver(installed_version:exeVer, vulnerable_range:"5.0 - 5.0.0.807");
     security_message(port: 0, data: report);
   }
   exit(0);
@@ -111,7 +111,7 @@ else if(hotfix_check_sp(xp:3) > 0)
   {
     if(version_in_range(version:exeVer, test_version:"5.1",
                         test_version2:"5.1.0.1110")){
-      report = report_fixed_ver(installed_version:exeVer, vulnerable_range:"5.1" + " - " + "5.1.0.1110");
+      report = report_fixed_ver(installed_version:exeVer, vulnerable_range:"5.1 - 5.1.0.1110");
       security_message(port: 0, data: report);
     }
     exit(0);
@@ -124,7 +124,7 @@ else if(hotfix_check_sp(win2003:3) > 0)
   {
     if(version_in_range(version:exeVer, test_version:"5.2",
                         test_version2:"5.2.2007.4529")){
-      report = report_fixed_ver(installed_version:exeVer, vulnerable_range:"5.2" + " - " + "5.2.2007.4529");
+      report = report_fixed_ver(installed_version:exeVer, vulnerable_range:"5.2 - 5.2.2007.4529");
       security_message(port: 0, data: report);
     }
     exit(0);

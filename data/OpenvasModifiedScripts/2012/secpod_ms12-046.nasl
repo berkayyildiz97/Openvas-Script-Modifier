@@ -105,7 +105,7 @@ if(officeVer =~ "^14\..*")
   {
     if(version_in_range(version:dllVer7, test_version:"7.0", test_version2:"7.0.16.26"))
     {
-      report = report_fixed_ver(installed_version:dllVer7, vulnerable_range:"7.0" + " - " + "7.0.16.26");
+      report = report_fixed_ver(installed_version:dllVer7, vulnerable_range:"7.0 - 7.0.16.26");
       security_message(port: 0, data: report);
       exit(0);
     }
@@ -117,7 +117,7 @@ if(officeVer =~ "^14\..*")
   if(accVer)
   {
     if(version_in_range(version:accVer, test_version:"14.0", test_version2:"14.0.6015.999")){
-      report = report_fixed_ver(installed_version:accVer, vulnerable_range:"14.0" + " - " + "14.0.6015.999");
+      report = report_fixed_ver(installed_version:accVer, vulnerable_range:"14.0 - 14.0.6015.999");
       security_message(port: 0, data: report);
     }
   }

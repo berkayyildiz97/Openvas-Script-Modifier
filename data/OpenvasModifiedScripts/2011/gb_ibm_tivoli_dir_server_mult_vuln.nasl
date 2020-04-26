@@ -74,7 +74,7 @@ if( ! version = get_app_version( cpe: CPE ) ) exit( 0 );
 
 if( version_in_range( version: version, test_version: "6.20", test_version2: "6.20.0.2" ) ) {
   report = report_fixed_ver( installed_version: version, fixed_version: "6.20.0.3" );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"6.20" + " - " + "6.20.0.2");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"6.20 - 6.20.0.2");
   security_message(port: 0, data: report);
   exit( 0 );
 }

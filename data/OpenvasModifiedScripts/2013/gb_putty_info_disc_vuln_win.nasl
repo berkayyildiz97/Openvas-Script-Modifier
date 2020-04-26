@@ -70,7 +70,7 @@ if(!puttyVer){
 
 if(version_in_range(version:puttyVer, test_version:"0.59", test_version2:"0.61"))
 {
-  report = report_fixed_ver(installed_version:puttyVer, vulnerable_range:"0.59" + " - " + "0.61");
+  report = report_fixed_ver(installed_version:puttyVer, vulnerable_range:"0.59 - 0.61");
   security_message(port: 0, data: report);
   exit(0);
 }

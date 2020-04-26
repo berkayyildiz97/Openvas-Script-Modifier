@@ -65,7 +65,7 @@ ver = get_kb_item("Opera/Win/Version");
 if(ver)
 {
   if(version_is_equal(version:ver, test_version:"9.52")){
-      report = report_fixed_ver(installed_version:ver, vulnerable_range:"Equal to " + "9.52");
+      report = report_fixed_ver(installed_version:ver, vulnerable_range:"Equal to 9.52");
       security_message(port: 0, data: report);
   }
 }

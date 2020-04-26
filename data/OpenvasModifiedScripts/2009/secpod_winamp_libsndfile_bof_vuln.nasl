@@ -69,6 +69,6 @@ if(!winampVer)
   exit(0);
 
 if(version_is_less_equal(version:winampVer, test_version:"5.5.5.2435")){
-   report = report_fixed_ver(installed_version:winampVer, vulnerable_range:"Less than or equal to " + "5.5.5.2435");
+   report = report_fixed_ver(installed_version:winampVer, vulnerable_range:"Less than or equal to 5.5.5.2435");
    security_message(port: 0, data: report);
 }

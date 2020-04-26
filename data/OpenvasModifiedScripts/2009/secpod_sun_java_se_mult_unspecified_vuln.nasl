@@ -70,7 +70,7 @@ if(jdkVer)
 {
   if(version_in_range(version:jdkVer, test_version:"1.5", test_version2:"1.5.0.19"))
   {
-    report = report_fixed_ver(installed_version:jdkVer, vulnerable_range:"1.5" + " - " + "1.5.0.19");
+    report = report_fixed_ver(installed_version:jdkVer, vulnerable_range:"1.5 - 1.5.0.19");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -89,7 +89,7 @@ if(isnull(jreVer))
 if(jreVer)
 {
   if(version_in_range(version:jreVer, test_version:"1.5", test_version2:"1.5.0.19")){
-    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.5" + " - " + "1.5.0.19");
+    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.5 - 1.5.0.19");
     security_message(port: 0, data: report);
     exit(0);
   }

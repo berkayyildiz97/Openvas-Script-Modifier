@@ -73,7 +73,7 @@ if(airVer)
 {
   if(version_is_less_equal(version:airVer, test_version:"3.4.0.2540"))
   {
-    report = report_fixed_ver(installed_version:airVer, vulnerable_range:"Less than or equal to " + "3.4.0.2540");
+    report = report_fixed_ver(installed_version:airVer, vulnerable_range:"Less than or equal to 3.4.0.2540");
     security_message(port: 0, data: report);
     exit(0);
   }

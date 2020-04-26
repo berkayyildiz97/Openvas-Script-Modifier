@@ -72,7 +72,7 @@ port = get_http_port(default:80);
 
 if(vers = get_version_from_kb(port:port, app:"CybozuOffice")) {
   if(version_in_range(version:vers, test_version:"6.0.0", test_version2:"8.1.0")) {
-    report = report_fixed_ver(installed_version:vers, vulnerable_range:"6.0.0" + " - " + "8.1.0");
+    report = report_fixed_ver(installed_version:vers, vulnerable_range:"6.0.0 - 8.1.0");
     security_message(port: port, data: report);
   }
 }

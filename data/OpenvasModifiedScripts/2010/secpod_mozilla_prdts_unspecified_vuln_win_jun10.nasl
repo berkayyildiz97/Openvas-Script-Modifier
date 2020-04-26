@@ -79,7 +79,7 @@ if(ffVer)
 {
   if(version_in_range(version:ffVer, test_version:"3.5.0", test_version2:"3.5.9"))
   {
-    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"3.5.0" + " - " + "3.5.9");
+    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"3.5.0 - 3.5.9");
     security_message(port: 0, data: report);
     exit(0);
   }

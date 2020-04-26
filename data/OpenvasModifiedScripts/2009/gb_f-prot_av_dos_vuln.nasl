@@ -66,6 +66,6 @@ if(!fpscanVer){
 }
 
 if(version_is_less_equal(version:fpscanVer, test_version:"4.6.8")){
-  report = report_fixed_ver(installed_version:fpscanVer, vulnerable_range:"Less than or equal to " + "4.6.8");
+  report = report_fixed_ver(installed_version:fpscanVer, vulnerable_range:"Less than or equal to 4.6.8");
   security_message(port: 0, data: report);
 }

@@ -73,7 +73,7 @@ if(excelviewVer =~ "^12\.")
 {
   if(version_in_range(version:excelviewVer, test_version:"12.0", test_version2:"12.0.6679.4999"))
   {
-    report = report_fixed_ver(installed_version:excelviewVer, vulnerable_range:"12.0" + " - " + "12.0.6679.4999");
+    report = report_fixed_ver(installed_version:excelviewVer, vulnerable_range:"12.0 - 12.0.6679.4999");
     security_message(port: 0, data: report);
     exit(0);
   }

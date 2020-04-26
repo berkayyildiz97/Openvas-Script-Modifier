@@ -76,7 +76,7 @@ CPE = "cpe:/a:adobe:acrobat_reader";
 if(readerVer = get_app_version(cpe:CPE, nofork:TRUE))
 {
   if(version_is_less_equal(version:readerVer, test_version:"10.0.3")){
-    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Less than or equal to " + "10.0.3");
+    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Less than or equal to 10.0.3");
     security_message(port: 0, data: report);
   }
 }
@@ -85,7 +85,7 @@ CPE = "cpe:/a:adobe:acrobat";
 if(acrobatVer = get_app_version(cpe:CPE))
 {
   if(version_is_less_equal(version:acrobatVer, test_version:"10.0.3")) {
-    report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"Less than or equal to " + "10.0.3");
+    report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"Less than or equal to 10.0.3");
     security_message(port: 0, data: report);
   }
 }

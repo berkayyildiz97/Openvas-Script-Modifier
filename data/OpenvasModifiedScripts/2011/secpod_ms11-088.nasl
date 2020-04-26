@@ -97,7 +97,7 @@ foreach item (entries)
       {
         if(version_in_range(version:dllVer, test_version:"14.0", test_version2:"14.0.6019.999"))
         {
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"14.0" + " - " + "14.0.6019.999", install_path:imePath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"14.0 - 14.0.6019.999", install_path:imePath);
           security_message(port: 0, data: report);
           exit(0);
         }
@@ -122,7 +122,7 @@ foreach item (entries)
       {
         if(version_in_range(version:dllVer, test_version:"14.0", test_version2:"14.0.5810.999"))
         {
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"14.0" + " - " + "14.0.5810.999", install_path:offPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"14.0 - 14.0.5810.999", install_path:offPath);
           security_message(port: 0, data: report);
           exit(0);
         }

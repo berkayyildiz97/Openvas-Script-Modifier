@@ -242,7 +242,7 @@ dllPath = sysPath + "\mshtml.dll";
      if("Service Pack 1" >< SP)
      {
        if(version_in_range(version:dllVer, test_version:"7.0", test_version2:"7.0.6001.18098")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"7.0" + " - " + "7.0.6001.18098", install_path:dllPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"7.0 - 7.0.6001.18098", install_path:dllPath);
           security_message(port: 0, data: report);
        }
          exit(0);
@@ -255,7 +255,7 @@ dllPath = sysPath + "\mshtml.dll";
      if("Service Pack 1" >< SP)
      {
        if(version_in_range(version:dllVer, test_version:"7.0", test_version2:"7.0.6001.18098")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"7.0" + " - " + "7.0.6001.18098", install_path:dllPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"7.0 - 7.0.6001.18098", install_path:dllPath);
           security_message(port: 0, data: report);
        }
          exit(0);

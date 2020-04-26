@@ -66,6 +66,6 @@ if(!lotusVer)
   exit(0);
 
 if(version_in_range(version:lotusVer, test_version:"8.5", test_version2:"8.5.00.8318")){
-  report = report_fixed_ver(installed_version:lotusVer, vulnerable_range:"8.5" + " - " + "8.5.00.8318");
+  report = report_fixed_ver(installed_version:lotusVer, vulnerable_range:"8.5 - 8.5.00.8318");
   security_message(port: 0, data: report);
 }

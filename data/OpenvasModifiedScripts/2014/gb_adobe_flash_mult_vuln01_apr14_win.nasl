@@ -71,7 +71,7 @@ if(!playerVer = get_app_version(cpe:CPE)){
 
 if(version_is_equal(version:playerVer, test_version:"12.0.0.77"))
 {
-  report = report_fixed_ver(installed_version:playerVer, vulnerable_range:"Equal to " + "12.0.0.77");
+  report = report_fixed_ver(installed_version:playerVer, vulnerable_range:"Equal to 12.0.0.77");
   security_message(port: 0, data: report);
   exit(0);
 }

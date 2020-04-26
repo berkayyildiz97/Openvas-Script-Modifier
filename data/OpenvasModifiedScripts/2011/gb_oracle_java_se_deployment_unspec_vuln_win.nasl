@@ -64,7 +64,7 @@ if(jreVer)
 
   if(version_in_range(version:jreVer, test_version:"1.6", test_version2:"1.6.0.27"))
   {
-    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.6" + " - " + "1.6.0.27");
+    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.6 - 1.6.0.27");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -74,7 +74,7 @@ jdkVer = get_kb_item("Sun/Java/JDK/Win/Ver");
 if(jdkVer)
 {
   if(version_in_range(version:jdkVer, test_version:"1.6", test_version2:"1.6.0.27")) {
-    report = report_fixed_ver(installed_version:jdkVer, vulnerable_range:"1.6" + " - " + "1.6.0.27");
+    report = report_fixed_ver(installed_version:jdkVer, vulnerable_range:"1.6 - 1.6.0.27");
     security_message(port: 0, data: report);
   }
 }

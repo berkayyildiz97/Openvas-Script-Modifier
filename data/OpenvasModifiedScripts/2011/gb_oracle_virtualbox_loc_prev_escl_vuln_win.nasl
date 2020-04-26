@@ -66,7 +66,7 @@ vmVer = get_kb_item("Oracle/VirtualBox/Win/Ver");
 if(vmVer)
 {
   if(version_is_equal(version:vmVer, test_version:"4.0")){
-    report = report_fixed_ver(installed_version:vmVer, vulnerable_range:"Equal to " + "4.0");
+    report = report_fixed_ver(installed_version:vmVer, vulnerable_range:"Equal to 4.0");
     security_message(port: 0, data: report);
   }
 }

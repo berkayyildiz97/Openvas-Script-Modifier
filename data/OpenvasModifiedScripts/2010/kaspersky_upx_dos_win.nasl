@@ -60,7 +60,7 @@ version = get_kb_item("Kaspersky/AV/Ver");
 if (!version) exit (0);
 
 if (version_is_equal (version: version, test_version:"6.0.1.411")) {
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to " + "6.0.1.411");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to 6.0.1.411");
   security_message(port: 0, data: report);
   exit(0);
 }

@@ -1,6 +1,5 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_zope_python_scripts_dos_vuln_lin.nasl 14240 2019-03-17 15:50:45Z cfischer $
 #
 # Zope Python Scripts Local Denial of Service Vulnerability
 #
@@ -27,8 +26,8 @@
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.800064");
-  script_version("$Revision: 14240 $");
-  script_tag(name:"last_modification", value:"$Date: 2019-03-17 16:50:45 +0100 (Sun, 17 Mar 2019) $");
+  script_version("2020-02-03T13:52:45+0000");
+  script_tag(name:"last_modification", value:"2020-02-03 13:52:45 +0000 (Mon, 03 Feb 2020)");
   script_tag(name:"creation_date", value:"2008-11-21 14:18:03 +0100 (Fri, 21 Nov 2008)");
   script_tag(name:"cvss_base", value:"4.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:N/I:N/A:P");
@@ -40,37 +39,44 @@ if(description)
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (C) 2008 Greenbone Networks GmbH");
   script_family("Denial of Service");
-  script_dependencies("gb_get_http_banner.nasl");
-  script_require_ports("Services/www", 8080);
-  script_mandatory_keys("zope/banner");
+  script_dependencies("gb_zope_detect.nasl");
+  script_mandatory_keys("zope/detected");
 
   script_tag(name:"impact", value:"Successful exploitation allows remote authenticated users to cause
   denial of service or resource exhaustion.");
+
   script_tag(name:"affected", value:"Zope Versions 2.x - 2.11.2 on Linux.");
+
   script_tag(name:"insight", value:"Zope server allows improper strings to be passed via certain raise and
   import commands.");
+
   script_tag(name:"summary", value:"This host is running Zope, and is prone to Denial of Service
   Vulnerability.");
+
   script_tag(name:"solution", value:"Update Zope to a later version.");
 
-  script_tag(name:"qod_type", value:"executable_version");
+  script_tag(name:"qod_type", value:"remote_banner");
   script_tag(name:"solution_type", value:"VendorFix");
 
   exit(0);
 }
 
-include("http_func.inc");
-include("version_func.inc");
+CPE = "cpe:/a:zope:zope";
 
-port = get_http_port(default:8080);
-banner = get_http_banner(port:port);
-if(!banner) exit(0);
+include( "host_details.inc" );
+include( "version_func.inc" );
 
-zopeVer = eregmatch(pattern:"Zope ([0-9.]+)", string:banner);
-if(zopeVer != NULL)
-{
-  if(version_in_range(version:zopeVer[1], test_version:"2.0", test_version2:"2.11.2")){
-    report = report_fixed_ver(installed_version:zopeVer[1], vulnerable_range:"2.0" + " - " + "2.11.2");
-    security_message(port: 0, data: report);
-  }
+if( ! port = get_app_port( cpe: CPE ) ) exit( 0 );
+if( ! infos = get_app_version_and_location( cpe: CPE, port: port, exit_no_version: TRUE ) ) exit( 0 );
+
+version = infos["version"];
+location = infos["location"];
+
+if( version_in_range( version: version, test_version:"2.0", test_version2:"2.11.2" ) ) {
+  report = report_fixed_ver( installed_version: version, fixed_version: "2.11.3", install_path: location );
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"2.0 - 2.11.2");
+  security_message(port: port, data: report);
+  exit( 0 );
 }
+
+exit( 99 );

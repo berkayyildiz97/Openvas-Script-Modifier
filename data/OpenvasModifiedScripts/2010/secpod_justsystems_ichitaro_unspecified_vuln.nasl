@@ -66,7 +66,7 @@ ichitaroVer = get_kb_item("Ichitaro/Ver");
 if(ichitaroVer)
 {
   if(version_in_range(version:ichitaroVer, test_version:"2006", test_version2:"2010")){
-    report = report_fixed_ver(installed_version:ichitaroVer, vulnerable_range:"2006" + " - " + "2010");
+    report = report_fixed_ver(installed_version:ichitaroVer, vulnerable_range:"2006 - 2010");
     security_message(port: 0, data: report);
   }
 }

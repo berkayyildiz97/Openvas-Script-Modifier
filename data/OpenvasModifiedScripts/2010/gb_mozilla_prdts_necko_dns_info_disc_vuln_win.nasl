@@ -94,7 +94,7 @@ fpVer = get_kb_item("Thunderbird/Win/Ver");
 if(!isnull(fpVer))
 {
   if(version_is_less_equal(version:fpVer, test_version:"3.0.1")){
-    report = report_fixed_ver(installed_version:fpVer, vulnerable_range:"Less than or equal to " + "3.0.1", install_path:path);
+    report = report_fixed_ver(installed_version:fpVer, vulnerable_range:"Less than or equal to 3.0.1", install_path:path);
     security_message(port: 0, data: report);
   }
 }

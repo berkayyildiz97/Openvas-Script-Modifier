@@ -95,7 +95,7 @@ foreach item (keys)
     }
 
     if(version_is_less_equal(version:w3cVer, test_version:"10.0.1")){
-      report = report_fixed_ver(installed_version:w3cVer, vulnerable_range:"Less than or equal to " + "10.0.1");
+      report = report_fixed_ver(installed_version:w3cVer, vulnerable_range:"Less than or equal to 10.0.1");
       security_message(port: 0, data: report);
       exit(0);
     }

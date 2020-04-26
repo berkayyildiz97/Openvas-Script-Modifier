@@ -77,7 +77,7 @@ if (!version = get_app_version(cpe: CPE, port: port))
   exit(0);
 
 if(version_is_equal(version: version, test_version: "1.3.6")) {
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to " + "1.3.6");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Equal to 1.3.6");
   security_message(port: port, data: report);
   exit(0);
 }
@@ -85,7 +85,7 @@ else if(version_is_equal(version: version, test_version: "1.4.0")) {
   if (!build = get_kb_item("apache_continuum/build"))
     exit(0);
   if(version_is_less_equal(version:build, test_version: "939198")) {
-    report = report_fixed_ver(installed_version:build, vulnerable_range:"Less than or equal to " + "939198");
+    report = report_fixed_ver(installed_version:build, vulnerable_range:"Less than or equal to 939198");
     security_message(port: port, data: report);
     exit(0);
   }

@@ -69,6 +69,6 @@ if(!avcPlayer){
 }
 
 if(version_is_less_equal(version:avcPlayer, test_version:"5.5.90213")){
-  report = report_fixed_ver(installed_version:avcPlayer, vulnerable_range:"Less than or equal to " + "5.5.90213");
+  report = report_fixed_ver(installed_version:avcPlayer, vulnerable_range:"Less than or equal to 5.5.90213");
   security_message(port: 0, data: report);
 }

@@ -89,7 +89,7 @@ if("^" >< buf[0]) {
     exit(0);
 
   if(version_is_equal(version:version[1], test_version:"1.5.12")) {
-    report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Equal to " + "1.5.12");
+    report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Equal to 1.5.12");
     security_message(port: port, data: report);
     exit(0);
   }

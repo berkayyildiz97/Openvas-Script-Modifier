@@ -72,7 +72,7 @@ bopupVer = get_kb_item("Bopup/Server/Ver");
 if(bopupVer != NULL)
 {
   if(version_is_less_equal(version:bopupVer, test_version:"3.2.26.5460")){
-    report = report_fixed_ver(installed_version:bopupVer, vulnerable_range:"Less than or equal to " + "3.2.26.5460");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:bopupVer, vulnerable_range:"Less than or equal to 3.2.26.5460");
+    security_message(port: bopupPort, data: report);
   }
 }

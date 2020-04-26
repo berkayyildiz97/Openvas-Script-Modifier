@@ -69,7 +69,7 @@ surgemailVer = get_kb_item("SurgeMail/Ver");
 if(!isnull(surgemailVer))
 {
   if(version_is_equal(version:surgemailVer, test_version:"4.3e")){
-    report = report_fixed_ver(installed_version:surgemailVer, vulnerable_range:"Equal to " + "4.3e");
+    report = report_fixed_ver(installed_version:surgemailVer, vulnerable_range:"Equal to 4.3e");
     security_message(port: 0, data: report);
     exit(0);
   }

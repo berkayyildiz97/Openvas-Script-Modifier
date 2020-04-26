@@ -73,7 +73,7 @@ sshdVer = get_kb_item("freeSSHd/Ver");
 if(sshdVer)
 {
   if(version_is_less_equal(version:sshdVer, test_version:"1.2.4")){
-    report = report_fixed_ver(installed_version:sshdVer, vulnerable_range:"Less than or equal to " + "1.2.4");
+    report = report_fixed_ver(installed_version:sshdVer, vulnerable_range:"Less than or equal to 1.2.4");
     security_message(port: 0, data: report);
   }
 }

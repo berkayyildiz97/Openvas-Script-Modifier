@@ -68,7 +68,7 @@ if(isnull(rpVer)){
 }
 
 if(version_in_range(version:rpVer, test_version:"12.0", test_version2:"12.0.0.1701")){
-  report = report_fixed_ver(installed_version:rpVer, vulnerable_range:"12.0" + " - " + "12.0.0.1701");
+  report = report_fixed_ver(installed_version:rpVer, vulnerable_range:"12.0 - 12.0.0.1701");
   security_message(port: 0, data: report);
   exit(0);
 }

@@ -65,7 +65,7 @@ swfVer = get_kb_item("SWFTools/Ver");
 if(swfVer != NULL)
 {
   if(version_is_less_equal(version:swfVer, test_version:"0.9.1")){
-      report = report_fixed_ver(installed_version:swfVer, vulnerable_range:"Less than or equal to " + "0.9.1");
+      report = report_fixed_ver(installed_version:swfVer, vulnerable_range:"Less than or equal to 0.9.1");
       security_message(port: 0, data: report);
   }
 }

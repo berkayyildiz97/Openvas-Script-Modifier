@@ -71,6 +71,6 @@ if(!ctrack_ver){
 }
 
 if(version_is_equal(version:ctrack_ver, test_version:"4.3")){
-  report = report_fixed_ver(installed_version:ctrack_ver, vulnerable_range:"Equal to " + "4.3");
+  report = report_fixed_ver(installed_version:ctrack_ver, vulnerable_range:"Equal to 4.3");
   security_message(port: 0, data: report);
 }

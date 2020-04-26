@@ -78,7 +78,7 @@ if(diaryVer[1] != NULL)
 {
   if(version_is_less(version:diaryVer[1], test_version:"2.2.3")){
     report = report_fixed_ver(installed_version:diaryVer[1], fixed_version:"2.2.3");
-    security_message(port: 0, data: report);
+    security_message(port: diaryPort, data: report);
   }
 }
 

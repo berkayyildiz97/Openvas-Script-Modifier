@@ -80,7 +80,7 @@ if(!ver) {
 if(!ver)exit(0);
 
 if(version_is_equal(version:ver, test_version:"0.96.2")){
-  report = report_fixed_ver(installed_version:ver, vulnerable_range:"Equal to " + "0.96.2");
+  report = report_fixed_ver(installed_version:ver, vulnerable_range:"Equal to 0.96.2");
   security_message(port: port, data: report);
 }
 

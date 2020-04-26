@@ -89,7 +89,7 @@ if(tbVer =~ "^31\.")
 {
   if(version_is_equal(version:tbVer, test_version:"31.0"))
   {
-    report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"Equal to " + "31.0");
+    report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"Equal to 31.0");
     security_message(port: 0, data: report);
     exit(0);
   }

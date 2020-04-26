@@ -80,7 +80,7 @@ if(slimVer)
 {
   if(version_is_less_equal(version:slimVer, test_version:"1.0.0.1"))
   {
-    report = report_fixed_ver(installed_version:slimVer, vulnerable_range:"Less than or equal to " + "1.0.0.1");
+    report = report_fixed_ver(installed_version:slimVer, vulnerable_range:"Less than or equal to 1.0.0.1");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -95,7 +95,7 @@ if(docVer != NULL)
 {
  if(version_is_less_equal(version:docVer, test_version:"6.0"))
   {
-    report = report_fixed_ver(installed_version:docVer, vulnerable_range:"Less than or equal to " + "6.0");
+    report = report_fixed_ver(installed_version:docVer, vulnerable_range:"Less than or equal to 6.0");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -105,7 +105,7 @@ extractVer = get_kb_item("Able2Extract/Ver");
 if(extractVer)
 {
   if(version_is_less_equal(version:extractVer, test_version:"7.0")){
-    report = report_fixed_ver(installed_version:extractVer, vulnerable_range:"Less than or equal to " + "7.0");
+    report = report_fixed_ver(installed_version:extractVer, vulnerable_range:"Less than or equal to 7.0");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -115,7 +115,7 @@ pdfVer = get_kb_item("Able2Extract/PDF/Server/Ver");
 if(pdfVer)
 {
   if(version_is_less_equal(version:pdfVer, test_version:"1.0.0")){
-    report = report_fixed_ver(installed_version:pdfVer, vulnerable_range:"Less than or equal to " + "1.0.0");
+    report = report_fixed_ver(installed_version:pdfVer, vulnerable_range:"Less than or equal to 1.0.0");
     security_message(port: 0, data: report);
   }
 }

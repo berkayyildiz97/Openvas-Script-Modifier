@@ -92,7 +92,7 @@ if(!pidVer = get_app_version(cpe:CPE)){
 
 if(version_in_range(version:pidVer, test_version:"2.10.0", test_version2:"2.10.9"))
 {
-  report = report_fixed_ver(installed_version:pidVer, vulnerable_range:"2.10.0" + " - " + "2.10.9");
+  report = report_fixed_ver(installed_version:pidVer, vulnerable_range:"2.10.0 - 2.10.9");
   security_message(port: 0, data: report);
   exit(0);
 }

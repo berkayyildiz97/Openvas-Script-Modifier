@@ -90,7 +90,7 @@ stormdllVer = GetVer(share:share, file:file);
 if(stormdllVer != NULL)
 {
   if(version_is_less_equal(version:stormVer, test_version:"3.09.62")){
-    report = report_fixed_ver(installed_version:stormVer, vulnerable_range:"Less than or equal to " + "3.09.62", install_path:stormPath);
+    report = report_fixed_ver(installed_version:stormVer, vulnerable_range:"Less than or equal to 3.09.62", install_path:stormPath);
     security_message(port: 0, data: report);
   }
 }

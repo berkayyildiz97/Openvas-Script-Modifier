@@ -88,7 +88,7 @@ if(offVer =~ "^15.*")
   {
     if(version_in_range(version:fileVer, test_version:"15.0", test_version2:"15.0.4551.1000"))
     {
-      report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"15.0" + " - " + "15.0.4551.1000", install_path:filePath);
+      report = report_fixed_ver(installed_version:fileVer, vulnerable_range:"15.0 - 15.0.4551.1000", install_path:filePath);
       security_message(port: 0, data: report);
       exit(0);
     }

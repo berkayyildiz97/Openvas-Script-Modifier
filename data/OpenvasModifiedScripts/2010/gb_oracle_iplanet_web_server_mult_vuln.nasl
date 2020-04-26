@@ -72,7 +72,7 @@ location = infos["location"];
 
 if( version_is_less_equal( version: version, test_version: "7.0" ) ) {
   report = report_fixed_ver( installed_version: version, fixed_version: "Apply the patch.", install_path: location );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to " + "7.0");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to 7.0");
   security_message(port: port, data: report);
   exit( 0 );
 }

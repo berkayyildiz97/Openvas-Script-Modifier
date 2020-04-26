@@ -23,11 +23,11 @@ CPE = "cpe:/a:django_project:django";
 if (description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.143182");
-  script_version("2019-12-28T10:21:15+0000");
-  script_tag(name:"last_modification", value:"2019-12-28 10:21:15 +0000 (Sat, 28 Dec 2019)");
+  script_version("2020-02-04T09:04:16+0000");
+  script_tag(name:"last_modification", value:"2020-02-04 09:04:16 +0000 (Tue, 04 Feb 2020)");
   script_tag(name:"creation_date", value:"2019-12-09 02:34:33 +0000 (Mon, 09 Dec 2019)");
-  script_tag(name:"cvss_base", value:"6.5");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:P/I:P/A:P");
+  script_tag(name:"cvss_base", value:"4.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:N/I:P/A:N");
 
   script_cve_id("CVE-2019-19118");
 

@@ -73,7 +73,7 @@ if(readerVer)
 {
   if(version_in_range(version:readerVer, test_version:"6.0", test_version2:"6.0.2"))
   {
-    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"6.0" + " - " + "6.0.2");
+    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"6.0 - 6.0.2");
     security_message(port: 0, data: report);
     exit(0);
   }

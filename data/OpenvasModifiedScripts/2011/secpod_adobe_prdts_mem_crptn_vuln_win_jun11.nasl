@@ -68,7 +68,7 @@ if(readerVer = get_app_version(cpe:CPE, nofork:TRUE))
   if(readerVer =~ "^8")
   {
     if(version_in_range(version:readerVer, test_version:"8.0", test_version2:"8.2.6")){
-      report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"8.0" + " - " + "8.2.6");
+      report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"8.0 - 8.2.6");
       security_message(port: 0, data: report);
     }
   }
@@ -78,7 +78,7 @@ CPE = "cpe:/a:adobe:acrobat";
 if(acrobatVer = get_app_version(cpe:CPE))
 {
   if(version_in_range(version:acrobatVer, test_version:"8.0", test_version2:"8.2.6")){
-   report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"8.0" + " - " + "8.2.6");
+   report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"8.0 - 8.2.6");
    security_message(port: 0, data: report);
   }
 }

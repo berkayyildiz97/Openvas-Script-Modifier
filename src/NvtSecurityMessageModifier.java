@@ -27,6 +27,8 @@ public class NvtSecurityMessageModifier {
 
     private final Pattern patternTestVersion2 = Pattern.compile("test_version2:([^\\),]*)");
 
+    private final Pattern patternSecurityMessageParameter = Pattern.compile("security_message\\(([^\\)]*)");
+
     private final Pattern patternPath = Pattern.compile("[^[,'=\")&+(/;]?]*path=.*;");
 
     private enum VersionFunction {
@@ -207,8 +209,19 @@ public class NvtSecurityMessageModifier {
                 if (isScannerInVersionCheck && line.contains("security_message")) {
                     String portParameter = "0";
                     Matcher matcherPortParameter = patternPortParameter.matcher(lineWithoutSpaceChars);
+                    Matcher matcherSecurityMessageParameter = patternSecurityMessageParameter.matcher(lineWithoutSpaceChars);
                     if (matcherPortParameter.find()) {
                         portParameter = matcherPortParameter.group(1);
+                    }
+                    //Handles security_message calls without "port:"
+                    //2009/secpod_ms09-053.nasl:                            security_message(21);
+                    //2016/gb_mysql_unspecified_vuln13_jun16_lin.nasl:      security_message(sqlPort);
+                    else if (matcherSecurityMessageParameter.find()) {
+                        String parameter = matcherSecurityMessageParameter.group(1);
+                        if ((!parameter.contains(",")) && (!parameter.contains(":")) && (!parameter.contains("\"")) &&
+                                (parameter.toLowerCase().contains("port") || parameter.matches("\\d+"))) {
+                            portParameter = parameter;
+                        }
                     }
 
                     isSecurityMessageFound = true;
@@ -236,13 +249,33 @@ public class NvtSecurityMessageModifier {
             report = report + ", fixed_version:" + nvtFixedVersion;
         }
         if ( (versionFunction == VersionFunction.VERSION_IN_RANGE) && (!nvtVulnerableRangeVersion1.equals("")) && (!nvtVulnerableRangeVersion2.equals("")) ) {
-            report = report + ", vulnerable_range:" + nvtVulnerableRangeVersion1 + " + \" - \" + " + nvtVulnerableRangeVersion2;
+            if (nvtVulnerableRangeVersion1.contains("\"") && nvtVulnerableRangeVersion2.contains("\"")) {
+                String nvtVulnerableRangeVersion1Temp = nvtVulnerableRangeVersion1.replaceAll("\"", "");
+                String nvtVulnerableRangeVersion2Temp = nvtVulnerableRangeVersion2.replaceAll("\"", "");
+                report = report + ", vulnerable_range:\"" + nvtVulnerableRangeVersion1Temp + " - " + nvtVulnerableRangeVersion2Temp + "\"";
+            }
+            else {
+                report = report + ", vulnerable_range:" + nvtVulnerableRangeVersion1 + " + \" - \" + " + nvtVulnerableRangeVersion2;
+            }
         }
         if ( (versionFunction == VersionFunction.VERSION_IS_LESS_EQUAL) && (!nvtVulnerableRangeVersion1.equals("")) ) {
-            report = report + ", vulnerable_range:" + "\"Less than or equal to \" + " + nvtVulnerableRangeVersion1;
+            if (nvtVulnerableRangeVersion1.contains("\"")) {
+                String nvtVulnerableRangeVersion1Temp = nvtVulnerableRangeVersion1.replaceAll("\"", "");
+                report = report + ", vulnerable_range:" + "\"Less than or equal to " + nvtVulnerableRangeVersion1Temp + "\"";
+            }
+            else {
+                report = report + ", vulnerable_range:" + "\"Less than or equal to \" + " + nvtVulnerableRangeVersion1;
+            }
         }
         if ( (versionFunction == VersionFunction.VERSION_IS_EQUAL) && (!nvtVulnerableRangeVersion1.equals("")) ) {
-            report = report + ", vulnerable_range:" + "\"Equal to \" + " + nvtVulnerableRangeVersion1;        }
+            if (nvtVulnerableRangeVersion1.contains("\"")) {
+                String nvtVulnerableRangeVersion1Temp = nvtVulnerableRangeVersion1.replaceAll("\"", "");
+                report = report + ", vulnerable_range:" + "\"Equal to " + nvtVulnerableRangeVersion1Temp + "\"";
+            }
+            else {
+                report = report + ", vulnerable_range:" + "\"Equal to \" + " + nvtVulnerableRangeVersion1;
+            }
+        }
         if (!nvtPath.equals("")) {
             report = report + ", install_path:" + nvtPath;
         }

@@ -85,8 +85,8 @@ if(mysqlVer =~ "^(5\.5)")
 {
   if(version_in_range(version:mysqlVer, test_version:"5.5", test_version2:"5.5.37"))
   {
-    report = report_fixed_ver(installed_version:mysqlVer, vulnerable_range:"5.5" + " - " + "5.5.37");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:mysqlVer, vulnerable_range:"5.5 - 5.5.37");
+    security_message(port: sqlPort, data: report);
     exit(0);
   }
 }

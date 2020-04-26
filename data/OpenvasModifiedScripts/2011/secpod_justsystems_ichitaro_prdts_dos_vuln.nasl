@@ -76,7 +76,7 @@ if( version = get_app_version( cpe: ichitaro_CPE, nofork: TRUE ) )
   if( version_in_range( version: version, test_version: "2005", test_version2: "2011" ) )
   {
     report = report_fixed_ver( installed_version: version, fixed_version: "Apply the patch" );
-    report = report_fixed_ver(installed_version:version, vulnerable_range:"2005" + " - " + "2011");
+    report = report_fixed_ver(installed_version:version, vulnerable_range:"2005 - 2011");
     security_message(port: 0, data: report);
     exit( 0 );
   }

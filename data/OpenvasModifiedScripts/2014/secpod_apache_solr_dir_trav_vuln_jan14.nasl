@@ -77,6 +77,6 @@ if(!solrVer = get_app_version(cpe:CPE, port:solrPort)){
 if(version_is_less(version:solrVer, test_version:"4.6"))
 {
   report = report_fixed_ver(installed_version:solrVer, fixed_version:"4.6");
-  security_message(port: 0, data: report);
+  security_message(port: solrPort, data: report);
   exit(0);
 }

@@ -75,6 +75,6 @@ if(isnull(ncpaVer)){
 }
 
 if(version_is_less_equal(version:ncpaVer, test_version:"3.01.2")){
-  report = report_fixed_ver(installed_version:ncpaVer, vulnerable_range:"Less than or equal to " + "3.01.2");
-  security_message(port: 0, data: report);
+  report = report_fixed_ver(installed_version:ncpaVer, vulnerable_range:"Less than or equal to 3.01.2");
+  security_message(port: ncpaPort, data: report);
 }

@@ -65,7 +65,7 @@ if(!mozVer){
 }
 
 if(version_in_range(version:mozVer, test_version:"1.5", test_version2:"1.7")){
-  report = report_fixed_ver(installed_version:mozVer, vulnerable_range:"1.5" + " - " + "1.7");
+  report = report_fixed_ver(installed_version:mozVer, vulnerable_range:"1.5 - 1.7");
   security_message(port: 0, data: report);
 }
 

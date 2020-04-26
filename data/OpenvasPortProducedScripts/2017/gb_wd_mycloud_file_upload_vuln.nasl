@@ -1,14 +1,13 @@
 ###############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_wd_mycloud_file_upload_vuln.nasl 12561 2018-11-28 13:48:33Z cfischer $
 #
-# WD MyCloud File Upload Vulnerability
+# Western Digital My Cloud File Upload Vulnerability
 #
 # Authors:
 # Christian Kuersteiner <christian.kuersteiner@greenbone.net>
 #
 # Copyright:
-# Copyright (c) 2017 Greenbone Networks GmbH
+# Copyright (C) 2017 Greenbone Networks GmbH
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -30,8 +29,8 @@ CPE_PREFIX = "cpe:/o:wdc";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.140610");
-  script_version("$Revision: 12561 $");
-  script_tag(name:"last_modification", value:"$Date: 2018-11-28 14:48:33 +0100 (Wed, 28 Nov 2018) $");
+  script_version("2020-02-03T07:55:34+0000");
+  script_tag(name:"last_modification", value:"2020-02-03 07:55:34 +0000 (Mon, 03 Feb 2020)");
   script_tag(name:"creation_date", value:"2017-12-19 09:48:55 +0700 (Tue, 19 Dec 2017)");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
@@ -42,17 +41,17 @@ if(description)
 
   script_tag(name:"solution_type", value:"VendorFix");
 
-  script_name("WD MyCloud File Upload Vulnerability");
+  script_name("Western Digital My Cloud File Upload Vulnerability");
 
   script_category(ACT_GATHER_INFO);
 
-  script_copyright("This script is Copyright (C) 2017 Greenbone Networks GmbH");
+  script_copyright("Copyright (C) 2017 Greenbone Networks GmbH");
   script_family("Web application abuses");
   script_dependencies("gb_wd_mycloud_consolidation.nasl");
   script_require_ports("Services/www", 80);
   script_mandatory_keys("wd-mycloud/http/detected");
 
-  script_tag(name:"summary", value:"Western Digital MyCloud is prone to a file upload vulnerability.");
+  script_tag(name:"summary", value:"Western Digital My Cloud is prone to a file upload vulnerability.");
 
   script_tag(name:"insight", value:"The /web/jquery/uploader/multi_uploadify.php PHP script provides multipart
   upload functionality that is accessible without authentication and can be used to place a file anywhere on the

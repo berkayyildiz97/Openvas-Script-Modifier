@@ -92,7 +92,7 @@ foreach item (registry_enum_keys(key:key))
         if(httpVer != NULL)
         {
           if(version_is_less_equal(version:httpVer, test_version:"6.0.5.3")){
-            report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"Less than or equal to " + "6.0.5.3", install_path:exePath);
+            report = report_fixed_ver(installed_version:httpVer, vulnerable_range:"Less than or equal to 6.0.5.3", install_path:exePath);
             security_message(port: 0, data: report);
           }
         }

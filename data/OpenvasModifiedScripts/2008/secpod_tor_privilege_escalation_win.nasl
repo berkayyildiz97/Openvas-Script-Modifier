@@ -86,7 +86,7 @@ torVer = eregmatch(pattern:"Tor ([0-9.]+)", string:torVer);
 if(torVer[1] != NULL)
 {
   if(version_is_less_equal(version:torVer[1], test_version:"0.2.0.31")){
-    report = report_fixed_ver(installed_version:torVer[1], vulnerable_range:"Less than or equal to " + "0.2.0.31");
+    report = report_fixed_ver(installed_version:torVer[1], vulnerable_range:"Less than or equal to 0.2.0.31");
     security_message(port: 0, data: report);
   }
 }

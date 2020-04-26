@@ -98,7 +98,7 @@ foreach item (registry_enum_keys(key:key))
       {
         if(version_is_less_equal(version:afmVer, test_version:"4.3.1.0"))
         {
-          report = report_fixed_ver(installed_version:afmVer, vulnerable_range:"Less than or equal to " + "4.3.1.0", install_path:afmpath);
+          report = report_fixed_ver(installed_version:afmVer, vulnerable_range:"Less than or equal to 4.3.1.0", install_path:afmpath);
           security_message(port: 0, data: report);
           exit(0);
         }

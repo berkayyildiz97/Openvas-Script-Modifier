@@ -77,7 +77,7 @@ if(!RTVer = get_app_version(cpe:CPE, port:http_port)){
 
 if(version_in_range(version:RTVer, test_version:"4.2.0", test_version2:"4.2.2"))
 {
-  report = report_fixed_ver(installed_version:RTVer, vulnerable_range:"4.2.0" + " - " + "4.2.2");
-  security_message(port: 0, data: report);
+  report = report_fixed_ver(installed_version:RTVer, vulnerable_range:"4.2.0 - 4.2.2");
+  security_message(port: http_port, data: report);
   exit(0);
 }

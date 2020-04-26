@@ -68,6 +68,6 @@ if(!safariVer){
 }
 
 if(version_is_less_equal(version:safariVer, test_version:"3.525.21.0")){
-  report = report_fixed_ver(installed_version:safariVer, vulnerable_range:"Less than or equal to " + "3.525.21.0");
+  report = report_fixed_ver(installed_version:safariVer, vulnerable_range:"Less than or equal to 3.525.21.0");
   security_message(port: 0, data: report);
 }

@@ -76,6 +76,6 @@ if(!isnull(dmver[1]))
   #  Document Manager version < 4.0
   if(version_is_less(version:dmver[1], test_version:"4.0")){
     report = report_fixed_ver(installed_version:dmver[1], fixed_version:"4.0");
-    security_message(port: 0, data: report);
+    security_message(port: dmport, data: report);
   }
 }

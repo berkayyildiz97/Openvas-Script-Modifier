@@ -69,6 +69,6 @@ if(!flockVer){
 }
 
 if(version_in_range(version:flockVer, test_version:"3.0", test_version2:"3.0.0.4093")){
-  report = report_fixed_ver(installed_version:flockVer, vulnerable_range:"3.0" + " - " + "3.0.0.4093");
+  report = report_fixed_ver(installed_version:flockVer, vulnerable_range:"3.0 - 3.0.0.4093");
   security_message(port: 0, data: report);
 }

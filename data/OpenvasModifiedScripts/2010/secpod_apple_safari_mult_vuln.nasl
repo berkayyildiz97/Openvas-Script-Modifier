@@ -92,6 +92,6 @@ if(!safariVer){
 
 ## Included version 4.0.5 because exploit is working
 if(version_is_less_equal(version:safariVer, test_version:"5.31.22.7")){
-  report = report_fixed_ver(installed_version:safariVer, vulnerable_range:"Less than or equal to " + "5.31.22.7");
+  report = report_fixed_ver(installed_version:safariVer, vulnerable_range:"Less than or equal to 5.31.22.7");
   security_message(port: 0, data: report);
 }

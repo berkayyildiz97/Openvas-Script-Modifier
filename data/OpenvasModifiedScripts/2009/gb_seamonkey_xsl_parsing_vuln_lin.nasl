@@ -67,6 +67,6 @@ if(!smVer)
 
 if(version_in_range(version:smVer, test_version:"1.0",
                                    test_version2:"1.1.15")){
-  report = report_fixed_ver(installed_version:smVer, vulnerable_range:"1.0" + " - " + "1.1.15");
+  report = report_fixed_ver(installed_version:smVer, vulnerable_range:"1.0 - 1.1.15");
   security_message(port: 0, data: report);
 }

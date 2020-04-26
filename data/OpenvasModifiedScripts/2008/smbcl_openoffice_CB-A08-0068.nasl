@@ -76,7 +76,7 @@ openVer = get_kb_item("OpenOffice/Win/Ver");
 if(openVer != NULL)
 {
   if(version_is_less_equal(version:openVer, test_version:"2.4.1")){
-    report = report_fixed_ver(installed_version:openVer, vulnerable_range:"Less than or equal to " + "2.4.1");
+    report = report_fixed_ver(installed_version:openVer, vulnerable_range:"Less than or equal to 2.4.1");
     security_message(port: 0, data: report);
   }
 }

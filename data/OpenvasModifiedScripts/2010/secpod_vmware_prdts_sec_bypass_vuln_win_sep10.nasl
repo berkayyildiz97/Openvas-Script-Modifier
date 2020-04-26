@@ -80,7 +80,7 @@ if(vmpVer)
 {
   if(version_in_range(version:vmpVer, test_version:"3.0", test_version2:"3.1.1"))
   {
-    report = report_fixed_ver(installed_version:vmpVer, vulnerable_range:"3.0" + " - " + "3.1.1");
+    report = report_fixed_ver(installed_version:vmpVer, vulnerable_range:"3.0 - 3.1.1");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -90,7 +90,7 @@ vmwtnVer = get_kb_item("VMware/Workstation/Win/Ver");
 if(vmwtnVer)
 {
   if(version_in_range(version:vmwtnVer, test_version:"7.0", test_version2:"7.1.1")){
-    report = report_fixed_ver(installed_version:vmwtnVer, vulnerable_range:"7.0" + " - " + "7.1.1");
+    report = report_fixed_ver(installed_version:vmwtnVer, vulnerable_range:"7.0 - 7.1.1");
     security_message(port: 0, data: report);
   }
 }

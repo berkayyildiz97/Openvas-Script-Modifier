@@ -72,7 +72,7 @@ if(vmpVer)
 {
   if(version_in_range(version:vmpVer, test_version:"2.0", test_version2:"2.5.3"))
   {
-    report = report_fixed_ver(installed_version:vmpVer, vulnerable_range:"2.0" + " - " + "2.5.3");
+    report = report_fixed_ver(installed_version:vmpVer, vulnerable_range:"2.0 - 2.5.3");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -84,7 +84,7 @@ if(vmwtnVer)
 {
   if(version_in_range(version:vmwtnVer, test_version:"6.0", test_version2:"6.5.3"))
   {
-    report = report_fixed_ver(installed_version:vmwtnVer, vulnerable_range:"6.0" + " - " + "6.5.3");
+    report = report_fixed_ver(installed_version:vmwtnVer, vulnerable_range:"6.0 - 6.5.3");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -95,7 +95,7 @@ aceVer = get_kb_item("VMware/ACE/Win/Ver");
 if(aceVer)
 {
   if(version_in_range(version:aceVer, test_version:"2.0", test_version2:"2.5.3")){
-    report = report_fixed_ver(installed_version:aceVer, vulnerable_range:"2.0" + " - " + "2.5.3");
+    report = report_fixed_ver(installed_version:aceVer, vulnerable_range:"2.0 - 2.5.3");
     security_message(port: 0, data: report);
   }
 }

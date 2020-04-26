@@ -92,7 +92,7 @@ if(wme9Installed)
   {
     if(version_in_range(version:dllVer, test_version:"9.0",
                                         test_version2:"9.0.0.3373")){
-      report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"9.0" + " - " + "9.0.0.3373", install_path:wmePath);
+      report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"9.0 - 9.0.0.3373", install_path:wmePath);
       security_message(port: 0, data: report);
       exit(0);
     }

@@ -74,5 +74,5 @@ if(!ocsVer = get_version_from_kb(port:ocsPort,app:"OCS_Inventory_NG"))
 
 if(version_is_less(version:ocsVer, test_version:"2.0.2")){
   report = report_fixed_ver(installed_version:ocsVer, fixed_version:"2.0.2");
-  security_message(port: 0, data: report);
+  security_message(port: ocsPort, data: report);
 }

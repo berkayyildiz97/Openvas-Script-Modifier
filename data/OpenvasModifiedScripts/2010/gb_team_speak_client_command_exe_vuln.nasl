@@ -90,7 +90,7 @@ foreach item (registry_enum_keys(key:key))
     {
       if(version_is_equal(version:tsVer, test_version:"2.0.32.60"))
       {
-        report = report_fixed_ver(installed_version:tsVer, vulnerable_range:"Equal to " + "2.0.32.60");
+        report = report_fixed_ver(installed_version:tsVer, vulnerable_range:"Equal to 2.0.32.60");
         security_message(port: 0, data: report);
         exit(0);
       }

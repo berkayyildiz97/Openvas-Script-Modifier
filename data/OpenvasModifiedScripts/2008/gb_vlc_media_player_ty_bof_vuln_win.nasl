@@ -77,7 +77,7 @@ location = infos["location"];
 
 if( version_in_range( version: version, test_version: "0.9.0", test_version2: "0.9.4" ) ) {
   report = report_fixed_ver( installed_version: version, fixed_version: "0.9.5", install_path: location );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"0.9.0" + " - " + "0.9.4");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"0.9.0 - 0.9.4");
   security_message(port: 0, data: report);
   exit( 0 );
 }

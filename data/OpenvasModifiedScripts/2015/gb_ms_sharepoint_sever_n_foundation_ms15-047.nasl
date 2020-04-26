@@ -101,7 +101,7 @@ if(shareVer =~ "^12\..*")
     {
       if(version_in_range(version:dllVer, test_version:"12.0", test_version2:"12.0.6721.4999"))
       {
-        report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"12.0" + " - " + "12.0.6721.4999", install_path:path);
+        report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"12.0 - 12.0.6721.4999", install_path:path);
         security_message(port: 0, data: report);
         exit(0);
       }
@@ -123,7 +123,7 @@ if(shareVer =~ "^14\..*")
     {
       if(version_in_range(version:dllVer, test_version:"14.0", test_version2:"14.0.7149.4999"))
       {
-        report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"14.0" + " - " + "14.0.7149.4999", install_path:path);
+        report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"14.0 - 14.0.7149.4999", install_path:path);
         security_message(port: 0, data: report);
         exit(0);
       }
@@ -145,7 +145,7 @@ if(shareVer =~ "^15\..*")
     {
       if(version_in_range(version:dllVer, test_version:"15.0", test_version2:"15.0.4719.999"))
       {
-        report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"15.0" + " - " + "15.0.4719.999", install_path:path);
+        report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"15.0 - 15.0.4719.999", install_path:path);
         security_message(port: 0, data: report);
         exit(0);
       }

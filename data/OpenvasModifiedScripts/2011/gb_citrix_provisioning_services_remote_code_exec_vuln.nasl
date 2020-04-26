@@ -67,7 +67,7 @@ version = get_kb_item("Citrix/Provisioning/Services/Ver");
 if(version)
 {
   if(version_is_less_equal(version:version, test_version:"5.6.0")){
-    report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to " + "5.6.0");
+    report = report_fixed_ver(installed_version:version, vulnerable_range:"Less than or equal to 5.6.0");
     security_message(port: 0, data: report);
   }
 }

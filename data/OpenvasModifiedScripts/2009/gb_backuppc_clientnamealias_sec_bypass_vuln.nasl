@@ -68,7 +68,7 @@ if(backuppcVer)
 {
   if(version_in_range(version:backuppcVer, test_version:"3.0",
                                            test_version2:"3.1.0")){
-     report = report_fixed_ver(installed_version:backuppcVer, vulnerable_range:"3.0" + " - " + "3.1.0");
+     report = report_fixed_ver(installed_version:backuppcVer, vulnerable_range:"3.0 - 3.1.0");
      security_message(port: 0, data: report);
   }
 }

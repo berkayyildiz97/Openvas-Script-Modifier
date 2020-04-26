@@ -83,8 +83,8 @@ if(sqliteVer != NULL)
   if(sqliteVer[1] != NULL)
   {
     if(version_is_less_equal(version:sqliteVer[1], test_version:"2.2.2")){
-      report = report_fixed_ver(installed_version:sqliteVer[1], vulnerable_range:"Less than or equal to " + "2.2.2");
-      security_message(port: 0, data: report);
+      report = report_fixed_ver(installed_version:sqliteVer[1], vulnerable_range:"Less than or equal to 2.2.2");
+      security_message(port: lightNEasyPort, data: report);
       exit(0);
     }
   }
@@ -97,8 +97,8 @@ if(nodbVer != NULL)
   if(nodbVer[1] != NULL)
   {
     if(version_is_less_equal(version:nodbVer[1], test_version:"2.2.1")){
-      report = report_fixed_ver(installed_version:nodbVer[1], vulnerable_range:"Less than or equal to " + "2.2.1");
-      security_message(port: 0, data: report);
+      report = report_fixed_ver(installed_version:nodbVer[1], vulnerable_range:"Less than or equal to 2.2.1");
+      security_message(port: lightNEasyPort, data: report);
     }
   }
 }

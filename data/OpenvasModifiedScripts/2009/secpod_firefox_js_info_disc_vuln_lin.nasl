@@ -68,6 +68,6 @@ if(!firefoxVer){
 
 if(version_in_range(version:firefoxVer, test_version:"2.0",
                                         test_version2:"3.0.5")){
-  report = report_fixed_ver(installed_version:firefoxVer, vulnerable_range:"2.0" + " - " + "3.0.5");
+  report = report_fixed_ver(installed_version:firefoxVer, vulnerable_range:"2.0 - 3.0.5");
   security_message(port: 0, data: report);
 }

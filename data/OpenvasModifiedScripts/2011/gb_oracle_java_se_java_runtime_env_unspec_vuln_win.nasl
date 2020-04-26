@@ -65,7 +65,7 @@ if(jreVer)
 
   if(version_is_equal(version:jreVer, test_version:"1.7.0"))
   {
-    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"Equal to " + "1.7.0");
+    report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"Equal to 1.7.0");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -76,7 +76,7 @@ if(jdkVer)
 {
 
   if(version_is_equal(version:jdkVer, test_version:"1.7.0")) {
-    report = report_fixed_ver(installed_version:jdkVer, vulnerable_range:"Equal to " + "1.7.0");
+    report = report_fixed_ver(installed_version:jdkVer, vulnerable_range:"Equal to 1.7.0");
     security_message(port: 0, data: report);
   }
 }

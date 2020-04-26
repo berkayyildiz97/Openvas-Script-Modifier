@@ -95,7 +95,7 @@ ledgerVer = eregmatch(pattern:"^(.+) under (/.*)$", string:ledgerVer);
 if(ledgerVer[1] != NULL)
 {
   if(version_is_less_equal(version:ledgerVer[1], test_version:"2.8.24")){
-    report = report_fixed_ver(installed_version:ledgerVer[1], vulnerable_range:"Less than or equal to " + "2.8.24");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:ledgerVer[1], vulnerable_range:"Less than or equal to 2.8.24");
+    security_message(port: ledgerPort, data: report);
   }
 }

@@ -84,7 +84,7 @@ if( version = get_app_version( cpe: player_CPE, nofork: TRUE ) )
   {
     location = get_app_location( cpe: player_CPE );
     report = report_fixed_ver( installed_version: version, fixed_version: "3.1.4", install_path: location );
-    report = report_fixed_ver(installed_version:version, vulnerable_range:"3.1.0" + " - " + "3.1.3");
+    report = report_fixed_ver(installed_version:version, vulnerable_range:"3.1.0 - 3.1.3");
     security_message(port: 0, data: report);
     exit( 0 );
   }
@@ -96,7 +96,7 @@ if( version = get_app_version( cpe: workstation_CPE ) )
   {
     location = get_app_location( cpe: workstation_CPE );
     report = report_fixed_ver( installed_version: version, fixed_version: "7.1.4", install_path: location );
-    report = report_fixed_ver(installed_version:version, vulnerable_range:"7.1.0" + " - " + "7.1.3");
+    report = report_fixed_ver(installed_version:version, vulnerable_range:"7.1.0 - 7.1.3");
     security_message(port: 0, data: report);
     exit( 0 );
   }

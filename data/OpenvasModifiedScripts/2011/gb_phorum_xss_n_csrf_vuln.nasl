@@ -71,5 +71,5 @@ if(!phorumVer)
 
 if(version_is_less(version:phorumVer, test_version:"5.2.16")){
   report = report_fixed_ver(installed_version:phorumVer, fixed_version:"5.2.16");
-  security_message(port: 0, data: report);
+  security_message(port: phorumPort, data: report);
 }

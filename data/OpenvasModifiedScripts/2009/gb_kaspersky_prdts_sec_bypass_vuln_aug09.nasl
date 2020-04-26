@@ -65,7 +65,7 @@ kavVer = get_kb_item("Kaspersky/AV/Ver");
 if(kavVer != NULL) {
   if(version_in_range(version:kavVer, test_version:"9.0",
                                       test_version2:"9.0.0.462")) {
-    report = report_fixed_ver(installed_version:kavVer, vulnerable_range:"9.0" + " - " + "9.0.0.462");
+    report = report_fixed_ver(installed_version:kavVer, vulnerable_range:"9.0 - 9.0.0.462");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -76,7 +76,7 @@ kisVer = get_kb_item("Kaspersky/IntNetSec/Ver");
 if(kisVer != NULL) {
   if(version_in_range(version:kisVer, test_version:"9.0",
                                       test_version2:"9.0.0.462")) {
-    report = report_fixed_ver(installed_version:kisVer, vulnerable_range:"9.0" + " - " + "9.0.0.462");
+    report = report_fixed_ver(installed_version:kisVer, vulnerable_range:"9.0 - 9.0.0.462");
     security_message(port: 0, data: report);
     exit(0);
   }

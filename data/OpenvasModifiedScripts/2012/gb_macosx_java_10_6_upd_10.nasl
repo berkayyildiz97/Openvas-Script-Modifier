@@ -81,7 +81,7 @@ if("Mac OS X" >< osName)
   {
     if(isosxpkgvuln(fixed:"com.apple.pkg.JavaForMacOSX10.6", diff:"10"))
     {
-      report = report_fixed_ver(installed_version:osVer, vulnerable_range:"Equal to " + "10.6.8");
+      report = report_fixed_ver(installed_version:osVer, vulnerable_range:"Equal to 10.6.8");
       security_message(port: 0, data: report);
       exit(0);
     }

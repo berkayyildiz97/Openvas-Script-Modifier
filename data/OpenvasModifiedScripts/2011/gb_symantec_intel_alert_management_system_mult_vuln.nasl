@@ -73,6 +73,6 @@ if(!savceVer){
 }
 
 if(version_is_less_equal(version:savceVer,test_version:"10.1.8000.8")) {
-  report = report_fixed_ver(installed_version:savceVer, vulnerable_range:"Less than or equal to " + "10.1.8000.8");
+  report = report_fixed_ver(installed_version:savceVer, vulnerable_range:"Less than or equal to 10.1.8000.8");
   security_message(port: 0, data: report);
 }

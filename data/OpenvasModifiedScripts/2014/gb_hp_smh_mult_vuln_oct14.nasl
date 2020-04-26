@@ -88,6 +88,6 @@ if(!smhVer = get_app_version(cpe:CPE, port:smhPort)) exit(0);
 if(version_is_less(version:smhVer, test_version:"7.4"))
 {
   report = report_fixed_ver(installed_version:smhVer, fixed_version:"7.4");
-  security_message(port: 0, data: report);
+  security_message(port: smhPort, data: report);
   exit(0);
 }

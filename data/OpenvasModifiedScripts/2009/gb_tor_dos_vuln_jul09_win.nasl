@@ -74,7 +74,7 @@ if(!torVer){
 torVer = ereg_replace(pattern:"-", replace:".", string:torVer);
 
 if(version_in_range(version:torVer, test_version:"0.2", test_version2:"0.2.0.34.alpha")) {
-  report = report_fixed_ver(installed_version:torVer, vulnerable_range:"0.2" + " - " + "0.2.0.34.alpha");
+  report = report_fixed_ver(installed_version:torVer, vulnerable_range:"0.2 - 0.2.0.34.alpha");
   security_message(port: 0, data: report);
   exit(0);
 }

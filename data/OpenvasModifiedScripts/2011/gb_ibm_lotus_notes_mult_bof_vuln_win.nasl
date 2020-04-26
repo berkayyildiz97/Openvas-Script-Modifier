@@ -91,7 +91,7 @@ version = eregmatch(pattern:"(([0-9]+\.[0-9]+\.[0-9]+).?([0-9]+)?)", string: lot
 if(version[1] != NULL)
 {
   if(version_is_less_equal(version:version[1], test_version:"8.5.2.2")){
-    report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Less than or equal to " + "8.5.2.2");
+    report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Less than or equal to 8.5.2.2");
     security_message(port: 0, data: report);
   }
 }

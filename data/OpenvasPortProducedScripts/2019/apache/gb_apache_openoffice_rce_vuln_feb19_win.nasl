@@ -23,11 +23,11 @@ CPE = "cpe:/a:openoffice:openoffice.org";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.814827");
-  script_version("2019-05-17T10:45:27+0000");
+  script_version("2020-02-07T10:32:53+0000");
   script_cve_id("CVE-2018-16858");
   script_tag(name:"cvss_base", value:"7.5");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
-  script_tag(name:"last_modification", value:"2019-05-17 10:45:27 +0000 (Fri, 17 May 2019)");
+  script_tag(name:"last_modification", value:"2020-02-07 10:32:53 +0000 (Fri, 07 Feb 2020)");
   script_tag(name:"creation_date", value:"2019-02-07 11:33:21 +0530 (Thu, 07 Feb 2019)");
   script_tag(name:"qod_type", value:"registry");
   script_name("Apache OpenOffice Remote Code Execution Vulnerability Feb19 (Windows)");
@@ -43,15 +43,14 @@ if(description)
   script_tag(name:"impact", value:"Successful exploitation will allow remote
   attackers to execute arbitrary code and traverse directories.");
 
-  script_tag(name:"affected", value:"Apache OpenOffice Writer version 4.1.6 on
-  Windows.");
+  script_tag(name:"affected", value:"Apache OpenOffice Writer through version 4.1.7.");
 
-  script_tag(name:"solution", value:"Micropatch is available.");
+  script_tag(name:"solution", value:"No known solution was made available for at least one year since the disclosure
+  of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer
+  release, disable respective features, remove the product or replace the product by another one.");
 
-  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"solution_type", value:"WillNotFix");
   script_xref(name:"URL", value:"https://thehackernews.com/2019/02/hacking-libreoffice-openoffice.html");
-  script_xref(name:"URL", value:"https://www.openoffice.org/");
-  script_xref(name:"URL", value:"https://www.bleepingcomputer.com/news/security/openoffice-zero-day-code-execution-flaw-gets-free-micropatch/");
 
   script_category(ACT_GATHER_INFO);
   script_copyright("Copyright (C) 2019 Greenbone Networks GmbH");
@@ -66,12 +65,11 @@ include("host_details.inc");
 include("version_func.inc");
 
 if(!infos = get_app_version_and_location(cpe:CPE, exit_no_version:TRUE)) exit(0);
-opver = infos['version'];
-opath = infos['location'];
+ver = infos["version"];
+path = infos["location"];
 
-# 4.1.6 == 4.16.9790
-if(version_is_less_equal(version: opver, test_version: "4.16.9790")){
-  report = report_fixed_ver(installed_version:opver, fixed_version:"Install the micropatch", install_path:opath);
+if(version_is_less_equal(version:ver, test_version:"4.17.0")) {
+  report = report_fixed_ver(installed_version:ver, fixed_version:"None", install_path:path);
   if(!port = get_app_port(cpe: CPE)) port = 0;
   security_message(port:port, data:report);
   exit(0);

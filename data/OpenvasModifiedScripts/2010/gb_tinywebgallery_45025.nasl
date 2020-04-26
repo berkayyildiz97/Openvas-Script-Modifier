@@ -72,7 +72,7 @@ port = get_http_port(default:80);
 
 if(vers = get_version_from_kb(port:port,app:"TinyWebGallery")) {
   if(version_is_equal(version: vers, test_version: "1.8.2")) {
-    report = report_fixed_ver(installed_version:vers, vulnerable_range:"Equal to " + "1.8.2");
+    report = report_fixed_ver(installed_version:vers, vulnerable_range:"Equal to 1.8.2");
     security_message(port: port, data: report);
     exit(0);
   }

@@ -1,14 +1,13 @@
 ##############################################################################
 # OpenVAS Vulnerability Test
-# $Id: gb_wd_nas_rce_vuln.nasl 12584 2018-11-29 15:18:23Z cfischer $
 #
-# WD My Book Live / MyCloud NAS RCE Vulnerability
+# Western Digital My Book Live / My Cloud NAS RCE Vulnerability
 #
 # Authors:
 # Christian Kuersteiner <christian.kuersteiner@greenbone.net>
 #
 # Copyright:
-# Copyright (c) 2018 Greenbone Networks GmbH
+# Copyright (C) 2018 Greenbone Networks GmbH
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,8 +27,8 @@
 if (description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.141680");
-  script_version("$Revision: 12584 $");
-  script_tag(name:"last_modification", value:"$Date: 2018-11-29 16:18:23 +0100 (Thu, 29 Nov 2018) $");
+  script_version("2020-02-03T07:55:34+0000");
+  script_tag(name:"last_modification", value:"2020-02-03 07:55:34 +0000 (Mon, 03 Feb 2020)");
   script_tag(name:"creation_date", value:"2018-11-13 13:26:47 +0700 (Tue, 13 Nov 2018)");
   script_tag(name:"cvss_base", value:"10.0");
   script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
@@ -40,22 +39,22 @@ if (description)
 
   script_tag(name:"solution_type", value:"WillNotFix");
 
-  script_name("WD My Book Live / MyCloud NAS RCE Vulnerability");
+  script_name("Western Digital My Book Live / My Cloud NAS RCE Vulnerability");
 
   script_category(ACT_ATTACK);
 
-  script_copyright("This script is Copyright (C) 2018 Greenbone Networks GmbH");
+  script_copyright("Copyright (C) 2018 Greenbone Networks GmbH");
   script_family("Web application abuses");
   script_dependencies("gb_wd_mybook_live_detect.nasl", "gb_wd_mycloud_consolidation.nasl");
   script_require_ports("Services/www", 80);
   script_mandatory_keys("wd/product/detected");
 
-  script_tag(name:"summary", value:"WD MyBook Live and some models of WD MyCloud NAS contain a remotely
-exploitable vulnerability that lets anyone run commands on the device as root. The vulnerability exists in the
-language change and modify functionality in the REST API");
+  script_tag(name:"summary", value:"Western Digital MyBook Live and some models of Western Digital My Cloud NAS
+  contain a remotely exploitable vulnerability that lets anyone run commands on the device as root. The vulnerability
+  exists in the language change and modify functionality in the REST API");
 
   script_tag(name:"vuldetect", value:"Sends a crafted HTTP PUT request and checks if the 'id' command can be
-executed.");
+  executed.");
 
   script_tag(name:"solution", value:"No known solution was made available for at least one year since the disclosure
   of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer
@@ -89,8 +88,8 @@ cpe_list = make_list(
 if (!infos = get_all_app_ports_from_list(cpe_list: cpe_list, service:"www"))
   exit(0);
 
-port = infos['port'];
-cpe = infos['cpe'];
+port = infos["port"];
+cpe = infos["cpe"];
 
 if (!get_app_location(cpe: cpe, port: port, nofork: TRUE))
   exit(0);

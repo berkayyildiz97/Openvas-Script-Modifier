@@ -74,7 +74,7 @@ if(qtVer =~ "^6\.5.*")
   # QuickTime version < 6.5.2
   if(version_is_less_equal(version:qtVer, test_version:"6.5.2"))
   {
-    report = report_fixed_ver(installed_version:qtVer, vulnerable_range:"Less than or equal to " + "6.5.2");
+    report = report_fixed_ver(installed_version:qtVer, vulnerable_range:"Less than or equal to 6.5.2");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -84,7 +84,7 @@ if(qtVer =~ "^7\.6.*")
 {
   # QuickTime version < 7.6.7
   if(version_is_less_equal(version:qtVer, test_version:"7.6.7")){
-    report = report_fixed_ver(installed_version:qtVer, vulnerable_range:"Less than or equal to " + "7.6.7");
+    report = report_fixed_ver(installed_version:qtVer, vulnerable_range:"Less than or equal to 7.6.7");
     security_message(port: 0, data: report);
   }
 }

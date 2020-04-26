@@ -69,7 +69,7 @@ if(ctorrentVer != NULL)
 {
   if(version_is_equal(version:ctorrentVer, test_version:"1.3.4"))
   {
-    report = report_fixed_ver(installed_version:ctorrentVer, vulnerable_range:"Equal to " + "1.3.4");
+    report = report_fixed_ver(installed_version:ctorrentVer, vulnerable_range:"Equal to 1.3.4");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -79,7 +79,7 @@ ectorrentVer = get_kb_item("Enhanced/CTorrent/Ver");
 if(ectorrentVer != NULL)
 {
   if(version_is_less_equal(version:ectorrentVer, test_version:"3.3.2")){
-    report = report_fixed_ver(installed_version:ectorrentVer, vulnerable_range:"Less than or equal to " + "3.3.2");
+    report = report_fixed_ver(installed_version:ectorrentVer, vulnerable_range:"Less than or equal to 3.3.2");
     security_message(port: 0, data: report);
     exit(0);
   }

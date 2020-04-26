@@ -69,7 +69,7 @@ jreVer = get_app_version(cpe:"cpe:/a:sun:jre");
 if(jreVer)
 {
   if(version_in_range(version:jreVer, test_version:"1.6", test_version2:"1.6.0.19")){
-     report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.6" + " - " + "1.6.0.19");
+     report = report_fixed_ver(installed_version:jreVer, vulnerable_range:"1.6 - 1.6.0.19");
      security_message(port: 0, data: report);
   }
 }

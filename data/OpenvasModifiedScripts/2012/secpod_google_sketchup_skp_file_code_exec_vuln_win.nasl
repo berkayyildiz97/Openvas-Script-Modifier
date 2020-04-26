@@ -66,6 +66,6 @@ if(!gsVer){
 }
 
 if(version_is_less_equal(version:gsVer, test_version:"7.1.6860.0")){
-  report = report_fixed_ver(installed_version:gsVer, vulnerable_range:"Less than or equal to " + "7.1.6860.0");
+  report = report_fixed_ver(installed_version:gsVer, vulnerable_range:"Less than or equal to 7.1.6860.0");
   security_message(port: 0, data: report);
 }

@@ -65,6 +65,6 @@ if(ibmVer == NULL){
 }
 
 if(version_in_range(version:ibmVer, test_version:"9.5", test_version2:"9.5.0.8")){
-  report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"9.5" + " - " + "9.5.0.8");
+  report = report_fixed_ver(installed_version:ibmVer, vulnerable_range:"9.5 - 9.5.0.8");
   security_message(port: 0, data: report);
 }

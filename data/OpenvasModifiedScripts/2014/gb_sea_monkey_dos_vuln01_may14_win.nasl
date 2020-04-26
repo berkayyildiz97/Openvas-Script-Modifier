@@ -72,7 +72,7 @@ if(!smVer = get_app_version(cpe:CPE)){
 
 if(version_is_equal(version:smVer, test_version:"2.25"))
 {
-  report = report_fixed_ver(installed_version:smVer, vulnerable_range:"Equal to " + "2.25");
+  report = report_fixed_ver(installed_version:smVer, vulnerable_range:"Equal to 2.25");
   security_message(port: 0, data: report);
   exit(0);
 }

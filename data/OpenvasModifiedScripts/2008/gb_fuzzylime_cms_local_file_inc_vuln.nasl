@@ -82,7 +82,7 @@ foreach path (make_list_unique("/fuzzylime/_cms303", cgi_dirs(port:port)))
     if(cmsVer[1] != NULL)
     {
       if(version_is_less_equal(version:cmsVer[1], test_version:"3.03")){
-        report = report_fixed_ver(installed_version:cmsVer[1], vulnerable_range:"Less than or equal to " + "3.03");
+        report = report_fixed_ver(installed_version:cmsVer[1], vulnerable_range:"Less than or equal to 3.03");
         security_message(port: port, data: report);
         exit(0);
       }

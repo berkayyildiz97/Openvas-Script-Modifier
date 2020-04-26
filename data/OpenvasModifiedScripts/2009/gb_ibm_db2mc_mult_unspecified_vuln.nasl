@@ -80,7 +80,7 @@ dmcVer = eregmatch(pattern:"^(.+) under (/.*)$", string:dmcVer);
 if(dmcVer[1] != NULL)
 {
   if(version_is_less_equal(version:dmcVer[1], test_version:"2.2.24")){
-    report = report_fixed_ver(installed_version:dmcVer[1], vulnerable_range:"Less than or equal to " + "2.2.24");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:dmcVer[1], vulnerable_range:"Less than or equal to 2.2.24");
+    security_message(port: dmcPort, data: report);
   }
 }

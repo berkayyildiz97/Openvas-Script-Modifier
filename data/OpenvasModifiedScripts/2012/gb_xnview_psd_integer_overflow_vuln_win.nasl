@@ -64,7 +64,7 @@ if(isnull(xnviewVer)){
 }
 
 if(version_is_less_equal(version:xnviewVer, test_version:"1.98.2")){
-  report = report_fixed_ver(installed_version:xnviewVer, vulnerable_range:"Less than or equal to " + "1.98.2");
+  report = report_fixed_ver(installed_version:xnviewVer, vulnerable_range:"Less than or equal to 1.98.2");
   security_message(port: 0, data: report);
 }
 

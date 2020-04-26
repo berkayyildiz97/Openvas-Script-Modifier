@@ -86,6 +86,6 @@ if(!vlcVer){
 }
 
 if(version_in_range(version:vlcVer, test_version:"0.5.0", test_version2:"0.9.5")){
-  report = report_fixed_ver(installed_version:vlcVer, vulnerable_range:"0.5.0" + " - " + "0.9.5");
+  report = report_fixed_ver(installed_version:vlcVer, vulnerable_range:"0.5.0 - 0.9.5");
   security_message(port: 0, data: report);
 }

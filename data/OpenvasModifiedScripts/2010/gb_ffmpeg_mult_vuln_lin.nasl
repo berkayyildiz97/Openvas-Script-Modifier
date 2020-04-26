@@ -86,6 +86,6 @@ if(!ffmpegVer){
 }
 
 if(version_is_equal(version:ffmpegVer, test_version:"0.5")){
-  report = report_fixed_ver(installed_version:ffmpegVer, vulnerable_range:"Equal to " + "0.5");
+  report = report_fixed_ver(installed_version:ffmpegVer, vulnerable_range:"Equal to 0.5");
   security_message(port: 0, data: report);
 }

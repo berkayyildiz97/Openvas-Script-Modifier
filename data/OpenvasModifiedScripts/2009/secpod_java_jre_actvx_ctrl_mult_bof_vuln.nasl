@@ -105,7 +105,7 @@ if(version_in_range(version:jreVer, test_version:"1.6.0", test_version2:"1.6.0.1
   if(version_is_less_equal(version:dllVer, test_version:"6.0.130.3"))
   {
     if(is_killbit_set(clsid:"{CAFEEFAC-DEC7-0000-0000-ABCDEFFEDCBA}") == 0){
-      report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"Less than or equal to " + "6.0.130.3");
+      report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"Less than or equal to 6.0.130.3");
       security_message(port: 0, data: report);
       exit(0);
     }

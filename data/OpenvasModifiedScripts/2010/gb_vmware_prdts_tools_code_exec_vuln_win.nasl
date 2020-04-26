@@ -71,7 +71,7 @@ if(vmplayerVer != NULL )
 {
   if(version_in_range(version:vmplayerVer, test_version:"2.5", test_version2:"2.5.3"))
   {
-    report = report_fixed_ver(installed_version:vmplayerVer, vulnerable_range:"2.5" + " - " + "2.5.3");
+    report = report_fixed_ver(installed_version:vmplayerVer, vulnerable_range:"2.5 - 2.5.3");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -82,7 +82,7 @@ if(vmworkstnVer != NULL)
 {
   if(version_in_range(version:vmworkstnVer, test_version:"6.5", test_version2:"6.5.3"))
   {
-    report = report_fixed_ver(installed_version:vmworkstnVer, vulnerable_range:"6.5" + " - " + "6.5.3");
+    report = report_fixed_ver(installed_version:vmworkstnVer, vulnerable_range:"6.5 - 6.5.3");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -96,7 +96,7 @@ if(!aceVer)
   if(aceVer)
   {
     if(version_in_range(version:aceVer, test_version:"2.5", test_version2:"2.5.3")){
-      report = report_fixed_ver(installed_version:aceVer, vulnerable_range:"2.5" + " - " + "2.5.3");
+      report = report_fixed_ver(installed_version:aceVer, vulnerable_range:"2.5 - 2.5.3");
       security_message(port: 0, data: report);
     }
   }
@@ -107,7 +107,7 @@ vmserVer = get_kb_item("VMware/Server/Win/Ver");
 if(vmserVer)
 {
   if(version_in_range(version:vmserVer, test_version:"2.0", test_version2:"2.0.1")){
-    report = report_fixed_ver(installed_version:vmserVer, vulnerable_range:"2.0" + " - " + "2.0.1");
+    report = report_fixed_ver(installed_version:vmserVer, vulnerable_range:"2.0 - 2.0.1");
     security_message(port: 0, data: report);
   }
 }

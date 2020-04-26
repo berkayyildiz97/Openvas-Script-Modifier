@@ -90,7 +90,7 @@ if(risingDisplayName =~ "Rising AntiVirus Software (2008|2009|2010)")
   {
     if(version_in_range(version:risingDriverVer, test_version:"20.0",
                                                  test_version2:"22.0.0.5")){
-      report = report_fixed_ver(installed_version:risingDriverVer, vulnerable_range:"20.0" + " - " + "22.0.0.5");
+      report = report_fixed_ver(installed_version:risingDriverVer, vulnerable_range:"20.0 - 22.0.0.5");
       security_message(port: 0, data: report);
     }
   }

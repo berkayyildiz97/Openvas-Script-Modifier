@@ -72,6 +72,6 @@ if(rpVer == NULL){
 }
 
 if(version_is_less_equal(version:rpVer, test_version:"11.0.0.477")){
-  report = report_fixed_ver(installed_version:rpVer, vulnerable_range:"Less than or equal to " + "11.0.0.477");
+  report = report_fixed_ver(installed_version:rpVer, vulnerable_range:"Less than or equal to 11.0.0.477");
   security_message(port: 0, data: report);
 }

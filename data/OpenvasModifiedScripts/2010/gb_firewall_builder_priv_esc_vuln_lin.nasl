@@ -68,6 +68,6 @@ if(isnull(fwbuildVer)){
 }
 
 if(version_in_range(version:fwbuildVer, test_version:"3.0.4", test_version2:"3.0.6" )){
-   report = report_fixed_ver(installed_version:fwbuildVer, vulnerable_range:"3.0.4" + " - " + "3.0.6");
+   report = report_fixed_ver(installed_version:fwbuildVer, vulnerable_range:"3.0.4 - 3.0.6");
    security_message(port: 0, data: report);
 }

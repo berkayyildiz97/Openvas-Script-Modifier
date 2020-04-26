@@ -70,6 +70,6 @@ if(!eDirVer)
   exit(0);
 
 if(version_in_range(version:eDirVer, test_version:"8.8", test_version2:"8.8.SP4")){
-  report = report_fixed_ver(installed_version:eDirVer, vulnerable_range:"8.8" + " - " + "8.8.SP4");
+  report = report_fixed_ver(installed_version:eDirVer, vulnerable_range:"8.8 - 8.8.SP4");
   security_message(port: 0, data: report);
 }

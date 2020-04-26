@@ -72,6 +72,6 @@ if(!vmVer[1])
   exit(0);
 
 if(version_is_equal(version:vmVer[1], test_version:"4.0.0")){
-  report = report_fixed_ver(installed_version:vmVer[1], vulnerable_range:"Equal to " + "4.0.0");
+  report = report_fixed_ver(installed_version:vmVer[1], vulnerable_range:"Equal to 4.0.0");
   security_message(port: 0, data: report);
 }

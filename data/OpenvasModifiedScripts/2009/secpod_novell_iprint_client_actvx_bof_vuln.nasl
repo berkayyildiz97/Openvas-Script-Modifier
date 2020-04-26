@@ -78,7 +78,7 @@ iprintVer = eregmatch(pattern:"v([0-9.]+)", string:ver);
 if(iprintVer[1] != NULL)
 {
   if(version_is_less_equal(version:iprintVer[1], test_version:"4.38")){
-    report = report_fixed_ver(installed_version:iprintVer[1], vulnerable_range:"Less than or equal to " + "4.38");
+    report = report_fixed_ver(installed_version:iprintVer[1], vulnerable_range:"Less than or equal to 4.38");
     security_message(port: 0, data: report);
   }
 }

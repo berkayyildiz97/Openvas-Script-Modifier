@@ -80,7 +80,7 @@ foreach dir( make_list_unique( "/seportal", cgi_dirs( port:port ) ) ) {
     if(sepVer[1] != NULL)
     {
       if(version_is_less_equal(version:sepVer[1], test_version:"2.4")){
-        report = report_fixed_ver(installed_version:sepVer[1], vulnerable_range:"Less than or equal to " + "2.4");
+        report = report_fixed_ver(installed_version:sepVer[1], vulnerable_range:"Less than or equal to 2.4");
         security_message(port: port, data: report);
       }
     }

@@ -79,7 +79,7 @@ foreach bin(paths) {
   if(!isnull(lftVer[1])) {
     if(version_in_range(version:lftVer[1], test_version:"3.0", test_version2:"3.2")) {
       report = report_fixed_ver(installed_version:lftVer[1], fixed_version:"3.3");
-      report = report_fixed_ver(installed_version:lftVer[1], vulnerable_range:"3.0" + " - " + "3.2");
+      report = report_fixed_ver(installed_version:lftVer[1], vulnerable_range:"3.0 - 3.2");
       security_message(port: 0, data: report);
       ssh_close_connection();
       exit(0);

@@ -90,7 +90,7 @@ if(jrunVer =~ "^4")
 
   if(version_in_range(version:jrunVer, test_version:"4.0",
                                       test_version2:"4.0.7.43085")){
-    report = report_fixed_ver(installed_version:jrunVer, vulnerable_range:"4.0" + " - " + "4.0.7.43085");
+    report = report_fixed_ver(installed_version:jrunVer, vulnerable_range:"4.0 - 4.0.7.43085");
     security_message(port: 0, data: report);
   }
 }

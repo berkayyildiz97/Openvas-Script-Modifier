@@ -81,7 +81,7 @@ if(!luaVer = get_app_version(cpe:CPE, port:luaPort)){
 
 if(version_in_range(version:luaVer, test_version:"2.0", test_version2:"2.3.2.109"))
 {
-  report = report_fixed_ver(installed_version:luaVer, vulnerable_range:"2.0" + " - " + "2.3.2.109");
+  report = report_fixed_ver(installed_version:luaVer, vulnerable_range:"2.0 - 2.3.2.109");
   security_message(port: luaPort, data: report);
   exit(0);
 }

@@ -73,7 +73,7 @@ if(ffVer)
 {
   if(version_in_range(version:ffVer, test_version:"3.6.0", test_version2:"3.6.10"))
   {
-    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"3.6.0" + " - " + "3.6.10");
+    report = report_fixed_ver(installed_version:ffVer, vulnerable_range:"3.6.0 - 3.6.10");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -83,7 +83,7 @@ tbVer = get_kb_item("Thunderbird/Win/Ver");
 if(tbVer)
 {
   if(version_in_range(version:tbVer, test_version:"3.1.0", test_version2:"3.1.5")){
-    report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"3.1.0" + " - " + "3.1.5");
+    report = report_fixed_ver(installed_version:tbVer, vulnerable_range:"3.1.0 - 3.1.5");
     security_message(port: 0, data: report);
   }
 }

@@ -86,7 +86,7 @@ foreach dir (make_list_unique("/", "/glFusion", "/glfusion/public_html", cgi_dir
     {
       if(version_is_less_equal(version:ver[1], test_version:"1.1.2"))
       {
-        report = report_fixed_ver(installed_version:ver[1], vulnerable_range:"Less than or equal to " + "1.1.2");
+        report = report_fixed_ver(installed_version:ver[1], vulnerable_range:"Less than or equal to 1.1.2");
         security_message(port: port, data: report);
         exit(0);
       }

@@ -77,6 +77,6 @@ if(ortroVer[1] != NULL)
 {
   if(version_is_less(version:ortroVer[1], test_version:"1.3.4")){
     report = report_fixed_ver(installed_version:ortroVer[1], fixed_version:"1.3.4");
-    security_message(port: 0, data: report);
+    security_message(port: ortroPort, data: report);
   }
 }

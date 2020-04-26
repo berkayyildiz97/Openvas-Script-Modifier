@@ -74,7 +74,7 @@ if(acrobatVer =~ "^11\.0")
 {
   if(version_in_range(version:acrobatVer, test_version:"11.0.0", test_version2:"11.0.04"))
   {
-    report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"11.0.0" + " - " + "11.0.04");
+    report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"11.0.0 - 11.0.04");
     security_message(port: 0, data: report);
     exit(0);
   }

@@ -73,7 +73,7 @@ CPE = "cpe:/a:adobe:acrobat_reader";
 if(readerVer = get_app_version(cpe:CPE, nofork:TRUE))
 {
   if(version_is_less_equal(version:readerVer, test_version:"9.3.4")){
-    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Less than or equal to " + "9.3.4");
+    report = report_fixed_ver(installed_version:readerVer, vulnerable_range:"Less than or equal to 9.3.4");
     security_message(port: 0, data: report);
   }
 }
@@ -82,7 +82,7 @@ CPE = "cpe:/a:adobe:acrobat";
 if(acrobatVer = get_app_version(cpe:CPE, nofork:TRUE))
 {
   if(version_is_less_equal(version:acrobatVer, test_version:"9.3.4")){
-    report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"Less than or equal to " + "9.3.4");
+    report = report_fixed_ver(installed_version:acrobatVer, vulnerable_range:"Less than or equal to 9.3.4");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -92,7 +92,7 @@ CPE = "cpe:/a:adobe:flash_player";
 if(flashVer = get_app_version(cpe:CPE))
 {
   if(version_is_less_equal(version:flashVer, test_version:"10.1.82.76")){
-    report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to " + "10.1.82.76");
+    report = report_fixed_ver(installed_version:flashVer, vulnerable_range:"Less than or equal to 10.1.82.76");
     security_message(port: 0, data: report);
   }
 }

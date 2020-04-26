@@ -69,7 +69,7 @@ winGateVer = get_kb_item("WinGate/Ver");
 if(!winGateVer) exit(0);
 
 if(version_in_range(version:winGateVer, test_version:"6.0", test_version2:"6.5.2.1217")){
-  report = report_fixed_ver(installed_version:winGateVer, vulnerable_range:"6.0" + " - " + "6.5.2.1217");
+  report = report_fixed_ver(installed_version:winGateVer, vulnerable_range:"6.0 - 6.5.2.1217");
   security_message(port: 0, data: report);
 }
 

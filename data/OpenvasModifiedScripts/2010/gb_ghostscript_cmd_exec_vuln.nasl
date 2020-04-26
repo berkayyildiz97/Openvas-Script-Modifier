@@ -72,6 +72,6 @@ if(!ghostVer){
 }
 
 if(version_is_less_equal(version:ghostVer, test_version:"8.71")){
-   report = report_fixed_ver(installed_version:ghostVer, vulnerable_range:"Less than or equal to " + "8.71");
+   report = report_fixed_ver(installed_version:ghostVer, vulnerable_range:"Less than or equal to 8.71");
    security_message(port: 0, data: report);
 }

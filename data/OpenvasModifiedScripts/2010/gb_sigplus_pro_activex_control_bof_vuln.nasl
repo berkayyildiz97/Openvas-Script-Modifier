@@ -69,7 +69,7 @@ sigVer = get_kb_item("SigPlus/Ver");
 if(sigVer)
 {
   if(version_is_equal(version:sigVer, test_version:"3.74") ){
-    report = report_fixed_ver(installed_version:sigVer, vulnerable_range:"Equal to " + "3.74");
+    report = report_fixed_ver(installed_version:sigVer, vulnerable_range:"Equal to 3.74");
     security_message(port: 0, data: report);
   }
 }

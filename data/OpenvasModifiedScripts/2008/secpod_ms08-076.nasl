@@ -118,17 +118,17 @@ if(dllVer)
       {
         if(version_in_range(version:dllVer, test_version:"9.0",
                             test_version2:"9.0.0.3267")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"9.0" + " - " + "9.0.0.3267", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"9.0 - 9.0.0.3267", install_path:sysPath);
           security_message(port: 0, data: report);
         }
         else if(version_in_range(version:dllVer, test_version:"10.0",
                                  test_version2:"10.0.0.3702")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0" + " - " + "10.0.0.3702", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0 - 10.0.0.3702", install_path:sysPath);
           security_message(port: 0, data: report);
         }
         else if(version_in_range(version:dllVer, test_version:"11.0",
                                  test_version2:"11.0.5721.5250")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.5721.5250", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0 - 11.0.5721.5250", install_path:sysPath);
           security_message(port: 0, data: report);
         }
       }
@@ -136,17 +136,17 @@ if(dllVer)
       {
         if(version_in_range(version:dllVer, test_version:"9.0",
                             test_version2:"9.0.0.4503")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"9.0" + " - " + "9.0.0.4503", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"9.0 - 9.0.0.4503", install_path:sysPath);
           security_message(port: 0, data: report);
         }
         else if(version_in_range(version:dllVer, test_version:"10.0",
                                  test_version2:"10.0.0.3702")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0" + " - " + "10.0.0.3702", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0 - 10.0.0.3702", install_path:sysPath);
           security_message(port: 0, data: report);
         }
         else if(version_in_range(version:dllVer, test_version:"11.0",
                                  test_version2:"11.0.5721.5250")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.5721.5250", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0 - 11.0.5721.5250", install_path:sysPath);
           security_message(port: 0, data: report);
         }
       }
@@ -160,7 +160,7 @@ if(dllVer)
       {
         if(version_in_range(version:dllVer, test_version:"10.0",
                             test_version2:"10.0.0.3710")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0" + " - " + "10.0.0.3710", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0 - 10.0.0.3710", install_path:sysPath);
           security_message(port: 0, data: report);
         }
       }
@@ -168,7 +168,7 @@ if(dllVer)
       {
         if(version_in_range(version:dllVer, test_version:"10.0",
                             test_version2:"10.0.0.4000")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0" + " - " + "10.0.0.4000", install_path:sysPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"10.0 - 10.0.0.4000", install_path:sysPath);
           security_message(port: 0, data: report);
         }
       }
@@ -193,7 +193,7 @@ if(dllVer)
       if("Service Pack 1" >< SP)
       {
         if(version_in_range(version:dllVer, test_version:"11.0", test_version2:"11.0.6001.7000")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7000", install_path:dllPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0 - 11.0.6001.7000", install_path:dllPath);
           security_message(port: 0, data: report);
         }
          exit(0);
@@ -206,7 +206,7 @@ if(dllVer)
       if("Service Pack 1" >< SP)
       {
         if(version_in_range(version:dllVer, test_version:"11.0", test_version2:"11.0.6001.7000")){
-          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0" + " - " + "11.0.6001.7000", install_path:dllPath);
+          report = report_fixed_ver(installed_version:dllVer, vulnerable_range:"11.0 - 11.0.6001.7000", install_path:dllPath);
           security_message(port: 0, data: report);
         }
         exit(0);

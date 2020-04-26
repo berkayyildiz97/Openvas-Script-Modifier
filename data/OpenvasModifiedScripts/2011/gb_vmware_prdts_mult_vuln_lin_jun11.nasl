@@ -87,7 +87,7 @@ if(vmpVer)
 {
   if(version_in_range(version:vmpVer, test_version:"3.1.0", test_version2:"3.1.3"))
   {
-    report = report_fixed_ver(installed_version:vmpVer, vulnerable_range:"3.1.0" + " - " + "3.1.3");
+    report = report_fixed_ver(installed_version:vmpVer, vulnerable_range:"3.1.0 - 3.1.3");
     security_message(port: 0, data: report);
     exit(0);
   }
@@ -98,7 +98,7 @@ vmwtnVer = get_kb_item("VMware/Workstation/Linux/Ver");
 if(vmwtnVer)
 {
   if(version_in_range(version:vmwtnVer, test_version:"7.1.0", test_version2:"7.1.3")){
-    report = report_fixed_ver(installed_version:vmwtnVer, vulnerable_range:"7.1.0" + " - " + "7.1.3");
+    report = report_fixed_ver(installed_version:vmwtnVer, vulnerable_range:"7.1.0 - 7.1.3");
     security_message(port: 0, data: report);
   }
 }
@@ -108,7 +108,7 @@ vmesx = get_kb_item("VMware/Esx/Linux/Ver");
 if(vmesx)
 {
   if(version_in_range(version:vmesx, test_version:"3.0.3", test_version2:"4.1.0")){
-    report = report_fixed_ver(installed_version:vmesx, vulnerable_range:"3.0.3" + " - " + "4.1.0");
+    report = report_fixed_ver(installed_version:vmesx, vulnerable_range:"3.0.3 - 4.1.0");
     security_message(port: 0, data: report);
   }
 }

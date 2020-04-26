@@ -75,7 +75,7 @@ if(wordviewVer)
   ## Wordview.exe will update for https://support.microsoft.com/en-us/kb/3055054
   if(version_in_range(version:wordviewVer, test_version:"11.0", test_version2:"11.0.8419"))
   {
-    report = report_fixed_ver(installed_version:wordviewVer, vulnerable_range:"11.0" + " - " + "11.0.8419");
+    report = report_fixed_ver(installed_version:wordviewVer, vulnerable_range:"11.0 - 11.0.8419");
     security_message(port: 0, data: report);
     exit(0);
   }

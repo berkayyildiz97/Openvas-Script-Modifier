@@ -70,7 +70,7 @@ if( ! version = get_app_version( cpe:CPE ) )
 # IBM DB2 9.1 FP8 => 9.1.800.1023
 if( version_in_range( version:version, test_version:"9.1", test_version2:"9.1.800.1022" ) ) {
   report = report_fixed_ver( installed_version:version, fixed_version:"9.1 Fixpak 8" );
-  report = report_fixed_ver(installed_version:version, vulnerable_range:"9.1" + " - " + "9.1.800.1022");
+  report = report_fixed_ver(installed_version:version, vulnerable_range:"9.1 - 9.1.800.1022");
   security_message(port: 0, data: report);
   exit( 0 );
 }

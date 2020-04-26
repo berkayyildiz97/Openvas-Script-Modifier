@@ -71,6 +71,6 @@ if(!bbdVer){
 }
 
 if(version_in_range(version:bbdVer, test_version:"4.7", test_version2:"6.0.0.43")){
-  report = report_fixed_ver(installed_version:bbdVer, vulnerable_range:"4.7" + " - " + "6.0.0.43");
+  report = report_fixed_ver(installed_version:bbdVer, vulnerable_range:"4.7 - 6.0.0.43");
   security_message(port: 0, data: report);
 }

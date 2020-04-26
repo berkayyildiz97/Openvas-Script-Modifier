@@ -76,7 +76,7 @@ version = eregmatch(pattern:"hybrid-([0-9.]+)", string: banner);
 if(isnull(version[1]))exit(0);
 
 if(version_is_less_equal(version: version[1], test_version: "7.2.2")) {
-  report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Less than or equal to " + "7.2.2");
+  report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Less than or equal to 7.2.2");
   security_message(port: port, data: report);
   exit(0);
 }

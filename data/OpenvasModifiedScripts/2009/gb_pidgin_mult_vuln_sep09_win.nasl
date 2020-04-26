@@ -66,6 +66,6 @@ if(!pidginVer)
   exit(0);
 
 if(version_is_equal(version:pidginVer, test_version:"2.6.0")){
-  report = report_fixed_ver(installed_version:pidginVer, vulnerable_range:"Equal to " + "2.6.0");
+  report = report_fixed_ver(installed_version:pidginVer, vulnerable_range:"Equal to 2.6.0");
   security_message(port: 0, data: report);
 }

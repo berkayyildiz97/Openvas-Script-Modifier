@@ -68,7 +68,7 @@ hpdsVer = get_kb_item("www/" + hpdsPort+ "/HP/Diagnostics_Server/Ver");
 if(hpdsVer)
 {
   if(version_is_equal(version:hpdsVer, test_version:"9.00")){
-    report = report_fixed_ver(installed_version:hpdsVer, vulnerable_range:"Equal to " + "9.00");
+    report = report_fixed_ver(installed_version:hpdsVer, vulnerable_range:"Equal to 9.00");
     security_message(port: hpdsPort, data: report);
   }
 }

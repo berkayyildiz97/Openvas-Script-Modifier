@@ -23,12 +23,12 @@ CPE = "cpe:/a:adobe:illustrator";
 if(description)
 {
   script_oid("1.3.6.1.4.1.25623.1.0.816613");
-  script_version("2020-01-17T10:38:45+0000");
+  script_version("2020-02-04T09:04:16+0000");
   script_cve_id("CVE-2020-3710", "CVE-2020-3711", "CVE-2020-3712", "CVE-2020-3713",
                 "CVE-2020-3714");
-  script_tag(name:"cvss_base", value:"10.0");
-  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
-  script_tag(name:"last_modification", value:"2020-01-17 10:38:45 +0000 (Fri, 17 Jan 2020)");
+  script_tag(name:"cvss_base", value:"9.3");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
+  script_tag(name:"last_modification", value:"2020-02-04 09:04:16 +0000 (Tue, 04 Feb 2020)");
   script_tag(name:"creation_date", value:"2020-01-16 15:20:54 +0530 (Thu, 16 Jan 2020)");
   script_tag(name:"qod_type", value:"registry");
   script_name("Adobe Illustrator Multiple Vulnerabilities-Windows (apsb20-03)");

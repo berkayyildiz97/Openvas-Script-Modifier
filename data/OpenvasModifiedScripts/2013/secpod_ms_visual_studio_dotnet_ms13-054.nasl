@@ -76,7 +76,7 @@ if(vsPath)
   {
     if(version_in_range(version:vsVer, test_version:"10.0", test_version2:"10.0.6884.0"))
     {
-      report = report_fixed_ver(installed_version:vsVer, vulnerable_range:"10.0" + " - " + "10.0.6884.0", install_path:vsPath);
+      report = report_fixed_ver(installed_version:vsVer, vulnerable_range:"10.0 - 10.0.6884.0", install_path:vsPath);
       security_message(port: 0, data: report);
       exit(0);
     }

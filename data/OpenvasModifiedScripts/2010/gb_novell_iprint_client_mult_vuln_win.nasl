@@ -103,7 +103,7 @@ if(version_is_less_equal(version:iPrintVer, test_version:"5.40")) {
   if(ocxSize) {
     killbit = "{36723f97-7aa0-11d4-8919-FF2D71D0D32C}";
     if(is_killbit_set(clsid:killbit) == 0){
-      report = report_fixed_ver(installed_version:iPrintVer, vulnerable_range:"Less than or equal to " + "5.40", install_path:path);
+      report = report_fixed_ver(installed_version:iPrintVer, vulnerable_range:"Less than or equal to 5.40", install_path:path);
       security_message(port: 0, data: report);
       exit(0);
     }

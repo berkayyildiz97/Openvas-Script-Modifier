@@ -96,7 +96,7 @@ foreach item (entries)
     if(zimVer[1] != NULL)
     {
       if(version_is_less_equal(version:zimVer[1], test_version:"2.1")){
-        report = report_fixed_ver(installed_version:zimVer[1], vulnerable_range:"Less than or equal to " + "2.1");
+        report = report_fixed_ver(installed_version:zimVer[1], vulnerable_range:"Less than or equal to 2.1");
         security_message(port: 0, data: report);
       }
     }

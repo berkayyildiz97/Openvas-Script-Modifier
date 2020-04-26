@@ -76,8 +76,8 @@ if(vers = get_version_from_kb(port:port, app:"hp_openview_insight"))
   if(version[1])
   {
     if(version_is_less_equal(version:version[1], test_version:"5.41.002")){
-      report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Less than or equal to " + "5.41.002");
-      security_message(port: 0, data: report);
+      report = report_fixed_ver(installed_version:version[1], vulnerable_range:"Less than or equal to 5.41.002");
+      security_message(port: port, data: report);
     }
   }
 }

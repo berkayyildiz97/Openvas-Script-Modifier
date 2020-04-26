@@ -65,6 +65,6 @@ if(!appVer)
   exit(0);
 
 if(version_is_less_equal(version:appVer, test_version:"5.2")){
-  report = report_fixed_ver(installed_version:appVer, vulnerable_range:"Less than or equal to " + "5.2");
+  report = report_fixed_ver(installed_version:appVer, vulnerable_range:"Less than or equal to 5.2");
   security_message(port: 0, data: report);
 }

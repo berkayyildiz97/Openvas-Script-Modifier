@@ -69,6 +69,6 @@ if(!rubyVer)
 
 if(version_in_range(version:rubyVer, test_version:"1.9.1",
                                      test_version2:"1.9.1.p375")){
-  report = report_fixed_ver(installed_version:rubyVer, vulnerable_range:"1.9.1" + " - " + "1.9.1.p375");
+  report = report_fixed_ver(installed_version:rubyVer, vulnerable_range:"1.9.1 - 1.9.1.p375");
   security_message(port: 0, data: report);
 }

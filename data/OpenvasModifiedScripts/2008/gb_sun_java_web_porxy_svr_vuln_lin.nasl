@@ -92,8 +92,8 @@ if(banner =~ "Server: Sun-Java-System-Web-Proxy-Server/4\.0") {
     if(sunVer)
     { # Grep for versions prior to 4.0.8
       if(version_in_range(version:sunVer[1], test_version:"4.0", test_version2:"4.0.7")){
-        report = report_fixed_ver(installed_version:sunVer[1], vulnerable_range:"4.0" + " - " + "4.0.7");
-        security_message(port: 0, data: report);
+        report = report_fixed_ver(installed_version:sunVer[1], vulnerable_range:"4.0 - 4.0.7");
+        security_message(port: sunPort, data: report);
       }
       ssh_close_connection();
       exit(0);

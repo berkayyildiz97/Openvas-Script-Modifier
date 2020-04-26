@@ -76,7 +76,7 @@ if(wordviewVer)
 {
   if(version_in_range(version:wordviewVer, test_version:"11.0", test_version2:"11.0.8412"))
   {
-    report = report_fixed_ver(installed_version:wordviewVer, vulnerable_range:"11.0" + " - " + "11.0.8412");
+    report = report_fixed_ver(installed_version:wordviewVer, vulnerable_range:"11.0 - 11.0.8412");
     security_message(port: 0, data: report);
     exit(0);
   }

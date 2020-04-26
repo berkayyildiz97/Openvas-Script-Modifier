@@ -68,7 +68,7 @@ if(mysvrVer[1] != NULL)
 {
   # MyServer Version 0.8.11 and prior
   if(version_is_less_equal(version:mysvrVer[1], test_version:"0.8.11")){
-    report = report_fixed_ver(installed_version:mysvrVer[1], vulnerable_range:"Less than or equal to " + "0.8.11");
-    security_message(port: 0, data: report);
+    report = report_fixed_ver(installed_version:mysvrVer[1], vulnerable_range:"Less than or equal to 0.8.11");
+    security_message(port: port, data: report);
   }
 }
