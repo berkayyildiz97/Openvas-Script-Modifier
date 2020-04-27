@@ -10,9 +10,7 @@ public class MainNvtPortProducer {
             //If you have already dumped port_producible_nvt_oid_list for given outputDirectoryPath, make below line comment for faster output.
             nvtProvider.dumpPortProducibleNvtFileList(nvtDirectoryPath);
             nvtPortProducer.producePortForSecurityMessage(nvtDirectoryPath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

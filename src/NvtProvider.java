@@ -14,6 +14,14 @@ public class NvtProvider {
 
     public final static String portProducibleNvtFileListPath = "data/port_producible_nvt_oid_list";
 
+    private final Pattern patternVersionIsLess = Pattern.compile("if\\(version_is_less\\(version:([^,]*)");
+
+    private final Pattern patternVersionInRange = Pattern.compile("if\\(version_in_range\\(version:([^,]*)");
+
+    private final Pattern patternVersionIsLessEqual = Pattern.compile("if\\(version_is_less_equal\\(version:([^,]*)");
+
+    private final Pattern patternVersionIsEqual = Pattern.compile("if\\(version_is_equal\\(version:([^,]*)");
+
     public ArrayList<File> getNVTFiles(String nvtDirectoryPath) {
         File folder = new File(nvtDirectoryPath);
         ArrayList<File> allNvts = new ArrayList<>();
@@ -113,5 +121,85 @@ public class NvtProvider {
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(portProducibleNvtFileList);
         objectOutputStream.close();
+    }
+
+    public void updateUndetailedMessageNvtOidList(String nvtDirectoryPath, String nvtOidListPath) throws FileNotFoundException {
+        ArrayList<File> allNvts = getNVTFiles(nvtDirectoryPath);
+
+        ArrayList<String> listNVTsGivingUndetailedMessage = new ArrayList<>();
+
+        for (File file : allNvts) {
+            boolean isVersionChecked = false;
+            String nvtVersionVariable = "";
+            Scanner input = new Scanner(file);
+
+            String nvtOid = "";
+
+            while (input.hasNextLine()) {
+                String line = input.nextLine();
+                String lineWithoutSpaceChars = line.replaceAll("\\s+","");
+
+                if (lineWithoutSpaceChars.contains("script_oid(")) {
+                    Matcher matcherOid = patternOid.matcher(lineWithoutSpaceChars);
+                    if (matcherOid.find()) {
+                        nvtOid = matcherOid.group(1);
+                    }
+                }
+                if (isVersionChecked && line.contains(nvtVersionVariable)) {
+                    break;
+                }
+                if (line.contains("version_is_less") || line.contains("version_in_range") || line.contains("version_is_less_equal") || line.contains("version_is_equal")) {
+                    String lineWithoutSpace = line.replaceAll("\\s+","");
+                    Matcher matcherVersion = patternVersionIsLess.matcher(lineWithoutSpace);
+                    if (matcherVersion.find())
+                    {
+                        isVersionChecked = true;
+                        nvtVersionVariable = matcherVersion.group(1);
+                    }
+                    matcherVersion = patternVersionInRange.matcher(lineWithoutSpace);
+                    if (matcherVersion.find())
+                    {
+                        isVersionChecked = true;
+                        nvtVersionVariable = matcherVersion.group(1);
+                    }
+                    matcherVersion = patternVersionIsLessEqual.matcher(lineWithoutSpace);
+                    if (matcherVersion.find())
+                    {
+                        isVersionChecked = true;
+                        nvtVersionVariable = matcherVersion.group(1);
+                    }
+                    matcherVersion = patternVersionIsEqual.matcher(lineWithoutSpace);
+                    if (matcherVersion.find())
+                    {
+                        isVersionChecked = true;
+                        nvtVersionVariable = matcherVersion.group(1);
+                    }
+                }
+                if (isVersionChecked && line.contains("}")) {
+                    boolean isReportFixedVerOrManualMessageFound = false;
+                    Scanner scanner2 = new Scanner(file);
+                    while (scanner2.hasNextLine()) {
+                        String line2 = scanner2.nextLine().toLowerCase();
+                        if (line2.contains("report_fixed_ver") || line2.contains("'file checked:") || line2.contains("\\n'file checked:")
+                                || line2.contains("'fixed version:") || line2.contains("'\\nfixed version:")
+                                || line2.contains("'installed version:") || line2.contains("'\\ninstalled version:")) {
+                            isReportFixedVerOrManualMessageFound = true;
+                            break;
+                        }
+                    }
+                    if (!isReportFixedVerOrManualMessageFound) {
+                        if (!listNVTsGivingUndetailedMessage.contains(nvtOid)) {
+                            listNVTsGivingUndetailedMessage.add(nvtOid);
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        PrintWriter printWriter = new PrintWriter(nvtOidListPath);
+        for (String oid : listNVTsGivingUndetailedMessage) {
+            printWriter.println(oid);
+        }
+        printWriter.close();
     }
 }
